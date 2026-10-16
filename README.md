@@ -21,16 +21,17 @@
 
 ## 🗺️ Project roadmap: Vanilla first
 
-**One game, four development tracks.** Complete the faithful Windows port first; expand only when the baseline is stable.
+**One game, five development tracks.** Complete the faithful Windows port first; expand only when the baseline is stable.
 
 | Track | Direction | State |
 | --- | --- | --- |
 | 🎮 **Vanilla** | Native Windows PS2-accurate port, performance, rendering, saves and QA | 🔄 Main priority |
 | 🎨 **Remastered** | Optional HD graphics and interface enhancements | 💡 Future |
 | 👥 **Multiplayer** | Online races; requires significant networking research | 🔬 Future research |
+| 🧩 **Modding** | Community vehicle packs, liveries and a safe mod loader | 💡 Future |
 | 🌐 **Browser** | WebAssembly/WebGPU feasibility based on upstream web recompilation | 🔬 Optional parallel research |
 
-**Likely sequencing:** Vanilla → Remastered (usually easier incremental work) → Multiplayer; browser feasibility can be tested independently after the core stabilizes.
+**Likely sequencing:** Vanilla → Remastered (usually easier incremental work) → Multiplayer; mod support can evolve alongside the remaster, while browser feasibility can be tested independently after the core stabilizes.
 
 **[Full illustrated roadmap →](ROADMAP.md)** · **[Development issues →](../../issues)** · **[Known issues →](docs/KNOWN_ISSUES.md)**
 
