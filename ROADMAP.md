@@ -132,6 +132,39 @@ flowchart TD
 
 **Success criteria:** Create a fully original racer with custom portrait, name, livery, colors and number, drive a race, relaunch to load it, then remove the mod and return cleanly to Vanilla. No extra game assets are included in the repository.
 
+## Track F — Camera, Photo & Replay Experience (priority expansion)
+
+**Product decision:** cinematic and functional cameras are more valuable near-term than a full vehicle creation garage. Keep Garage Studio in the long-term concepts, not the near-term queue.
+
+### F1 — In-race camera options (first exploration after Vanilla fidelity)
+- [ ] Document existing camera logic, coordinate systems, clipping/collision and controller inputs
+- [ ] Test chase-camera distance/height/FOV, hood/front view, cockpit only if relevant geometry exists, and cinematic preset
+- [ ] Implement per-camera toggles with safe boundaries, reset and no physics/gameplay alterations
+- [ ] Save user preference without changing Vanilla defaults
+
+### F2 — Photo Mode (high priority after stable graphics)
+- [ ] Pause safely in supported modes; test whether simulation, particles and animation can be frozen independently
+- [ ] Camera translate/orbit/zoom/roll, FOV, depth of field, exposure, hide HUD
+- [ ] Capture screenshots at supported resolutions with a graceful fallback
+- [ ] Protect race timing and physics from photo-mode pause and restore
+
+### F3 — Replay Studio (high priority, higher technical uncertainty)
+- [ ] Audit the game's existing replay storage/playback and whether full vehicle transforms are recorded
+- [ ] First prototype **camera selection during existing replays** (chase, trackside, orbit/free camera if feasible)
+- [ ] Explore timeline controls, pause, scrub, slow motion and vehicle switching, with fidelity checks
+- [ ] If existing replay data is insufficient, research deterministic inputs vs snapshot/state recording with memory/storage budgets
+- [ ] Optional video export only after replay correctness and rendering stability
+
+### F4 — Ghost Racing (medium priority)
+- [ ] Prototype recording a local player's lap with timestamps and vehicle trajectory
+- [ ] Playback transparent ghost isolated from collisions and race outcomes
+- [ ] Compare lap timing and save/load recordings by game version and track
+- [ ] Only explore online ghosts/leaderboards after privacy, anti-cheat and backend costs are evaluated
+
+**Dependency order:** Vanilla fidelity → camera hooks → Photo Mode + replay camera prototype → Replay Studio → Ghost Racing (may run in parallel if feasible).
+
+**Technical caution:** existing native replays may not store enough scene state for arbitrarily moving the camera or scrubbing. A camera toggle is not promised until inspected; new replay recording may require substantial simulation instrumentation.
+
 ## Progress philosophy
 
 | Signal | Meaning |
