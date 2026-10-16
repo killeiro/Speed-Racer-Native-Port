@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Development roadmap
+    url: https://github.com/killeiro/Speed-Racer-Native-Port/blob/main/ROADMAP.md
+    about: See planned work before opening a duplicate issue.
