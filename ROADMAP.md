@@ -17,6 +17,7 @@ flowchart TD
   D --> G["👥 Multiplayer R&D<br/>Netcode, sync, matchmaking"]
   D --> M["🧩 Modding tools<br/>Car replacements, packs, safe loaders"]
   M --> N["🚗 Community mods<br/>Custom vehicles and liveries"]
+  M --> O["🛠️ Racer & T-180 Creator<br/>Portrait, name, colors, decals"]
   F --> H["✨ Remastered release candidate"]
   G --> I["🌍 Online multiplayer release candidate"]
   E --> J["🖥️ Browser build candidate"]
@@ -103,10 +104,33 @@ flowchart TD
 - [ ] Add mod conflict detection, safe-mode launch and error reporting
 - [ ] Investigate optional mod manager later; avoid arbitrary executable scripts in the first iteration
 - [ ] Assess multiplayer mod compatibility and a controlled whitelist/checksum handshake
+- [ ] Design optional shader/texture mod hooks with versioning and compatibility validation
+- [ ] Investigate the [Racer & T-180 Creator](#track-e2--racer--t-180-creator-long-term-concept) as an accessible community tool
 
 **Engineering note:** early Vanilla work should avoid hard-wiring every asset path in a way that makes future swapping impossible, but modding must not delay correct native gameplay. Adding new cars or tracks may require modifying game logic and fixed data structures, not merely swapping 3D files.
 
 **Licensing:** community mod authors must own or have permission to distribute everything in their uploads, including trademarks and third-party fictional vehicle designs. Do not distribute extracted game files as starter templates.
+
+## Track E2 — Racer & T-180 Creator (long-term concept)
+
+**Goal:** a beginner-friendly garage/editor for building a fictional racer identity and customized T-180-inspired vehicle using permitted original assets. This is an optional creator tool, not part of Vanilla.
+
+### Prototype ladder
+- [ ] **Visual mod foundation:** user-installed texture packs, liveries, optional shader/post-processing presets (validated formats, reversible, Vanilla as fallback)
+- [ ] **Garage MVP:** select a compatible base chassis, primary/secondary colors, decals, race number, racer name; export/share presets
+- [ ] **Racer profile MVP:** choose a locally provided portrait, create a display name and profile with image cropping and data validation
+- [ ] **Creator kit:** versioned template packages, mod manifest, Blender pipeline where feasible, automated asset checks
+- [ ] **Expanded vehicles:** attempt new original models, materials, sounds, and tunable handling *only after* engine limits are understood
+- [ ] **Online compatibility:** consent, file checksum comparison, optional fallback visuals, image moderation, privacy and no arbitrary mod code execution
+
+### Technical gates
+1. Determine whether vehicle selection, raster UI portraits and per-car materials can be changed without patching fixed-size game tables.
+2. Keep user portraits on device by default; no automatic public uploads or remote image fetching.
+3. Store modifications separately from game content; one-click disable and restore; ensure invalid packs cannot crash Vanilla.
+4. Distinguish **cosmetic** modifications from physics-changing mods; multiplayer should use common verified gameplay data.
+5. Only offer base vehicles, logos, fictional racers and other assets with appropriate redistribution rights. Transformers and branded real cars may require permission.
+
+**Success criteria:** Create a fully original racer with custom portrait, name, livery, colors and number, drive a race, relaunch to load it, then remove the mod and return cleanly to Vanilla. No extra game assets are included in the repository.
 
 ## Progress philosophy
 
