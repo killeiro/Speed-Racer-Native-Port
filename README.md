@@ -19,19 +19,20 @@
 
 **These results are preliminary, not independently reproduced.** No performance figures should be presented as benchmarks until captured on a defined build and test machine.
 
-## 🗺️ Development roadmap
+## 🗺️ Project roadmap: Vanilla first
 
-| Phase | Milestone | State |
+**One game, four development tracks.** Complete the faithful Windows port first; expand only when the baseline is stable.
+
+| Track | Direction | State |
 | --- | --- | --- |
-| 0 | Boot & controller input | ✅ Locally verified |
-| 1 | Source audit & profiling | 🔄 Next |
-| 2 | Timing & performance | ⏳ Planned |
-| 3 | PS2 visual fidelity | ⏳ Planned |
-| 4 | Reproducible Windows build & QA | ⏳ Planned |
-| 5 | Legal review & community alpha | 🔒 Gated |
-| 6 | Optional HD enhancements | 💡 Future |
+| 🎮 **Vanilla** | Native Windows PS2-accurate port, performance, rendering, saves and QA | 🔄 Main priority |
+| 🎨 **Remastered** | Optional HD graphics and interface enhancements | 💡 Future |
+| 👥 **Multiplayer** | Online races; requires significant networking research | 🔬 Future research |
+| 🌐 **Browser** | WebAssembly/WebGPU feasibility based on upstream web recompilation | 🔬 Optional parallel research |
 
-**[Explore the full visual roadmap →](ROADMAP.md)** · **[Open tasks →](../../issues)** · **[Known issues →](docs/KNOWN_ISSUES.md)**
+**Likely sequencing:** Vanilla → Remastered (usually easier incremental work) → Multiplayer; browser feasibility can be tested independently after the core stabilizes.
+
+**[Full illustrated roadmap →](ROADMAP.md)** · **[Development issues →](../../issues)** · **[Known issues →](docs/KNOWN_ISSUES.md)**
 
 ## Project priorities
 
