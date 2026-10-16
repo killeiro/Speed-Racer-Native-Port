@@ -1,0 +1,32 @@
+# Never commit commercial game data
+*.iso
+*.bin
+*.cue
+*.chd
+*.elf
+SLUS_*
+disc/
+**/disc/
+data/
+**/data/
+bios/
+**/bios/
+*.sav
+*.ps2
+# Generated output
+build/
+dist/
+out/
+*.exe
+*.dll
+*.o
+*.obj
+*.log
+*.pdb
+# Local and IDE
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
