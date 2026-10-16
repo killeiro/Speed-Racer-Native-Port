@@ -28,7 +28,7 @@
 | 🎮 **Vanilla** | Native Windows PS2-accurate port, performance, rendering, saves and QA | 🔄 Main priority |
 | 🎨 **Remastered** | Optional HD graphics and interface enhancements | 💡 Future |
 | 👥 **Multiplayer** | Online races; requires significant networking research | 🔬 Future research |
-| 🧩 **Modding** | Community vehicle packs, liveries and a safe mod loader | 💡 Future |
+| 🧩 **Modding & Creator** | Shader/texture packs, community vehicles and an optional garage to create racer portraits, names and custom T-180 designs | 💡 Future |
 | 🌐 **Browser** | WebAssembly/WebGPU feasibility based on upstream web recompilation | 🔬 Optional parallel research |
 
 **Likely sequencing:** Vanilla → Remastered (usually easier incremental work) → Multiplayer; mod support can evolve alongside the remaster, while browser feasibility can be tested independently after the core stabilizes.
