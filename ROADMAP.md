@@ -111,6 +111,20 @@ flowchart TD
 
 **Licensing:** community mod authors must own or have permission to distribute everything in their uploads, including trademarks and third-party fictional vehicle designs. Do not distribute extracted game files as starter templates.
 
+### E1 — First community mod milestone: skin & livery packs (earlier than full vehicle creation)
+
+**Community-driven example:** a red, Match 4-inspired visual variant for the Match 6. This is a proposed fan concept, not a completed mod or claim that asset replacement is implemented.
+
+- [ ] Audit vehicle textures/material bindings, palette data and texture formats to determine what can be replaced safely
+- [ ] Prototype a **cosmetic-only** vehicle recolor using permitted self-created assets and no altered handling
+- [ ] Support independent livery packs with names, author attribution, compatible build range, preview image and manifest
+- [ ] Define enable/disable, load order, conflicts and one-click restore to the unchanged Vanilla look
+- [ ] Test menu previews and in-race visuals, including UVs, reflections, effects and performance
+- [ ] Publish a contributor guide for fictional/original liveries; do not include extracted commercial textures as templates
+- [ ] Where needed, require permission for protected designs, emblems and third-party content
+
+**Release approach:** ship safe replacement-skin infrastructure before attempting entirely new vehicles, racer portraits or a full Garage Studio. This track must not block Vanilla correctness.
+
 ## Track E2 — Racer & T-180 Creator (long-term concept)
 
 **Goal:** a beginner-friendly garage/editor for building a fictional racer identity and customized T-180-inspired vehicle using permitted original assets. This is an optional creator tool, not part of Vanilla.
