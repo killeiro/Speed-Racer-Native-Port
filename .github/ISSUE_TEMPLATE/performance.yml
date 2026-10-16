@@ -1,0 +1,22 @@
+name: Performance report
+description: Report slow motion, frame pacing and latency
+title: "[Performance] "
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scene and reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Median/p95 frame time, wall vs simulation time, CPU/GPU and VSync
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Build SHA, OS, CPU, GPU and driver
+    validations:
+      required: true
