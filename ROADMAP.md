@@ -15,12 +15,14 @@ flowchart TD
   D --> E["🌐 Browser feasibility + prototype"]
   D --> F["🎨 Remastered edition<br/>HD rendering, UI and polish"]
   D --> G["👥 Multiplayer R&D<br/>Netcode, sync, matchmaking"]
+  D --> M["🧩 Modding tools<br/>Car replacements, packs, safe loaders"]
+  M --> N["🚗 Community mods<br/>Custom vehicles and liveries"]
   F --> H["✨ Remastered release candidate"]
   G --> I["🌍 Online multiplayer release candidate"]
   E --> J["🖥️ Browser build candidate"]
 ```
 
-**The three branches after Vanilla are independent exploratory tracks.** They may be reordered based on tests, contributors and rights. None is committed to a release date.
+**The four branches after Vanilla are independent exploratory tracks.** They may be reordered based on tests, contributors and rights. None is committed to a release date.
 
 ## Development tracks
 
@@ -29,6 +31,7 @@ flowchart TD
 | **VANILLA** | Native Windows experience faithful to PS2, including correct game speed, visuals, audio, input and saves | 🔄 Active priority | Reproducible build, full QA, rights review |
 | **REMASTERED** | Optional improved resolutions, rendering, UI and accessibility while preserving game feel | 💡 Future | Vanilla stable + visual baseline |
 | **MULTIPLAYER** | Explore online races and networking feasibility | 🔬 Research backlog | Deterministic simulation/network feasibility, anti-desync tests |
+| **MODDING** | Optional vehicle, texture and content packs through a safe, versioned community mod loader | 💡 Future architecture + prototype | Technical interfaces, compatible data formats and creator rights |
 | **WEB** | Explore recompilation to WebAssembly/WebGPU with user-provided game data | 🔬 Feasibility | Browser compatibility, performance, storage, copyright safeguards |
 
 ## Track A — Vanilla first
@@ -87,6 +90,23 @@ flowchart TD
 - [ ] Do **not** deploy commercial ISO, recompilation output, or hosted copyrighted content
 
 **Opportunity:** [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) already targets WebAssembly/WebGPU; a browser proof of concept may be possible sooner than multiplayer once Vanilla works, but needs independent testing.
+
+## Track E — Modding ecosystem (community expansion)
+
+**Goal:** let creators make optional, user-installed vehicles, liveries and tracks without modifying the Vanilla baseline. Examples of fan concepts include Brazilian cars; recognizable third-party fictional characters or vehicles require permission from their rights holders for public distribution.
+
+- [ ] Research game vehicle data: asset formats, model skeletons, materials, textures, physics parameters and sound mapping
+- [ ] Design a **versioned mod manifest** with mod ID, author, version, required game/runtime version, dependencies and file checksums
+- [ ] Prefer isolated mod folders plus explicit opt-in loading and easy removal; protect original files
+- [ ] Prototype one fully original test vehicle and one texture/livery replacement
+- [ ] Document compatible asset formats (for example glTF conversion if feasible), validation tools and Blender workflow
+- [ ] Add mod conflict detection, safe-mode launch and error reporting
+- [ ] Investigate optional mod manager later; avoid arbitrary executable scripts in the first iteration
+- [ ] Assess multiplayer mod compatibility and a controlled whitelist/checksum handshake
+
+**Engineering note:** early Vanilla work should avoid hard-wiring every asset path in a way that makes future swapping impossible, but modding must not delay correct native gameplay. Adding new cars or tracks may require modifying game logic and fixed data structures, not merely swapping 3D files.
+
+**Licensing:** community mod authors must own or have permission to distribute everything in their uploads, including trademarks and third-party fictional vehicle designs. Do not distribute extracted game files as starter templates.
 
 ## Progress philosophy
 
