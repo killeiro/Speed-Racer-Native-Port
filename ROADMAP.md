@@ -1,196 +1,107 @@
-# 🏁 Speed Racer Native Port — Product Roadmap
+# 🏁 Speed Racer Native Port — Development Roadmap
 
-[← Overview](README.md) · [Tasks](../../issues)
+[Overview](README.md) · [Open issues](../../issues) · [UI/UX concept brief](docs/REMASTER_UI_UX.md)
 
-**Vision:** preserve the original PS2 experience through a faithful Windows native port (**Vanilla**); then develop optional modern experiences without compromising the original. The browser is a possible additional platform, not a promise of a hosted game.
+> **Vision:** Preserve the original PS2 game through a faithful native PC port (**Vanilla**). Then create a thoughtfully redesigned, improved **Remaster**. Community **Mods** remain separate, optional extensions. Online and browser support are longer-term research directions. No release dates are promised.
 
-## The big picture
+## 🗺️ At a glance
 
 ```mermaid
 flowchart TD
-  A["🏁 Foundation<br/>Boot + gamepad: local tests"] --> B["🎮 VANILLA / Windows Native<br/>Audit → timing → graphics → audio → saves → QA"]
-  B --> C{"Vanilla stable and<br/>rights reviewed?"}
-  C -->|No| B
-  C -->|Yes| D["🏆 Vanilla v1.0 milestone"]
-  D --> E["🌐 Browser feasibility + prototype"]
-  D --> F["🎨 Remastered edition<br/>HD rendering, UI and polish"]
-  D --> G["👥 Multiplayer R&D<br/>Netcode, sync, matchmaking"]
-  D --> M["🧩 Modding tools<br/>Car replacements, packs, safe loaders"]
-  M --> N["🚗 Community mods<br/>Custom vehicles and liveries"]
-  M --> O["🛠️ Racer & T-180 Creator<br/>Portrait, name, colors, decals"]
-  F --> H["✨ Remastered release candidate"]
-  G --> I["🌍 Online multiplayer release candidate"]
-  E --> J["🖥️ Browser build candidate"]
+  V["🎮 VANILLA<br/>PS2-accurate native Windows port"] --> G{"Stable, verified, rights cleared?"}
+  G -->|No| V
+  G -->|Yes| R["✨ REMASTER<br/>Art direction, UI/UX, shaders, models"]
+  R --> C["📷 Cinematic features<br/>Camera presets • Photo Mode • Replay • Director Mode"]
+  R --> S["🏎️ Curated content<br/>Official alternative liveries / vehicle variants"]
+  V --> M["🧩 COMMUNITY MOD SUPPORT<br/>Optional mods, safe overlays, asset formats"]
+  M --> U["🚗 Community skins, shaders, vehicles"]
+  M --> T["🛠️ Creator tools (long-term)"]
+  V --> W["🌐 Browser feasibility"]
+  V --> N["👥 Multiplayer research"]
 ```
 
-**The four branches after Vanilla are independent exploratory tracks.** They may be reordered based on tests, contributors and rights. None is committed to a release date.
+These are conceptual branches; feature feasibility and distribution permissions must be assessed separately.
 
-## Development tracks
+## Product identity and boundaries
 
-| Track | Goal | Status | Release gate |
+| Edition / track | Purpose | Included examples | Priority |
 | --- | --- | --- | --- |
-| **VANILLA** | Native Windows experience faithful to PS2, including correct game speed, visuals, audio, input and saves | 🔄 Active priority | Reproducible build, full QA, rights review |
-| **REMASTERED** | Optional improved resolutions, rendering, UI and accessibility while preserving game feel | 💡 Future | Vanilla stable + visual baseline |
-| **MULTIPLAYER** | Explore online races and networking feasibility | 🔬 Research backlog | Deterministic simulation/network feasibility, anti-desync tests |
-| **MODDING** | Optional vehicle, texture and content packs through a safe, versioned community mod loader | 💡 Future architecture + prototype | Technical interfaces, compatible data formats and creator rights |
-| **WEB** | Explore recompilation to WebAssembly/WebGPU with user-provided game data | 🔬 Feasibility | Browser compatibility, performance, storage, copyright safeguards |
+| **Vanilla** | Faithful preservation | Original UI, camera, assets, physics, timing, graphics, sound, input and saves | 🔄 **Now** |
+| **Remaster Core** | A curated, polished modern edition | Complete UI/UX redesign, refined shaders/materials, lighting/VFX, optimized and refined 3D models, HD rendering | ⏳ **After Vanilla** |
+| **Remaster Features** | First-party experience improvements | F1-style configurable cameras, Photo Mode, improved replay, Director Mode, optional Ghost Racing | 💡 Future |
+| **Remaster Content** | First-party curated additions | Optional alternative skins/liveries; e.g. red heritage variant or black/yellow Racer X-inspired Match 6 concept | 💡 Future |
+| **Community Mods** | Optional third-party contributions | Reversible livery/skin packs, shader/texture mods, custom models, optional creator tools | 🔬 Future |
+| **Multiplayer / Web** | Independent platform and netcode R&D | Online races, browser build feasibility | 🔬 Research |
 
-## Track A — Vanilla first
+**Rule:** The same category of asset can belong to Remaster *or* Mods. Classification depends on integration and curation: first-party variants shipped as part of an authorized Remaster are **Remaster content**; optional user-installed community packs are **Mods**. The Vanilla baseline stays unchanged.
 
-### A0 · Proof of concept — 🟢 locally reported
-- [x] Windows native executable starts (developer report; needs reproducible verification)
-- [x] Gamepad input works locally (developer report)
-- [ ] Record hardware and full gameplay evidence
+## Phase 0 — Windows proof of concept (local report)
+- [x] Windows executable launches in developer testing
+- [x] Gamepad input works in developer testing
+- [ ] Independently reproduce, inventory the source, and capture test environment
 
-### A1 · Technical baseline — 🔄 next
-- [ ] Source/license inventory and dependency attribution ([issue #1](../../issues/1))
-- [ ] Reproducible benchmark, profiling and simulation-vs-wall-time measurements ([#2](../../issues/2))
-- [ ] Correct slow-motion and frame pacing ([#3](../../issues/3))
-- [ ] Profile VU1 and GS bottlenecks ([#4](../../issues/4))
+## Phase 1 — Vanilla audit and accurate baseline (CURRENT)
+- [ ] Source, dependencies, license provenance ([#1](../../issues/1))
+- [ ] Frame timing and simulation-clock profiling ([#2](../../issues/2))
+- [ ] Investigate slow motion/stutter ([#3](../../issues/3))
+- [ ] Profile VU1/GS execution ([#4](../../issues/4))
+- [ ] Compare original graphics against reference ([#5](../../issues/5), [#6](../../issues/6))
+- [ ] Verify audio, physics, menus, races, saves and controller input
+- [ ] Reproducible Windows build on a clean machine ([#7](../../issues/7))
+- [ ] Review distribution rights before any public executable ([#8](../../issues/8))
 
-### A2 · Faithful playable build — ⏳ planned
-- [ ] Match PCSX2/original PS2 visuals in reference scenes ([#5](../../issues/5))
-- [ ] Restore missing effects and texture/render paths ([#6](../../issues/6))
-- [ ] Confirm audio, cutscenes, saves, menus, handling and race outcomes
-- [ ] Controller, keyboard, settings and crash logging
+**Vanilla definition of done:** documented repeatable tests show the game plays at intended speed and preserves original graphics, menus, physics, audio, controls, saving, and typical full races; authorized packaging passes clean-machine QA. A milestone does not override copyright.
 
-### A3 · Packaging and preservation — ⏳ planned
-- [ ] Build from authorized sources on a clean Windows machine ([#7](../../issues/7))
-- [ ] Versioned technical docs, known issues, test matrix, reproducible toolchain
-- [ ] Review every file before distribution ([#8](../../issues/8))
-- [ ] Set a release process that does **not** distribute unauthorized game-derived code or assets
+## Phase 2 — Remaster Core: visual and interface modernization
 
-**Definition of Vanilla 1.0:** game completes a representative set of races at intended game speed; controls/audio/saving work; visual output matches the original within documented limitations; clean install/build process and legal gate pass. A project milestone is **not** permission to distribute copyrighted game code.
+**Design ownership:** The maintainer will lead the modern UI/UX redesign. Treat the [HUD concept brief](docs/REMASTER_UI_UX.md) as visual direction, *not* a final approved interface or an in-engine implementation.
 
-## Track B — Remastered (recommended first expansion, subject to feasibility)
+### Modern UI/UX
+- [ ] Inventory all screens: launch, menus, garage/selection, settings, loading, race HUD, pause, results, replay
+- [ ] Define an accessible design system: typography, spacing, contrast, responsive safe areas, motion and controller focus states
+- [ ] Redesign HUD without overwhelming the driving view: rank/time gaps, lap, contextual radio message, speed, gear, boost, health
+- [ ] Build Figma prototypes, test gameplay readability, implement renderable UI components and regression tests
+- [ ] Maintain a toggle or separate edition boundary where technically feasible so Vanilla remains visually faithful
 
-- [ ] Optional resolution scale and modern aspect ratios
-- [ ] Antialiasing, filtering, post-processing and optimized graphics profiles
-- [ ] UI modernization without breaking menus or accessibility
-- [ ] Compare every option with Vanilla baseline; keep an authentic preset
-- [ ] Avoid introducing ripped or replacement commercial assets without permission
+### Rendering and assets
+- [ ] HD scaling, frame pacing, options and anti-aliasing
+- [ ] Refine shaders, illumination, VFX, reflections and materials while retaining the game's art direction
+- [ ] Improve 3D model detail/LOD and texture quality where supported and legally distributable
+- [ ] Benchmark GPU cost, memory, visual differences and fallback presets
 
-**Why this is likely ahead of multiplayer:** builds on graphics and performance work already necessary for Vanilla. This is an engineering prioritization, not a promise.
+### Curated vehicle variants
+- [ ] Explore official Remaster liveries and cosmetic-only variants without changing car physics
+- [ ] Investigate red Match 4-inspired Match 6 and black/yellow Racer X-inspired Match 6 concepts as **proposals**, not shipped content
+- [ ] Verify permitted use of original game characters, names, trademarks and likenesses before distribution
+- [ ] Distinguish first-party Remaster variants from user-made mod packs
 
-## Track C — Multiplayer (larger experimental track)
+## Phase 3 — Remaster Features: cameras and cinematic tools
+- [ ] **Adjustable cameras**: chase distance/height/FOV, optional front/cockpit if supported ([#13](../../issues/13))
+- [ ] **Photo Mode**: free/orbit camera, pause safety, HUD visibility, FOV/DOF, screenshot ([#14](../../issues/14))
+- [ ] **Replay Studio**: investigate native replay data, switch camera during replay, seek/slow motion if technically possible ([#15](../../issues/15))
+- [ ] **Director Mode**: presets/automatic cinematic cuts during replays, trackside views, subject switching; depends on viable replay/camera hooks
+- [ ] **Ghost Racing**: local time-trial ghost without collisions ([#16](../../issues/16))
 
-- [ ] Determine whether native game mechanics expose stable state, or need substantial re-engineering
-- [ ] Research race-state synchronization, rollback vs lockstep vs authoritative server
-- [ ] Prototype two local networked clients with recorded desync metrics
-- [ ] Assess lobby, reconnect, latency, security, hosting and maintenance costs
-- [ ] Define scope: live online races only after a reliable minimal networking prototype
+## Phase 4 — Community Mod Support (parallel architecture research; shipping later)
+- [ ] Versioned manifest and isolated, reversible mod packages ([#10](../../issues/10))
+- [ ] Shader and texture mod compatibility ([#11](../../issues/11))
+- [ ] Cosmetic vehicle skin/livery pipeline ([#17](../../issues/17))
+- [ ] Optional creator tools and racer portrait / car customization are **low-priority long-term**, not a near-term Garage Studio commitment ([#12](../../issues/12))
+- [ ] Prevent broken mod packs from corrupting Vanilla and research multiplayer checksum compatibility
+- [ ] Require contributors to have redistribution rights for submitted content
 
-**Risks:** non-deterministic PS2 floating-point behavior, physics timing and original game architecture can make netcode far more difficult than graphics improvements.
+## Phase 5 — Exploration
+- [ ] Online multiplayer: authoritative simulation, deterministic behavior, latency and anti-desync testing
+- [ ] Browser/WebGPU/WebAssembly: performance, security, local data access and copyright safeguards
 
-## Track D — Browser / WebAssembly (independent feasibility track)
+## Progress policy
 
-- [ ] Test the upstream `ps2-web-recomp` Emscripten/WebGPU path against our authorized source workflow
-- [ ] Evaluate browsers, SharedArrayBuffer/cross-origin isolation, Gamepad API, audio and storage
-- [ ] Benchmark loading and memory consumption, plus mobile constraints
-- [ ] Decide whether local user-provided disc data and local compilation are needed
-- [ ] Do **not** deploy commercial ISO, recompilation output, or hosted copyrighted content
-
-**Opportunity:** [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) already targets WebAssembly/WebGPU; a browser proof of concept may be possible sooner than multiplayer once Vanilla works, but needs independent testing.
-
-## Track E — Modding ecosystem (community expansion)
-
-**Goal:** let creators make optional, user-installed vehicles, liveries and tracks without modifying the Vanilla baseline. Examples of fan concepts include Brazilian cars; recognizable third-party fictional characters or vehicles require permission from their rights holders for public distribution.
-
-- [ ] Research game vehicle data: asset formats, model skeletons, materials, textures, physics parameters and sound mapping
-- [ ] Design a **versioned mod manifest** with mod ID, author, version, required game/runtime version, dependencies and file checksums
-- [ ] Prefer isolated mod folders plus explicit opt-in loading and easy removal; protect original files
-- [ ] Prototype one fully original test vehicle and one texture/livery replacement
-- [ ] Document compatible asset formats (for example glTF conversion if feasible), validation tools and Blender workflow
-- [ ] Add mod conflict detection, safe-mode launch and error reporting
-- [ ] Investigate optional mod manager later; avoid arbitrary executable scripts in the first iteration
-- [ ] Assess multiplayer mod compatibility and a controlled whitelist/checksum handshake
-- [ ] Design optional shader/texture mod hooks with versioning and compatibility validation
-- [ ] Investigate the [Racer & T-180 Creator](#track-e2--racer--t-180-creator-long-term-concept) as an accessible community tool
-
-**Engineering note:** early Vanilla work should avoid hard-wiring every asset path in a way that makes future swapping impossible, but modding must not delay correct native gameplay. Adding new cars or tracks may require modifying game logic and fixed data structures, not merely swapping 3D files.
-
-**Licensing:** community mod authors must own or have permission to distribute everything in their uploads, including trademarks and third-party fictional vehicle designs. Do not distribute extracted game files as starter templates.
-
-### E1 — First community mod milestone: skin & livery packs (earlier than full vehicle creation)
-
-**Community-driven example:** a red, Match 4-inspired visual variant for the Match 6. This is a proposed fan concept, not a completed mod or claim that asset replacement is implemented.
-
-- [ ] Audit vehicle textures/material bindings, palette data and texture formats to determine what can be replaced safely
-- [ ] Prototype a **cosmetic-only** vehicle recolor using permitted self-created assets and no altered handling
-- [ ] Support independent livery packs with names, author attribution, compatible build range, preview image and manifest
-- [ ] Define enable/disable, load order, conflicts and one-click restore to the unchanged Vanilla look
-- [ ] Test menu previews and in-race visuals, including UVs, reflections, effects and performance
-- [ ] Publish a contributor guide for fictional/original liveries; do not include extracted commercial textures as templates
-- [ ] Where needed, require permission for protected designs, emblems and third-party content
-
-**Release approach:** ship safe replacement-skin infrastructure before attempting entirely new vehicles, racer portraits or a full Garage Studio. This track must not block Vanilla correctness.
-
-## Track E2 — Racer & T-180 Creator (long-term concept)
-
-**Goal:** a beginner-friendly garage/editor for building a fictional racer identity and customized T-180-inspired vehicle using permitted original assets. This is an optional creator tool, not part of Vanilla.
-
-### Prototype ladder
-- [ ] **Visual mod foundation:** user-installed texture packs, liveries, optional shader/post-processing presets (validated formats, reversible, Vanilla as fallback)
-- [ ] **Garage MVP:** select a compatible base chassis, primary/secondary colors, decals, race number, racer name; export/share presets
-- [ ] **Racer profile MVP:** choose a locally provided portrait, create a display name and profile with image cropping and data validation
-- [ ] **Creator kit:** versioned template packages, mod manifest, Blender pipeline where feasible, automated asset checks
-- [ ] **Expanded vehicles:** attempt new original models, materials, sounds, and tunable handling *only after* engine limits are understood
-- [ ] **Online compatibility:** consent, file checksum comparison, optional fallback visuals, image moderation, privacy and no arbitrary mod code execution
-
-### Technical gates
-1. Determine whether vehicle selection, raster UI portraits and per-car materials can be changed without patching fixed-size game tables.
-2. Keep user portraits on device by default; no automatic public uploads or remote image fetching.
-3. Store modifications separately from game content; one-click disable and restore; ensure invalid packs cannot crash Vanilla.
-4. Distinguish **cosmetic** modifications from physics-changing mods; multiplayer should use common verified gameplay data.
-5. Only offer base vehicles, logos, fictional racers and other assets with appropriate redistribution rights. Transformers and branded real cars may require permission.
-
-**Success criteria:** Create a fully original racer with custom portrait, name, livery, colors and number, drive a race, relaunch to load it, then remove the mod and return cleanly to Vanilla. No extra game assets are included in the repository.
-
-## Track F — Camera, Photo & Replay Experience (priority expansion)
-
-**Product decision:** cinematic and functional cameras are more valuable near-term than a full vehicle creation garage. Keep Garage Studio in the long-term concepts, not the near-term queue.
-
-### F1 — In-race camera options (first exploration after Vanilla fidelity)
-- [ ] Document existing camera logic, coordinate systems, clipping/collision and controller inputs
-- [ ] Test chase-camera distance/height/FOV, hood/front view, cockpit only if relevant geometry exists, and cinematic preset
-- [ ] Implement per-camera toggles with safe boundaries, reset and no physics/gameplay alterations
-- [ ] Save user preference without changing Vanilla defaults
-
-### F2 — Photo Mode (high priority after stable graphics)
-- [ ] Pause safely in supported modes; test whether simulation, particles and animation can be frozen independently
-- [ ] Camera translate/orbit/zoom/roll, FOV, depth of field, exposure, hide HUD
-- [ ] Capture screenshots at supported resolutions with a graceful fallback
-- [ ] Protect race timing and physics from photo-mode pause and restore
-
-### F3 — Replay Studio (high priority, higher technical uncertainty)
-- [ ] Audit the game's existing replay storage/playback and whether full vehicle transforms are recorded
-- [ ] First prototype **camera selection during existing replays** (chase, trackside, orbit/free camera if feasible)
-- [ ] Explore timeline controls, pause, scrub, slow motion and vehicle switching, with fidelity checks
-- [ ] If existing replay data is insufficient, research deterministic inputs vs snapshot/state recording with memory/storage budgets
-- [ ] Optional video export only after replay correctness and rendering stability
-
-### F4 — Ghost Racing (medium priority)
-- [ ] Prototype recording a local player's lap with timestamps and vehicle trajectory
-- [ ] Playback transparent ghost isolated from collisions and race outcomes
-- [ ] Compare lap timing and save/load recordings by game version and track
-- [ ] Only explore online ghosts/leaderboards after privacy, anti-cheat and backend costs are evaluated
-
-**Dependency order:** Vanilla fidelity → camera hooks → Photo Mode + replay camera prototype → Replay Studio → Ghost Racing (may run in parallel if feasible).
-
-**Technical caution:** existing native replays may not store enough scene state for arbitrarily moving the camera or scrubbing. A camera toggle is not promised until inspected; new replay recording may require substantial simulation instrumentation.
-
-## Progress philosophy
-
-| Signal | Meaning |
+| Marker | Meaning |
 | --- | --- |
-| 🟢 Verified | Acceptance tests and evidence linked |
-| 🔄 Active | Work started, no completion claim |
-| ⏳ Planned | Scoped but not started |
-| 🔬 Research | Feasibility unresolved |
-| 🔒 Blocked | Legal, technical or verification gate |
+| ✅ Verified | Finished, tested, linked evidence |
+| 🔄 Active | Work in progress |
+| ⏳ Planned | Defined; not implemented |
+| 🔬 Research | Feasibility unknown |
+| 🔒 Gated | Needs technical, QA or legal review |
 
-**No fake percentages.** Progress is tracked through closed issues, reproduced tests, build SHAs, and accepted milestones.
-
-## Contribution rules
-
-Report issues with: **steps to reproduce → expected/actual → hardware & build → logs → comparison/test → outcome**. Never attach copyrighted game data or confidential assets. See [CONTRIBUTING.md](CONTRIBUTING.md).
+No made-up completion percentages. Issues, build SHA, benchmarks, screenshots and tests are the source of truth. **No commercial PS2 ISO, copyrighted assets or game-derived binaries are being published here.**
