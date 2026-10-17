@@ -19,21 +19,19 @@
 
 **These results are preliminary, not independently reproduced.** No performance figures should be presented as benchmarks until captured on a defined build and test machine.
 
-## 🗺️ Project roadmap: Vanilla first
+## 🗺️ Roadmap: preservation → remaster → community
 
-**One game, five development tracks.** Complete the faithful Windows port first; expand only when the baseline is stable.
-
-| Track | Direction | State |
+| Track | Role | Status |
 | --- | --- | --- |
-| 🎮 **Vanilla** | Native Windows PS2-accurate port, performance, rendering, saves and QA | 🔄 Main priority |
-| 🎨 **Remastered** | Optional HD graphics and interface enhancements | 💡 Future |
-| 👥 **Multiplayer** | Online races; requires significant networking research | 🔬 Future research |
-| 🧩 **Modding & Creator** | Shader/texture packs, community vehicles and an optional garage to create racer portraits, names and custom T-180 designs | 💡 Future |
-| 🌐 **Browser** | WebAssembly/WebGPU feasibility based on upstream web recompilation | 🔬 Optional parallel research |
+| 🎮 **Vanilla** | Faithful native Windows port; original graphics, UI, physics, sound and controls | 🔄 Main priority |
+| ✨ **Remaster Core** | Maintainer-led UI/UX redesign, HD visuals, better shaders, materials, 3D models and curated skins | ⏳ Future |
+| 📷 **Remaster Features** | Configurable cameras, Photo Mode, Replay Studio, Director Mode, Ghost Racing | 💡 Future |
+| 🧩 **Community Mods** | Separately installed liveries, shader/texture mods, vehicles and optional creator tools | 🔬 Future |
+| 🌐 **Multiplayer / Web** | Independent research into online racing and browser compatibility | 🔬 Research |
 
-**Likely sequencing:** Vanilla → Remastered (usually easier incremental work) → Multiplayer; mod support can evolve alongside the remaster, while browser feasibility can be tested independently after the core stabilizes.
+**Vanilla = preservation · Remaster = official curated modernization · Mods = optional community expansion.**
 
-**[Full illustrated roadmap →](ROADMAP.md)** · **[Development issues →](../../issues)** · **[Known issues →](docs/KNOWN_ISSUES.md)**
+**[Visual roadmap →](ROADMAP.md)** · **[Remaster HUD design brief →](docs/REMASTER_UI_UX.md)** · **[Development issues →](../../issues)**
 
 ## Project priorities
 
