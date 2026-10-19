@@ -1,5 +1,8 @@
 # Profiling results — Vanilla audit v2
 
+> **Historical v2 snapshot (2026-10-16).** This report records the code and tests at that date. Mipmapping and VU/VIF execution subsequently changed. For current implementation, measurements and unresolved work, read the [audit index](README.md).
+
+
 ## Ranking sustentado por evidências
 
 | Prioridade | Custo/defeito | Evidência | Ação e risco |
@@ -32,3 +35,4 @@ A cobertura AOT não é total: Windows não tem JIT VU ativo. O contador interpr
 - Uploads/CLUT/cachesVRAM são ativos, mas não foi isolado bytes/s nem custoGPU porpipeline nesta rodada. `PS2_GPU_PROFILE` precisa replay headless porque caminho comsurface não o mede da mesma maneira.
 
 Fontes primárias: [PCSX2 Vif_Codes](https://github.com/PCSX2/pcsx2/blob/master/pcsx2/Vif_Codes.cpp), [MTVU](https://github.com/PCSX2/pcsx2/blob/master/pcsx2/MTVU.cpp), [GS software](https://github.com/PCSX2/pcsx2/blob/master/pcsx2/GS/Renderers/SW/GSDrawScanline.cpp).
+

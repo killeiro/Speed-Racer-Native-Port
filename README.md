@@ -10,14 +10,18 @@
 
 | Feature | Status | Evidence |
 | --- | --- | --- |
-| Windows executable launches | 🟢 Locally reported | Developer test |
-| Gamepad input | 🟢 Locally reported | Developer test |
-| Stable gameplay speed | 🔴 Needs work | Slow-motion / stutter reports |
-| Accurate graphics | 🔴 Needs work | Visual differences reported |
-| Clean PC installation | ⚪ Untested | Validation pending |
-| Redistributable release | 🔒 Blocked | Rights and code review required |
+| Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
+| Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
+| Gameplay speed | 🔄 Improved; unresolved | VU continuations and VIF/Q optimizations measured; Fuji and other scenes remain below target |
+| Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
+| Regression tests | 🟢 Local suite | 21/21 CTest in v6; differential VU/VIF/Q checks and 12 unchanged images |
+| Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
+| Clean PC installation | ⚪ Untested | Development-path fallback still present |
+| Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
 
-**These results are preliminary, not independently reproduced.** No performance figures should be presented as benchmarks until captured on a defined build and test machine.
+**Last consolidated baseline: local Vanilla v6, 2026-10-19.** These are maintainer-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
+
+On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40→57.94 simulated FPS in Thunderhead-0**, **35.67→40.07 in Fuji-3** and **47.04→53.69 in Grand-Prix-0**. Background applications were active; Skorost's smaller improvement was inconclusive. These are short scene measurements, not a claim of stable 60 FPS across the game. The v6 VIF parser-context change adds a small, scene-dependent improvement; its [final-artifact comparisons and 36-route matrix](docs/audit/vanilla-v6.md) remain below target in several scenes. See the [audit index](docs/audit/README.md), [v5 report](docs/audit/vanilla-v5.md) and [machine-readable metrics](docs/audit/vanilla-v5-metrics.json) for protocol, build hashes, percentiles and limits.
 
 ## 🗺️ Roadmap: preservation → remaster → community
 
@@ -35,11 +39,11 @@
 
 ## Project priorities
 
-1. Find whether observed slowdown is simulation timing, rendering bottlenecks, or both.
-2. Profile the Emotion Engine / VU1 / GS runtime paths without guessing.
-3. Compare unmodified game footage under PCSX2 and the native build at matched scenes and settings.
-4. Restore original visual behavior before attempting upscaling or enhancements.
-5. Publish only material that we are authorized to distribute.
+1. Reduce remaining VIF/VU and GS preparation costs in Fuji, Grand Prix and Skorost, retaining changes only after controlled comparison.
+2. Confirm race-timer cadence independently and extend short replays to full laps/races, classes and long sessions.
+3. Compare matched original/native scenes at 1x, then address remaining dithering/CRTC/fog behavior using evidence.
+4. Measure frame pacing, physical input latency and actual audio underruns; finish shutdown and clean-machine validation.
+5. Publish verified documentation now; review source provenance and distribution permissions before publishing a playable build.
 
 ## Technical references
 
@@ -58,3 +62,4 @@ Speed Racer and associated game assets belong to their respective rights holders
 ## Maintainer
 
 Project initiated by [@killeiro](https://github.com/killeiro).
+

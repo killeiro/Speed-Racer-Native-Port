@@ -1,5 +1,8 @@
 # Performance baseline — Vanilla audit v2
 
+> **Historical v2 snapshot (2026-10-16).** This report records the code and tests at that date. Mipmapping and VU/VIF execution subsequently changed. For current implementation, measurements and unresolved work, read the [audit index](README.md).
+
+
 Não se considera concluída a meta de velocidade. Replay local começa no frame4200 de `race-fixed.state`, termina4560, sem novas entradas; o carro próprio não recebeu aceleração e ficou parado, com adversários/efeitos ativos. Não representa pilotagem, corrida completa nem a pior trajetória. Descarta60 primeiras linhas para aquecimento. O estado/ISO/ELF são privados e seus bytes não são publicados.
 
 Host: i5-12400 (6C/12T), RTX3060, driver617.14, Windows11Pro10.0.26200; Clang23.1.3 Release-O3, SDL2.32.10, wgpu-native29.0.1.1/Vulkan/Mailbox. Áudio WASAPI. Drivers de controles físicos são desligados **somente no benchmark** para impedir entrada externa. Uso normal preserva controles.
@@ -41,3 +44,4 @@ O script não deve receber o memory card principal; use cópia. Os CSVs contêm 
 Executável funcional preservado: `226993b25ac1b04dcec501f8e86914f4060de9f7cf046944e9f78f2b9ade1376`. Build auditado corrigido: `69227f6323f3d3a5c7284a81338fa8c16e71382bcc9ab523e30d626046aff9f0`. O baseline instrumentado é um terceiro binário, equivalente funcionalmente ao preservado mais telemetria; não confundir seu hash com o conhecido.
 
 Sem medição input-to-photon, sem teste30min, sem corrida completa, sem atestado de áudio sem underruns. Estatísticas GPU finais ainda não são snapshot sincronizado entre três threads. Não se removeu efeito, não se alterou física e não se forçou aceleração da simulação.
+

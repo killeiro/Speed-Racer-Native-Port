@@ -1,5 +1,8 @@
 # Vanilla stabilization — relatório executivo v2
 
+> **Historical v2 snapshot (2026-10-16).** This report records the code and tests at that date. Mipmapping and VU/VIF execution subsequently changed. For current implementation, measurements and unresolved work, read the [audit index](README.md).
+
+
 O executável Windows e o controle funcionam; o usuário confirmou o controle físico. A câmera lenta foi confirmada por medição independente da apresentação. A fidelidade gráfica continua incompleta: mipmapping e dithering de 16 bits são lacunas ativas. O backend medido foi Vulkan/Mailbox em RTX3060. Esta iteração não certifica 60 FPS.
 
 ## Inventário e causas
@@ -37,3 +40,4 @@ Build corrigido SHA-256: `69227f6323f3d3a5c7284a81338fa8c16e71382bcc9ab523e30d62
 - [ ] Direitos de distribuição e notices transitivos esclarecidos antes de binário público.
 
 Testes manuais ficam restritos a verificações físicas e de experiência que os instrumentos atuais não certificam. Não foi exigido novo ciclo de logs ao usuário.
+

@@ -1,5 +1,8 @@
 # Architecture — Vanilla audit v2
 
+> **Historical v2 snapshot (2026-10-16).** This report records the code and tests at that date. Mipmapping and VU/VIF execution subsequently changed. For current implementation, measurements and unresolved work, read the [audit index](README.md).
+
+
 Escopo: fonte local atual, não o ZIP antigo. Data: 16/10/2026. Leitura estrutural de host, recompilador, runtime, shaders, build e testes; testes dirigidos aos caminhos ativos, sem certificação integral do hardware PS2.
 
 ## Estado e proveniência
@@ -54,3 +57,4 @@ Dependências DLL locais: SDL2, libstdc++-6, libgcc_s_seh-1 e libwinpthread-1. O
 Base upstream MIT; SDL zlib; wgpu-native MIT/Apache2 e dependências; runtimes MinGW/GCC têm condições próprias e runtime exception. IPU adapta tabelas Play! e exige `runtime/src/ipu/NOTICE` em distribuição binária. O pacote local anterior omitia esse aviso: foi acrescentado. Inventário completo transitivo de wgpu/GCC e direito de distribuir código comercial recompilado continuam pendentes (#8). O PR contém apenas documentação original, métricas e hashes, sem copiar implementação GPL do PCSX2.
 
 Fontes: [upstream](https://github.com/snuri00/ps2-web-recomp), [projeto público](https://github.com/killeiro/Speed-Racer-Native-Port), [ROADMAP](https://github.com/killeiro/Speed-Racer-Native-Port/blob/main/ROADMAP.md).
+

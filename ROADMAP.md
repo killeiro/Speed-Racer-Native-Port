@@ -35,22 +35,35 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 **Rule:** The same category of asset can belong to Remaster *or* Mods. Classification depends on integration and curation: first-party variants shipped as part of an authorized Remaster are **Remaster content**; optional user-installed community packs are **Mods**. The Vanilla baseline stays unchanged.
 
-## Phase 0 — Windows proof of concept (local report)
-- [x] Windows executable launches in developer testing
-- [x] Gamepad input works in developer testing
-- [ ] Independently reproduce, inventory the source, and capture test environment
+## Phase 0 — Windows proof of concept (local validation)
 
-## Phase 1 — Vanilla audit and accurate baseline (CURRENT)
-- [ ] Source, dependencies, license provenance ([#1](../../issues/1))
-- [ ] Frame timing and simulation-clock profiling ([#2](../../issues/2))
-- [ ] Investigate slow motion/stutter ([#3](../../issues/3))
-- [ ] Profile VU1/GS execution ([#4](../../issues/4))
-- [ ] Compare original graphics against reference ([#5](../../issues/5), [#6](../../issues/6))
-- [ ] Verify audio, physics, menus, races, saves and controller input
-- [ ] Reproducible Windows build on a clean machine ([#7](../../issues/7))
-- [ ] Review distribution rights before any public executable ([#8](../../issues/8))
+- [x] Windows GUI executable launches without a console window
+- [x] Controller integration implemented; maintainer confirmed a physical controller
+- [x] Local source/runtime inventory and measured build environment documented
+- [ ] Independent reproduction and complete dependency/provenance review
 
-**Vanilla definition of done:** documented repeatable tests show the game plays at intended speed and preserves original graphics, menus, physics, audio, controls, saving, and typical full races; authorized packaging passes clean-machine QA. A milestone does not override copyright.
+## Phase 1 — Vanilla stabilization (CURRENT)
+
+Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Current P0/P1 tasks](docs/audit/next-10-tasks.md).
+
+- [x] Separate EE simulation timing from presentation callbacks; capture percentiles and environment
+- [x] Fix DATE/CT24 and delayed VU MSKPATH3 regressions with focused tests
+- [x] Implement mipmapping/LOD/filtering and relevant GS hazard tests
+- [x] Implement selective native VU continuations with pipeline/code-generation validation
+- [x] Reduce VIF NOP/MASK=0 and Q-analysis overhead, with controlled measurements
+- [x] Capture 36 Class 1 route checkpoints and run short 600-VBlank performance samples
+- [x] Reuse VIF parser context per synchronous call; compare against the frozen prior parser
+- [x] Pass 21 local tests, VU/VIF/Q differential checks and 12-image regression in v6
+- [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
+- [ ] Extract race timer independently; complete laps/races, classes 2–4, Mirror and 30-minute sessions
+- [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
+- [ ] Verify actual audio underruns, physical input latency, pause/restart, saves and shutdown
+- [ ] Reproducible Windows build and launch on a clean machine without development fallbacks ([#7](../../issues/7))
+- [ ] Complete source/dependency provenance and distribution review ([#1](../../issues/1), [#8](../../issues/8))
+
+**Performance remains P0.** Fuji, Grand Prix and some Skorost/Thunderhead samples still run below target. A 600-VBlank route sample is approximately ten simulated seconds; it does not validate every section of a track or a full race. The EE clock and a pre-present callback are not independent race-timer or scanout measurements. Regression agreement does not establish PS2 accuracy.
+
+**Vanilla definition of done:** repeatable tests show intended speed and original graphics, menus, physics, audio, controls and saving over typical full races and long sessions; authorized packaging passes clean-machine QA. These acceptance gates remain open. No milestone overrides distribution rights.
 
 ## Phase 2 — Remaster Core: visual and interface modernization
 
@@ -105,3 +118,4 @@ These are conceptual branches; feature feasibility and distribution permissions 
 | 🔒 Gated | Needs technical, QA or legal review |
 
 No made-up completion percentages. Issues, build SHA, benchmarks, screenshots and tests are the source of truth. **No commercial PS2 ISO, copyrighted assets or game-derived binaries are being published here.**
+

@@ -1,5 +1,8 @@
 # Testes e estabilidade — Vanilla audit v2
 
+> **Historical v2 snapshot (2026-10-16).** This report records the code and tests at that date. Mipmapping and VU/VIF execution subsequently changed. For current implementation, measurements and unresolved work, read the [audit index](README.md).
+
+
 | Área | Resultado desta iteração | Limite |
 |---|---|---|
 | Build Release | Compilação de host, runtime e testes passou | Build limpo em outro PC não verificado |
@@ -18,3 +21,4 @@
 | Paridade PCSX2 | Código primário comparado | Cinco pares visuais sincronizados não verificados |
 
 Os testes não simulam resultados físicos, visuais ou legais ausentes. A cópia funcional conhecida foi preservada antes das mudanças. Os dados e saves originais não foram apagados nem migrados.
+

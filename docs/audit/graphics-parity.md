@@ -1,5 +1,8 @@
 # Fidelidade gráfica — auditoria Vanilla v2
 
+> **Historical v2 snapshot (2026-10-16).** This report records the code and tests at that date. Mipmapping and VU/VIF execution subsequently changed. For current implementation, measurements and unresolved work, read the [audit index](README.md).
+
+
 A paridade com PS2/PCSX2 **não foi certificada**. Imagens iguais entre dois builds detectam regressões locais; não provam que ambos reproduzem o console corretamente. Não foram aplicados filtros cosméticos nem removidos efeitos.
 
 ## Evidências atuais
@@ -44,3 +47,4 @@ O [PCSX2 GS HW](https://github.com/PCSX2/pcsx2/blob/master/pcsx2/GS/Renderers/HW
 [paraLLEl-GS](https://github.com/Arntzen-Software/parallel-gs) demonstra renderer compute com dumps e controle de hazards. Replay e testes isolados se aplicam ao projeto; trocar o backend inteiro agora teria risco alto. [RT64](https://github.com/rt64/rt64) e [Zelda64Recomp](https://github.com/Zelda64Recomp/Zelda64Recomp) são referências de separação entre fidelidade, resolução e apresentação; a arquitetura N64 não resolve automaticamente GS/VU. [PS2Recomp](https://github.com/ran-j/PS2Recomp) é infraestrutura experimental. [BT3-Recomp](https://github.com/z3xox/BT3-Recomp) e [God of War Recomp](https://github.com/KIexster/god-of-war-recomp) são referências de integração, com recursos/desempenho declarados que não foram reproduzidos aqui. O alvo continua Windows nativo.
 
 Tour atual: boot até frame 8000, saída 0 em 98,56 s, com capturas a cada 400 frames. Entradas Cross nos frames 800, 1700, 2100, 2500, 2900, 3700, 4100, 4500, 4900, 5300, 5700, 6100, 6500 e 6900, duração 6 frames. O carro ficou parado no grid; o avanço dos adversários foi observado. São capturas nativas locais, sem publicação de imagens comerciais no PR.
+

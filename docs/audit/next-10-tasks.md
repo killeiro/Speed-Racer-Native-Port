@@ -1,16 +1,18 @@
 # Próximas dez tarefas — Vanilla
 
-| # | Prioridade | Tarefa | Dificuldade | Impacto | Dependências e critério de aceite | Issues |
-|---|---|---|---|---|---|---|
-| 1 | P0 | Replay determinístico e relógio da corrida | Alta | Base das medições | Capturar entradas/ticks/cronômetro e sincronizar EE/VU/GS; cinco cenários repetíveis e taxa original confirmada | #2, #3 |
-| 2 | P0 | VIF parser/UNPACK orientado pelo perfil | Média | Throughput CPU | Depende de 1; medir NOP/UNPACK, fuzz de parser/estado, paridade GIF e ganho sem remover efeitos | #4 |
-| 3 | P0 | Cobertura AOT VU dirigida por custo | Alta | Throughput CPU | Depende de 1; ordenar por tempo/instruções, preservar CLIP/Q/status, comparar registradores/memória/pacotes | #4 |
-| 4 | P0 | Mipmapping GS completo | Alta | Fidelidade ativa | Testes LOD/MMIN/MIPTBP/hazards e cena V04 em PCSX2 1x; preservar feedback e cache | #6 |
-| 5 | P0 | Cinco pares PCSX2/nativo | Média | Referência visual | Depende de 1 e referência legítima; mesma cena/tick/câmera, 1x, precisão e matriz de diferenças | #5 |
-| 6 | P1 | Dithering 16 bits, CRTC e fog | Alta | Fidelidade | Depende de 5; priorizar uso ativo, testes isolados antes do shader; AA1 após ocorrência | #6 |
-| 7 | P1 | Latência e pacing com métricas de underrun | Alta | Resposta e regularidade | Depende de 1–3; medir polling/SIO2 e input-to-photon adequado, áudio/presents por 30 minutos | #3 |
-| 8 | P1 | Sincronização PATH1 e encerramento | Alta | Estabilidade | Contar SIGNAL/FINISH/LABEL; mailbox EE se usado; halt atômico, drain/join e testes de saída/save | #3, #4 |
-| 9 | P1 | Build portátil reproduzível em PC limpo | Média | Manutenção | Receita de geração/deps fixadas, sem fallback DEV_ROOT; Unicode, pasta sem escrita e outra GPU | #7 |
-| 10 | P1 | Proveniência, licenças e CI permitida | Média | Distribuição e QA | Allowlist de fontes independentes, notices transitivos, sem gerados comerciais; binário público só com direitos esclarecidos | #1, #8 |
+Atualização local v6, 19/10/2026. A ordem mantém o escopo original. Continuações VU, UNPACK MASK=0 e índice Q e contexto VIF por chamada estão implementados e medidos; isso não encerra o aceite de desempenho. Evidências e matriz atuais: [vanilla-v6.md](vanilla-v6.md); histórico [v5](vanilla-v5.md) e [v4](vanilla-v4.md).
 
-A meta é a simulação no ritmo original documentado, p95/p99 dentro do orçamento apropriado e sem underruns recorrentes em largada, corrida, efeitos e sessão de 30 minutos. Resolução superior vem depois da paridade em 1x. Uma rodada 2x mais rápida que 1x não conclui otimização. Remaster, novas interfaces, mods, multiplayer e navegador ficam fora desta iteração.
+| # | Prioridade | Tarefa | Estado e próximo critério de aceite | Issues |
+|---|---|---|---|---|
+| 1 | P0 | Replay e relógio da corrida | Scripts coerentes, gatilhos/stick direito e 36 checkpoints Class1 disponíveis. Falta extrair cronômetro, confirmar taxa da corrida, repetir trajetórias/voltas completas e classes2–4/Mirror; multithread ainda não declarado determinístico | #2, #3 |
+| 2 | P0 | VIF parser/UNPACK por perfil | NOP literal, MASK=0 e contexto por chamada implementados; 29.968 diferenciais passam também contra o parser v5 congelado. Próximo: throughput em Fuji/Grand Prix/Skorost com ganho repetido, preservando ciclos, aliasing e efeitos. Cópia V4_32 em bloco foi rejeitada por regressão | #4 |
+| 3 | P0 | Cobertura e throughput VU nativo | 37 continuações com FlagPipe compartilhada; 4.400 diferenciais sintéticos e mais de1,26milhão reais passaram. Índice Q por geração implementado na v5 (30.772 diferenciais); guarda de chamadas Q preserva os resultados. Próximo: kernels BDDB931EFD33B73E/3629DCD016897BE2, VIF::run e alocação de registradores; manter teste de código mutável, CLIP/Q/status e GIF. Não compilar combinações sem medir cache de instruções | #4 |
+| 4 | P0 | Mipmapping GS completo | Implementação CPU/GPU, TEX1/MTBA/MIPTBP/hazards e readback passaram. Regiões GS corrigidas na v4. Falta paridade V04 em cena sincronizada PCSX2 1x; dependências reais e feedback preservados | #6 |
+| 5 | P0 | Cinco pares PCSX2/nativo | Código de referência pesquisado. Pendentes capturas no mesmo estado/tick/câmera em1x: menu, seleção, largada, múltiplos carros e efeitos. Comparação com baseline nativo mede regressão, não paridade PS2 | #5 |
+| 6 | P1 | Dithering16, CRTC e fog | Dithering16 solicitado nos replays; priorizar casos ativos após os pares de referência. Testes isolados antes do shader; AA1 só após uso observado | #6 |
+| 7 | P1 | Latência, pacing e áudio | EE e callbacks de present medidos separadamente. Pendentes input-to-photon físico, underruns reais e sessão contínua de30min. MÉDIA60FPS não basta; aceitar p95/p99 no orçamento confirmado | #3 |
+| 8 | P1 | PATH1 e encerramento | Medir SIGNAL/FINISH/LABEL; mailbox EE se necessário. Pedido atômico, drain/join, pause/restart, saída e save de corrida permanecem pendentes | #3, #4 |
+| 9 | P1 | Build portátil reproduzível | Pacote GUI/DLL local verificado. Falta geração/deps fixadas, PC limpo sem DEV_ROOT, Unicode/pasta sem escrita e outra GPU | #7 |
+| 10 | P1 | Proveniência, licenças e CI | Publicação autorizada de documentação e métricas via PR22; fonte e executável permanecem locais. Falta allowlist de fontes independentes e inventário transitivo. Capturas, gerados comerciais, ISO/ELF/saves não entram no repositório público | #1, #8 |
+
+Aceite Vanilla: ritmo original confirmado, p95/p99 adequados e sem underruns recorrentes em largada, corrida e efeitos, incluindo30min contínuos. Os36 replays de600VBlanks são janelas curtas, não testes completos de todas as pistas. Fuji, Grand Prix e parte de Skorost ainda exigem trabalho P0. Resolução superior vem após a paridade1x. Remaster, novas interfaces, mods, multiplayer e navegador ficam fora desta fase.
