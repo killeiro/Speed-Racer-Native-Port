@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
 | Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
-| Gameplay speed | 🔄 Improved; unresolved | VU continuations and VIF/Q optimizations measured; Fuji and other scenes remain below target |
+| Gameplay speed | 🔄 Improved; unresolved | V10 CL=0 VIF fills measured: Fuji-3 39.54→47.98 simulated FPS in warmed pairs; full-game target remains open |
 | Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
 | Regression tests | 🟢 Local suite | 23/23 local CTest in v10; differential VU/VIF/Q checks and 12 unchanged images |
 | Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
