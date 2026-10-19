@@ -61,14 +61,16 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [x] Reuse unchanged GS descriptors; validate original-comparison payload equivalence,23 tests and12 unchanged images
 - [x] Warm both binaries at the same path before paired measurements; run36 native short route windows in v9
 - [x] Specialize CL=0 VIF fills after profiling; validate 69,168 differential cases, 23 tests, images, native pairs and 36 short route windows in v10
+- [x] Validate exact SSE2 VU code equality with2,308,915 cases, real cache mutations,25 tests, images, five paired scenes and36 short route windows in v11
+- [x] Trace the live active-scene clock and validate optional native telemetry through active/pause/resume cases; original cadence still open
 - [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
-- [ ] Extract race timer independently; complete laps/races, classes 2–4, Mirror and 30-minute sessions
+- [ ] Confirm original cadence using the live scene clock; complete laps/races, classes 2–4, Mirror and 30-minute sessions
 - [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
 - [ ] Verify actual audio underruns, physical input latency, pause/restart, saves and shutdown
 - [ ] Reproducible Windows build and launch on a clean machine without development fallbacks ([#7](../../issues/7))
 - [ ] Complete source/dependency provenance and distribution review ([#1](../../issues/1), [#8](../../issues/8))
 
-**Performance remains P0.** Fuji, Grand Prix and some Skorost/Thunderhead samples still run below target. A 600-VBlank route sample is approximately ten simulated seconds; it does not validate every section of a track or a full race. The EE clock and a pre-present callback are not independent race-timer or scanout measurements. Regression agreement does not establish PS2 accuracy.
+**Performance remains P0.** Fuji, Grand Prix and some Skorost/Thunderhead samples still run below target. A 600-VBlank route sample is approximately ten simulated seconds; it does not validate every section of a track or a full race. V11 separately validates an active-scene clock; original PS2 cadence and per-player lap/result timing remain unconfirmed. Pre-present callbacks do not measure scanout. Regression agreement does not establish PS2 accuracy.
 
 **Vanilla definition of done:** repeatable tests show intended speed and original graphics, menus, physics, audio, controls and saving over typical full races and long sessions; authorized packaging passes clean-machine QA. These acceptance gates remain open. No milestone overrides distribution rights.
 

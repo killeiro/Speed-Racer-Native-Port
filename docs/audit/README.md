@@ -4,6 +4,7 @@ Documentation publication: **2026-10-19**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v11: exact VU equality and live scene clock](vanilla-v11.md) and [metrics](vanilla-v11-metrics.json):2,308,915 byte-equality cases,25 tests, five paired scenes,12 unchanged images and36 short routes; optional active-scene clock trace; original cadence/performance acceptance open.
 - [Vanilla v10: zero-input VIF fills](vanilla-v10.md) and [metrics](vanilla-v10-metrics.json): profile-backed specialization, 69,168 differential cases, native scene pairs and 36 short route windows; full-game acceptance remains open.
 - [Vanilla v9: GS descriptor reuse](vanilla-v9.md) and [metrics](vanilla-v9-metrics.json): validated CPU preparation reduction, small scene-dependent gains,23 tests and36 short route windows; global acceptance remains open.
 - [Vanilla v8: pacing investigation](vanilla-v8.md) and [metrics](vanilla-v8-metrics.json): same-binary tests, rejected prototypes, opt-in policy and preserved default; menu cadence improves, race results remain mixed.
@@ -35,7 +36,7 @@ The detailed reports identify executable SHA-256, scene/state hash, CPU/GPU, com
 
 The 36 routes cover six environments, three lengths and two directions in **Class 1**, at 600 VBlanks per run, discarding 60 warm-up frames. Acceleration and scripted boost/steering/Car-Fu commands are included. Screenshots and perturbative profiling are collected separately from performance runs. These are approximately ten simulated seconds per route, **not full laps/races, all track sections, classes 2–4, Mirror, all effects or 30-minute stability tests**. Scripted inputs do not imply fully deterministic threaded execution.
 
-Simulated FPS and EE cycles/wall-time are measured separately from pre-present callbacks. The runtime's nominal rate is 60 Hz; independent extraction of the in-game race timer is still pending. Pre-present callbacks do not measure scanout or input-to-photon. An empty audio-queue sample is not a hardware underrun counter. Near-60 mean FPS alone does not certify frame pacing.
+Simulated FPS and EE cycles/wall-time are measured separately from pre-present callbacks. The runtime's nominal rate is 60 Hz; v11 separately validates a live active-scene clock through writer tracing and pause/resume; original PS2 cadence and per-player lap/result timing remain unconfirmed. Pre-present callbacks do not measure scanout or input-to-photon. An empty audio-queue sample is not a hardware underrun counter. Near-60 mean FPS alone does not certify frame pacing.
 
 Fuji, Grand Prix and some Skorost/Thunderhead samples still fall below target. Original/native synchronized visual pairs, remaining dithering/CRTC/fog behavior, actual audio underruns, physical input latency, shutdown and clean-machine deployment remain open. Development-path fallbacks still exist. A public playable release is not available.
 

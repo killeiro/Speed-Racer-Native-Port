@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Local Vanilla v11 VU equality and live scene clock
+
+- Audit sampled CRT callers and validate exact SSE2 equality over existing VU cache spans; preserve every byte and invalidation path.
+- Pass2,308,915 equality cases, real cache mutation checks,25 tests,12 unchanged images and36 short route windows.
+- Retain five-scene warmed alternating pairs and all adverse results; full-game performance and pacing remain open.
+- Trace a live scene-clock writer, validate active/pause/resume behavior and add read-only opt-in telemetry on the EE thread.
+- Prepare a private GUI package; publish documentation/metrics only. Prior baselines and legacy default pacing remain available.
+
 ## 2026-10-19 — Local Vanilla v10 VIF fills
 
 - Profile the zero-input fill workload in Fuji/Skorost; predecode mask rows and omit protected destinations without changing simulation or effects.
