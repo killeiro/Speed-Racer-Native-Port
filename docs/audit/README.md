@@ -4,6 +4,7 @@ Documentation publication: **2026-10-19**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v8: pacing investigation](vanilla-v8.md) and [metrics](vanilla-v8-metrics.json): same-binary tests, rejected prototypes, opt-in policy and preserved default; menu cadence improves, race results remain mixed.
 - [Vanilla v7: VU register accesses](vanilla-v7.md) and [metrics](vanilla-v7-metrics.json): experimental local candidate with mixed performance; audited access contract, adjacent comparisons and native threaded checks.
 
 - [Vanilla v6: VIF parser context](vanilla-v6.md) and [metrics](vanilla-v6-metrics.json): latest validated local artifact; small performance change, 21 tests, frozen-parser comparison and 36 short route samples.

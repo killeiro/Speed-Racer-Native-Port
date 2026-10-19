@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Local Vanilla v8 pacing investigation
+
+- Audit audio-queue quantization and GPU submission order; retain rejected pre-publication probes and adverse measurements.
+- Implement opt-in monotonic pacing with audio reserve; preserve default pacing because race results remain mixed despite improved menu cadence.
+- Add same-binary alternating comparison helper; pass22 local tests,12 unchanged images and three final-build smoke modes.
+- Document the next ten priorities and keep full-game acceptance open. No implementation or binary is published.
+
 ## 2026-10-19 — Vanilla v7 evidence (documentation only)
 
 - Record VU register-access optimization and removal of unused global TPC reads from helper construction.
