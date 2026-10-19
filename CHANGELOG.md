@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Local Vanilla v12 GS read-set reuse
+
+- Trace EE/VU/GS work and waits in Fuji/Skorost; keep diagnostic probes separate and absent from the final artifact.
+- Skip repeated texture-read registration for exact descriptors already in the same GS batch; preserve hazards and payloads.
+- Pass 74,531 differential draws,26 tests,12 unchanged images and36 short native route windows.
+- Retain warmed five-scene pairs, adverse results, prior baselines and legacy default pacing; global acceptance stays open.
+- Prepare a private GUI package; publish documentation and sanitized metrics only.
+
 ## 2026-10-19 — Local Vanilla v11 VU equality and live scene clock
 
 - Audit sampled CRT callers and validate exact SSE2 equality over existing VU cache spans; preserve every byte and invalidation path.

@@ -4,6 +4,7 @@ Documentation publication: **2026-10-19**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v12: exact GS read-registration reuse](vanilla-v12.md) and [metrics](vanilla-v12-metrics.json): native work/wait diagnosis,74,531 differential draws,26 tests, five paired scenes,12 unchanged images and36 short routes; Vanilla acceptance remains open.
 - [Vanilla v11: exact VU equality and live scene clock](vanilla-v11.md) and [metrics](vanilla-v11-metrics.json):2,308,915 byte-equality cases,25 tests, five paired scenes,12 unchanged images and36 short routes; optional active-scene clock trace; original cadence/performance acceptance open.
 - [Vanilla v10: zero-input VIF fills](vanilla-v10.md) and [metrics](vanilla-v10-metrics.json): profile-backed specialization, 69,168 differential cases, native scene pairs and 36 short route windows; full-game acceptance remains open.
 - [Vanilla v9: GS descriptor reuse](vanilla-v9.md) and [metrics](vanilla-v9-metrics.json): validated CPU preparation reduction, small scene-dependent gains,23 tests and36 short route windows; global acceptance remains open.
