@@ -1,0 +1,12 @@
+{
+  "before": {
+    "frame_04400.ppm": "ef608519c56f41f90eeb95a5f430512fbfa8567c1318cd2fe3cdc8dd08697d55",
+    "frame_04600.ppm": "c14f357b7283d275b5b9d45202b47e2d35e3e4a42e13a7d6e35df2fc4f8fb195",
+    "frame_04800.ppm": "5f054856ac955deb9b53d8cc84520f93fb3ba413bc0533b2fc6860aa2fad48f2"
+  },
+  "after": {
+    "frame_04400.ppm": "ef608519c56f41f90eeb95a5f430512fbfa8567c1318cd2fe3cdc8dd08697d55",
+    "frame_04600.ppm": "c14f357b7283d275b5b9d45202b47e2d35e3e4a42e13a7d6e35df2fc4f8fb195",
+    "frame_04800.ppm": "5f054856ac955deb9b53d8cc84520f93fb3ba413bc0533b2fc6860aa2fad48f2"
+  }
+}

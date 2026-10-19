@@ -1,0 +1,2079 @@
+{
+  "date": "2026-10-17",
+  "base_commit": "604d51a",
+  "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+  "pe_subsystem": 2,
+  "machine": {
+    "cpu": "Intel Core i5-12400",
+    "gpu": "NVIDIA RTX 3060",
+    "driver": "617.14",
+    "backend": "Vulkan",
+    "present_mode": "Mailbox",
+    "scale": 1,
+    "source": "640x479"
+  },
+  "conditions": {
+    "mode": "native Windows GUI, threaded",
+    "route_class": 1,
+    "frame_start": 10600,
+    "frames_per_route": 600,
+    "warmup_frames": 60,
+    "nominal_runtime_hz": 60,
+    "audio": "WASAPI",
+    "physical_controllers_disabled_in_replays": true,
+    "input": "R2 continuous; L2 at +180 for 120 frames; right stick right at +210 for 16; Circle at +300 for 12",
+    "limitation": "Short windows from grid, not complete laps/races. No scanout or physical input-to-photon measurement. EE clock speed is not an independent extraction of the game race timer."
+  },
+  "ctest": {
+    "passed": 20,
+    "failed": 0,
+    "vif_differential_checks": 29968,
+    "vu_fixture_checks": 4400,
+    "gs_region_rectangles": 1300,
+    "gs_changed_bytes": 133749
+  },
+  "real_vu_checks": 1264870,
+  "quality": [
+    {
+      "environment": "Thunderhead",
+      "exit": 0,
+      "summary": [
+        "379678",
+        "20091098",
+        "4811"
+      ]
+    },
+    {
+      "environment": "Onuris",
+      "exit": 0,
+      "summary": [
+        "331584",
+        "27659925",
+        "10905"
+      ]
+    },
+    {
+      "environment": "Fuji",
+      "exit": 0,
+      "summary": [
+        "5741276",
+        "1280147035",
+        "640832"
+      ]
+    },
+    {
+      "environment": "Aurora",
+      "exit": 0,
+      "summary": [
+        "686052",
+        "98855353",
+        "78805"
+      ]
+    },
+    {
+      "environment": "Grand-Prix",
+      "exit": 0,
+      "summary": [
+        "3626260",
+        "716316639",
+        "440773"
+      ]
+    },
+    {
+      "environment": "Skorost",
+      "exit": 0,
+      "summary": [
+        "725862",
+        "109709915",
+        "88744"
+      ]
+    }
+  ],
+  "image_regression": {
+    "frame_10440.ppm": true,
+    "frame_10560.ppm": true,
+    "frame_10680.ppm": true
+  },
+  "comparisons": {
+    "native": {
+      "before_fps_mean": 28.55423742283029,
+      "after_fps_mean": 56.13644356752322,
+      "gain_percent": 96.59584227817557,
+      "before_p95_ms_mean": 72.03566666666667,
+      "after_p95_ms_mean": 25.557433333333332
+    },
+    "zero-mask": {
+      "before_fps_mean": 36.189353397237795,
+      "after_fps_mean": 38.855535516990564,
+      "gain_percent": 7.367310740501565,
+      "before_p95_ms_mean": 37.1203,
+      "after_p95_ms_mean": 33.8631
+    }
+  },
+  "paired_runs": [
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "4e85195f9c6f3217683e3dd9a15b0f0ef8cd4656dc3fe5c6ac10bebbcd4cf6dd",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 36.65281738714999,
+      "simulation_speed_percent": 61.09136444521949,
+      "nominal_hz": 60,
+      "measured_wall_s": 14.7055544,
+      "interval_ms": {
+        "p50": 27.7013,
+        "p95": 35.7943,
+        "p99": 40.2243
+      },
+      "post_wait_ms_mean": 16.77392648148148,
+      "pace_wait_ms_mean": 0.0015437037037037036,
+      "present_callback_fps": 36.62554840705635,
+      "present_interval_ms": {
+        "p50": 27.5106,
+        "p95": 34.7658,
+        "p99": 39.3295
+      },
+      "stutter_over_33ms": 57,
+      "audio_queue_mean_ms": 3.6722811918063316,
+      "zero_audio_queue_samples": 330,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=761760 DATE_CT24=0 mip_requested=145145 dither16_requested=1115 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 64479 copy_read 0 copy_write 0 load_clut 70006 display 598 raster 305615 resolve 0 snapshot 56950 decode 69418",
+        "[gpu] raster batches 305646, prims 32526746, tiles 11033568, avg/display 511.11 batches, avg/batch 106.42 prims, max/batch 42073; key flushes 13174, feedback flushes 248096",
+        "[gpu] feedback detail: candidate checks 367913, UV fallback 212774, framebuffer overlap 35217, depth overlap 0",
+        "[vu-cont] native_segments=7146707 interpreted_instructions=27916036 checked_calls=0"
+      ],
+      "group": "zero-mask",
+      "variant": "before",
+      "pair": 1
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 39.21006829004449,
+      "simulation_speed_percent": 65.35368199741305,
+      "nominal_hz": 60,
+      "measured_wall_s": 13.7464693,
+      "interval_ms": {
+        "p50": 25.8939,
+        "p95": 33.2552,
+        "p99": 35.9435
+      },
+      "post_wait_ms_mean": 14.99104037037037,
+      "pace_wait_ms_mean": 0.0016342592592592593,
+      "present_callback_fps": 39.192498488643835,
+      "present_interval_ms": {
+        "p50": 25.7917,
+        "p95": 32.816,
+        "p99": 34.8227
+      },
+      "stutter_over_33ms": 19,
+      "audio_queue_mean_ms": 4.401024208566108,
+      "zero_audio_queue_samples": 288,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=761976 DATE_CT24=0 mip_requested=145145 dither16_requested=1115 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 64479 copy_read 0 copy_write 0 load_clut 70006 display 598 raster 305615 resolve 0 snapshot 56950 decode 69418",
+        "[gpu] raster batches 305646, prims 32526746, tiles 11033568, avg/display 511.11 batches, avg/batch 106.42 prims, max/batch 42073; key flushes 13174, feedback flushes 248096",
+        "[gpu] feedback detail: candidate checks 367913, UV fallback 212774, framebuffer overlap 35217, depth overlap 0",
+        "[vu-cont] native_segments=7148419 interpreted_instructions=27923206 checked_calls=0"
+      ],
+      "group": "zero-mask",
+      "variant": "after",
+      "pair": 1
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 38.86200008597226,
+      "simulation_speed_percent": 64.77353664918057,
+      "nominal_hz": 60,
+      "measured_wall_s": 13.8695898,
+      "interval_ms": {
+        "p50": 26.3099,
+        "p95": 33.7151,
+        "p99": 36.5156
+      },
+      "post_wait_ms_mean": 15.211989444444445,
+      "pace_wait_ms_mean": 0.0015142592592592592,
+      "present_callback_fps": 38.840009062958096,
+      "present_interval_ms": {
+        "p50": 26.1956,
+        "p95": 33.023,
+        "p99": 36.3549
+      },
+      "stutter_over_33ms": 21,
+      "audio_queue_mean_ms": 4.188718808193669,
+      "zero_audio_queue_samples": 289,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=761841 DATE_CT24=0 mip_requested=145145 dither16_requested=1115 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 64479 copy_read 0 copy_write 0 load_clut 70006 display 598 raster 305615 resolve 0 snapshot 56950 decode 69418",
+        "[gpu] raster batches 305646, prims 32526746, tiles 11033568, avg/display 511.11 batches, avg/batch 106.42 prims, max/batch 42073; key flushes 13174, feedback flushes 248096",
+        "[gpu] feedback detail: candidate checks 367913, UV fallback 212774, framebuffer overlap 35217, depth overlap 0",
+        "[vu-cont] native_segments=7147528 interpreted_instructions=27919520 checked_calls=0"
+      ],
+      "group": "zero-mask",
+      "variant": "after",
+      "pair": 2
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "4e85195f9c6f3217683e3dd9a15b0f0ef8cd4656dc3fe5c6ac10bebbcd4cf6dd",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 36.01381243962383,
+      "simulation_speed_percent": 60.02629804884187,
+      "nominal_hz": 60,
+      "measured_wall_s": 14.9664799,
+      "interval_ms": {
+        "p50": 28.214,
+        "p95": 36.531,
+        "p99": 40.0834
+      },
+      "post_wait_ms_mean": 17.23250703703704,
+      "pace_wait_ms_mean": 0.0015205555555555556,
+      "present_callback_fps": 35.98325431814966,
+      "present_interval_ms": {
+        "p50": 28.1846,
+        "p95": 36.1119,
+        "p99": 39.3345
+      },
+      "stutter_over_33ms": 60,
+      "audio_queue_mean_ms": 3.239005586592179,
+      "zero_audio_queue_samples": 341,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=761724 DATE_CT24=0 mip_requested=145142 dither16_requested=1115 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 64479 copy_read 0 copy_write 0 load_clut 70006 display 598 raster 305615 resolve 0 snapshot 56950 decode 69418",
+        "[gpu] raster batches 305646, prims 32526746, tiles 11033568, avg/display 511.11 batches, avg/batch 106.42 prims, max/batch 42073; key flushes 13174, feedback flushes 248096",
+        "[gpu] feedback detail: candidate checks 367913, UV fallback 212774, framebuffer overlap 35217, depth overlap 0",
+        "[vu-cont] native_segments=7145799 interpreted_instructions=27912496 checked_calls=0"
+      ],
+      "group": "zero-mask",
+      "variant": "before",
+      "pair": 2
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "4e85195f9c6f3217683e3dd9a15b0f0ef8cd4656dc3fe5c6ac10bebbcd4cf6dd",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 35.90143036493957,
+      "simulation_speed_percent": 59.83898436408124,
+      "nominal_hz": 60,
+      "measured_wall_s": 15.0133294,
+      "interval_ms": {
+        "p50": 27.6364,
+        "p95": 39.0356,
+        "p99": 46.7337
+      },
+      "post_wait_ms_mean": 17.097203333333333,
+      "pace_wait_ms_mean": 0.0016138888888888889,
+      "present_callback_fps": 35.8722241795705,
+      "present_interval_ms": {
+        "p50": 27.6697,
+        "p95": 38.5274,
+        "p99": 44.3449
+      },
+      "stutter_over_33ms": 72,
+      "audio_queue_mean_ms": 3.427729981378026,
+      "zero_audio_queue_samples": 337,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=761767 DATE_CT24=0 mip_requested=145145 dither16_requested=1115 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 64479 copy_read 0 copy_write 0 load_clut 70006 display 598 raster 305615 resolve 0 snapshot 56950 decode 69418",
+        "[gpu] raster batches 305646, prims 32526746, tiles 11033568, avg/display 511.11 batches, avg/batch 106.42 prims, max/batch 42073; key flushes 13174, feedback flushes 248096",
+        "[gpu] feedback detail: candidate checks 367913, UV fallback 212774, framebuffer overlap 35217, depth overlap 0",
+        "[vu-cont] native_segments=7146743 interpreted_instructions=27916180 checked_calls=0"
+      ],
+      "group": "zero-mask",
+      "variant": "before",
+      "pair": 3
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 38.49453817495495,
+      "simulation_speed_percent": 64.1610666911804,
+      "nominal_hz": 60,
+      "measured_wall_s": 14.001986400000002,
+      "interval_ms": {
+        "p50": 26.2729,
+        "p95": 34.619,
+        "p99": 38.1465
+      },
+      "post_wait_ms_mean": 15.46994925925926,
+      "pace_wait_ms_mean": 0.001623888888888889,
+      "present_callback_fps": 38.46959966392614,
+      "present_interval_ms": {
+        "p50": 26.0296,
+        "p95": 34.167,
+        "p99": 37.7275
+      },
+      "stutter_over_33ms": 36,
+      "audio_queue_mean_ms": 4.202392923649907,
+      "zero_audio_queue_samples": 288,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=761770 DATE_CT24=0 mip_requested=145145 dither16_requested=1115 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 64479 copy_read 0 copy_write 0 load_clut 70006 display 598 raster 305615 resolve 0 snapshot 56950 decode 69418",
+        "[gpu] raster batches 305646, prims 32526746, tiles 11033568, avg/display 511.11 batches, avg/batch 106.42 prims, max/batch 42073; key flushes 13174, feedback flushes 248096",
+        "[gpu] feedback detail: candidate checks 367913, UV fallback 212774, framebuffer overlap 35217, depth overlap 0",
+        "[vu-cont] native_segments=7147027 interpreted_instructions=27917300 checked_calls=0"
+      ],
+      "group": "zero-mask",
+      "variant": "after",
+      "pair": 3
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [
+        "PS2_VU_CONT_OFF=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 28.5333490663785,
+      "simulation_speed_percent": 47.55710042592897,
+      "nominal_hz": 60,
+      "measured_wall_s": 18.8901765,
+      "interval_ms": {
+        "p50": 20.5201,
+        "p95": 71.694,
+        "p99": 76.7743
+      },
+      "post_wait_ms_mean": 21.380409074074073,
+      "pace_wait_ms_mean": 2.725867962962963,
+      "present_callback_fps": 28.467758069265543,
+      "present_interval_ms": {
+        "p50": 19.9631,
+        "p95": 71.0999,
+        "p99": 77.1908
+      },
+      "stutter_over_33ms": 209,
+      "audio_queue_mean_ms": 45.59154748603352,
+      "zero_audio_queue_samples": 221,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=840279 DATE_CT24=0 mip_requested=237521 dither16_requested=1090 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 86637 copy_read 0 copy_write 0 load_clut 69691 display 598 raster 300254 resolve 0 snapshot 60532 decode 76523",
+        "[gpu] raster batches 300283, prims 28755193, tiles 11022822, avg/display 502.15 batches, avg/batch 95.76 prims, max/batch 25519; key flushes 10841, feedback flushes 247041",
+        "[gpu] feedback detail: candidate checks 399090, UV fallback 207999, framebuffer overlap 39019, depth overlap 0",
+        "[vu-cont] native_segments=0 interpreted_instructions=820737776 checked_calls=0"
+      ],
+      "group": "native",
+      "variant": "before",
+      "pair": 1
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 56.2887422411086,
+      "simulation_speed_percent": 93.81756629346815,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.575626999999999,
+      "interval_ms": {
+        "p50": 18.6177,
+        "p95": 25.9507,
+        "p99": 29.8984
+      },
+      "post_wait_ms_mean": 4.821199629629629,
+      "pace_wait_ms_mean": 1.7367533333333334,
+      "present_callback_fps": 56.15344920261214,
+      "present_interval_ms": {
+        "p50": 17.9522,
+        "p95": 24.715,
+        "p99": 27.8102
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 41.41653072625699,
+      "zero_audio_queue_samples": 42,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=840903 DATE_CT24=0 mip_requested=237667 dither16_requested=1091 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 86637 copy_read 0 copy_write 0 load_clut 69691 display 598 raster 300254 resolve 0 snapshot 60532 decode 76523",
+        "[gpu] raster batches 300577, prims 28782192, tiles 11033101, avg/display 502.64 batches, avg/batch 95.76 prims, max/batch 25519; key flushes 10852, feedback flushes 247288",
+        "[gpu] feedback detail: candidate checks 399537, UV fallback 208190, framebuffer overlap 39075, depth overlap 0",
+        "[vu-cont] native_segments=2357398 interpreted_instructions=9179454 checked_calls=0"
+      ],
+      "group": "native",
+      "variant": "after",
+      "pair": 1
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 55.252395196457215,
+      "simulation_speed_percent": 92.09026606088959,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.755233200000001,
+      "interval_ms": {
+        "p50": 19.0077,
+        "p95": 26.7458,
+        "p99": 30.1531
+      },
+      "post_wait_ms_mean": 5.158327592592593,
+      "pace_wait_ms_mean": 1.5821194444444444,
+      "present_callback_fps": 55.13226399533292,
+      "present_interval_ms": {
+        "p50": 18.3578,
+        "p95": 25.1207,
+        "p99": 27.4555
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 42.13656052141527,
+      "zero_audio_queue_samples": 35,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=840614 DATE_CT24=0 mip_requested=237560 dither16_requested=1090 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 86637 copy_read 0 copy_write 0 load_clut 69691 display 598 raster 300254 resolve 0 snapshot 60532 decode 76523",
+        "[gpu] raster batches 300286, prims 28779381, tiles 11025005, avg/display 502.15 batches, avg/batch 95.84 prims, max/batch 25519; key flushes 10841, feedback flushes 247041",
+        "[gpu] feedback detail: candidate checks 399090, UV fallback 207999, framebuffer overlap 39019, depth overlap 0",
+        "[vu-cont] native_segments=2355510 interpreted_instructions=9172330 checked_calls=0"
+      ],
+      "group": "native",
+      "variant": "after",
+      "pair": 2
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [
+        "PS2_VU_CONT_OFF=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 28.544744946878442,
+      "simulation_speed_percent": 47.57609416662576,
+      "nominal_hz": 60,
+      "measured_wall_s": 18.882635,
+      "interval_ms": {
+        "p50": 20.1084,
+        "p95": 71.7247,
+        "p99": 79.1884
+      },
+      "post_wait_ms_mean": 21.961015925925928,
+      "pace_wait_ms_mean": 2.0316862962962965,
+      "present_callback_fps": 28.487508116287344,
+      "present_interval_ms": {
+        "p50": 19.4687,
+        "p95": 71.3269,
+        "p99": 77.2587
+      },
+      "stutter_over_33ms": 200,
+      "audio_queue_mean_ms": 43.585335195530725,
+      "zero_audio_queue_samples": 222,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=840222 DATE_CT24=0 mip_requested=237498 dither16_requested=1090 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 86637 copy_read 0 copy_write 0 load_clut 69691 display 598 raster 300254 resolve 0 snapshot 60532 decode 76523",
+        "[gpu] raster batches 300283, prims 28755193, tiles 11022822, avg/display 502.15 batches, avg/batch 95.76 prims, max/batch 25519; key flushes 10841, feedback flushes 247041",
+        "[gpu] feedback detail: candidate checks 399090, UV fallback 207999, framebuffer overlap 39019, depth overlap 0",
+        "[vu-cont] native_segments=0 interpreted_instructions=820662150 checked_calls=0"
+      ],
+      "group": "native",
+      "variant": "before",
+      "pair": 2
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [
+        "PS2_VU_CONT_OFF=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 28.58461825523393,
+      "simulation_speed_percent": 47.64255180275409,
+      "nominal_hz": 60,
+      "measured_wall_s": 18.8562952,
+      "interval_ms": {
+        "p50": 20.2003,
+        "p95": 72.6883,
+        "p99": 77.2898
+      },
+      "post_wait_ms_mean": 22.660853703703705,
+      "pace_wait_ms_mean": 1.312021111111111,
+      "present_callback_fps": 28.524055722555552,
+      "present_interval_ms": {
+        "p50": 19.867,
+        "p95": 71.9916,
+        "p99": 77.203
+      },
+      "stutter_over_33ms": 210,
+      "audio_queue_mean_ms": 41.180633147113596,
+      "zero_audio_queue_samples": 224,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=840220 DATE_CT24=0 mip_requested=237496 dither16_requested=1090 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 86637 copy_read 0 copy_write 0 load_clut 69691 display 598 raster 300254 resolve 0 snapshot 60532 decode 76523",
+        "[gpu] raster batches 300283, prims 28755193, tiles 11022822, avg/display 502.15 batches, avg/batch 95.76 prims, max/batch 25519; key flushes 10841, feedback flushes 247041",
+        "[gpu] feedback detail: candidate checks 399090, UV fallback 207999, framebuffer overlap 39019, depth overlap 0",
+        "[vu-cont] native_segments=0 interpreted_instructions=820630734 checked_calls=0"
+      ],
+      "group": "native",
+      "variant": "before",
+      "pair": 3
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 56.86819326500385,
+      "simulation_speed_percent": 94.78334884045157,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.4780574,
+      "interval_ms": {
+        "p50": 18.9029,
+        "p95": 23.9758,
+        "p99": 29.5271
+      },
+      "post_wait_ms_mean": 4.719696851851852,
+      "pace_wait_ms_mean": 1.8082087037037038,
+      "present_callback_fps": 56.84435637321193,
+      "present_interval_ms": {
+        "p50": 18.0218,
+        "p95": 23.3891,
+        "p99": 26.4155
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 47.335817504655495,
+      "zero_audio_queue_samples": 28,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=840912 DATE_CT24=0 mip_requested=237676 dither16_requested=1091 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 86637 copy_read 0 copy_write 0 load_clut 69691 display 598 raster 300254 resolve 0 snapshot 60532 decode 76523",
+        "[gpu] raster batches 300577, prims 28782192, tiles 11033101, avg/display 502.64 batches, avg/batch 95.76 prims, max/batch 25519; key flushes 10852, feedback flushes 247288",
+        "[gpu] feedback detail: candidate checks 399537, UV fallback 208190, framebuffer overlap 39075, depth overlap 0",
+        "[vu-cont] native_segments=2357058 interpreted_instructions=9178102 checked_calls=0"
+      ],
+      "group": "native",
+      "variant": "after",
+      "pair": 3
+    }
+  ],
+  "routes": [
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 57.92042775579135,
+      "simulation_speed_percent": 96.53712899551131,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.305870500000001,
+      "interval_ms": {
+        "p50": 19.0382,
+        "p95": 24.4719,
+        "p99": 30.1944
+      },
+      "post_wait_ms_mean": 3.275020740740741,
+      "pace_wait_ms_mean": 3.322451666666667,
+      "present_callback_fps": 57.85734471139856,
+      "present_interval_ms": {
+        "p50": 17.5846,
+        "p95": 23.4454,
+        "p99": 27.378
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 53.93047858472998,
+      "zero_audio_queue_samples": 16,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=840895 DATE_CT24=0 mip_requested=237659 dither16_requested=1091 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 86637 copy_read 0 copy_write 0 load_clut 69691 display 598 raster 300254 resolve 0 snapshot 60532 decode 76523",
+        "[gpu] raster batches 300577, prims 28782192, tiles 11033101, avg/display 502.64 batches, avg/batch 95.76 prims, max/batch 25519; key flushes 10852, feedback flushes 247288",
+        "[gpu] feedback detail: candidate checks 399537, UV fallback 208190, framebuffer overlap 39075, depth overlap 0",
+        "[vu-cont] native_segments=2357090 interpreted_instructions=9178222 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Thunderhead-1",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "e4d7056d0c92ca8c885648318dd556f4070ac645b80ad8630e84fe5eaf28685e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 58.3300563709673,
+      "simulation_speed_percent": 97.22214426835474,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.2405191,
+      "interval_ms": {
+        "p50": 18.0704,
+        "p95": 23.0878,
+        "p99": 29.4165
+      },
+      "post_wait_ms_mean": 4.928230925925926,
+      "pace_wait_ms_mean": 1.4985798148148148,
+      "present_callback_fps": 58.3663645835943,
+      "present_interval_ms": {
+        "p50": 17.5339,
+        "p95": 22.4108,
+        "p99": 25.6292
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 49.97023091247672,
+      "zero_audio_queue_samples": 5,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=832945 DATE_CT24=0 mip_requested=236159 dither16_requested=1082 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 85798 copy_read 0 copy_write 0 load_clut 69010 display 598 raster 298324 resolve 0 snapshot 59947 decode 76317",
+        "[gpu] raster batches 298651, prims 28566239, tiles 10828892, avg/display 499.42 batches, avg/batch 95.65 prims, max/batch 25743; key flushes 10764, feedback flushes 245425",
+        "[gpu] feedback detail: candidate checks 399384, UV fallback 206471, framebuffer overlap 38954, depth overlap 0",
+        "[vu-cont] native_segments=2354521 interpreted_instructions=9173488 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Thunderhead-2",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "ffa391cb37135c8755baf29a4db05c96ff0b76b54d939568bd1ab9942b28558d",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 58.474617882475485,
+      "simulation_speed_percent": 97.46255667758341,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.217674599999999,
+      "interval_ms": {
+        "p50": 18.7989,
+        "p95": 23.174,
+        "p99": 30.5568
+      },
+      "post_wait_ms_mean": 3.173395740740741,
+      "pace_wait_ms_mean": 3.525535185185185,
+      "present_callback_fps": 58.320183236151124,
+      "present_interval_ms": {
+        "p50": 17.9522,
+        "p95": 23.9391,
+        "p99": 29.9835
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 56.307893854748606,
+      "zero_audio_queue_samples": 9,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=788685 DATE_CT24=0 mip_requested=221282 dither16_requested=1026 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 84745 copy_read 0 copy_write 0 load_clut 66633 display 598 raster 283855 resolve 0 snapshot 58992 decode 76853",
+        "[gpu] raster batches 284167, prims 26136743, tiles 10240131, avg/display 475.20 batches, avg/batch 91.98 prims, max/batch 24970; key flushes 10202, feedback flushes 234460",
+        "[gpu] feedback detail: candidate checks 455828, UV fallback 195775, framebuffer overlap 38685, depth overlap 0",
+        "[vu-cont] native_segments=2290722 interpreted_instructions=8989630 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Thunderhead-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "8b5e93810c75295f80c07587fc3137b40872332045821053dfbd8c75c1382cc9",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 59.95266720239955,
+      "simulation_speed_percent": 99.92407400374881,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9904257,
+      "interval_ms": {
+        "p50": 18.8458,
+        "p95": 29.3063,
+        "p99": 31.0415
+      },
+      "post_wait_ms_mean": 0.016022222222222222,
+      "pace_wait_ms_mean": 6.398763333333333,
+      "present_callback_fps": 60.04442730622263,
+      "present_interval_ms": {
+        "p50": 15.214,
+        "p95": 28.1168,
+        "p99": 33.4668
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 82.99815027829314,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=678953 DATE_CT24=0 mip_requested=240308 dither16_requested=1239 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 87943 copy_read 0 copy_write 0 load_clut 76885 display 600 raster 339197 resolve 0 snapshot 66783 decode 55480",
+        "[gpu] raster batches 339197, prims 22413811, tiles 12060652, avg/display 565.33 batches, avg/batch 66.08 prims, max/batch 17263; key flushes 12435, feedback flushes 278826",
+        "[gpu] feedback detail: candidate checks 443154, UV fallback 236649, framebuffer overlap 42112, depth overlap 0",
+        "[vu-cont] native_segments=678574 interpreted_instructions=2831624 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Thunderhead-4",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "33c4807f1abe503c0bb99894ba094fa05c3a1109fe842a9f817447849205334f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96471093449273,
+      "simulation_speed_percent": 99.94526225930572,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.98862,
+      "interval_ms": {
+        "p50": 18.6856,
+        "p95": 28.5906,
+        "p99": 30.4711
+      },
+      "post_wait_ms_mean": 0.013902407407407407,
+      "pace_wait_ms_mean": 6.291157037037037,
+      "present_callback_fps": 60.028367468629696,
+      "present_interval_ms": {
+        "p50": 15.9378,
+        "p95": 26.4767,
+        "p99": 32.5299
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 82.99073469387756,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=680334 DATE_CT24=0 mip_requested=256757 dither16_requested=1199 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 101657 copy_read 0 copy_write 0 load_clut 78681 display 600 raster 330179 resolve 0 snapshot 67023 decode 54068",
+        "[gpu] raster batches 330179, prims 21203827, tiles 11817861, avg/display 550.30 batches, avg/batch 64.22 prims, max/batch 17594; key flushes 12119, feedback flushes 272051",
+        "[gpu] feedback detail: candidate checks 473899, UV fallback 229009, framebuffer overlap 43000, depth overlap 0",
+        "[vu-cont] native_segments=700490 interpreted_instructions=2916320 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Thunderhead-5",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "d51be364b0ed26aaa4d4d8b50d6ec20b93fde78c1f0494eece2b7981a0c0d304",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02541669917115,
+      "simulation_speed_percent": 100.04841621232579,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9795295,
+      "interval_ms": {
+        "p50": 18.9889,
+        "p95": 28.577,
+        "p99": 31.0343
+      },
+      "post_wait_ms_mean": 0.000774074074074074,
+      "pace_wait_ms_mean": 6.303395555555555,
+      "present_callback_fps": 60.05431584184719,
+      "present_interval_ms": {
+        "p50": 15.657,
+        "p95": 26.4628,
+        "p99": 32.3304
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 82.70006679035251,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=668946 DATE_CT24=0 mip_requested=246169 dither16_requested=1198 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 103463 copy_read 0 copy_write 0 load_clut 79047 display 600 raster 330115 resolve 0 snapshot 66454 decode 52371",
+        "[gpu] raster batches 330115, prims 21357067, tiles 11907824, avg/display 550.19 batches, avg/batch 64.70 prims, max/batch 17479; key flushes 12102, feedback flushes 271666",
+        "[gpu] feedback detail: candidate checks 471085, UV fallback 228818, framebuffer overlap 42848, depth overlap 0",
+        "[vu-cont] native_segments=681412 interpreted_instructions=2846386 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Onuris-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "8cc7940aeb71d32a36fd6577d0aac1ec484c5d56e8670027a2170ddeba89fe8e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.020938955987994,
+      "simulation_speed_percent": 100.03837496640224,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9801994,
+      "interval_ms": {
+        "p50": 18.8676,
+        "p95": 29.2628,
+        "p99": 30.5496
+      },
+      "post_wait_ms_mean": 0.08838907407407408,
+      "pace_wait_ms_mean": 6.171831851851852,
+      "present_callback_fps": 60.180462561326706,
+      "present_interval_ms": {
+        "p50": 15.6298,
+        "p95": 25.0343,
+        "p99": 32.9151
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 82.13975881261595,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=758637 DATE_CT24=0 mip_requested=210486 dither16_requested=1162 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 102451 copy_read 0 copy_write 0 load_clut 91451 display 600 raster 315068 resolve 0 snapshot 52897 decode 69341",
+        "[gpu] raster batches 315068, prims 25153764, tiles 12076242, avg/display 525.11 batches, avg/batch 79.84 prims, max/batch 12971; key flushes 14160, feedback flushes 252101",
+        "[gpu] feedback detail: candidate checks 673102, UV fallback 221942, framebuffer overlap 30113, depth overlap 0",
+        "[vu-cont] native_segments=523031 interpreted_instructions=2118020 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Onuris-1",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "91b5d8bb214059b1f0d947216aa05f54eb7f9f182f20ee6be3de3f2e9e0bf1a8",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.06282616190061,
+      "simulation_speed_percent": 100.10857991515383,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9739367,
+      "interval_ms": {
+        "p50": 18.8406,
+        "p95": 28.5211,
+        "p99": 29.8056
+      },
+      "post_wait_ms_mean": 0.010923518518518518,
+      "pace_wait_ms_mean": 6.198325555555556,
+      "present_callback_fps": 60.12405880052637,
+      "present_interval_ms": {
+        "p50": 15.7578,
+        "p95": 25.3504,
+        "p99": 30.2022
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 82.4229944341373,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=749370 DATE_CT24=0 mip_requested=216595 dither16_requested=1130 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 102807 copy_read 0 copy_write 0 load_clut 91964 display 600 raster 307294 resolve 0 snapshot 51989 decode 68845",
+        "[gpu] raster batches 307294, prims 24520584, tiles 11777198, avg/display 512.16 batches, avg/batch 79.80 prims, max/batch 12147; key flushes 13751, feedback flushes 245612",
+        "[gpu] feedback detail: candidate checks 666100, UV fallback 215830, framebuffer overlap 29664, depth overlap 0",
+        "[vu-cont] native_segments=508034 interpreted_instructions=2057672 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Onuris-2",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "4f4c63b421fab667230aa50edd6c0cfed0dcf1e627fc8c2305f5b74c28733639",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.024611872674456,
+      "simulation_speed_percent": 100.04463529132461,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9796499,
+      "interval_ms": {
+        "p50": 18.5382,
+        "p95": 29.5299,
+        "p99": 30.559
+      },
+      "post_wait_ms_mean": 0.006598703703703704,
+      "pace_wait_ms_mean": 6.277282962962963,
+      "present_callback_fps": 60.05464370916911,
+      "present_interval_ms": {
+        "p50": 15.6496,
+        "p95": 25.5965,
+        "p99": 30.6852
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 82.2547996289425,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=734254 DATE_CT24=0 mip_requested=205026 dither16_requested=1124 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 98834 copy_read 0 copy_write 0 load_clut 88002 display 600 raster 298582 resolve 0 snapshot 44348 decode 69444",
+        "[gpu] raster batches 298582, prims 24386505, tiles 11660668, avg/display 497.64 batches, avg/batch 81.67 prims, max/batch 12463; key flushes 13427, feedback flushes 237092",
+        "[gpu] feedback detail: candidate checks 463960, UV fallback 214684, framebuffer overlap 22355, depth overlap 0",
+        "[vu-cont] native_segments=482075 interpreted_instructions=1948308 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Onuris-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9ee083086ccd034e7db175a8c6cd89742d1554795afe9ae33fba94b206dcde16",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.328634359507724,
+      "simulation_speed_percent": 100.55139076726043,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.934397500000001,
+      "interval_ms": {
+        "p50": 17.888,
+        "p95": 29.049,
+        "p99": 30.5644
+      },
+      "post_wait_ms_mean": 1.786735,
+      "pace_wait_ms_mean": 4.449540185185185,
+      "present_callback_fps": 60.445677531281895,
+      "present_interval_ms": {
+        "p50": 16.3662,
+        "p95": 23.5993,
+        "p99": 29.0385
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 75.58937291280148,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=765602 DATE_CT24=0 mip_requested=205470 dither16_requested=1117 AA1_requested=0",
+        "[gpu] 599 submits, dispatches: upload 92836 copy_read 0 copy_write 0 load_clut 81874 display 599 raster 310966 resolve 0 snapshot 59053 decode 67644",
+        "[gpu] raster batches 311267, prims 26871601, tiles 12001485, avg/display 519.64 batches, avg/batch 86.33 prims, max/batch 14894; key flushes 12650, feedback flushes 250506",
+        "[gpu] feedback detail: candidate checks 381971, UV fallback 213156, framebuffer overlap 37300, depth overlap 0",
+        "[vu-cont] native_segments=681999 interpreted_instructions=3104990 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Onuris-4",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "f4767141716a570c43058dec8eaabe2dcbcc18b60c5613443bb6d04cba85a93e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 59.40967461089749,
+      "simulation_speed_percent": 99.0195493925678,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.0725964,
+      "interval_ms": {
+        "p50": 17.9158,
+        "p95": 22.3256,
+        "p99": 30.0684
+      },
+      "post_wait_ms_mean": 2.733255,
+      "pace_wait_ms_mean": 3.7354075925925927,
+      "present_callback_fps": 59.621757578840736,
+      "present_interval_ms": {
+        "p50": 16.82,
+        "p95": 24.8431,
+        "p99": 30.7363
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 56.70376066790352,
+      "zero_audio_queue_samples": 5,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=759591 DATE_CT24=0 mip_requested=201470 dither16_requested=1097 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 88991 copy_read 0 copy_write 0 load_clut 79759 display 600 raster 307837 resolve 0 snapshot 60853 decode 66685",
+        "[gpu] raster batches 307837, prims 26248796, tiles 11351077, avg/display 513.06 batches, avg/batch 85.27 prims, max/batch 14755; key flushes 12268, feedback flushes 248957",
+        "[gpu] feedback detail: candidate checks 440229, UV fallback 209527, framebuffer overlap 39430, depth overlap 0",
+        "[vu-cont] native_segments=689386 interpreted_instructions=3156426 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Onuris-5",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "8e59f03ee8a8fd5528b2cc24169fbf318eb87470909c32612aa1087f8b209e5e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.22257548827213,
+      "simulation_speed_percent": 100.37485492087468,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.950132,
+      "interval_ms": {
+        "p50": 17.7059,
+        "p95": 23.4439,
+        "p99": 30.2849
+      },
+      "post_wait_ms_mean": 2.239977962962963,
+      "pace_wait_ms_mean": 4.11818,
+      "present_callback_fps": 60.47338227054843,
+      "present_interval_ms": {
+        "p50": 16.5436,
+        "p95": 24.4998,
+        "p99": 33.6808
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 66.45639517625231,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=740176 DATE_CT24=0 mip_requested=197696 dither16_requested=1065 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 88643 copy_read 0 copy_write 0 load_clut 78615 display 600 raster 300230 resolve 0 snapshot 59740 decode 65437",
+        "[gpu] raster batches 300230, prims 25488188, tiles 11140326, avg/display 500.38 batches, avg/batch 84.90 prims, max/batch 14859; key flushes 11889, feedback flushes 242267",
+        "[gpu] feedback detail: candidate checks 438256, UV fallback 203415, framebuffer overlap 38813, depth overlap 0",
+        "[vu-cont] native_segments=670876 interpreted_instructions=3074550 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Fuji-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "4c69fc89e195966bfeb30d0c5c474c96f1d999bbfd6de4d684c12a7df3c234e7",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 40.27099555810919,
+      "simulation_speed_percent": 67.12150567996494,
+      "nominal_hz": 60,
+      "measured_wall_s": 13.3843227,
+      "interval_ms": {
+        "p50": 25.7043,
+        "p95": 31.7374,
+        "p99": 35.3101
+      },
+      "post_wait_ms_mean": 14.120501666666666,
+      "pace_wait_ms_mean": 0.001638888888888889,
+      "present_callback_fps": 40.30495585233813,
+      "present_interval_ms": {
+        "p50": 25.4349,
+        "p95": 31.372,
+        "p99": 34.5121
+      },
+      "stutter_over_33ms": 12,
+      "audio_queue_mean_ms": 4.578532588454376,
+      "zero_audio_queue_samples": 254,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=783890 DATE_CT24=0 mip_requested=210655 dither16_requested=1111 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 75812 copy_read 0 copy_write 0 load_clut 75366 display 598 raster 307847 resolve 0 snapshot 59860 decode 57388",
+        "[gpu] raster batches 307880, prims 34871982, tiles 11139088, avg/display 514.85 batches, avg/batch 113.26 prims, max/batch 21603; key flushes 12914, feedback flushes 250157",
+        "[gpu] feedback detail: candidate checks 376650, UV fallback 212010, framebuffer overlap 38116, depth overlap 0",
+        "[vu-cont] native_segments=6766835 interpreted_instructions=26289320 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Fuji-1",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "e74861b42beadcbdc742fcd970ebecb260b4dca72d9a04048b0f263d54f6906c",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 42.032620807366946,
+      "simulation_speed_percent": 70.05748623737344,
+      "nominal_hz": 60,
+      "measured_wall_s": 12.8233736,
+      "interval_ms": {
+        "p50": 24.9322,
+        "p95": 30.5731,
+        "p99": 32.1278
+      },
+      "post_wait_ms_mean": 13.390824444444444,
+      "pace_wait_ms_mean": 0.0015496296296296295,
+      "present_callback_fps": 41.99939717960204,
+      "present_interval_ms": {
+        "p50": 24.6621,
+        "p95": 30.044,
+        "p99": 32.1975
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 5.7492364990689016,
+      "zero_audio_queue_samples": 217,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=764353 DATE_CT24=0 mip_requested=211656 dither16_requested=1102 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 75422 copy_read 0 copy_write 0 load_clut 74586 display 598 raster 302480 resolve 0 snapshot 56338 decode 62068",
+        "[gpu] raster batches 302762, prims 34726328, tiles 11057809, avg/display 506.29 batches, avg/batch 114.70 prims, max/batch 20361; key flushes 12856, feedback flushes 245574",
+        "[gpu] feedback detail: candidate checks 349240, UV fallback 210482, framebuffer overlap 35111, depth overlap 0",
+        "[vu-cont] native_segments=6767431 interpreted_instructions=26277322 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Fuji-2",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "91da58e939ed795e96f5035c957b85d02b59161c91aca6897512d177c9719551",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 44.47799906503781,
+      "simulation_speed_percent": 74.13346109686057,
+      "nominal_hz": 60,
+      "measured_wall_s": 12.1183509,
+      "interval_ms": {
+        "p50": 24.2004,
+        "p95": 29.6052,
+        "p99": 30.801
+      },
+      "post_wait_ms_mean": 12.340913148148148,
+      "pace_wait_ms_mean": 0.001435925925925926,
+      "present_callback_fps": 44.51156785192545,
+      "present_interval_ms": {
+        "p50": 24.1042,
+        "p95": 29.0558,
+        "p99": 30.6359
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 6.707664804469274,
+      "zero_audio_queue_samples": 185,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=720254 DATE_CT24=0 mip_requested=195616 dither16_requested=1073 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 58118 copy_read 0 copy_write 0 load_clut 66698 display 598 raster 298074 resolve 0 snapshot 59350 decode 56328",
+        "[gpu] raster batches 298388, prims 32715488, tiles 10507446, avg/display 498.98 batches, avg/batch 109.64 prims, max/batch 21597; key flushes 12213, feedback flushes 243432",
+        "[gpu] feedback detail: candidate checks 424522, UV fallback 204943, framebuffer overlap 38489, depth overlap 0",
+        "[vu-cont] native_segments=6383483 interpreted_instructions=24782968 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 38.89022759939305,
+      "simulation_speed_percent": 64.820585073632,
+      "nominal_hz": 60,
+      "measured_wall_s": 13.8595229,
+      "interval_ms": {
+        "p50": 26.2951,
+        "p95": 33.9473,
+        "p99": 36.9827
+      },
+      "post_wait_ms_mean": 15.189572592592592,
+      "pace_wait_ms_mean": 0.0015031481481481482,
+      "present_callback_fps": 38.856396202391466,
+      "present_interval_ms": {
+        "p50": 26.0334,
+        "p95": 33.698,
+        "p99": 35.5651
+      },
+      "stutter_over_33ms": 28,
+      "audio_queue_mean_ms": 4.6133128491620115,
+      "zero_audio_queue_samples": 279,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=761936 DATE_CT24=0 mip_requested=145145 dither16_requested=1115 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 64479 copy_read 0 copy_write 0 load_clut 70006 display 598 raster 305615 resolve 0 snapshot 56950 decode 69418",
+        "[gpu] raster batches 305646, prims 32526746, tiles 11033568, avg/display 511.11 batches, avg/batch 106.42 prims, max/batch 42073; key flushes 13174, feedback flushes 248096",
+        "[gpu] feedback detail: candidate checks 367913, UV fallback 212774, framebuffer overlap 35217, depth overlap 0",
+        "[vu-cont] native_segments=7149044 interpreted_instructions=27925492 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 39.91798313434848,
+      "simulation_speed_percent": 66.53206573333244,
+      "nominal_hz": 60,
+      "measured_wall_s": 13.5026862,
+      "interval_ms": {
+        "p50": 25.6093,
+        "p95": 33.1531,
+        "p99": 37.3436
+      },
+      "post_wait_ms_mean": 14.517286666666667,
+      "pace_wait_ms_mean": 0.001490925925925926,
+      "present_callback_fps": 39.88979215538936,
+      "present_interval_ms": {
+        "p50": 25.4496,
+        "p95": 32.6655,
+        "p99": 36.2087
+      },
+      "stutter_over_33ms": 22,
+      "audio_queue_mean_ms": 4.798288640595903,
+      "zero_audio_queue_samples": 272,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=722722 DATE_CT24=0 mip_requested=140506 dither16_requested=1102 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 63767 copy_read 0 copy_write 0 load_clut 69057 display 598 raster 302474 resolve 0 snapshot 56262 decode 76865",
+        "[gpu] raster batches 302510, prims 32082296, tiles 10857522, avg/display 505.87 batches, avg/batch 106.05 prims, max/batch 42985; key flushes 12867, feedback flushes 245192",
+        "[gpu] feedback detail: candidate checks 359275, UV fallback 210291, framebuffer overlap 34878, depth overlap 0",
+        "[vu-cont] native_segments=7068874 interpreted_instructions=27616532 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Fuji-5",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "0231da8c7582752bf85afd677235fb2398617ba6a1a6206692a56d531d1d0674",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 39.51802265246376,
+      "simulation_speed_percent": 65.86545919044747,
+      "nominal_hz": 60,
+      "measured_wall_s": 13.639346399999999,
+      "interval_ms": {
+        "p50": 25.6767,
+        "p95": 34.411,
+        "p99": 39.4749
+      },
+      "post_wait_ms_mean": 14.797416666666667,
+      "pace_wait_ms_mean": 0.0014975925925925927,
+      "present_callback_fps": 39.485214566553005,
+      "present_interval_ms": {
+        "p50": 25.6176,
+        "p95": 33.454,
+        "p99": 37.5583
+      },
+      "stutter_over_33ms": 28,
+      "audio_queue_mean_ms": 4.717603351955307,
+      "zero_audio_queue_samples": 266,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=748489 DATE_CT24=0 mip_requested=138262 dither16_requested=1105 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 40979 copy_read 0 copy_write 0 load_clut 62624 display 598 raster 302023 resolve 0 snapshot 56285 decode 70654",
+        "[gpu] raster batches 302054, prims 31717895, tiles 10655462, avg/display 505.11 batches, avg/batch 105.01 prims, max/batch 42541; key flushes 12455, feedback flushes 245784",
+        "[gpu] feedback detail: candidate checks 358989, UV fallback 210864, framebuffer overlap 34920, depth overlap 0",
+        "[vu-cont] native_segments=7036669 interpreted_instructions=27476620 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Aurora-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "fa46ba909c337a92fc75e4903047798a354fe2eaa3d91dc98903669b31b0cb59",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96847438387649,
+      "simulation_speed_percent": 99.95209818136168,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9880559,
+      "interval_ms": {
+        "p50": 18.6441,
+        "p95": 29.1143,
+        "p99": 30.5154
+      },
+      "post_wait_ms_mean": 0.005714814814814815,
+      "pace_wait_ms_mean": 6.174870185185185,
+      "present_callback_fps": 59.97582317818764,
+      "present_interval_ms": {
+        "p50": 15.6828,
+        "p95": 25.2173,
+        "p99": 32.3371
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 82.51455658627087,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=675840 DATE_CT24=0 mip_requested=181838 dither16_requested=1151 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 94176 copy_read 0 copy_write 0 load_clut 77242 display 600 raster 319458 resolve 0 snapshot 63598 decode 42583",
+        "[gpu] raster batches 319458, prims 20056542, tiles 11786780, avg/display 532.43 batches, avg/batch 62.78 prims, max/batch 12022; key flushes 13659, feedback flushes 260992",
+        "[gpu] feedback detail: candidate checks 459471, UV fallback 219841, framebuffer overlap 41151, depth overlap 0",
+        "[vu-cont] native_segments=884913 interpreted_instructions=3936978 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Aurora-1",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "3f8a02c2974afb7cae444e9b3f4c1d95624463659d746bae37ced3e19c3e6631",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.023391973329026,
+      "simulation_speed_percent": 100.04231563782993,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.979832400000001,
+      "interval_ms": {
+        "p50": 18.7685,
+        "p95": 29.5245,
+        "p99": 30.55
+      },
+      "post_wait_ms_mean": 0.0006709259259259259,
+      "pace_wait_ms_mean": 6.417705,
+      "present_callback_fps": 60.04363735398673,
+      "present_interval_ms": {
+        "p50": 15.5285,
+        "p95": 26.2103,
+        "p99": 33.6847
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 82.97960667903526,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=653035 DATE_CT24=0 mip_requested=202579 dither16_requested=1093 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 80397 copy_read 0 copy_write 0 load_clut 71487 display 600 raster 304104 resolve 0 snapshot 62717 decode 42852",
+        "[gpu] raster batches 304104, prims 18527832, tiles 10618475, avg/display 506.84 batches, avg/batch 60.93 prims, max/batch 13017; key flushes 12568, feedback flushes 250146",
+        "[gpu] feedback detail: candidate checks 508093, UV fallback 208763, framebuffer overlap 41383, depth overlap 0",
+        "[vu-cont] native_segments=832348 interpreted_instructions=3797078 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Aurora-2",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "91373e33859f4a2e7c2a066f5106f1163c961e89c9c4e24bdd6cb6153d04927d",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 60.01990901583106,
+      "simulation_speed_percent": 100.0373227374477,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9803535,
+      "interval_ms": {
+        "p50": 18.8517,
+        "p95": 29.7994,
+        "p99": 30.9091
+      },
+      "post_wait_ms_mean": 0.09048148148148148,
+      "pace_wait_ms_mean": 6.509066666666667,
+      "present_callback_fps": 60.027534485289564,
+      "present_interval_ms": {
+        "p50": 16.4835,
+        "p95": 25.8462,
+        "p99": 31.7318
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 81.24674768089054,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=620181 DATE_CT24=0 mip_requested=175543 dither16_requested=1042 AA1_requested=0",
+        "[gpu] 599 submits, dispatches: upload 52330 copy_read 0 copy_write 0 load_clut 60702 display 599 raster 290854 resolve 0 snapshot 62024 decode 48375",
+        "[gpu] raster batches 291177, prims 17686683, tiles 10036824, avg/display 486.11 batches, avg/batch 60.74 prims, max/batch 12863; key flushes 11977, feedback flushes 240483",
+        "[gpu] feedback detail: candidate checks 526973, UV fallback 198831, framebuffer overlap 41012, depth overlap 0",
+        "[vu-cont] native_segments=4193313 interpreted_instructions=16898700 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 59.81409203140465,
+      "simulation_speed_percent": 99.69273285141507,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.011254399999999,
+      "interval_ms": {
+        "p50": 16.7341,
+        "p95": 25.2216,
+        "p99": 30.7438
+      },
+      "post_wait_ms_mean": 3.007489814814815,
+      "pace_wait_ms_mean": 3.2884681481481484,
+      "present_callback_fps": 59.98267980645692,
+      "present_interval_ms": {
+        "p50": 16.1443,
+        "p95": 24.2541,
+        "p99": 28.1202
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 63.60419294990724,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=677893 DATE_CT24=0 mip_requested=199260 dither16_requested=1184 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 39939 copy_read 0 copy_write 0 load_clut 63856 display 600 raster 326121 resolve 0 snapshot 64631 decode 45008",
+        "[gpu] raster batches 326121, prims 21585173, tiles 11655176, avg/display 543.53 batches, avg/batch 66.19 prims, max/batch 13628; key flushes 13968, feedback flushes 267632",
+        "[gpu] feedback detail: candidate checks 472000, UV fallback 226144, framebuffer overlap 40221, depth overlap 0",
+        "[vu-cont] native_segments=1336387 interpreted_instructions=5715692 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Aurora-4",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "5b293c65efb50a20e4b3afb552bf468d9a5baa9ce564aaf01c9145a1b24ae2d0",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 59.95649183197918,
+      "simulation_speed_percent": 99.9315408668669,
+      "nominal_hz": 60,
+      "measured_wall_s": 8.9898522,
+      "interval_ms": {
+        "p50": 19.0406,
+        "p95": 29.0008,
+        "p99": 30.3955
+      },
+      "post_wait_ms_mean": 0.01988740740740741,
+      "pace_wait_ms_mean": 6.417748888888889,
+      "present_callback_fps": 60.049052388631544,
+      "present_interval_ms": {
+        "p50": 16.3513,
+        "p95": 24.7725,
+        "p99": 31.3578
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 81.68460296846011,
+      "zero_audio_queue_samples": 0,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=670927 DATE_CT24=0 mip_requested=205458 dither16_requested=1086 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 85384 copy_read 0 copy_write 0 load_clut 72511 display 600 raster 300327 resolve 0 snapshot 59086 decode 45348",
+        "[gpu] raster batches 300327, prims 20226774, tiles 11172100, avg/display 500.55 batches, avg/batch 67.35 prims, max/batch 13417; key flushes 12652, feedback flushes 245303",
+        "[gpu] feedback detail: candidate checks 381631, UV fallback 207426, framebuffer overlap 36042, depth overlap 0",
+        "[vu-cont] native_segments=1018050 interpreted_instructions=4466974 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Aurora-5",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "87087b5d00275046ed4afa0cbbb6af9f6e897fc72c1b183e33b9fc8e9091fb68",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 58.93025536491369,
+      "simulation_speed_percent": 98.2222545344716,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.1464053,
+      "interval_ms": {
+        "p50": 18.2736,
+        "p95": 23.6034,
+        "p99": 29.9525
+      },
+      "post_wait_ms_mean": 5.119889074074074,
+      "pace_wait_ms_mean": 1.7349168518518518,
+      "present_callback_fps": 59.15544160151757,
+      "present_interval_ms": {
+        "p50": 17.837,
+        "p95": 23.6773,
+        "p99": 28.5643
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 39.32838589981447,
+      "zero_audio_queue_samples": 8,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=663323 DATE_CT24=0 mip_requested=195983 dither16_requested=1047 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 85009 copy_read 0 copy_write 0 load_clut 70799 display 600 raster 289661 resolve 0 snapshot 57015 decode 44133",
+        "[gpu] raster batches 289661, prims 20698145, tiles 10805930, avg/display 482.77 batches, avg/batch 71.46 prims, max/batch 12553; key flushes 12266, feedback flushes 236594",
+        "[gpu] feedback detail: candidate checks 350900, UV fallback 199977, framebuffer overlap 34451, depth overlap 0",
+        "[vu-cont] native_segments=4712048 interpreted_instructions=18864290 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 53.114911153978596,
+      "simulation_speed_percent": 88.52806643370582,
+      "nominal_hz": 60,
+      "measured_wall_s": 10.147809500000001,
+      "interval_ms": {
+        "p50": 18.8023,
+        "p95": 30.5448,
+        "p99": 33.5917
+      },
+      "post_wait_ms_mean": 6.828326851851852,
+      "pace_wait_ms_mean": 1.761347962962963,
+      "present_callback_fps": 53.10178922770577,
+      "present_interval_ms": {
+        "p50": 18.5759,
+        "p95": 29.8514,
+        "p99": 33.4016
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 33.61269832402235,
+      "zero_audio_queue_samples": 58,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=824903 DATE_CT24=0 mip_requested=195385 dither16_requested=922 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 84802 copy_read 0 copy_write 0 load_clut 73025 display 598 raster 255366 resolve 0 snapshot 53015 decode 119852",
+        "[gpu] raster batches 255395, prims 25574090, tiles 8827595, avg/display 427.08 batches, avg/batch 100.14 prims, max/batch 39923; key flushes 9158, feedback flushes 210443",
+        "[gpu] feedback detail: candidate checks 385306, UV fallback 175911, framebuffer overlap 34445, depth overlap 0",
+        "[vu-cont] native_segments=5435257 interpreted_instructions=21614772 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Grand-Prix-1",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "6865e7a204eeff00bfb4023bcacf35b1b0fcdb4eb1cdaa51d4ba3199d93b7696",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 54.32246526917371,
+      "simulation_speed_percent": 90.54080348886305,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.9222301,
+      "interval_ms": {
+        "p50": 19.0494,
+        "p95": 29.2535,
+        "p99": 31.0837
+      },
+      "post_wait_ms_mean": 5.927912777777777,
+      "pace_wait_ms_mean": 2.493673148148148,
+      "present_callback_fps": 54.199783794337314,
+      "present_interval_ms": {
+        "p50": 18.8288,
+        "p95": 27.49,
+        "p99": 30.5941
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 41.18189199255121,
+      "zero_audio_queue_samples": 50,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=828575 DATE_CT24=0 mip_requested=197312 dither16_requested=917 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 80658 copy_read 0 copy_write 0 load_clut 68428 display 598 raster 270954 resolve 0 snapshot 70607 decode 116256",
+        "[gpu] raster batches 270983, prims 25895988, tiles 8664596, avg/display 453.15 batches, avg/batch 95.56 prims, max/batch 41445; key flushes 9168, feedback flushes 227045",
+        "[gpu] feedback detail: candidate checks 584203, UV fallback 174956, framebuffer overlap 38664, depth overlap 0",
+        "[vu-cont] native_segments=5373105 interpreted_instructions=21385462 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Grand-Prix-2",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "05b1e2a37ffbc3c8fbab267ad498d4b1e9fb0ea9a5d1ef54cf4d803eef023b21",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 55.669624348708005,
+      "simulation_speed_percent": 92.78558802687951,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.6821203,
+      "interval_ms": {
+        "p50": 16.2427,
+        "p95": 30.2682,
+        "p99": 33.1517
+      },
+      "post_wait_ms_mean": 5.058857962962963,
+      "pace_wait_ms_mean": 2.8056924074074074,
+      "present_callback_fps": 55.54199873395272,
+      "present_interval_ms": {
+        "p50": 16.9388,
+        "p95": 29.3205,
+        "p99": 33.8253
+      },
+      "stutter_over_33ms": 9,
+      "audio_queue_mean_ms": 45.469895716946,
+      "zero_audio_queue_samples": 27,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=779479 DATE_CT24=0 mip_requested=180150 dither16_requested=870 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 79993 copy_read 0 copy_write 0 load_clut 67911 display 598 raster 245157 resolve 0 snapshot 54605 decode 122112",
+        "[gpu] raster batches 245187, prims 24239665, tiles 8533776, avg/display 410.01 batches, avg/batch 98.86 prims, max/batch 41101; key flushes 8653, feedback flushes 203260",
+        "[gpu] feedback detail: candidate checks 447401, UV fallback 165979, framebuffer overlap 34972, depth overlap 0",
+        "[vu-cont] native_segments=5134598 interpreted_instructions=20398758 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Grand-Prix-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "5e3db0cd5bfe42622a9f3d3c45bee4e47bc6dd1b7e8826632b0a9b4f89b433f3",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 53.79269916504848,
+      "simulation_speed_percent": 89.65802215856668,
+      "nominal_hz": 60,
+      "measured_wall_s": 10.019947100000001,
+      "interval_ms": {
+        "p50": 20.0262,
+        "p95": 26.4624,
+        "p99": 29.8292
+      },
+      "post_wait_ms_mean": 6.5585831481481485,
+      "pace_wait_ms_mean": 1.920407037037037,
+      "present_callback_fps": 53.737476982905164,
+      "present_interval_ms": {
+        "p50": 19.6908,
+        "p95": 25.4869,
+        "p99": 28.1037
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 34.70881784386617,
+      "zero_audio_queue_samples": 57,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=798914 DATE_CT24=0 mip_requested=182919 dither16_requested=1015 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 87908 copy_read 0 copy_write 0 load_clut 70988 display 598 raster 277966 resolve 0 snapshot 53518 decode 100670",
+        "[gpu] raster batches 277996, prims 24676466, tiles 10669504, avg/display 464.88 batches, avg/batch 88.77 prims, max/batch 32110; key flushes 10013, feedback flushes 227460",
+        "[gpu] feedback detail: candidate checks 351341, UV fallback 193674, framebuffer overlap 33780, depth overlap 0",
+        "[vu-cont] native_segments=5451305 interpreted_instructions=21735544 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Grand-Prix-4",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "540896a43cf8ad36e661cd715006670379f8edb1640fc1400ef51dfe925240e9",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 54.86548550539377,
+      "simulation_speed_percent": 91.44584358401252,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.8240268,
+      "interval_ms": {
+        "p50": 19.7316,
+        "p95": 28.3545,
+        "p99": 30.2241
+      },
+      "post_wait_ms_mean": 5.518164814814815,
+      "pace_wait_ms_mean": 2.5155937037037037,
+      "present_callback_fps": 54.79070749193571,
+      "present_interval_ms": {
+        "p50": 19.1752,
+        "p95": 26.005,
+        "p99": 28.8732
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 41.75094423791822,
+      "zero_audio_queue_samples": 46,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=772650 DATE_CT24=0 mip_requested=178739 dither16_requested=973 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 87181 copy_read 0 copy_write 0 load_clut 70101 display 598 raster 266510 resolve 0 snapshot 51730 decode 92382",
+        "[gpu] raster batches 266796, prims 23931649, tiles 10390953, avg/display 446.15 batches, avg/batch 89.70 prims, max/batch 32570; key flushes 9573, feedback flushes 218482",
+        "[gpu] feedback detail: candidate checks 350334, UV fallback 185843, framebuffer overlap 32614, depth overlap 0",
+        "[vu-cont] native_segments=5256923 interpreted_instructions=20963894 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Grand-Prix-5",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "3e59b3175114212f17db7bcad8899d1fa7ce26b7999f098ec32dcb6862804832",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 56.39997809713652,
+      "simulation_speed_percent": 94.00325823962505,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.5567413,
+      "interval_ms": {
+        "p50": 18.9629,
+        "p95": 26.9655,
+        "p99": 30.5206
+      },
+      "post_wait_ms_mean": 6.070493888888889,
+      "pace_wait_ms_mean": 1.7208942592592593,
+      "present_callback_fps": 56.28524313076341,
+      "present_interval_ms": {
+        "p50": 18.6454,
+        "p95": 25.8409,
+        "p99": 28.0735
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 38.22347672253259,
+      "zero_audio_queue_samples": 31,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=755126 DATE_CT24=0 mip_requested=171499 dither16_requested=953 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 84135 copy_read 0 copy_write 0 load_clut 67786 display 598 raster 260866 resolve 0 snapshot 50177 decode 103753",
+        "[gpu] raster batches 260896, prims 22849578, tiles 10332521, avg/display 436.28 batches, avg/batch 87.58 prims, max/batch 27746; key flushes 9369, feedback flushes 213266",
+        "[gpu] feedback detail: candidate checks 331770, UV fallback 181832, framebuffer overlap 31386, depth overlap 0",
+        "[vu-cont] native_segments=5126126 interpreted_instructions=20428520 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Skorost-0",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "665c4a739db8ea793879b79134319b0f690e2ebe66da8e5ab2a3c721134b341e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 48.587795717471685,
+      "simulation_speed_percent": 80.98190788001385,
+      "nominal_hz": 60,
+      "measured_wall_s": 11.0933207,
+      "interval_ms": {
+        "p50": 22.3095,
+        "p95": 28.5969,
+        "p99": 30.9405
+      },
+      "post_wait_ms_mean": 9.190552777777778,
+      "pace_wait_ms_mean": 0.23004592592592593,
+      "present_callback_fps": 48.805154295141065,
+      "present_interval_ms": {
+        "p50": 22.0986,
+        "p95": 28.2377,
+        "p99": 30.8327
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 14.740890538033396,
+      "zero_audio_queue_samples": 116,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=885805 DATE_CT24=0 mip_requested=253981 dither16_requested=1048 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 63146 copy_read 0 copy_write 0 load_clut 60647 display 600 raster 261436 resolve 0 snapshot 33225 decode 80675",
+        "[gpu] raster batches 261436, prims 37730294, tiles 9328548, avg/display 435.73 batches, avg/batch 144.32 prims, max/batch 42061; key flushes 10959, feedback flushes 212896",
+        "[gpu] feedback detail: candidate checks 327596, UV fallback 200168, framebuffer overlap 12685, depth overlap 0",
+        "[vu-cont] native_segments=829626 interpreted_instructions=3810822 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 44.710669707766414,
+      "simulation_speed_percent": 74.52004271606035,
+      "nominal_hz": 60,
+      "measured_wall_s": 12.055288000000001,
+      "interval_ms": {
+        "p50": 23.7516,
+        "p95": 33.5926,
+        "p99": 38.2005
+      },
+      "post_wait_ms_mean": 11.318635185185185,
+      "pace_wait_ms_mean": 0.001543148148148148,
+      "present_callback_fps": 44.703607713505114,
+      "present_interval_ms": {
+        "p50": 22.7767,
+        "p95": 32.2184,
+        "p99": 36.2815
+      },
+      "stutter_over_33ms": 19,
+      "audio_queue_mean_ms": 7.738098696461825,
+      "zero_audio_queue_samples": 163,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=806659 DATE_CT24=0 mip_requested=230888 dither16_requested=922 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 72562 copy_read 0 copy_write 0 load_clut 59158 display 598 raster 235093 resolve 0 snapshot 33141 decode 99035",
+        "[gpu] raster batches 235103, prims 44394055, tiles 8568284, avg/display 393.15 batches, avg/batch 188.83 prims, max/batch 59115; key flushes 9780, feedback flushes 191030",
+        "[gpu] feedback detail: candidate checks 396184, UV fallback 175911, framebuffer overlap 15119, depth overlap 0",
+        "[vu-cont] native_segments=1162626 interpreted_instructions=5011670 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 54.35726746682044,
+      "simulation_speed_percent": 90.5991916857425,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.9158774,
+      "interval_ms": {
+        "p50": 19.4652,
+        "p95": 27.9021,
+        "p99": 30.082
+      },
+      "post_wait_ms_mean": 7.013517592592593,
+      "pace_wait_ms_mean": 0.7613062962962963,
+      "present_callback_fps": 54.58149306023657,
+      "present_interval_ms": {
+        "p50": 17.7378,
+        "p95": 26.5181,
+        "p99": 28.497
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 23.931987012987012,
+      "zero_audio_queue_samples": 52,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=832656 DATE_CT24=0 mip_requested=243221 dither16_requested=926 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 70598 copy_read 0 copy_write 0 load_clut 58300 display 600 raster 234077 resolve 0 snapshot 30827 decode 98365",
+        "[gpu] raster batches 234077, prims 33851918, tiles 8596715, avg/display 390.13 batches, avg/batch 144.62 prims, max/batch 42294; key flushes 9820, feedback flushes 189496",
+        "[gpu] feedback detail: candidate checks 301672, UV fallback 176866, framebuffer overlap 12615, depth overlap 0",
+        "[vu-cont] native_segments=687985 interpreted_instructions=3130670 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Skorost-3",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "9a692c2abf916309b5dc67e4a2b5d1028e4dd5e4a574d14791529826b8f2fd16",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 59.03209832561531,
+      "simulation_speed_percent": 98.39004683114698,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.1306258,
+      "interval_ms": {
+        "p50": 17.2295,
+        "p95": 23.5064,
+        "p99": 30.5177
+      },
+      "post_wait_ms_mean": 3.652086851851852,
+      "pace_wait_ms_mean": 3.0960674074074075,
+      "present_callback_fps": 59.267379537786574,
+      "present_interval_ms": {
+        "p50": 16.6393,
+        "p95": 24.3339,
+        "p99": 29.7184
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 49.295018552875696,
+      "zero_audio_queue_samples": 14,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=778057 DATE_CT24=0 mip_requested=209316 dither16_requested=1204 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 83464 copy_read 0 copy_write 0 load_clut 73750 display 600 raster 312484 resolve 0 snapshot 48708 decode 48251",
+        "[gpu] raster batches 312484, prims 20261485, tiles 11047844, avg/display 520.81 batches, avg/batch 64.84 prims, max/batch 18262; key flushes 13364, feedback flushes 255092",
+        "[gpu] feedback detail: candidate checks 610149, UV fallback 229964, framebuffer overlap 25109, depth overlap 0",
+        "[vu-cont] native_segments=946175 interpreted_instructions=4332852 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Skorost-4",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "d8648bb0dc8b645d2d594d75b354a1faf5e8467de0330adb5e4f485fd0bb22d8",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 58.03579686713077,
+      "simulation_speed_percent": 96.72925418892684,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.287371400000001,
+      "interval_ms": {
+        "p50": 17.4725,
+        "p95": 25.1745,
+        "p99": 29.824
+      },
+      "post_wait_ms_mean": 4.229534074074074,
+      "pace_wait_ms_mean": 2.5217835185185185,
+      "present_callback_fps": 58.2670400715515,
+      "present_interval_ms": {
+        "p50": 16.8153,
+        "p95": 23.0923,
+        "p99": 27.8472
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 42.26594248608534,
+      "zero_audio_queue_samples": 29,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=820251 DATE_CT24=0 mip_requested=221174 dither16_requested=1194 AA1_requested=0",
+        "[gpu] 600 submits, dispatches: upload 38038 copy_read 0 copy_write 0 load_clut 59457 display 600 raster 301222 resolve 0 snapshot 41798 decode 61986",
+        "[gpu] raster batches 301222, prims 22093369, tiles 9873256, avg/display 502.04 batches, avg/batch 73.35 prims, max/batch 18979; key flushes 12181, feedback flushes 246640",
+        "[gpu] feedback detail: candidate checks 457890, UV fallback 228054, framebuffer overlap 18431, depth overlap 0",
+        "[vu-cont] native_segments=925616 interpreted_instructions=4300832 checked_calls=0"
+      ]
+    },
+    {
+      "track": "Skorost-5",
+      "repeat": 1,
+      "exe_sha256": "37bff9d2205fd1fabea42201517cc8b04435e6d0739177455773bbf58e91b132",
+      "state_sha256": "1b308377cf019ead81ee8f317c6d50b6ee8c28a6ca373dbc88015ab857cb7fef",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "frames_recorded": 600,
+      "simulation_fps": 58.88129772894507,
+      "simulation_speed_percent": 98.13984040690926,
+      "nominal_hz": 60,
+      "measured_wall_s": 9.1540102,
+      "interval_ms": {
+        "p50": 17.0598,
+        "p95": 23.6689,
+        "p99": 29.6542
+      },
+      "post_wait_ms_mean": 4.622292592592593,
+      "pace_wait_ms_mean": 1.8494487037037037,
+      "present_callback_fps": 58.89641646396118,
+      "present_interval_ms": {
+        "p50": 16.7818,
+        "p95": 23.0389,
+        "p99": 26.5685
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 41.4163624535316,
+      "zero_audio_queue_samples": 17,
+      "stats": [
+        "[gpu] NVIDIA GeForce RTX 3060 (617.14)",
+        "[gpu] backend=6 adapter_type=1",
+        "[display-audit] source=640x479 scale=1 halved=0 field_blend=0 present_mode=4",
+        "[gs-audit] setup_builds=813355 DATE_CT24=0 mip_requested=228130 dither16_requested=1161 AA1_requested=0",
+        "[gpu] 598 submits, dispatches: upload 83017 copy_read 0 copy_write 0 load_clut 69870 display 598 raster 295795 resolve 0 snapshot 41866 decode 63232",
+        "[gpu] raster batches 296341, prims 21615238, tiles 10198624, avg/display 495.55 batches, avg/batch 72.94 prims, max/batch 18391; key flushes 12622, feedback flushes 241043",
+        "[gpu] feedback detail: candidate checks 486577, UV fallback 221751, framebuffer overlap 19274, depth overlap 0",
+        "[vu-cont] native_segments=943280 interpreted_instructions=4375004 checked_calls=0"
+      ]
+    }
+  ]
+}
