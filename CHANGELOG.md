@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Local Vanilla v9 GS preparation
+
+- Reuse unchanged31-word GS descriptors, invalidating before rejected primitives and at flush; preserve GPU payloads and default pacing.
+- Pass23 tests,61,265 actual-draw differential calls,12 unchanged images and36 short native route windows.
+- Retain warm-up runs and all alternating-pair results; small Grand Prix/Skorost gains do not establish full-game60 FPS.
+- Prepare a private local Windows package; publish documentation/metrics only.
+
 ## 2026-10-19 — Local Vanilla v8 pacing investigation
 
 - Audit audio-queue quantization and GPU submission order; retain rejected pre-publication probes and adverse measurements.

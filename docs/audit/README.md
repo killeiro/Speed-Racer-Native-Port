@@ -4,6 +4,7 @@ Documentation publication: **2026-10-19**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v9: GS descriptor reuse](vanilla-v9.md) and [metrics](vanilla-v9-metrics.json): validated CPU preparation reduction, small scene-dependent gains,23 tests and36 short route windows; global acceptance remains open.
 - [Vanilla v8: pacing investigation](vanilla-v8.md) and [metrics](vanilla-v8-metrics.json): same-binary tests, rejected prototypes, opt-in policy and preserved default; menu cadence improves, race results remain mixed.
 - [Vanilla v7: VU register accesses](vanilla-v7.md) and [metrics](vanilla-v7-metrics.json): experimental local candidate with mixed performance; audited access contract, adjacent comparisons and native threaded checks.
 

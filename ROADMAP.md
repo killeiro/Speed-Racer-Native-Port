@@ -58,6 +58,8 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [x] Add native threaded VU/Q diagnostic checks in Fuji and Grand Prix; retain noisy grouped runs alongside adjacent comparisons
 - [x] Investigate audio/deadline pacing with same-binary comparisons; retain adverse results and keep v8 opt-in
 - [x] Add repeatable pacing comparison helper, pass 22 local tests and 12-image regression
+- [x] Reuse unchanged GS descriptors; validate original-comparison payload equivalence,23 tests and12 unchanged images
+- [x] Warm both binaries at the same path before paired measurements; run36 native short route windows in v9
 - [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
 - [ ] Extract race timer independently; complete laps/races, classes 2–4, Mirror and 30-minute sessions
 - [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
