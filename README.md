@@ -12,9 +12,9 @@
 | --- | --- | --- |
 | Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
 | Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
-| Gameplay speed | 🔄 Improved; unresolved | V10 CL=0 VIF fills measured: Fuji-3 39.54→47.98 simulated FPS in warmed pairs; full-game target remains open |
+| Gameplay speed | 🔄 Improved; unresolved | V11 exact VU equality validated in five paired scenes; throughput/pacing remain unresolved; live scene-clock diagnostics added |
 | Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
-| Regression tests | 🟢 Local suite | 23/23 local CTest in v10; differential VU/VIF/Q checks and 12 unchanged images |
+| Regression tests | 🟢 Local suite | 25/25 local CTest in v11; differential VU/VIF/Q checks and 12 unchanged images |
 | Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
 | Clean PC installation | ⚪ Untested | Development-path fallback still present |
 | Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
@@ -30,6 +30,8 @@ The [v8 pacing investigation](docs/audit/vanilla-v8.md) isolates audio-queue-dri
 The [v9 GS preparation report](docs/audit/vanilla-v9.md) validates reuse of unchanged descriptors, with identical GPU payloads in the differential fixture,23 passing tests,12 unchanged images and36 short route windows. Controlled same-path pairs show small gains in Grand Prix/Skorost and essentially unchanged Fuji/Thunderhead; full-game performance remains unresolved. Default pacing is preserved and prior baselines remain available.
 
 The [v10 VIF fill report](docs/audit/vanilla-v10.md) identifies a dominant zero-input fill workload and specializes it while preserving masks, ROW/COL and wrap. The actual-parser differential passed 69,168 cases; 23 tests, 12 unchanged images and 36 short route windows passed. Warmed alternating v9/v10 measurements are recorded per scene, with all regressions and variability retained. Default pacing stays legacy; global performance acceptance and original/native visual parity remain open.
+
+The [v11 VU validation and scene-clock report](docs/audit/vanilla-v11.md) records an exact byte-equality optimization, 2,308,915 comparison cases, real-cache mutation tests,25 passing tests,12 unchanged images and36 short route windows. Five scenes received warmed same-path alternating pairs; adverse FPS/p95/stutter results are retained. An opt-in EE-thread trace follows a statically audited live scene clock, verified during active play, pause and resume in the final native executable. Original PS2 cadence, full-game performance and visual parity remain open.
 
 ## 🗺️ Roadmap: preservation → remaster → community
 
@@ -47,8 +49,8 @@ The [v10 VIF fill report](docs/audit/vanilla-v10.md) identifies a dominant zero-
 
 ## Project priorities
 
-1. Reduce remaining VIF/VU and GS preparation costs in Fuji, Grand Prix and Skorost, retaining changes only after controlled comparison.
-2. Confirm race-timer cadence independently and extend short replays to full laps/races, classes and long sessions.
+1. Separate EE/VU/GS useful work and waits in Fuji/Skorost, then reduce the stage limiting the race using controlled comparisons.
+2. Use the verified live scene clock to confirm original cadence and extend short replays to full laps/races, classes and long sessions.
 3. Compare matched original/native scenes at 1x, then address remaining dithering/CRTC/fog behavior using evidence.
 4. Measure frame pacing, physical input latency and actual audio underruns; finish shutdown and clean-machine validation.
 5. Publish verified documentation now; review source provenance and distribution permissions before publishing a playable build.
