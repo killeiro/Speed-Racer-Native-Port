@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Local Vanilla v10 VIF fills
+
+- Profile the zero-input fill workload in Fuji/Skorost; predecode mask rows and omit protected destinations without changing simulation or effects.
+- Pass 69,168 VIF differential cases, 23 tests, 12 unchanged images and 36 short native route windows.
+- Retain same-path warmed alternating measurements, negative cases, prior baselines and legacy default pacing; global acceptance stays open.
+- Prepare a private native GUI package; publish documentation and metrics only.
+
 ## 2026-10-19 — Local Vanilla v9 GS preparation
 
 - Reuse unchanged31-word GS descriptors, invalidating before rejected primitives and at flush; preserve GPU payloads and default pacing.

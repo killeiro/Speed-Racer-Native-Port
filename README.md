@@ -14,7 +14,7 @@
 | Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
 | Gameplay speed | 🔄 Improved; unresolved | VU continuations and VIF/Q optimizations measured; Fuji and other scenes remain below target |
 | Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
-| Regression tests | 🟢 Local suite | 23/23 local CTest in v9; differential VU/VIF/Q checks and 12 unchanged images |
+| Regression tests | 🟢 Local suite | 23/23 local CTest in v10; differential VU/VIF/Q checks and 12 unchanged images |
 | Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
 | Clean PC installation | ⚪ Untested | Development-path fallback still present |
 | Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
@@ -28,6 +28,8 @@ The latest experimental [v7 report](docs/audit/vanilla-v7.md) documents VU regis
 The [v8 pacing investigation](docs/audit/vanilla-v8.md) isolates audio-queue-driven frame irregularity. A deadline improves menu cadence, but race measurements remain mixed, so it stays opt-in and the default pacing is preserved. It adds a reproducible same-binary comparison helper, 22 passing tests and 12 unchanged images. This is not a general speed upgrade or a new recommended release.
 
 The [v9 GS preparation report](docs/audit/vanilla-v9.md) validates reuse of unchanged descriptors, with identical GPU payloads in the differential fixture,23 passing tests,12 unchanged images and36 short route windows. Controlled same-path pairs show small gains in Grand Prix/Skorost and essentially unchanged Fuji/Thunderhead; full-game performance remains unresolved. Default pacing is preserved and prior baselines remain available.
+
+The [v10 VIF fill report](docs/audit/vanilla-v10.md) identifies a dominant zero-input fill workload and specializes it while preserving masks, ROW/COL and wrap. The actual-parser differential passed 69,168 cases; 23 tests, 12 unchanged images and 36 short route windows passed. Warmed alternating v9/v10 measurements are recorded per scene, with all regressions and variability retained. Default pacing stays legacy; global performance acceptance and original/native visual parity remain open.
 
 ## 🗺️ Roadmap: preservation → remaster → community
 
