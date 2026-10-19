@@ -4,6 +4,8 @@ Documentation publication: **2026-10-19**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v7: VU register accesses](vanilla-v7.md) and [metrics](vanilla-v7-metrics.json): experimental local candidate with mixed performance; audited access contract, adjacent comparisons and native threaded checks.
+
 - [Vanilla v6: VIF parser context](vanilla-v6.md) and [metrics](vanilla-v6-metrics.json): latest validated local artifact; small performance change, 21 tests, frozen-parser comparison and 36 short route samples.
 - [Vanilla v5: reusable Q analysis](vanilla-v5.md) and [metrics](vanilla-v5-metrics.json): consolidated baseline, 21 tests and 36 short route samples.
 - [Next ten tasks](next-10-tasks.md): current priorities and acceptance gates.
@@ -20,6 +22,7 @@ The target is a native Windows executable. The local build runs compiled game fu
 | [v4](vanilla-v4.md) | 37 selective native VU continuations with shared pipeline, GS page ranges, empty coverage rejection, zero-mask UNPACK, reliable scripted input | [Metrics](vanilla-v4-metrics.json); 20 tests; 36 route checkpoints |
 | [v5](vanilla-v5.md) | Reuse Q-analysis predecessor graph per microcode generation and avoid calls without pending Q | [Metrics](vanilla-v5-metrics.json); 21 tests; 30,772 synthetic Q comparisons |
 | [v6](vanilla-v6.md) | Capture VIF thread/unit context once per parse; retain mutable command state | [Metrics](vanilla-v6-metrics.json); 21 tests; 29,968 frozen-v5 parser comparisons |
+| [v7](vanilla-v7.md) | Reduce repeated VU register accesses after auditing helpers; preserve instruction bodies and pipeline behavior | [Metrics](vanilla-v7-metrics.json); 21 tests; six-environment regression and two native threaded diagnostic scenes |
 
 In v5, six environment checks compared 1,264,870 real VU invocations (registers, memory, GIF packets) and 416,563 Q analyses; 12 images matched v4 byte for byte. Agreement with the earlier native build detects regressions and **does not establish PS2 accuracy**.
 
@@ -35,7 +38,7 @@ Fuji, Grand Prix and some Skorost/Thunderhead samples still fall below target. O
 
 ## Historical v2 snapshot
 
-The following files describe the code and test coverage on **2026-10-16**. In particular, their statements that mipmapping was missing and only 12 tests existed are historical, superseded by v3–v6:
+The following files describe the code and test coverage on **2026-10-16**. In particular, their statements that mipmapping was missing and only 12 tests existed are historical, superseded by v3–v7:
 
 - [Architecture and provenance](architecture.md)
 - [Initial graphics gaps](graphics-parity.md)
@@ -45,3 +48,4 @@ The following files describe the code and test coverage on **2026-10-16**. In pa
 - [Initial stability matrix](stability-matrix.md) and [image hashes](image-check.json)
 
 References such as PCSX2, paraLLEl-GS, ps2-web-recomp and PS2Recomp informed code analysis; no PCSX2 GPL implementation was copied into the local MIT runtime. A visual comparison using PCSX2 is a reference test, not a change in the native Windows product target. Full dependency/provenance review and redistribution clearance remain pending.
+

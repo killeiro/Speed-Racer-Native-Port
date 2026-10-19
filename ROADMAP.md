@@ -53,7 +53,9 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [x] Reduce VIF NOP/MASK=0 and Q-analysis overhead, with controlled measurements
 - [x] Capture 36 Class 1 route checkpoints and run short 600-VBlank performance samples
 - [x] Reuse VIF parser context per synchronous call; compare against the frozen prior parser
-- [x] Pass 21 local tests, VU/VIF/Q differential checks and 12-image regression in v6
+- [x] Pass 21 local tests, VU/VIF/Q differential checks and 12-image regression in v7
+- [x] Audit VU register/helper separation and validate compiler optimization over the same 37 continuation bodies
+- [x] Add native threaded VU/Q diagnostic checks in Fuji and Grand Prix; retain noisy grouped runs alongside adjacent comparisons
 - [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
 - [ ] Extract race timer independently; complete laps/races, classes 2–4, Mirror and 30-minute sessions
 - [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
@@ -118,4 +120,5 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 | 🔒 Gated | Needs technical, QA or legal review |
 
 No made-up completion percentages. Issues, build SHA, benchmarks, screenshots and tests are the source of truth. **No commercial PS2 ISO, copyrighted assets or game-derived binaries are being published here.**
+
 

@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Vanilla v7 evidence (documentation only)
+
+- Record VU register-access optimization and removal of unused global TPC reads from helper construction.
+- Preserve the same 37 continuation instruction bodies; reject the extra pipeline-reference qualifier after an inconclusive probe.
+- Publish adjacent v6/v7 comparisons, retain prior grouped/exploratory runs and document observed concurrent host load.
+- Record 21 local tests, six-environment register/memory/GIF and 12-image regression, two native threaded diagnostic scenes and 36 short route samples.
+- Keep original-speed gameplay, complete races, visual parity, long sessions and clean-machine/distribution gates open. No implementation or game data is published.
+
 ## 2026-10-19 — Vanilla evidence update (documentation only)
 
 - Publish dated v2 baseline and v3–v6 engineering reports, sanitized metrics and build hashes.
@@ -15,4 +23,5 @@ All notable project updates will be recorded here. Dates refer to documentation 
 - Repository documentation and public development roadmap.
 - Created investigation track for speed, graphical fidelity and clean builds.
 - Public executable distribution remains blocked by rights and verification review.
+
 
