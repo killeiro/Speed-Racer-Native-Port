@@ -1,6 +1,6 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização com portable preflight v1,19/10/2026. [Verificação portátil](portable-preflight-v1.md). [Previsão e pesquisa gráfica](release-readiness-and-graphics.md). Estamos na estabilização Vanilla. O experimento Q não foi promovido após resultados adversos; fontes/executável v13 foram restaurados. [Relatório v14](vanilla-v14.md) · [Métricas](vanilla-v14-metrics.json) · [v13](vanilla-v13.md) · [Roadmap](../../ROADMAP.md).
+Atualização com preparação de dados v1,19/10/2026. [Preparador e52 testes sintéticos](data-preparation-v1.md). [Verificação portátil](portable-preflight-v1.md). [Previsão e pesquisa gráfica](release-readiness-and-graphics.md). Estamos na estabilização Vanilla. O experimento Q não foi promovido após resultados adversos; fontes/executável v13 foram restaurados. [Relatório v14](vanilla-v14.md) · [Métricas](vanilla-v14-metrics.json) · [v13](vanilla-v13.md) · [Roadmap](../../ROADMAP.md).
 
 | # | Prioridade | Próxima tarefa e aceite | Dificuldade | Impacto | Dependências |
 |---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Atualização com portable preflight v1,19/10/2026. [Verificação portátil](po
 | 6 | P1 | Corrigir dither16/CRTC/fog demonstrados; AA1 somente se observado | Alta | Aparência original | Pares originais e testes isolados; issue#6 |
 | 7 | P1 | Aceitar pacing sem regressão de corrida, medir underruns reais e latência física USB/Bluetooth; executar30min | Alta | Fluidez e resposta | Throughput P0, relógio e telemetria; issue#3 |
 | 8 | P1 | Auditar PATH1 SIGNAL/FINISH/LABEL, pedido atômico/drain/join, pause/restart e saída/save | Alta | Estabilidade | Donos EE/VU/renderer e testes de lifecycle |
-| 9 | P1 | Alvo portátil sem DEV_ROOT/DISC_HINT e checker de nove casos implementados; falta boot real, corridas/save/saída/30min com dados próprios, Unicode IO, saves graváveis e outro PC/GPU | Média/alta | Portabilidade | Dados legítimos e dependências fixadas; issue#7 |
+| 9 | P1 | Alvo portátil/checker e preparador específico com52 testes sintéticos implementados; usar ISO legítima completa para boot real, corridas/save/saída/30min, Unicode IO, saves graváveis e outro PC/GPU | Média/alta | Portabilidade | Dados legítimos e dependências fixadas; issue#7 |
 | 10 | P1 | Proveniência/licenças transitivas e CI; manter GitHub documental com evidências. PR22 integrado; PR23 v7–v14 aberto | Média/alta | Colaboração e distribuição | Fontes/dependências e aceite Vanilla |
 
 Os26 testes e as56 janelas do candidato v14 foram executados. Nova matriz36 rotas,12 imagens, smoke de pacote e diagnóstico adicional não foram concluídos após a indisponibilidade do disco. Evidência histórica v13 não é QA novo v14. Aceite Vanilla/60FPS permanece aberto. Remaster/UI/câmeras/mods/multiplayer/web continuam futuros.

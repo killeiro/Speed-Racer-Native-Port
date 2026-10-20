@@ -74,6 +74,7 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
 - [ ] Verify actual audio underruns, physical input latency, pause/restart, saves and shutdown
 - [x] Add opt-in separate portable GUI target with empty data fallbacks and a reusable checker; verify nine media-absent cases and26 tests, preserving v13
+- [x] Add a bounded Windows/Python data preparer with exact audited ELF checks, fresh destination and52 synthetic tests; real-disc/runtime validation remains open ([report](docs/audit/data-preparation-v1.md))
 - [ ] Reproducible Windows build and launch on a clean machine without development fallbacks ([#7](../../issues/7))
 - [ ] Complete source/dependency provenance and distribution review ([#1](../../issues/1), [#8](../../issues/8))
 

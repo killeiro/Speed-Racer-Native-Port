@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Portable data preparation v1
+
+- Add a private Windows/Python preparer for the audited USA ISO boot/ELF; use read-only input, streaming/hash verification and a new destination only.
+- Pass52 synthetic fault/format/path cases plus a production-CLI artificial fixture containing the audited local ELF; no fixture was run as a game.
+- Preserve runtime sources, v13 EXE/ZIP and the entire earlier portable bundle; no native rebuild or new boot/FPS/release claim.
+- Publish documentation/metrics only. Complete legitimate media, real portable boot and gameplay/clean-PC gates remain open.
+
 ## 2026-10-19 — Portable preflight v1
 
 - Add local opt-in SpeedRacerPortable target with empty DEV_ROOT/DISC_HINT and separate output; preserve original v13 executable/runtime sources.
