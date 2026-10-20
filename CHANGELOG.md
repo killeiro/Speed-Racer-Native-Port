@@ -2,6 +2,19 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — Six-environment controller baseline
+
+- Analyze six separate exact-v17 controller sessions,76,301 VBlanks,248 complete five-second buckets; retain all drops, spikes and partial buckets.
+- Confirm normal exit/drain/join and original/QA card preservation in all six; distinguish Fuji throughput dips from near60 cadence irregularity.
+- Preserve v20 rejection and full-game/result-save/30min gates; publish anonymous team evidence only.
+
+## 2026-10-20 — Vanilla v20 combined VU/audio cadence audit
+
+- Combine the exact private v19 VU rejection/test implementation with Windows SDL512 request and1024 fallback; preserve guest clocks, physics, graphics, controls and legacy pacing.
+- Pass31 tests,21,078,049 fresh native old/new VU decisions and three fully identical generated-WAV pairs before FPS; remove probes and verify pure rebuild.
+- Complete all56 warmed comparison windows with criteria declared before edits; retain every adverse pair. The combined candidate fails the prior performance screen, stays isolated, and exact v17 remains current. No new v20 image/route matrix or gameplay package follows rejection.
+- Keep complete races/result-save/readback, classes/Mirror/continuous30min, original graphics parity and physical audio/input/second-PC acceptance open. Public attribution remains the team; GitHub docs only, main unchanged.
+
 ## 2026-10-20 — Vanilla v19 Fuji/VU audit (experiment not promoted)
 
 - Add a private adaptive mismatch-word rejection experiment; retain complete reachable-code validation on every acceptance, candidate order and invalidation semantics.

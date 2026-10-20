@@ -1,6 +1,8 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de 20/10/2026: [auditoria v19 e métricas](vanilla-v19.md). A equipe relata vitória em Fuji, saindo de último, na candidata:59,20FPS médios,55/63 blocos de5s acima de58 e dois abaixo de55. O ganho VU cumpre os critérios Fuji, mas piora o p99 em todos os três pares Skorost-1; experimento isolado e fonte/EXE exatos v17 mantidos.31 testes,21,08 milhões de decisões nativas sem divergência e56 janelas selecionadas; aquecimento/tentativa interrompidos para liberar o controle preservados separadamente. Não houve nova matriz de imagens/36 rotas ou pacote depois da rejeição. Próximo P0: cadência com preservação do throughput; depois resultado/save/readback, classes/Mirror e30min. [Build atual v17](vanilla-v17.md) · [Roadmap](../../ROADMAP.md).
+Atualização de20/10/2026: [auditoria v20 e métricas](vanilla-v20.md). Experimento não promovido; fonte e EXE exatos v17 restaurados. A combinação de VU exata e bloco SDL512 passa31 testes,21,08 milhões de decisões nativas sem divergência e três pares WAV idênticos antes dos56 controles de desempenho. Os resultados adversos são preservados, sem alterar gates anteriores. Próximo P0: throughput e cadência juntos, depois resultado/save/reabertura, classes/Mirror e30min. [Build de referência v17](vanilla-v17.md) · [Roadmap](../../ROADMAP.md).
+
+Rodada da equipe concluída: seis sessões separadas no v17,76.301 VBlanks; Fuji58,13FPS com pior bucket48,34. Thunderhead/Onuris perto60 ainda têm picos. Próximo diagnóstico é automático: separar inserção nas filas EE→VU→GS da espera de dois presents e da espera de áudio, depois selecionar uma mudança mínima sustentada pelos perfis. Não pedir outra rodada manual do mesmo EXE. Resultado/save/readback e30min contínuos continuam abertos.
 
 | # | Prioridade | Próxima tarefa e aceite | Dependências |
 |---|---|---|---|
@@ -10,7 +12,7 @@ Atualização de 20/10/2026: [auditoria v19 e métricas](vanilla-v19.md). A equi
 | 4 | P0 | Usar relógio vivo em voltas/corridas completas, classes 2–4 e Mirror; confirmar jogo/parede, cadência PS2 e timing individual | Checkpoints, dados e referência original; issue #3 |
 | 5 | P0 | Fechar mip/hazards e cinco pares PS2 original/nativo a 1x; classificar filtragem/tramas/serrilhado com referência | Capturas sincronizadas; issues #5/#6 |
 | 6 | P1 | Corrigir dither16/CRTC/fog demonstrados; AA1 somente se observado. Avaliar custo/qualidade de escala depois de throughput | Referência original; 2x já perdeu 8–13% no checkpoint anterior |
-| 7 | P0 | Isolar backpressure Fuji e avaliar pacing informado por áudio sem perda de throughput; bloco256 v18 e deadline v17 não foram promovidos. Usar timestamps e controles finais; medir underruns reais, USB/Bluetooth e30min | Throughput, relógio e telemetria; issue #3 |
+| 7 | P0 | Isolar backpressure Fuji e avaliar pacing informado por áudio sem perda de throughput; blocos256 v18/512 v20 e deadline v17 não foram promovidos. Usar timestamps e controles finais; medir underruns reais, USB/Bluetooth e30min | Throughput, relógio e telemetria; issue #3 |
 | 8 | P1 | Flush forçado/replacement/retry do card passaram em fixture; provar save de resultado real e leitura após reabertura, com QA separado | #3, corridas completas; issue #7 |
 | 9 | P1 | Testar outro Windows/GPU, Unicode no IO real e pasta protegida; manter preparador, dependências e pacote reproduzíveis | Boot/pacote local v17 passaram; não é aceite de segundo PC; issue #7 |
 | 10 | P1 | Concluir proveniência/licenças transitivas, CI e critérios para alpha distribuível; manter GitHub documental | PR23 aberto, sem merge novo; nenhum código/binário/dado do jogo publicado |

@@ -4,6 +4,8 @@ Documentation publication: **2026-10-20**. This directory contains original engi
 
 ## Read first
 
+- [Six-environment controller baseline](vanilla-v20.md#seis-sessões-da-equipe-no-exe-de-referência-v17):76,301 VBlanks on exact v17, all six normal exits/cards preserved, sustained Fuji dips and cadence tails retained. Separate sessions do not close full-race/30min acceptance.
+- [Vanilla v20: combined VU/audio cadence](vanilla-v20.md) and [metrics](vanilla-v20-metrics.json):31 tests,21.08M native reference decisions, three unchanged generated-WAV pairs and56 controlled windows. The combined candidate fails the prior performance screen, stays isolated, and exact v17 remains current. No new v20 image/route matrix or gameplay package follows rejection.
 - [Vanilla v19: Fuji, adaptive VU rejection and human victory](vanilla-v19.md) and [metrics](vanilla-v19-metrics.json): Fuji throughput gains and59.20FPS human mean; predeclared Skorost callback-tail guard fails, experiment isolated and exact v17 retained. Both human sessions and all controls preserved.
 - [Vanilla v18: timing audit, human sessions and isolated experiment](vanilla-v18.md) and [metrics](vanilla-v18-metrics.json): failed audio FPS guard and exact v17 restoration; two human sessions, seven independent native checks and an automated baseline replay. Residual cadence/clock differences remain; no new playable version.
 - [Vanilla v17: repeated mip snapshot unions](vanilla-v17.md) and [metrics](vanilla-v17-metrics.json): 31 tests, 696,942 new native checks, 12 unchanged image pairs, seven-scene warmed gate, 36 short routes and private package; adverse tails and full-game gates retained.
