@@ -12,15 +12,17 @@
 | --- | --- | --- |
 | Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
 | Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
-| Gameplay speed | 🔄 Improved; unresolved | V15 GS snapshot reuse improves the targeted Skorost scene; Fuji gains are small and frame-time tails remain mixed; full-game speed/pacing remain unresolved |
+| Gameplay speed | 🔄 Improved; unresolved | V17 gains in all three target Skorost pairs; seven-scene controls and adverse tails retained; stable60/full-game pacing remains unresolved |
 | Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
-| Regression tests | 🟢 Local suite | 31/31 local CTest in v16; actual lifecycle/card tests, 12 new unchanged image pairs and retained v15 snapshot evidence |
+| Regression tests | 🟢 Local suite | 31/31 local CTest in v17; 1,115,619 differential primitives, 696,942 new native checks and 12 new unchanged image pairs |
 | Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
 | Clean PC installation | 🟡 Local portable boot verified | Empty data fallbacks; real local media/minimal-PATH boot passes; second PC/GPU still open |
 | Shutdown / card persistence | 🟡 Normal exit tested locally | Atomic close request, ordered drain/join and pending-card replacement/retry; real race-result save and restart remain open |
 | Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
 
-**Current private local portable build: Vanilla v16, 2026-10-20, with the v15 GS optimization plus ordered shutdown and pending-card persistence. The original development v13 EXE and earlier packages/save are preserved.** These are maintainer-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
+**Current private local portable build: Vanilla v17, 2026-10-20, with repeated mip snapshot unions removed and v16 shutdown/card fixes preserved. The original development v13 EXE and earlier packages/save are preserved.** These are maintainer-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
+
+The [v17 GS snapshot report](docs/audit/vanilla-v17.md) eliminates repeated whole-mip-range unions within an eligible descriptor run. Seven-scene warmed AB/BA/AB controls measure Skorost-1 at **58.32→59.89 simulated FPS (+2.69%)**, all three pairs positive. 31 tests, 696,942 new per-call native checks, 12 identical image pairs, 36 short routes and two final-folder launches pass. Matched callback p99 worsens in six of seven scenes; this passes the throughput gate, not general fluency/stutter acceptance. No stable60/full-game or original PS2 parity claim. 1x/legacy and v16 lifecycle/card behavior are preserved.
 
 The [v16 lifecycle report](docs/audit/vanilla-v16.md) records an atomic host close request, ordered EE/VU/GS completion, joined workers and a final pending-card flush with checked file replacement/retry. Validation includes 31 tests, seven native lifecycle/error scenarios, 12 identical image pairs, three-scene warmed controls, 36 short routes and two final-folder launches. This is a correctness update with no new FPS-gain claim; full races/result-save, original parity, restart/long sessions and second-PC/distribution gates stay open.
 
