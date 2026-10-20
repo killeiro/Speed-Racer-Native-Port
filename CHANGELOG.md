@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — Vanilla v16 ordered shutdown and card persistence
+
+- Publish host close requests atomically; drain EE/VU/GS and GPU before final stats, join native workers and return normally, including early loading errors.
+- Force pending card persistence at normal EE exit; write/close a sibling pending file and check replacement before clearing dirty state or reporting success. Preserve old data on tested failures and support retry.
+- Pass 31 tests, seven native lifecycle/error scenarios, 12 new identical image pairs, warmed three-scene controls, 36 short Class 1 routes and two final-folder launches.
+- Retain adverse performance/tail results and raw terminal counters; compare callbacks over a common prefix because drain changes terminal coverage. No new FPS optimization or full-game acceptance claim.
+- Preserve v15 package/save and earlier artifacts; publish documentation/metrics only. Full races/result-save, original parity, restart/long sessions, clean-PC and distribution gates remain open.
+
 ## 2026-10-20 — Vanilla v15 GS snapshot reuse
 
 - Compile a new private local native GUI with snapshot-call-local descriptor/mip bounds reuse; preserve per-primitive bounds, all overlap tests and GPU payloads per checked call.
