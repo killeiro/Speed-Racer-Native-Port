@@ -37,6 +37,8 @@ The [v12 GS read-registration report](docs/audit/vanilla-v12.md) distinguishes V
 
 The [v13 queue-sharing report](docs/audit/vanilla-v13.md) separates waiter flags from a per-packet counter and avoids reading that counter on non-full posts, preserving the wake protocol and every atomic order. It records 26 passing tests, ten expanded queue stress runs,12 unchanged images,36 short routes and warmed five-scene comparisons, including rotating v11/v12/v13 triplets in Fuji/Skorost. All adverse results remain available; stable60FPS and full-game acceptance are open.
 
+The [v14 experimental audit](docs/audit/vanilla-v14.md) records incremental Q predecessor updates,26 passing tests,225,036 Q differentials and seven-scene warmed pairs. The candidate is **not promoted**: Fuji improves modestly, but Skorost-1 and other scenes regress. V13 source/executable were restored, and the experiment is isolated locally. Additional native diagnosis is waiting for the legitimate disc image removed or moved during local Downloads cleanup; no new gameplay package or completed visual/36-route QA is claimed.
+
 ## 🗺️ Roadmap: preservation → remaster → community
 
 | Track | Role | Status |
