@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Portable preflight v1
+
+- Add local opt-in SpeedRacerPortable target with empty DEV_ROOT/DISC_HINT and separate output; preserve original v13 executable/runtime sources.
+- Add a reusable bounded preflight checker; nine media-absent cases and26 rebuilt tests pass with bundled DLLs and minimal system PATH.
+- Do not claim successful game boot, Unicode runtime IO, clean-PC QA, FPS gains or a gameplay release; legitimate local ISO remains unavailable.
+- Update public documentation/metrics only; source and technical binary stay local.
+
 ## 2026-10-19 — Release readiness and graphics research
 
 - Document conditional, low-confidence alpha/Vanilla planning ranges and explicit acceptance gates.

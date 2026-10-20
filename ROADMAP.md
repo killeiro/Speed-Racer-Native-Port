@@ -73,6 +73,7 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [ ] Confirm original cadence using the live scene clock; complete laps/races, classes 2–4, Mirror and 30-minute sessions
 - [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
 - [ ] Verify actual audio underruns, physical input latency, pause/restart, saves and shutdown
+- [x] Add opt-in separate portable GUI target with empty data fallbacks and a reusable checker; verify nine media-absent cases and26 tests, preserving v13
 - [ ] Reproducible Windows build and launch on a clean machine without development fallbacks ([#7](../../issues/7))
 - [ ] Complete source/dependency provenance and distribution review ([#1](../../issues/1), [#8](../../issues/8))
 

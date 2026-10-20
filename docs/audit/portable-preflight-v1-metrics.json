@@ -1,0 +1,150 @@
+{
+  "iteration": "portable-preflight-v1",
+  "date": "2026-10-19",
+  "status": "portable_target_built_and_media_absent_contract_verified; gameplay_acceptance_open",
+  "private_source_commit": "20396d12b4df6a5adce28af833b4d1eeea72a07a",
+  "source_files": {
+    "cmake/SpeedRacer.cmake": "5ce3c4214ff4d5b83bb68ab0bc4ea7684c32d020d2b9dfeec8a391c641aad9b2",
+    "scripts/audit/preflight_portable.py": "03eaed2ed30399f6c5ecb1c5392037cfb04f4f28c2adea9262631c3de5fd2d3d"
+  },
+  "active_development_version": "v13",
+  "active_development_exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+  "portable_exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+  "build": {
+    "target": "SpeedRacerPortable",
+    "option": "PS2_BUILD_SPEEDRACER_PORTABLE",
+    "option_default": "OFF",
+    "requires": "PS2_BUILD_SPEEDRACER=ON",
+    "output": "portable/SpeedRacer.exe under the selected build directory",
+    "pe_subsystem": 2,
+    "compiler": "Clang23/MinGW, CMake/Ninja Release O3",
+    "development_target_and_executable_preserved": true,
+    "effective_development_data_fallbacks_preserved": true,
+    "portable_DEV_ROOT_and_DISC_HINT_empty": true,
+    "invalid_flag_combination_rejected": true
+  },
+  "validation": {
+    "candidate_exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+    "pe_subsystem": 2,
+    "case_count": 9,
+    "cases": [
+      {
+        "case": "help",
+        "exit": 0,
+        "expected_exit": 0,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "missing-both-no-development-fallback",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "explicit-missing-elf",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "argument-value-is-not-help-option",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "conflicting-window-flags",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "working-directory-is-not-data-directory",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "explicit-legitimate-elf-needs-disc",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "unicode-directory-disc-still-required",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f"
+      },
+      {
+        "case": "development-launcher-control",
+        "exit": 1,
+        "expected_exit": 1,
+        "message_matched": true,
+        "no_game_frames_or_save_created": true,
+        "minimal_system_path": true,
+        "exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f"
+      }
+    ],
+    "minimal_path": "%SystemRoot%/System32;%SystemRoot%",
+    "source_package_not_modified": true,
+    "actual_game_boot_frames": 0,
+    "clean_pc_test": false,
+    "unicode_scope": "Executable-directory/ELF existence discovery only; runtime ELF/ISO IO not certified.",
+    "private_elf_fixture": true,
+    "development_negative_control": true,
+    "ctest": 26,
+    "four_bundled_dlls": true,
+    "harness_revision": 2,
+    "case_scenarios": 9,
+    "repetitions_during_checker_development_not_independent_new_scenarios": true,
+    "private_memcard_for_each_case": true,
+    "unexpected_execution_bounded_to_one_frame": true,
+    "no_actual_frames_observed": true,
+    "no_disc_or_ELF_in_technical_bundle": true,
+    "missing_media_failures_expected": true
+  },
+  "scope": {
+    "CMake_changed": true,
+    "audit_checker_added": true,
+    "host_runtime_renderer_controller_source_changed": false,
+    "guest_clocks_physics_or_pacing_changed": false,
+    "graphics_scale_or_mods_changed": false,
+    "new_performance_or_graphics_benchmark": false,
+    "new_gameplay_release_or_zip": false
+  },
+  "limits": [
+    "No successful game boot: legitimate local ISO remains unavailable.",
+    "PATH-minimum checks on the development Windows machine are not a clean-PC acceptance test.",
+    "Unicode check reaches executable-directory/ELF existence discovery only; runtime ELF/ISO IO is unverified.",
+    "No new race, visual comparison, input latency, audio, save result, lifecycle or30-minute validation.",
+    "The portable launcher uses the existing runtime sources; a different linked artifact is not assumed to have identical FPS.",
+    "Writable package directory is still required for default portable saves; protected-folder deployment not certified.",
+    "The full binary may still contain build/debug paths; verified empty macros remove automatic development game-data lookup, not all diagnostic strings.",
+    "Public source/binary redistribution provenance remains open; external update is documentation only."
+  ]
+}

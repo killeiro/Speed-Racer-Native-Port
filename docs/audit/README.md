@@ -4,6 +4,7 @@ Documentation publication: **2026-10-19**. This directory contains original engi
 
 ## Read first
 
+- [Portable preflight v1](portable-preflight-v1.md) and [metrics](portable-preflight-v1-metrics.json): separate GUI target without development data fallbacks, nine media-absent scenarios and26 tests; no successful game boot or clean-PC acceptance claimed.
 - [Release readiness, aliasing and graphics candidates](release-readiness-and-graphics.md) and [research metadata](graphics-candidates.json): conditional low-confidence planning ranges, alpha gates and native1x/2x/3x audit; no new runtime/asset integration.
 - [V14 experiment not promoted](vanilla-v14.md) and [metrics](vanilla-v14-metrics.json):26 tests,225,036 Q differentials and seven-scene pairs; adverse performance retained, v13 restored, further native QA waiting for the legitimate disc input.
 - [Vanilla v13: queue sharing](vanilla-v13.md) and [metrics](vanilla-v13-metrics.json): actual layout audit, unchanged wake protocol,26 tests, ten queue stress runs, five-scene comparisons,12 unchanged images and36 short routes; global acceptance open.
