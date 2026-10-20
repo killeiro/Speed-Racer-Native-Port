@@ -39,6 +39,8 @@ The [v13 queue-sharing report](docs/audit/vanilla-v13.md) separates waiter flags
 
 The [v14 experimental audit](docs/audit/vanilla-v14.md) records incremental Q predecessor updates,26 passing tests,225,036 Q differentials and seven-scene warmed pairs. The candidate is **not promoted**: Fuji improves modestly, but Skorost-1 and other scenes regress. V13 source/executable were restored, and the experiment is isolated locally. Additional native diagnosis is waiting for the legitimate disc image removed or moved during local Downloads cleanup; no new gameplay package or completed visual/36-route QA is claimed.
 
+[Release readiness and graphics research](docs/audit/release-readiness-and-graphics.md) separates the existing native prototype from a friend-test alpha. Low-confidence planning ranges are2–4 active working weeks for a limited alpha and6–12+ for broader Vanilla acceptance after legitimate data is restored; these are not release commitments. The audit explains1x aliasing, existing2x/3x scaling and why the identified PCSX2 texture pack requires a native loader. No renderer change, pack integration or new gameplay validation is claimed.
+
 ## 🗺️ Roadmap: preservation → remaster → community
 
 | Track | Role | Status |
