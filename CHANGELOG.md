@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — Vanilla v19 Fuji/VU audit (experiment not promoted)
+
+- Add a private adaptive mismatch-word rejection experiment; retain complete reachable-code validation on every acceptance, candidate order and invalidation semantics.
+- Pass31 tests, expanded actual-cache mutation coverage and21,078,049 native old/new decision checks without a mismatch; remove probes and verify pure rebuild before FPS.
+- Complete seven-scene controls: Fuji throughput gates pass; all three Skorost-1 callback-p99 pairs regress beyond the prior10% guard. Isolate experiment and restore exact v17; no new image/36-route matrix or package after rejection.
+- Retain the interrupted automation and restart only its unfinished warmup pair after the maintainer requests the wheel. Candidate human Fuji:59.20 mean simulated FPS, victory from last reported, two five-second windows below55. Timing tails and result-save verification remain open.
+- Preserve previous packages/cards and keep GitHub documentation-only. Main unchanged; PR23 open.
+
 ## 2026-10-20 — Vanilla v18 audio timing audit (experiment not promoted)
 
 - Audit EE post/pacing and GS acquire/submit/present with temporary thread-owned timestamps; confirm software queue quantum and distinguish callbacks/API timing from scanout.

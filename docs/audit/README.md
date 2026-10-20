@@ -4,6 +4,7 @@ Documentation publication: **2026-10-20**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v19: Fuji, adaptive VU rejection and human victory](vanilla-v19.md) and [metrics](vanilla-v19-metrics.json): Fuji throughput gains and59.20FPS human mean; predeclared Skorost callback-tail guard fails, experiment isolated and exact v17 retained. Both human sessions and all controls preserved.
 - [Vanilla v18: timing audit, human sessions and isolated experiment](vanilla-v18.md) and [metrics](vanilla-v18-metrics.json): failed audio FPS guard and exact v17 restoration; two human sessions, seven independent native checks and an automated baseline replay. Residual cadence/clock differences remain; no new playable version.
 - [Vanilla v17: repeated mip snapshot unions](vanilla-v17.md) and [metrics](vanilla-v17-metrics.json): 31 tests, 696,942 new native checks, 12 unchanged image pairs, seven-scene warmed gate, 36 short routes and private package; adverse tails and full-game gates retained.
 - [Vanilla v16: ordered shutdown and card persistence](vanilla-v16.md) and [metrics](vanilla-v16-metrics.json): atomic request/drain/join, checked save/retry, 31 tests, seven native scenarios, 12 unchanged image pairs, warmed controls, 36 short routes and new private package; full-game/performance/result-save gates remain open.
