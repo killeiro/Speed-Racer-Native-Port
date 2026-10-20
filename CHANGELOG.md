@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Release readiness and graphics research
+
+- Document conditional, low-confidence alpha/Vanilla planning ranges and explicit acceptance gates.
+- Inspect native1x/2x/3x rendering and presentation; define a controlled aliasing comparison without changing defaults.
+- Research BMT619 texture pack and Kermalis asset tool; record compatibility/license gaps. No pack download/integration or new gameplay claim.
+- Preserve active v13 source/executable and all prior evidence; publish documentation only.
+
 ## 2026-10-19 — V14 Q experiment not promoted
 
 - Preserve two Q-index prototypes locally;26 tests,225,036 Q differentials and883,499 instrumented native reference checks pass.

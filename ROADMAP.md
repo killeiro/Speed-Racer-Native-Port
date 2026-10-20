@@ -80,6 +80,12 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 
 **Vanilla definition of done:** repeatable tests show intended speed and original graphics, menus, physics, audio, controls and saving over typical full races and long sessions; authorized packaging passes clean-machine QA. These acceptance gates remain open. No milestone overrides distribution rights.
 
+## Release readiness and graphics research — 2026-10-19
+
+The native GUI/controller prototype exists. Active v13 still has throughput gaps; the v14 experiment is isolated after regressions. A limited friend-test alpha has a **low-confidence2–4 active-working-week planning range**, and broader Vanilla acceptance6–12+ weeks, conditional on restored legitimate media, continuous engineering/QA and all distribution gates. These are not committed release dates or automatic background work. Re-estimate after the Skorost control and a full-race/portable-data boot milestone.
+
+The [readiness/graphics audit](docs/audit/release-readiness-and-graphics.md) defines alpha acceptance and evaluates the reported aliasing.1x rendering enlarged to the window is a strong code-based explanation; existing2x/3x internal scaling needs fresh correctness/performance comparison before preset promotion. Texture packs and skins remain optional future work; no replacement loader exists in this renderer. Third-party pack/tool candidates and license uncertainty are documented without downloading or integrating assets.
+
 ## Phase 2 — Remaster Core: visual and interface modernization
 
 **Design ownership:** The maintainer will lead the modern UI/UX redesign. Treat the [HUD concept brief](docs/REMASTER_UI_UX.md) as visual direction, *not* a final approved interface or an in-engine implementation.

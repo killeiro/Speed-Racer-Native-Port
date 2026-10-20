@@ -1,0 +1,124 @@
+{
+  "checked_local_date": "2026-10-19",
+  "pack": {
+    "repository": "https://github.com/BMT619/Speed-Racer-PCSX2-HD-Texture-Pack",
+    "head_as_reported": "c099873ea272da0a292f9a1ba11ca44dd29dfb3f",
+    "description": "A Speed Racer HD Texture Replacement Pack for PCSX2",
+    "github_detected_license": null,
+    "tree_contains_license_file": false,
+    "tracked_files": [
+      "README.md"
+    ],
+    "releases": [
+      {
+        "tag": "v1.0",
+        "published_at": "2024-04-19T05:39:01Z",
+        "assets": [
+          {
+            "name": "SLUS-21812.zip",
+            "size_bytes": 1190071056,
+            "url": "https://github.com/BMT619/Speed-Racer-PCSX2-HD-Texture-Pack/releases/download/v1.0/SLUS-21812.zip",
+            "downloaded": false
+          }
+        ]
+      }
+    ]
+  },
+  "tool": {
+    "repository": "https://github.com/Kermalis/SpeedRacerTool",
+    "head_as_reported": "0abea25e075b02418f8d9ef941c0b566d44182fc",
+    "description": "Tool to rip models from PS2/WII Speed Racer",
+    "github_detected_license": null,
+    "tree_contains_license_file": false,
+    "source_copied": false
+  },
+  "sources": [
+    "https://github.com/BMT619/Speed-Racer-PCSX2-HD-Texture-Pack",
+    "https://github.com/BMT619/Speed-Racer-PCSX2-HD-Texture-Pack/releases/tag/v1.0",
+    "https://github.com/Kermalis/SpeedRacerTool",
+    "https://github.com/PCSX2/pcsx2/blob/master/pcsx2/GS/Renderers/HW/GSTextureReplacements.h",
+    "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository"
+  ],
+  "not_found": "A verified, ready-to-use PS2 Speed Racer skin pack repository compatible with this native port was not located in the searches; this is not proof none exists.",
+  "active_version": "v13",
+  "active_exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+  "runtime_changed": false,
+  "assets_downloaded_or_integrated": false,
+  "new_gameplay_tests_or_package": false,
+  "forecast": {
+    "kind": "conditional planning estimate, not a commitment or statistical forecast",
+    "confidence": "low",
+    "start_condition": "Legitimate local disc restored, sustained engineering/QA work resumed; distribution/provenance gates must also pass.",
+    "alpha_for_small_friend_test": {
+      "active_work_weeks": [
+        2,
+        4
+      ],
+      "scope": "Limited experimental Windows alpha on explicitly tested configurations; known performance limits disclosed; no stable60FPS or full-game certification."
+    },
+    "broader_stable_vanilla": {
+      "active_work_weeks_min": 6,
+      "active_work_weeks_upper_planning": 12,
+      "may_exceed_upper": true,
+      "scope": "Full-race/long-session speed, pacing, original graphics, saves/audio/input and portable package acceptance."
+    },
+    "calendar_dates_promised": false,
+    "automatic_background_work_implied": false,
+    "reestimate_after": "Reproduce/isolate Skorost regression and complete one reproducible full-race plus portable-data boot test."
+  },
+  "aliasing": {
+    "reported_by_user": true,
+    "new_screenshot_or_native_verification": false,
+    "strong_code_based_explanation": "Default1x source around640x479 enlarged to the window, no modern edge-AA pass in current blit; inference, not a confirmed diagnosis of the current user frame.",
+    "internal_scale_supported": [
+      1,
+      2,
+      3
+    ],
+    "environment_variable": "PS2_SCALE",
+    "window_resize_increases_internal_resolution": false,
+    "scale2_pixel_and_scaled_buffer_factor": 4,
+    "scale3_pixel_and_scaled_buffer_factor": 9,
+    "whole_game_fps_cost_measured_now": false,
+    "existing_v2_scale_execution": "Historical1x/2x/3x execution exists; not fresh v13 validation or performance certification.",
+    "default_changed": false
+  },
+  "native_integration": {
+    "pcsx2_texture_pack_drop_in_compatible": false,
+    "existing_native_texture_replacement_loader_found": false,
+    "required": [
+      "Identify/hash original texture+palette/region without framebuffer confusion",
+      "Decode external image/mips and keep bounded CPU/GPU cache",
+      "Map replacement dimensions/UV/mip/filter correctly",
+      "Respect GS feedback, CLUT, alpha/depth hazards",
+      "Keep optional reversible packs and Vanilla fallback; benchmark IO/memory/pacing",
+      "Resolve author permission/provenance before redistribution"
+    ],
+    "skins": "Cosmetic texture-only liveries may fit future replacement support. New geometry/model skins need a separate asset-format pipeline; no ready native-compatible PS2 skin repository verified."
+  },
+  "next_graphics_protocol": {
+    "blocked_on_legitimate_disc": true,
+    "one_exact_binary": true,
+    "scale_comparison": "1x vs2x, not a source optimization",
+    "scenes": [
+      "Fuji-4",
+      "Skorost-1",
+      "Skorost-2",
+      "Grand-Prix-0"
+    ],
+    "separate_warmups_per_scale": true,
+    "measured_pairs_per_scene": 3,
+    "order": "AB/BA/AB",
+    "vblanks_per_window": 600,
+    "discard_initial": 60,
+    "fps_run_native_threaded_without_capture_or_sampler": true,
+    "metrics": [
+      "EE progress/wall",
+      "callback p50/p95/p99 and long intervals",
+      "audio queue as observation only",
+      "memory and pixel-work context"
+    ],
+    "separate_images": "Matched state/input/camera at1x/2x; inspect silhouettes, road edges, HUD, alpha, mip and framebuffer effects; sync captures are not FPS benchmarks.",
+    "acceptance": "No lost effects or new artifacts; no preset promotion without measured speed/pacing and correctness."
+  }
+}
