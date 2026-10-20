@@ -43,6 +43,8 @@ The [v14 experimental audit](docs/audit/vanilla-v14.md) records incremental Q pr
 
 The [portable preflight report](docs/audit/portable-preflight-v1.md) records an opt-in separate native GUI target with development game-data fallbacks disabled, plus a reusable private checker. The build passes nine media-absent scenarios with bundled DLLs/minimal PATH and26 tests; the original v13 executable is preserved. Successful game boot, clean-PC acceptance and gameplay validation remain open because the legitimate local ISO is unavailable. No gameplay release is claimed.
 
+The [portable data preparer](docs/audit/data-preparation-v1.md) now validates the audited USA boot/ELF and stages a new private data directory without overwriting originals.52 synthetic tests pass; a private artificial fixture also exercises the fixed production ELF reference. This Python engineering tool has not been validated with the missing complete ISO and makes no game-boot/FPS/release claim.
+
 ## 🗺️ Roadmap: preservation → remaster → community
 
 | Track | Role | Status |
