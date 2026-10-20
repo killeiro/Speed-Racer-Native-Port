@@ -4,6 +4,8 @@ Documentation publication: **2026-10-20**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v22: shared-entry VU discriminator](vanilla-v22.md) and [metrics](vanilla-v22-metrics.json):31 tests,21.08M native references,three identical WAV pairs and56 final performance windows. The candidate fails the predeclared screen, stays isolated, and exact v17 source/EXE remain current.
+- [Vanilla v21: publication diagnosis](vanilla-v21.md) and [metrics](vanilla-v21-metrics.json):15 controlled diagnostic runs,all6 counter pairs equal,no ring-full waits; separates VU-limited Fuji from balanced GS/VU Skorost. No optimization/release implied by instrumentation.
 - [Six-environment controller baseline](vanilla-v20.md#seis-sessões-da-equipe-no-exe-de-referência-v17):76,301 VBlanks on exact v17, all six normal exits/cards preserved, sustained Fuji dips and cadence tails retained. Separate sessions do not close full-race/30min acceptance.
 - [Vanilla v20: combined VU/audio cadence](vanilla-v20.md) and [metrics](vanilla-v20-metrics.json):31 tests,21.08M native reference decisions, three unchanged generated-WAV pairs and56 controlled windows. The combined candidate fails the prior performance screen, stays isolated, and exact v17 remains current. No new v20 image/route matrix or gameplay package follows rejection.
 - [Vanilla v19: Fuji, adaptive VU rejection and human victory](vanilla-v19.md) and [metrics](vanilla-v19-metrics.json): Fuji throughput gains and59.20FPS human mean; predeclared Skorost callback-tail guard fails, experiment isolated and exact v17 retained. Both human sessions and all controls preserved.

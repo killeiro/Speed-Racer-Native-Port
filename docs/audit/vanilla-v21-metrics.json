@@ -1,0 +1,1080 @@
+{
+  "iteration": "vanilla-v21",
+  "date": "2026-10-20",
+  "public_attribution": "a equipe / the team",
+  "scope": "instrumented automatic diagnosis, no gameplay optimization or release",
+  "playable_reference": "v17",
+  "diagnostic_source_restored": true,
+  "build": {
+    "baseline_SHA256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+    "baseline_source": {
+      "runtime/src/gs/gs.cpp": "3b4864a2a2a650f07e2cb447744e492a505b6a38b4bd102751680451faa4deed",
+      "runtime/src/gs/queue.cpp": "95b22c871cdca1f5670035ccd42a00b703681b57d4a07b93cce40d47c24687f4"
+    },
+    "diagnostic_source": {
+      "runtime/src/gs/gs.cpp": "0634f108e2f24bc9d7643ebd2ffb8a75bef9995ba63409b720bd6bc724de1aa8",
+      "runtime/src/gs/queue.cpp": "632b77cac3e363a098f4d441211db37a430584f59fe679e96379aca5f0ef1e2d"
+    },
+    "diagnostic_header_SHA256": "7c2a8276849ad7b78124067789c0ab718f1b77bbf532debcb9e9bb3da00588b3",
+    "diagnostic_EXE_SHA256": "313ecb499cd7b197cbf5133c298cc1658193084f34bc95e13d92fd43a4073f7c",
+    "diagnostic_CTests_passed": 31,
+    "source_restored": true,
+    "pure_code_data_equal_except_COFF_timestamp_PE_checksum": true,
+    "restored_pure_SHA256": "badfacb321cb9f8104178c97be295855def6d75ed3b580db5ac90d57b6a0b041",
+    "exact_v17_target_restored": true
+  },
+  "protocol": {
+    "scenes": [
+      "Fuji-4",
+      "Skorost-1",
+      "Thunderhead-0"
+    ],
+    "warmup_baseline_VBlanks": 600,
+    "measured_order": "A/B/B/A,900 VBlanks each",
+    "discard_first_rows": 60,
+    "common_callbacks": 800,
+    "instrumentation_validity_FPS_absolute_percent": 10,
+    "complete_validator_terminal_pairs": 6,
+    "external_host_load": "uncontrolled"
+  },
+  "runs": [
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.685276200005319,
+      "frames_recorded": 600,
+      "simulation_fps": 48.74359803934619,
+      "simulation_speed_percent": 81.24188684378645,
+      "measured_wall_s": 11.057862400000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.217,
+        "p95": 33.2626,
+        "p99": 38.2763
+      },
+      "post_wait_ms_mean": 8.966431851851851,
+      "pace_wait_ms_mean": 0.0015112962962962964,
+      "present_callback_fps": 48.71177552406437,
+      "present_interval_ms": {
+        "p50": 19.6178,
+        "p95": 33.2923,
+        "p99": 36.1005
+      },
+      "stutter_over_33ms": 25,
+      "audio_queue_mean_ms": 12.680293135435992,
+      "zero_audio_queue_samples": 29,
+      "variant": "A",
+      "order": 0,
+      "warmup_only": true,
+      "diagnostic": false
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.94809979999991,
+      "frames_recorded": 900,
+      "simulation_fps": 56.760814433662176,
+      "simulation_speed_percent": 94.60504080319798,
+      "measured_wall_s": 14.7813242,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.9277,
+        "p95": 24.0108,
+        "p99": 26.6452
+      },
+      "post_wait_ms_mean": 7.577991666666667,
+      "pace_wait_ms_mean": 0.0011845238095238096,
+      "present_callback_fps": 56.7211991080534,
+      "present_interval_ms": {
+        "p50": 18.0774,
+        "p95": 23.845,
+        "p99": 26.1275
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 20.80176758045292,
+      "zero_audio_queue_samples": 48,
+      "variant": "A",
+      "order": 1,
+      "warmup_only": false,
+      "diagnostic": false,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 26.1275,
+        "over_33_333_ms": 0
+      }
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "313ecb499cd7b197cbf5133c298cc1658193084f34bc95e13d92fd43a4073f7c",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.84404469999572,
+      "frames_recorded": 900,
+      "simulation_fps": 57.076925470522205,
+      "simulation_speed_percent": 95.13191304488218,
+      "measured_wall_s": 14.6994603,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.0805,
+        "p95": 25.1437,
+        "p99": 28.7098
+      },
+      "post_wait_ms_mean": 6.317330714285714,
+      "pace_wait_ms_mean": 1.2092991666666666,
+      "present_callback_fps": 56.97883609759354,
+      "present_interval_ms": {
+        "p50": 17.5392,
+        "p95": 24.7019,
+        "p99": 27.1316
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 39.44218474374255,
+      "zero_audio_queue_samples": 35,
+      "variant": "B",
+      "order": 2,
+      "warmup_only": false,
+      "diagnostic": true,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 27.1316,
+        "over_33_333_ms": 1
+      }
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "313ecb499cd7b197cbf5133c298cc1658193084f34bc95e13d92fd43a4073f7c",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.69694840000011,
+      "frames_recorded": 900,
+      "simulation_fps": 57.66491342190586,
+      "simulation_speed_percent": 96.11193112051166,
+      "measured_wall_s": 14.5495753,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.2142,
+        "p95": 24.5673,
+        "p99": 29.521
+      },
+      "post_wait_ms_mean": 5.947534642857143,
+      "pace_wait_ms_mean": 1.3429295238095238,
+      "present_callback_fps": 57.54176175659978,
+      "present_interval_ms": {
+        "p50": 17.4604,
+        "p95": 24.0121,
+        "p99": 27.2751
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 42.085035756853394,
+      "zero_audio_queue_samples": 22,
+      "variant": "B",
+      "order": 3,
+      "warmup_only": false,
+      "diagnostic": true,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 27.4746,
+        "over_33_333_ms": 1
+      }
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 17.10073040000134,
+      "frames_recorded": 900,
+      "simulation_fps": 55.86274851607334,
+      "simulation_speed_percent": 93.10820599515009,
+      "measured_wall_s": 15.0189531,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.1931,
+        "p95": 26.0118,
+        "p99": 34.4431
+      },
+      "post_wait_ms_mean": 6.595425238095238,
+      "pace_wait_ms_mean": 1.2395314285714285,
+      "present_callback_fps": 55.77527364452789,
+      "present_interval_ms": {
+        "p50": 17.8095,
+        "p95": 25.789,
+        "p99": 32.9918
+      },
+      "stutter_over_33ms": 9,
+      "audio_queue_mean_ms": 37.98650536352801,
+      "zero_audio_queue_samples": 43,
+      "variant": "A",
+      "order": 4,
+      "warmup_only": false,
+      "diagnostic": false,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 29.7301,
+        "over_33_333_ms": 3
+      }
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.225003600004129,
+      "frames_recorded": 600,
+      "simulation_fps": 59.05778767270252,
+      "simulation_speed_percent": 98.43263115607827,
+      "measured_wall_s": 9.126654100000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.004,
+        "p95": 25.1748,
+        "p99": 30.0493
+      },
+      "post_wait_ms_mean": 3.9471885185185185,
+      "pace_wait_ms_mean": 2.6939966666666666,
+      "present_callback_fps": 58.887634221743426,
+      "present_interval_ms": {
+        "p50": 18.0679,
+        "p95": 25.6503,
+        "p99": 29.3892
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 53.290059369202226,
+      "zero_audio_queue_samples": 5,
+      "variant": "A",
+      "order": 0,
+      "warmup_only": true,
+      "diagnostic": false
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.486256599993794,
+      "frames_recorded": 900,
+      "simulation_fps": 58.33005542523257,
+      "simulation_speed_percent": 97.22030548231035,
+      "measured_wall_s": 14.3836654,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9948,
+        "p95": 26.4151,
+        "p99": 29.7594
+      },
+      "post_wait_ms_mean": 4.680199285714286,
+      "pace_wait_ms_mean": 2.2630440476190476,
+      "present_callback_fps": 58.26899025805683,
+      "present_interval_ms": {
+        "p50": 18.0373,
+        "p95": 25.2443,
+        "p99": 28.7304
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 42.93922646007152,
+      "zero_audio_queue_samples": 12,
+      "variant": "A",
+      "order": 1,
+      "warmup_only": false,
+      "diagnostic": false,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 28.7304,
+        "over_33_333_ms": 1
+      }
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "313ecb499cd7b197cbf5133c298cc1658193084f34bc95e13d92fd43a4073f7c",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.54526690000057,
+      "frames_recorded": 900,
+      "simulation_fps": 58.589712791691575,
+      "simulation_speed_percent": 97.6530835467892,
+      "measured_wall_s": 14.31992,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.024,
+        "p95": 26.5163,
+        "p99": 30.0263
+      },
+      "post_wait_ms_mean": 4.3554595238095235,
+      "pace_wait_ms_mean": 2.616800238095238,
+      "present_callback_fps": 58.47497379847241,
+      "present_interval_ms": {
+        "p50": 17.9473,
+        "p95": 24.5015,
+        "p99": 29.5855
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 56.193101311084625,
+      "zero_audio_queue_samples": 19,
+      "variant": "B",
+      "order": 2,
+      "warmup_only": false,
+      "diagnostic": true,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 29.8215,
+        "over_33_333_ms": 1
+      }
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "313ecb499cd7b197cbf5133c298cc1658193084f34bc95e13d92fd43a4073f7c",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 17.322675399998843,
+      "frames_recorded": 900,
+      "simulation_fps": 58.71602100715066,
+      "simulation_speed_percent": 97.86360491870181,
+      "measured_wall_s": 14.2891154,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.739,
+        "p95": 26.613,
+        "p99": 30.2287
+      },
+      "post_wait_ms_mean": 4.270893214285715,
+      "pace_wait_ms_mean": 2.555222619047619,
+      "present_callback_fps": 58.66112286660281,
+      "present_interval_ms": {
+        "p50": 17.987,
+        "p95": 24.9468,
+        "p99": 28.3001
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 52.103296781883195,
+      "zero_audio_queue_samples": 18,
+      "variant": "B",
+      "order": 3,
+      "warmup_only": false,
+      "diagnostic": true,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 28.3708,
+        "over_33_333_ms": 1
+      }
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.453471299995726,
+      "frames_recorded": 900,
+      "simulation_fps": 58.71232629811309,
+      "simulation_speed_percent": 97.85744684566927,
+      "measured_wall_s": 14.2900146,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.8586,
+        "p95": 26.8879,
+        "p99": 30.3449
+      },
+      "post_wait_ms_mean": 4.313659761904762,
+      "pace_wait_ms_mean": 2.6164330952380954,
+      "present_callback_fps": 58.68161313698209,
+      "present_interval_ms": {
+        "p50": 17.9605,
+        "p95": 25.078,
+        "p99": 28.6777
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 51.898293206197856,
+      "zero_audio_queue_samples": 12,
+      "variant": "A",
+      "order": 4,
+      "warmup_only": false,
+      "diagnostic": false,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 28.6777,
+        "over_33_333_ms": 1
+      }
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 10.992714200001501,
+      "frames_recorded": 600,
+      "simulation_fps": 60.0213907773603,
+      "simulation_speed_percent": 100.03884585235411,
+      "measured_wall_s": 8.9801318,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0331,
+        "p95": 28.9846,
+        "p99": 30.5091
+      },
+      "post_wait_ms_mean": 0.0006696296296296296,
+      "pace_wait_ms_mean": 6.893099444444444,
+      "present_callback_fps": 60.068493685007056,
+      "present_interval_ms": {
+        "p50": 15.7029,
+        "p95": 27.2146,
+        "p99": 33.1847
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 84.40320964749536,
+      "zero_audio_queue_samples": 0,
+      "variant": "A",
+      "order": 0,
+      "warmup_only": true,
+      "diagnostic": false
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.05445029999828,
+      "frames_recorded": 900,
+      "simulation_fps": 59.97010200928647,
+      "simulation_speed_percent": 99.9536452014073,
+      "measured_wall_s": 13.990304700000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0785,
+        "p95": 29.1314,
+        "p99": 30.4909
+      },
+      "post_wait_ms_mean": 0.0007238095238095238,
+      "pace_wait_ms_mean": 6.961765833333334,
+      "present_callback_fps": 60.02100806821134,
+      "present_interval_ms": {
+        "p50": 15.6806,
+        "p95": 27.074,
+        "p99": 32.4148
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 84.67938855780692,
+      "zero_audio_queue_samples": 0,
+      "variant": "A",
+      "order": 1,
+      "warmup_only": false,
+      "diagnostic": false,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 32.7357,
+        "over_33_333_ms": 5
+      }
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "313ecb499cd7b197cbf5133c298cc1658193084f34bc95e13d92fd43a4073f7c",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.052254399997764,
+      "frames_recorded": 900,
+      "simulation_fps": 59.96739217657396,
+      "simulation_speed_percent": 99.94912865652199,
+      "measured_wall_s": 13.990936900000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0221,
+        "p95": 29.247,
+        "p99": 30.5536
+      },
+      "post_wait_ms_mean": 0.06038380952380952,
+      "pace_wait_ms_mean": 6.846073214285714,
+      "present_callback_fps": 60.06839993712507,
+      "present_interval_ms": {
+        "p50": 15.8091,
+        "p95": 26.7699,
+        "p99": 33.2844
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 84.51331704410012,
+      "zero_audio_queue_samples": 0,
+      "variant": "B",
+      "order": 2,
+      "warmup_only": false,
+      "diagnostic": true,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 33.2943,
+        "over_33_333_ms": 8
+      }
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "313ecb499cd7b197cbf5133c298cc1658193084f34bc95e13d92fd43a4073f7c",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.594920600000478,
+      "frames_recorded": 900,
+      "simulation_fps": 60.051584525833256,
+      "simulation_speed_percent": 100.08945411745307,
+      "measured_wall_s": 13.971321600000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.023,
+        "p95": 29.5391,
+        "p99": 31.0256
+      },
+      "post_wait_ms_mean": 0.021987142857142858,
+      "pace_wait_ms_mean": 7.070455595238095,
+      "present_callback_fps": 60.01602120175037,
+      "present_interval_ms": {
+        "p50": 15.4742,
+        "p95": 28.8297,
+        "p99": 32.9546
+      },
+      "stutter_over_33ms": 9,
+      "audio_queue_mean_ms": 84.6809737783075,
+      "zero_audio_queue_samples": 0,
+      "variant": "B",
+      "order": 3,
+      "warmup_only": false,
+      "diagnostic": true,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 32.9546,
+        "over_33_333_ms": 8
+      }
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "7b088cdaeb06838613a3e6344a23fb364eab8ab2d27eb7fd7c53156578fe8a3e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 16.039114600003813,
+      "frames_recorded": 900,
+      "simulation_fps": 59.922742229811234,
+      "simulation_speed_percent": 99.87470949118037,
+      "measured_wall_s": 14.0013619,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0456,
+        "p95": 29.0386,
+        "p99": 30.5382
+      },
+      "post_wait_ms_mean": 0.0006589285714285714,
+      "pace_wait_ms_mean": 7.061727976190476,
+      "present_callback_fps": 60.00629372328375,
+      "present_interval_ms": {
+        "p50": 15.7588,
+        "p95": 26.7349,
+        "p99": 32.4203
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 84.68176877234804,
+      "zero_audio_queue_samples": 0,
+      "variant": "A",
+      "order": 4,
+      "warmup_only": false,
+      "diagnostic": false,
+      "common_callback_prefix": {
+        "count": 800,
+        "p99": 32.4203,
+        "over_33_333_ms": 6
+      }
+    }
+  ],
+  "assessment": {
+    "baseline": "v17",
+    "candidate_optimization": false,
+    "scenes": {
+      "Fuji-4": {
+        "reference_mean_simulated_FPS": 56.31178147486776,
+        "diagnostic_mean_simulated_FPS": 57.37091944621403,
+        "instrumentation_FPS_delta_percent_not_optimization": 1.8808461455245729,
+        "paired_terminal_counters_identical": [
+          true,
+          true
+        ],
+        "instrumentation_screen_passed": true,
+        "runs": [
+          {
+            "order": 2,
+            "simulated_FPS": 57.076925470522205,
+            "EE_insertion_ms": {
+              "samples": 840,
+              "mean": 0.013396547619047619,
+              "min": 0.0073,
+              "p50": 0.0123,
+              "p95": 0.017,
+              "p99": 0.0517,
+              "max": 0.1005
+            },
+            "EE_two_pending_guard_ms": {
+              "samples": 840,
+              "mean": 6.294663690476191,
+              "min": 0.0,
+              "p50": 7.2501,
+              "p95": 13.8394,
+              "p99": 16.3036,
+              "max": 20.5118
+            },
+            "EE_guard_wait_calls": 601,
+            "EE_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "VU_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "CPU_ms_per_frame": {
+              "EE": 9.609654350417163,
+              "VU": 17.170738974970202,
+              "renderer": 15.662246722288439
+            },
+            "VU_forward_minus_EE_post_ms": {
+              "samples": 840,
+              "mean": 35.14025726178391,
+              "min": 4.639699996914715,
+              "p50": 36.77070000412641,
+              "p95": 46.54519999894546,
+              "p99": 52.30619999929331,
+              "max": 65.91369999659946
+            },
+            "render_begin_minus_VU_forward_ms": {
+              "samples": 840,
+              "mean": 1.2230859525689517,
+              "min": 0.037099998735357076,
+              "p50": 1.0792000030050986,
+              "p95": 2.944500003650319,
+              "p99": 4.4393999996827915,
+              "max": 10.414399999717716
+            },
+            "render_present_body_ms": {
+              "samples": 840,
+              "mean": 3.0014973807954535,
+              "min": 1.445000001695007,
+              "p50": 2.882000000681728,
+              "p95": 4.0722000048845075,
+              "p99": 4.712499998277053,
+              "max": 5.400199996074662
+            },
+            "raw_SHA256": {
+              "ee.csv": "835caf6a94b9b6e009a7af8cece8f7910fc88d11a92a3c49a6769cdf1426b5a3",
+              "render.csv": "6c744b99142d9b780cc6575290592197db2eae561e91bbde9aa22ff7d8a7d733",
+              "vu.csv": "b8ffc9ea1eeb3c658f35cc82d19a154b0ac76decca3d061e012ffc931e9a7b79"
+            }
+          },
+          {
+            "order": 3,
+            "simulated_FPS": 57.66491342190586,
+            "EE_insertion_ms": {
+              "samples": 840,
+              "mean": 0.013495595238095239,
+              "min": 0.0078,
+              "p50": 0.0125,
+              "p95": 0.0171,
+              "p99": 0.0528,
+              "max": 0.098
+            },
+            "EE_two_pending_guard_ms": {
+              "samples": 840,
+              "mean": 5.925407142857143,
+              "min": 0.0,
+              "p50": 6.8395,
+              "p95": 13.2523,
+              "p99": 16.4669,
+              "max": 18.9646
+            },
+            "EE_guard_wait_calls": 578,
+            "EE_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "VU_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "CPU_ms_per_frame": {
+              "EE": 10.093861740166865,
+              "VU": 17.18936233611442,
+              "renderer": 15.476013110846246
+            },
+            "VU_forward_minus_EE_post_ms": {
+              "samples": 840,
+              "mean": 34.466917618963286,
+              "min": 3.9548000058857724,
+              "p50": 36.02939999836963,
+              "p95": 46.663999994052574,
+              "p99": 50.66899999656016,
+              "max": 55.8896000002278
+            },
+            "render_begin_minus_VU_forward_ms": {
+              "samples": 840,
+              "mean": 1.2143583332761496,
+              "min": 0.08199999865610152,
+              "p50": 1.083199997083284,
+              "p95": 2.69059999845922,
+              "p99": 5.668199999490753,
+              "max": 8.928600000217557
+            },
+            "render_present_body_ms": {
+              "samples": 840,
+              "mean": 2.969461190548914,
+              "min": 1.4225999984773807,
+              "p50": 2.8259000027901493,
+              "p95": 3.982399997767061,
+              "p99": 4.6131999988574535,
+              "max": 5.413799997768365
+            },
+            "raw_SHA256": {
+              "ee.csv": "db99fec9395701250db679d4492b49b42e909de6e2b6565cc6fe988a2fa743f3",
+              "render.csv": "da114ea835470e4a5eb915d39e14083c43274de48f038b3d8c13d828f15d8b47",
+              "vu.csv": "2b97478b9cdb30aa2883ba77945735787d64e1743f214eaeab2c09c65678014a"
+            }
+          }
+        ]
+      },
+      "Skorost-1": {
+        "reference_mean_simulated_FPS": 58.521190861672835,
+        "diagnostic_mean_simulated_FPS": 58.65286689942111,
+        "instrumentation_FPS_delta_percent_not_optimization": 0.2250057386212756,
+        "paired_terminal_counters_identical": [
+          true,
+          true
+        ],
+        "instrumentation_screen_passed": true,
+        "runs": [
+          {
+            "order": 2,
+            "simulated_FPS": 58.589712791691575,
+            "EE_insertion_ms": {
+              "samples": 840,
+              "mean": 0.013564285714285714,
+              "min": 0.0073,
+              "p50": 0.0123,
+              "p95": 0.0186,
+              "p99": 0.0589,
+              "max": 0.0885
+            },
+            "EE_two_pending_guard_ms": {
+              "samples": 840,
+              "mean": 4.333719642857143,
+              "min": 0.0,
+              "p50": 2.2701,
+              "p95": 13.3891,
+              "p99": 16.1024,
+              "max": 21.1309
+            },
+            "EE_guard_wait_calls": 507,
+            "EE_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "VU_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "CPU_ms_per_frame": {
+              "EE": 10.429082240762813,
+              "VU": 16.14645411203814,
+              "renderer": 16.258194278903456
+            },
+            "VU_forward_minus_EE_post_ms": {
+              "samples": 840,
+              "mean": 16.76598559509633,
+              "min": 1.9776999979512766,
+              "p50": 14.831899999990128,
+              "p95": 37.62109999661334,
+              "p99": 41.95040000195149,
+              "max": 46.355600003153086
+            },
+            "render_begin_minus_VU_forward_ms": {
+              "samples": 840,
+              "mean": 13.628817976262196,
+              "min": 0.10900000052060932,
+              "p50": 6.619399995543063,
+              "p95": 33.176900004036725,
+              "p99": 37.69019999890588,
+              "max": 42.86880000290694
+            },
+            "render_present_body_ms": {
+              "samples": 840,
+              "mean": 2.9729805951449504,
+              "min": 1.7221000016434118,
+              "p50": 3.0372999972314574,
+              "p95": 4.228300000249874,
+              "p99": 4.994499999156687,
+              "max": 5.9192999979131855
+            },
+            "raw_SHA256": {
+              "ee.csv": "8fd24d0fdea1f7e85859ca06f68b2078fef553b1bbedc3176010054929d2dd3f",
+              "render.csv": "0aaf04c68f48eea13e62b77d026959c682aa3aa0aaac459dd0839f470ffd5dac",
+              "vu.csv": "9bd1326fdd46940b1c7c124e2ada89dd9e6c75fb2524f0c3469a7f7cf37c446e"
+            }
+          },
+          {
+            "order": 3,
+            "simulated_FPS": 58.71602100715066,
+            "EE_insertion_ms": {
+              "samples": 840,
+              "mean": 0.014129880952380953,
+              "min": 0.0078,
+              "p50": 0.0127,
+              "p95": 0.0191,
+              "p99": 0.0551,
+              "max": 0.1256
+            },
+            "EE_two_pending_guard_ms": {
+              "samples": 840,
+              "mean": 4.248491428571429,
+              "min": 0.0,
+              "p50": 1.9937,
+              "p95": 12.9739,
+              "p99": 17.1985,
+              "max": 20.5351
+            },
+            "EE_guard_wait_calls": 508,
+            "EE_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "VU_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "CPU_ms_per_frame": {
+              "EE": 9.870381406436234,
+              "VU": 16.314064362336115,
+              "renderer": 16.35131108462455
+            },
+            "VU_forward_minus_EE_post_ms": {
+              "samples": 840,
+              "mean": 16.521203928719583,
+              "min": 2.209999998740386,
+              "p50": 14.468800000031479,
+              "p95": 36.95690000313334,
+              "p99": 42.34610000276007,
+              "max": 45.11650000495138
+            },
+            "render_begin_minus_VU_forward_ms": {
+              "samples": 840,
+              "mean": 13.941625000006752,
+              "min": 0.09819999831961468,
+              "p50": 5.629600003885571,
+              "p95": 33.02240000630263,
+              "p99": 37.62339999957476,
+              "max": 41.27709999738727
+            },
+            "render_present_body_ms": {
+              "samples": 840,
+              "mean": 2.9734860713731557,
+              "min": 1.7115000009653158,
+              "p50": 3.046999998332467,
+              "p95": 4.235499996866565,
+              "p99": 5.0685000023804605,
+              "max": 5.367500001739245
+            },
+            "raw_SHA256": {
+              "ee.csv": "7aed36cb13e78fb4313e347ac6dfceb81a08ab509a6032eb9f313ecfba2f57b0",
+              "render.csv": "24590e9f14534ba6b9bb6b8afee6894b0029976fe16de7030547b7c73cf49b0f",
+              "vu.csv": "e63905e3a42d47b5b1486f624c0b45a3d5003186c8892b7edabd65b9d1a85fcb"
+            }
+          }
+        ]
+      },
+      "Thunderhead-0": {
+        "reference_mean_simulated_FPS": 59.946422119548856,
+        "diagnostic_mean_simulated_FPS": 60.00948835120361,
+        "instrumentation_FPS_delta_percent_not_optimization": 0.10520432984137962,
+        "paired_terminal_counters_identical": [
+          true,
+          true
+        ],
+        "instrumentation_screen_passed": true,
+        "runs": [
+          {
+            "order": 2,
+            "simulated_FPS": 59.96739217657396,
+            "EE_insertion_ms": {
+              "samples": 840,
+              "mean": 0.013703214285714286,
+              "min": 0.0076,
+              "p50": 0.0125,
+              "p95": 0.0183,
+              "p99": 0.0524,
+              "max": 0.0976
+            },
+            "EE_two_pending_guard_ms": {
+              "samples": 840,
+              "mean": 0.04109440476190476,
+              "min": 0.0,
+              "p50": 0.0001,
+              "p95": 0.0001,
+              "p99": 0.0002,
+              "max": 14.1926
+            },
+            "EE_guard_wait_calls": 8,
+            "EE_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "VU_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "CPU_ms_per_frame": {
+              "EE": 9.609654350417163,
+              "VU": 12.42178188319428,
+              "renderer": 12.552145411203814
+            },
+            "VU_forward_minus_EE_post_ms": {
+              "samples": 840,
+              "mean": 7.070401309664747,
+              "min": 0.20029999723192304,
+              "p50": 6.205400000908412,
+              "p95": 13.652000001457054,
+              "p99": 20.803200000955258,
+              "max": 40.28660000039963
+            },
+            "render_begin_minus_VU_forward_ms": {
+              "samples": 840,
+              "mean": 0.5166304760201629,
+              "min": 0.08499999967170879,
+              "p50": 0.2294000005349517,
+              "p95": 1.8909999998868443,
+              "p99": 5.126000003656372,
+              "max": 7.914999994682148
+            },
+            "render_present_body_ms": {
+              "samples": 840,
+              "mean": 2.7990090477639264,
+              "min": 1.3500000059138983,
+              "p50": 2.816000000166241,
+              "p95": 3.7210000009508803,
+              "p99": 4.403999999340158,
+              "max": 6.598899999517016
+            },
+            "raw_SHA256": {
+              "ee.csv": "bf56d73a2329dd938dcffbb9a2daac2e130aa278ac72fb4777754f506dc7849a",
+              "render.csv": "e689e27a1b12c070f3c1d6e0c2e1c0acfd109536c05a58db77c74a22dbbba4f1",
+              "vu.csv": "872d1ec21832ef1feda77e193381372f38c192501290625f340f9c22b1dabe17"
+            }
+          },
+          {
+            "order": 3,
+            "simulated_FPS": 60.051584525833256,
+            "EE_insertion_ms": {
+              "samples": 840,
+              "mean": 0.013087142857142858,
+              "min": 0.0076,
+              "p50": 0.0121,
+              "p95": 0.0182,
+              "p99": 0.052,
+              "max": 0.0902
+            },
+            "EE_two_pending_guard_ms": {
+              "samples": 840,
+              "mean": 5.55952380952381e-05,
+              "min": 0.0,
+              "p50": 0.0001,
+              "p95": 0.0001,
+              "p99": 0.0001,
+              "max": 0.0001
+            },
+            "EE_guard_wait_calls": 0,
+            "EE_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "VU_ring_full": {
+              "duration_ms": 0.0,
+              "wait_calls": 0
+            },
+            "CPU_ms_per_frame": {
+              "EE": 9.535160905840286,
+              "VU": 12.663885578069129,
+              "renderer": 12.719755661501788
+            },
+            "VU_forward_minus_EE_post_ms": {
+              "samples": 840,
+              "mean": 7.018788095350222,
+              "min": 1.0343999965698458,
+              "p50": 6.555899999511894,
+              "p95": 12.757500000589062,
+              "p99": 16.25340000464348,
+              "max": 19.067200002609752
+            },
+            "render_begin_minus_VU_forward_ms": {
+              "samples": 840,
+              "mean": 0.4223020237207363,
+              "min": 0.07360000017797574,
+              "p50": 0.22870000248076394,
+              "p95": 1.247000000148546,
+              "p99": 2.689999993890524,
+              "max": 5.68819999898551
+            },
+            "render_present_body_ms": {
+              "samples": 840,
+              "mean": 2.825983928648514,
+              "min": 1.3717000038013794,
+              "p50": 2.8684999997494742,
+              "p95": 3.6646999942604452,
+              "p99": 4.190999999991618,
+              "max": 4.98630000220146
+            },
+            "raw_SHA256": {
+              "ee.csv": "41495afd8bd07b79b48e71910cdb9bbc1759eb38991e2f828d6a46d9147170e6",
+              "render.csv": "4d82e36f1bef9776d4ba536021a9e470c46ca2fc8fa05dd8f6176851f74b5c1d",
+              "vu.csv": "1e494b64857b8806f34d8c7f1a326da567b0f0dc13b712192fe0980b258bf7a7"
+            }
+          }
+        ]
+      }
+    },
+    "all_instrumentation_screens_passed": true,
+    "limits": [
+      "Instrumented CPU/timestamps are diagnostics, not pure FPS or hardware GPU/input latency.",
+      "Cross-thread posted timestamps are taken after queue publication; tiny negative differences can occur from sampling race and are retained.",
+      "Ring-full cumulative values are reported by producer thread; same-role ring posts are included, not only present packets.",
+      "Terminal counters do not prove full asynchronous GPU-stream identity. External host load uncontrolled."
+    ]
+  },
+  "failed_preparation_retained": {
+    "before_build_or_game": true,
+    "reason": "ambiguous edit anchor caught by assertion; original source bytes restored; revised preparation validates all replacements in memory"
+  },
+  "limits": [
+    "Instrumented CPU/timestamps are diagnostics, not pure FPS or hardware GPU/input latency.",
+    "Cross-thread posted timestamps are taken after queue publication; tiny negative differences can occur from sampling race and are retained.",
+    "Ring-full cumulative values are reported by producer thread; same-role ring posts are included, not only present packets.",
+    "Terminal counters do not prove full asynchronous GPU-stream identity. External host load uncontrolled.",
+    "No continuous30min/full-race/result-save/original cadence acceptance. Separate source restoration and frozen-reference control completed before v22."
+  ]
+}

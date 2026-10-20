@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — V21 attribution / V22 shared-entry VU filter
+
+- Separate EE ring insertion, outstanding-frame guard, VU forwarding and renderer boundaries in three controlled diagnostic scenes;31 tests and all6 terminal pairs pass, sources/probes restored.
+- Implement one shared discriminator per VU cache entry, retaining full validation on every acceptance and normal fallback for absent addresses/collisions.
+- Pass31 tests,21,078,049 native validator decisions and three identical generated-WAV pairs; retain all56 pure FPS controls and prior gates. The candidate fails the predeclared screen, stays isolated, and exact v17 source/EXE remain current.
+- Preserve six human v17 sessions, previous packages/save and all open full-game/graphics/physical-latency/distribution gates; GitHub anonymous docs only.
+
 ## 2026-10-20 — Six-environment controller baseline
 
 - Analyze six separate exact-v17 controller sessions,76,301 VBlanks,248 complete five-second buckets; retain all drops, spikes and partial buckets.
