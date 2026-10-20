@@ -1,0 +1,2048 @@
+{
+  "iteration": "restored-media-v1",
+  "date": "2026-10-20",
+  "work_started": "2026-10-19",
+  "status": "real_disc_prepared; portable_boot_and_short_replays_verified; performance_and_full_game_acceptance_open",
+  "private_head_before_documentation": "9d04fbacd1ce6b891f5cbbb4fbd66384a7f802d2",
+  "environment": {
+    "CPU": "Intel Core i5-12400, 6 cores/12 threads",
+    "GPU": "NVIDIA RTX3060",
+    "driver": "617.14",
+    "OS": "Windows11 Pro 10.0.26200",
+    "power_plan": "Balanced",
+    "host_load": "uncontrolled; no other agent build/probe/game during FPS",
+    "backend": "native Vulkan/wgpu Mailbox",
+    "audio": "WASAPI48k stereo",
+    "window": "960x720",
+    "controllers": "physical devices disabled only for automation; previous maintainer confirmation not recertified"
+  },
+  "media": {
+    "schema": 1,
+    "serial": "SLUS_218.12",
+    "purpose": "private portable data preparation",
+    "iso_bytes": 2877095936,
+    "iso_sha256": "a3bd02ad919c744b2dac65e1f9a4e6cdf3804d14678ca00d44ca1190084e3755",
+    "volume_bytes": 2877095936,
+    "elf_bytes": 5329820,
+    "elf_sha256": "6d6b8e257c7019e859fa5c54276800a3566680289420a664a83609088edc7fda",
+    "elf_entry": "0x100008",
+    "source_opened_read_only": true,
+    "source_rehashed_and_unchanged_at_check": true,
+    "gameplay_validated": false,
+    "saves_created": false
+  },
+  "executables": {
+    "active_v13_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+    "portable_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+    "isolated_v14_sha256": "f0c09e00278d26fd288ed2f3ed85f6a56bbf89d967c0f35fee8ea0f3782655f3",
+    "new_native_build": false,
+    "runtime_renderer_input_timing_physics_source_changed": false,
+    "v14_promoted": false,
+    "default_scale": 1
+  },
+  "portable_boot": {
+    "exit": 0,
+    "exit_evidence": "subprocess returned zero before the initial harness assertion; log reaches explicit frame limit",
+    "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+    "frame_limit": 1200,
+    "recorded_frames": 1200,
+    "minimal_system_path": true,
+    "no_explicit_ELF_or_disc": true,
+    "unrelated_cwd": true,
+    "private_card": true,
+    "real_local_ISO": true,
+    "clean_PC_certified": false,
+    "full_race_accepted": false,
+    "harness_assertion_corrected_without_repeating_or_overwriting_run": true
+  },
+  "control_protocol": {
+    "scene": "Skorost-1",
+    "frames_each": 600,
+    "discard_first": 60,
+    "warmup_order": "BA",
+    "measurement_order": "BA/AB/BA",
+    "A": "v13",
+    "B": "isolated v14",
+    "same_staged_path": true,
+    "historical_primary_series_retained": true,
+    "historical_failed_missing_disc_warmup_retained": true
+  },
+  "control_summary": {
+    "before": {
+      "simulation_fps": 53.88724243734418,
+      "simulation_speed_percent": 89.81479442219243,
+      "post_wait_ms_mean": 8.07626475308642,
+      "pace_wait_ms_mean": 0.001369320987654321,
+      "audio_queue_mean_ms": 18.206522656734947,
+      "zero_audio_queue_samples": 62.666666666666664,
+      "stutter_over_33ms": 2,
+      "interval_ms": {
+        "p50": 19.107033333333334,
+        "p95": 28.549266666666668,
+        "p99": 31.2473
+      },
+      "present_interval_ms": {
+        "p50": 18.368499999999997,
+        "p95": 27.133233333333333,
+        "p99": 30.055566666666667
+      }
+    },
+    "after": {
+      "simulation_fps": 53.25986269178752,
+      "simulation_speed_percent": 88.76912980245734,
+      "post_wait_ms_mean": 8.23661,
+      "pace_wait_ms_mean": 0.0015037654320987654,
+      "audio_queue_mean_ms": 15.07513842333954,
+      "zero_audio_queue_samples": 54.333333333333336,
+      "stutter_over_33ms": 1.3333333333333333,
+      "interval_ms": {
+        "p50": 19.2397,
+        "p95": 29.134533333333334,
+        "p99": 31.903433333333332
+      },
+      "present_interval_ms": {
+        "p50": 18.490033333333333,
+        "p95": 27.760733333333334,
+        "p99": 30.474166666666665
+      }
+    },
+    "relative_FPS_change_percent": -1.1642454079666908,
+    "pairs": [
+      {
+        "pair": 1,
+        "before_FPS": 53.59953814103358,
+        "after_FPS": 52.79077294858974
+      },
+      {
+        "pair": 2,
+        "before_FPS": 54.712005493938015,
+        "after_FPS": 53.26742745927584
+      },
+      {
+        "pair": 3,
+        "before_FPS": 53.35018367706094,
+        "after_FPS": 53.721387667496984
+      }
+    ]
+  },
+  "control_samples": [
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "f0c09e00278d26fd288ed2f3ed85f6a56bbf89d967c0f35fee8ea0f3782655f3",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.141521999998076,
+      "frames_recorded": 600,
+      "simulation_fps": 51.71960440048817,
+      "simulation_speed_percent": 86.20195479900497,
+      "measured_wall_s": 10.4215801,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.8012,
+        "p95": 29.5502,
+        "p99": 32.5882
+      },
+      "post_wait_ms_mean": 8.179051666666666,
+      "pace_wait_ms_mean": 0.0015725925925925927,
+      "present_callback_fps": 51.69813897578439,
+      "present_interval_ms": {
+        "p50": 19.344,
+        "p95": 28.2238,
+        "p99": 30.975
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 11.162033519553074,
+      "zero_audio_queue_samples": 72,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.563519300005282,
+      "frames_recorded": 600,
+      "simulation_fps": 53.45753996037894,
+      "simulation_speed_percent": 89.09860190823677,
+      "measured_wall_s": 10.0827685,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.4034,
+        "p95": 28.6263,
+        "p99": 31.6803
+      },
+      "post_wait_ms_mean": 8.16362111111111,
+      "pace_wait_ms_mean": 0.001426851851851852,
+      "present_callback_fps": 53.430323798209486,
+      "present_interval_ms": {
+        "p50": 18.7029,
+        "p95": 27.376,
+        "p99": 29.9074
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 14.64683985102421,
+      "zero_audio_queue_samples": 45,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "f0c09e00278d26fd288ed2f3ed85f6a56bbf89d967c0f35fee8ea0f3782655f3",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.593419600001653,
+      "frames_recorded": 600,
+      "simulation_fps": 52.79077294858974,
+      "simulation_speed_percent": 87.98728985397872,
+      "measured_wall_s": 10.2101176,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.4854,
+        "p95": 29.1637,
+        "p99": 31.4371
+      },
+      "post_wait_ms_mean": 8.278659074074074,
+      "pace_wait_ms_mean": 0.001422962962962963,
+      "present_callback_fps": 52.765102635002755,
+      "present_interval_ms": {
+        "p50": 18.7192,
+        "p95": 27.6286,
+        "p99": 29.9752
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 13.298603351955308,
+      "zero_audio_queue_samples": 60,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.371146500001487,
+      "frames_recorded": 600,
+      "simulation_fps": 53.59953814103358,
+      "simulation_speed_percent": 89.33527271986071,
+      "measured_wall_s": 10.056056799999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.3633,
+        "p95": 28.3532,
+        "p99": 31.3575
+      },
+      "post_wait_ms_mean": 8.172157777777779,
+      "pace_wait_ms_mean": 0.001415,
+      "present_callback_fps": 53.56787216491164,
+      "present_interval_ms": {
+        "p50": 18.519,
+        "p95": 26.986,
+        "p99": 29.8431
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 15.534474860335196,
+      "zero_audio_queue_samples": 63,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.141064099996584,
+      "frames_recorded": 600,
+      "simulation_fps": 54.712005493938015,
+      "simulation_speed_percent": 91.18944120359203,
+      "measured_wall_s": 9.851585499999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.7357,
+        "p95": 28.6771,
+        "p99": 30.7092
+      },
+      "post_wait_ms_mean": 7.856412037037037,
+      "pace_wait_ms_mean": 0.0013253703703703704,
+      "present_callback_fps": 54.721850667310036,
+      "present_interval_ms": {
+        "p50": 18.1408,
+        "p95": 26.9379,
+        "p99": 29.2979
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 21.79146927374302,
+      "zero_audio_queue_samples": 57,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "f0c09e00278d26fd288ed2f3ed85f6a56bbf89d967c0f35fee8ea0f3782655f3",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.38707859999704,
+      "frames_recorded": 600,
+      "simulation_fps": 53.26742745927584,
+      "simulation_speed_percent": 88.78173813062713,
+      "measured_wall_s": 10.1187541,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.1306,
+        "p95": 29.538,
+        "p99": 32.1864
+      },
+      "post_wait_ms_mean": 8.258871481481481,
+      "pace_wait_ms_mean": 0.0016464814814814814,
+      "present_callback_fps": 53.2374675581084,
+      "present_interval_ms": {
+        "p50": 18.3989,
+        "p95": 27.8502,
+        "p99": 30.7973
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 17.0118156424581,
+      "zero_audio_queue_samples": 51,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "f0c09e00278d26fd288ed2f3ed85f6a56bbf89d967c0f35fee8ea0f3782655f3",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.297446299999137,
+      "frames_recorded": 600,
+      "simulation_fps": 53.721387667496984,
+      "simulation_speed_percent": 89.53836142276617,
+      "measured_wall_s": 10.0332479,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.1031,
+        "p95": 28.7019,
+        "p99": 32.0868
+      },
+      "post_wait_ms_mean": 8.172299444444445,
+      "pace_wait_ms_mean": 0.001441851851851852,
+      "present_callback_fps": 53.719518449833565,
+      "present_interval_ms": {
+        "p50": 18.352,
+        "p95": 27.8034,
+        "p99": 30.65
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 14.914996275605214,
+      "zero_audio_queue_samples": 52,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.390857699996559,
+      "frames_recorded": 600,
+      "simulation_fps": 53.35018367706094,
+      "simulation_speed_percent": 88.91966934312458,
+      "measured_wall_s": 10.103058,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.2221,
+        "p95": 28.6175,
+        "p99": 31.6752
+      },
+      "post_wait_ms_mean": 8.200224444444444,
+      "pace_wait_ms_mean": 0.0013675925925925926,
+      "present_callback_fps": 53.338141778402715,
+      "present_interval_ms": {
+        "p50": 18.4457,
+        "p95": 27.4758,
+        "p99": 31.0257
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 17.29362383612663,
+      "zero_audio_queue_samples": 68,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true,
+      "disc_source": "private copy of recovered legitimate ISO",
+      "controlled_followup": true
+    }
+  ],
+  "exact_candidate_Q_diagnostic": {
+    "reference_checks_passed": 89922,
+    "exit": 0,
+    "frames": 600,
+    "FPS_benchmark": false
+  },
+  "thread_CPU_diagnostics": [
+    {
+      "scene": "Skorost-1",
+      "variant": "before",
+      "no_instruction_suspension_inside_counter_interval": true,
+      "start_frame": 10720,
+      "end_frame": 11080,
+      "frames": 360,
+      "wall_s": 6.558018700001412,
+      "exe_sha256": "ae621120cce2ec9cacc43d5b3b4b02602244745760de0084b6ece8814b65838f",
+      "roles": {
+        "renderer": {
+          "kernel_s": 0.34375,
+          "user_s": 6.125,
+          "cpu_ms_per_frame": 17.96875,
+          "kernel_ms_per_frame": 0.9548611111111112,
+          "cycles_per_frame": 44983889.48888889
+        },
+        "ee": {
+          "kernel_s": 0.171875,
+          "user_s": 3.515625,
+          "cpu_ms_per_frame": 10.243055555555555,
+          "kernel_ms_per_frame": 0.4774305555555556,
+          "cycles_per_frame": 26314152.08611111
+        },
+        "vu": {
+          "kernel_s": 0.203125,
+          "user_s": 5.921875,
+          "cpu_ms_per_frame": 17.01388888888889,
+          "kernel_ms_per_frame": 0.5642361111111112,
+          "cycles_per_frame": 42144819.891666666
+        }
+      },
+      "diagnostic_only_not_paired_fps": true
+    },
+    {
+      "scene": "Skorost-1",
+      "variant": "after",
+      "no_instruction_suspension_inside_counter_interval": true,
+      "start_frame": 10720,
+      "end_frame": 11080,
+      "frames": 360,
+      "wall_s": 6.422893499999191,
+      "exe_sha256": "f0c09e00278d26fd288ed2f3ed85f6a56bbf89d967c0f35fee8ea0f3782655f3",
+      "roles": {
+        "renderer": {
+          "kernel_s": 0.4375,
+          "user_s": 5.953125,
+          "cpu_ms_per_frame": 17.75173611111111,
+          "kernel_ms_per_frame": 1.2152777777777777,
+          "cycles_per_frame": 44097369.927777775
+        },
+        "ee": {
+          "kernel_s": 0.1875,
+          "user_s": 3.5625,
+          "cpu_ms_per_frame": 10.416666666666666,
+          "kernel_ms_per_frame": 0.5208333333333334,
+          "cycles_per_frame": 25958194.161111113
+        },
+        "vu": {
+          "kernel_s": 0.28125,
+          "user_s": 5.5,
+          "cpu_ms_per_frame": 16.05902777777778,
+          "kernel_ms_per_frame": 0.78125,
+          "cycles_per_frame": 40939982.722222224
+        }
+      },
+      "diagnostic_only_not_paired_fps": true
+    }
+  ],
+  "candidate_sampling": {
+    "samples_per_thread": 2220,
+    "wall_s": 10.000386699997762,
+    "renderer_percent": {
+      "emit_all_including_inlined_flush_batch": 28.3,
+      "draw": 18.2,
+      "msvcrt": 12.3,
+      "overlaps_vram": 4.0,
+      "psm_share_bits": 2.8
+    },
+    "intrusive_separate_from_FPS": true,
+    "does_not_prove_historical_regression_cause": true
+  },
+  "scale_protocol": {
+    "same_portable_binary": true,
+    "scenes": [
+      "Fuji-4",
+      "Skorost-1",
+      "Skorost-2",
+      "Grand-Prix-0"
+    ],
+    "warmups": 8,
+    "measured_windows": 24,
+    "frames_each": 600,
+    "discard_first": 60,
+    "measurement_order": "AB/BA/AB",
+    "A": "1x",
+    "B": "2x",
+    "no_captures_sampler_or_build_during_FPS": true
+  },
+  "scale_summary": {
+    "Fuji-4": {
+      "1": {
+        "simulation_fps": 55.182203553871304,
+        "simulation_speed_percent": 91.97323376283397,
+        "post_wait_ms_mean": 7.594413888888889,
+        "pace_wait_ms_mean": 0.0014603086419753086,
+        "audio_queue_mean_ms": 13.020098696461826,
+        "zero_audio_queue_samples": 42.666666666666664,
+        "stutter_over_33ms": 0,
+        "interval_ms": {
+          "p50": 18.2575,
+          "p95": 24.042233333333332,
+          "p99": 27.02756666666667
+        },
+        "present_interval_ms": {
+          "p50": 18.300966666666667,
+          "p95": 23.830333333333336,
+          "p99": 26.540466666666667
+        }
+      },
+      "2": {
+        "simulation_fps": 49.099276340043815,
+        "simulation_speed_percent": 81.83470266823055,
+        "post_wait_ms_mean": 10.342942345679011,
+        "pace_wait_ms_mean": 0.001822037037037037,
+        "audio_queue_mean_ms": 12.159400372439478,
+        "zero_audio_queue_samples": 43,
+        "stutter_over_33ms": 1.6666666666666667,
+        "interval_ms": {
+          "p50": 20.519766666666666,
+          "p95": 25.493266666666667,
+          "p99": 28.538933333333333
+        },
+        "present_interval_ms": {
+          "p50": 20.368366666666667,
+          "p95": 27.397566666666666,
+          "p99": 30.549333333333333
+        }
+      },
+      "FPS_change_percent": -11.02334959837018
+    },
+    "Skorost-1": {
+      "1": {
+        "simulation_fps": 53.67008152362411,
+        "simulation_speed_percent": 89.4528485897446,
+        "post_wait_ms_mean": 8.13280864197531,
+        "pace_wait_ms_mean": 0.0014433333333333334,
+        "audio_queue_mean_ms": 15.93173494723774,
+        "zero_audio_queue_samples": 62.666666666666664,
+        "stutter_over_33ms": 0.6666666666666666,
+        "interval_ms": {
+          "p50": 19.098766666666666,
+          "p95": 28.699066666666667,
+          "p99": 31.42193333333333
+        },
+        "present_interval_ms": {
+          "p50": 18.4469,
+          "p95": 27.5667,
+          "p99": 30.4097
+        }
+      },
+      "2": {
+        "simulation_fps": 46.66206842127113,
+        "simulation_speed_percent": 77.77247253732908,
+        "post_wait_ms_mean": 11.175428765432098,
+        "pace_wait_ms_mean": 0.0015985802469135803,
+        "audio_queue_mean_ms": 8.125015518311608,
+        "zero_audio_queue_samples": 154.66666666666666,
+        "stutter_over_33ms": 12,
+        "interval_ms": {
+          "p50": 22.365333333333332,
+          "p95": 32.59056666666667,
+          "p99": 36.44063333333333
+        },
+        "present_interval_ms": {
+          "p50": 21.534233333333333,
+          "p95": 31.0273,
+          "p99": 35.1128
+        }
+      },
+      "FPS_change_percent": -13.057578642335855
+    },
+    "Skorost-2": {
+      "1": {
+        "simulation_fps": 60.17192366009418,
+        "simulation_speed_percent": 100.2906860450323,
+        "post_wait_ms_mean": 2.438894135802469,
+        "pace_wait_ms_mean": 3.8472783950617284,
+        "audio_queue_mean_ms": 67.53287074829932,
+        "zero_audio_queue_samples": 0.6666666666666666,
+        "stutter_over_33ms": 2,
+        "interval_ms": {
+          "p50": 18.321933333333334,
+          "p95": 26.5234,
+          "p99": 30.0553
+        },
+        "present_interval_ms": {
+          "p50": 16.5483,
+          "p95": 25.596966666666667,
+          "p99": 30.627033333333333
+        }
+      },
+      "2": {
+        "simulation_fps": 55.30082736466173,
+        "simulation_speed_percent": 92.17185653876666,
+        "post_wait_ms_mean": 8.409485802469137,
+        "pace_wait_ms_mean": 0.0015178395061728395,
+        "audio_queue_mean_ms": 18.753422552664187,
+        "zero_audio_queue_samples": 40.666666666666664,
+        "stutter_over_33ms": 0,
+        "interval_ms": {
+          "p50": 19.4843,
+          "p95": 26.295666666666666,
+          "p99": 29.498866666666668
+        },
+        "present_interval_ms": {
+          "p50": 18.001666666666665,
+          "p95": 25.775866666666666,
+          "p99": 28.786099999999998
+        }
+      },
+      "FPS_change_percent": -8.095297605821672
+    },
+    "Grand-Prix-0": {
+      "1": {
+        "simulation_fps": 59.8201541185122,
+        "simulation_speed_percent": 99.70387717539252,
+        "post_wait_ms_mean": 0.573551975308642,
+        "pace_wait_ms_mean": 6.083002222222222,
+        "audio_queue_mean_ms": 79.21444033584164,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 7.333333333333333,
+        "interval_ms": {
+          "p50": 18.932166666666667,
+          "p95": 29.269766666666666,
+          "p99": 30.552866666666667
+        },
+        "present_interval_ms": {
+          "p50": 16.109133333333332,
+          "p95": 27.182666666666666,
+          "p99": 34.087900000000005
+        }
+      },
+      "2": {
+        "simulation_fps": 54.040579497153566,
+        "simulation_speed_percent": 90.07090302704226,
+        "post_wait_ms_mean": 9.086103271604939,
+        "pace_wait_ms_mean": 0.0015696296296296296,
+        "audio_queue_mean_ms": 16.48587026691496,
+        "zero_audio_queue_samples": 31.333333333333332,
+        "stutter_over_33ms": 2,
+        "interval_ms": {
+          "p50": 20.971333333333334,
+          "p95": 26.59166666666667,
+          "p99": 28.21003333333333
+        },
+        "present_interval_ms": {
+          "p50": 18.722433333333335,
+          "p95": 26.73623333333333,
+          "p99": 30.2019
+        }
+      },
+      "FPS_change_percent": -9.66158430469517
+    }
+  },
+  "scale_samples": [
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.457767100000638,
+      "frames_recorded": 600,
+      "simulation_fps": 53.46629743509574,
+      "simulation_speed_percent": 89.11330022605243,
+      "measured_wall_s": 10.081116999999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.5024,
+        "p95": 25.9692,
+        "p99": 29.2256
+      },
+      "post_wait_ms_mean": 7.890589444444444,
+      "pace_wait_ms_mean": 0.0016618518518518519,
+      "present_callback_fps": 53.42376016062465,
+      "present_interval_ms": {
+        "p50": 18.6152,
+        "p95": 25.7707,
+        "p99": 29.0108
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 12.953469273743018,
+      "zero_audio_queue_samples": 60,
+      "pair": 0,
+      "scale": 1,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 19.595788500002527,
+      "frames_recorded": 600,
+      "simulation_fps": 48.560468603656965,
+      "simulation_speed_percent": 80.93666151183577,
+      "measured_wall_s": 11.099563400000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 20.6868,
+        "p95": 25.8773,
+        "p99": 30.6729
+      },
+      "post_wait_ms_mean": 10.015292777777777,
+      "pace_wait_ms_mean": 0.0018637037037037038,
+      "present_callback_fps": 48.49134355019755,
+      "present_interval_ms": {
+        "p50": 20.5879,
+        "p95": 27.5697,
+        "p99": 30.5463
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 11.58666852886406,
+      "zero_audio_queue_samples": 45,
+      "pair": 0,
+      "scale": 2,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.251554900001793,
+      "frames_recorded": 600,
+      "simulation_fps": 55.01108754082762,
+      "simulation_speed_percent": 91.6880314321067,
+      "measured_wall_s": 9.7980248,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.3907,
+        "p95": 23.9483,
+        "p99": 27.2849
+      },
+      "post_wait_ms_mean": 7.675477407407407,
+      "pace_wait_ms_mean": 0.0014725925925925926,
+      "present_callback_fps": 54.987697501064126,
+      "present_interval_ms": {
+        "p50": 18.4136,
+        "p95": 23.9505,
+        "p99": 26.5907
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 12.325288640595904,
+      "zero_audio_queue_samples": 47,
+      "pair": 1,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.311677899997449,
+      "frames_recorded": 600,
+      "simulation_fps": 49.082064319140436,
+      "simulation_speed_percent": 81.80601506389209,
+      "measured_wall_s": 10.9816082,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 20.4836,
+        "p95": 25.5339,
+        "p99": 28.0501
+      },
+      "post_wait_ms_mean": 10.221646296296296,
+      "pace_wait_ms_mean": 0.001728888888888889,
+      "present_callback_fps": 49.033829927631,
+      "present_interval_ms": {
+        "p50": 20.3196,
+        "p95": 27.2305,
+        "p99": 29.62
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 11.795227188081936,
+      "zero_audio_queue_samples": 35,
+      "pair": 1,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.337062099999457,
+      "frames_recorded": 600,
+      "simulation_fps": 49.102484473662315,
+      "simulation_speed_percent": 81.84004972587294,
+      "measured_wall_s": 10.9770413,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 20.5525,
+        "p95": 25.6144,
+        "p99": 28.3472
+      },
+      "post_wait_ms_mean": 10.45228037037037,
+      "pace_wait_ms_mean": 0.0017653703703703703,
+      "present_callback_fps": 49.04059742296866,
+      "present_interval_ms": {
+        "p50": 20.4508,
+        "p95": 27.5475,
+        "p99": 30.8543
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 12.093182495344507,
+      "zero_audio_queue_samples": 54,
+      "pair": 2,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.613284799997928,
+      "frames_recorded": 600,
+      "simulation_fps": 55.21483189624185,
+      "simulation_speed_percent": 92.02761604492625,
+      "measured_wall_s": 9.7618698,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.3036,
+        "p95": 23.9518,
+        "p99": 26.3975
+      },
+      "post_wait_ms_mean": 7.594670925925926,
+      "pace_wait_ms_mean": 0.0014770370370370371,
+      "present_callback_fps": 55.158642161041236,
+      "present_interval_ms": {
+        "p50": 18.372,
+        "p95": 23.747,
+        "p99": 26.0718
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 13.519581005586593,
+      "zero_audio_queue_samples": 35,
+      "pair": 2,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.92314439999609,
+      "frames_recorded": 600,
+      "simulation_fps": 55.32069122454444,
+      "simulation_speed_percent": 92.20405381146898,
+      "measured_wall_s": 9.743189899999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.0782,
+        "p95": 24.2266,
+        "p99": 27.4003
+      },
+      "post_wait_ms_mean": 7.513093333333333,
+      "pace_wait_ms_mean": 0.0014312962962962962,
+      "present_callback_fps": 55.29007852179576,
+      "present_interval_ms": {
+        "p50": 18.1173,
+        "p95": 23.7935,
+        "p99": 26.9589
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 13.215426443202979,
+      "zero_audio_queue_samples": 46,
+      "pair": 3,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.32461119999789,
+      "frames_recorded": 600,
+      "simulation_fps": 49.1132802273287,
+      "simulation_speed_percent": 81.85804321492661,
+      "measured_wall_s": 10.9746284,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 20.5232,
+        "p95": 25.3315,
+        "p99": 29.2195
+      },
+      "post_wait_ms_mean": 10.35490037037037,
+      "pace_wait_ms_mean": 0.001971851851851852,
+      "present_callback_fps": 49.061193505898636,
+      "present_interval_ms": {
+        "p50": 20.3347,
+        "p95": 27.4147,
+        "p99": 31.1737
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 12.589791433891993,
+      "zero_audio_queue_samples": 40,
+      "pair": 3,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.779236399997899,
+      "frames_recorded": 600,
+      "simulation_fps": 52.67329067989022,
+      "simulation_speed_percent": 87.7914801347531,
+      "measured_wall_s": 10.2328902,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0347,
+        "p95": 30.0301,
+        "p99": 32.9371
+      },
+      "post_wait_ms_mean": 8.339037592592593,
+      "pace_wait_ms_mean": 0.0015477777777777777,
+      "present_callback_fps": 52.66742614337476,
+      "present_interval_ms": {
+        "p50": 18.4231,
+        "p95": 28.4431,
+        "p99": 31.2418
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 15.170748603351955,
+      "zero_audio_queue_samples": 60,
+      "pair": 0,
+      "scale": 1,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.827531799994176,
+      "frames_recorded": 600,
+      "simulation_fps": 47.175419873271416,
+      "simulation_speed_percent": 78.6280842376559,
+      "measured_wall_s": 11.4254415,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 22.0544,
+        "p95": 32.1497,
+        "p99": 35.6749
+      },
+      "post_wait_ms_mean": 11.019963888888888,
+      "pace_wait_ms_mean": 0.0015351851851851852,
+      "present_callback_fps": 47.14961729919985,
+      "present_interval_ms": {
+        "p50": 21.2554,
+        "p95": 30.4016,
+        "p99": 34.2032
+      },
+      "stutter_over_33ms": 9,
+      "audio_queue_mean_ms": 8.144050279329608,
+      "zero_audio_queue_samples": 159,
+      "pair": 0,
+      "scale": 2,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.26861999999528,
+      "frames_recorded": 600,
+      "simulation_fps": 53.52564431990877,
+      "simulation_speed_percent": 89.21211261640744,
+      "measured_wall_s": 10.0699395,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0748,
+        "p95": 28.8797,
+        "p99": 31.9426
+      },
+      "post_wait_ms_mean": 8.137247037037037,
+      "pace_wait_ms_mean": 0.0014101851851851851,
+      "present_callback_fps": 53.482401501252006,
+      "present_interval_ms": {
+        "p50": 18.6393,
+        "p95": 27.5497,
+        "p99": 30.9307
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 17.240230912476722,
+      "zero_audio_queue_samples": 63,
+      "pair": 1,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.973771599994507,
+      "frames_recorded": 600,
+      "simulation_fps": 46.796970907608156,
+      "simulation_speed_percent": 77.99731683311005,
+      "measured_wall_s": 11.5178395,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 22.6474,
+        "p95": 32.1823,
+        "p99": 36.7768
+      },
+      "post_wait_ms_mean": 11.069835925925926,
+      "pace_wait_ms_mean": 0.001562962962962963,
+      "present_callback_fps": 46.772216665735144,
+      "present_interval_ms": {
+        "p50": 21.6499,
+        "p95": 30.6942,
+        "p99": 35.6072
+      },
+      "stutter_over_33ms": 12,
+      "audio_queue_mean_ms": 8.319096834264432,
+      "zero_audio_queue_samples": 147,
+      "pair": 1,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.966150000000198,
+      "frames_recorded": 600,
+      "simulation_fps": 46.4472098333793,
+      "simulation_speed_percent": 77.41436403096442,
+      "measured_wall_s": 11.6045722,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 22.2259,
+        "p95": 32.9054,
+        "p99": 36.7926
+      },
+      "post_wait_ms_mean": 11.216981296296296,
+      "pace_wait_ms_mean": 0.0016692592592592592,
+      "present_callback_fps": 46.42246324384769,
+      "present_interval_ms": {
+        "p50": 21.5073,
+        "p95": 31.3313,
+        "p99": 35.1984
+      },
+      "stutter_over_33ms": 14,
+      "audio_queue_mean_ms": 8.37248417132216,
+      "zero_audio_queue_samples": 139,
+      "pair": 2,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.191395300003933,
+      "frames_recorded": 600,
+      "simulation_fps": 53.68416763559618,
+      "simulation_speed_percent": 89.47632615500413,
+      "measured_wall_s": 10.040204099999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.3042,
+        "p95": 28.2988,
+        "p99": 31.3634
+      },
+      "post_wait_ms_mean": 8.05856425925926,
+      "pace_wait_ms_mean": 0.0014551851851851852,
+      "present_callback_fps": 53.68172942339075,
+      "present_interval_ms": {
+        "p50": 18.5274,
+        "p95": 27.3999,
+        "p99": 30.0954
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 13.520811918063314,
+      "zero_audio_queue_samples": 66,
+      "pair": 2,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.167975799995475,
+      "frames_recorded": 600,
+      "simulation_fps": 53.800432615367384,
+      "simulation_speed_percent": 89.67010699782223,
+      "measured_wall_s": 10.0185068,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9173,
+        "p95": 28.9187,
+        "p99": 30.9598
+      },
+      "post_wait_ms_mean": 8.202614629629629,
+      "pace_wait_ms_mean": 0.0014646296296296295,
+      "present_callback_fps": 53.76278525587752,
+      "present_interval_ms": {
+        "p50": 18.174,
+        "p95": 27.7505,
+        "p99": 30.203
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 17.034162011173184,
+      "zero_audio_queue_samples": 59,
+      "pair": 3,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 13.897441099994467,
+      "frames_recorded": 600,
+      "simulation_fps": 46.74202452282593,
+      "simulation_speed_percent": 77.90573674791277,
+      "measured_wall_s": 11.531379000000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 22.2227,
+        "p95": 32.684,
+        "p99": 35.7525
+      },
+      "post_wait_ms_mean": 11.239469074074075,
+      "pace_wait_ms_mean": 0.0015635185185185186,
+      "present_callback_fps": 46.74124683764348,
+      "present_interval_ms": {
+        "p50": 21.4455,
+        "p95": 31.0564,
+        "p99": 34.5328
+      },
+      "stutter_over_33ms": 10,
+      "audio_queue_mean_ms": 7.683465549348231,
+      "zero_audio_queue_samples": 178,
+      "pair": 3,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.178355600000941,
+      "frames_recorded": 600,
+      "simulation_fps": 59.87823987658372,
+      "simulation_speed_percent": 99.80119283396353,
+      "measured_wall_s": 9.001600600000002,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.4424,
+        "p95": 25.9159,
+        "p99": 30.1089
+      },
+      "post_wait_ms_mean": 3.7820442592592594,
+      "pace_wait_ms_mean": 2.69527037037037,
+      "present_callback_fps": 60.06712272508867,
+      "present_interval_ms": {
+        "p50": 16.5849,
+        "p95": 25.3042,
+        "p99": 31.7619
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 50.83239517625232,
+      "zero_audio_queue_samples": 4,
+      "pair": 0,
+      "scale": 1,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.01879740000004,
+      "frames_recorded": 600,
+      "simulation_fps": 55.57193673282438,
+      "simulation_speed_percent": 92.62372416859117,
+      "measured_wall_s": 9.699140100000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.7772,
+        "p95": 26.0317,
+        "p99": 29.2081
+      },
+      "post_wait_ms_mean": 8.417827407407408,
+      "pace_wait_ms_mean": 0.0015346296296296297,
+      "present_callback_fps": 55.64352564825224,
+      "present_interval_ms": {
+        "p50": 17.7387,
+        "p95": 25.9522,
+        "p99": 28.4239
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 21.106592936802976,
+      "zero_audio_queue_samples": 46,
+      "pair": 0,
+      "scale": 2,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.166943899996113,
+      "frames_recorded": 600,
+      "simulation_fps": 60.23213913414054,
+      "simulation_speed_percent": 100.39104931805562,
+      "measured_wall_s": 8.9487109,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.0344,
+        "p95": 24.9482,
+        "p99": 30.3838
+      },
+      "post_wait_ms_mean": 2.9111955555555555,
+      "pace_wait_ms_mean": 3.315094074074074,
+      "present_callback_fps": 60.40541492070456,
+      "present_interval_ms": {
+        "p50": 16.5305,
+        "p95": 25.6199,
+        "p99": 32.2278
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 73.01793506493506,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.159939800003485,
+      "frames_recorded": 600,
+      "simulation_fps": 54.95816449926893,
+      "simulation_speed_percent": 91.6007281492784,
+      "measured_wall_s": 9.807459999999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.7104,
+        "p95": 26.3938,
+        "p99": 30.1898
+      },
+      "post_wait_ms_mean": 8.528192037037037,
+      "pace_wait_ms_mean": 0.0015492592592592593,
+      "present_callback_fps": 55.006661327135284,
+      "present_interval_ms": {
+        "p50": 18.3024,
+        "p95": 25.6884,
+        "p99": 29.2566
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 18.058258364312266,
+      "zero_audio_queue_samples": 41,
+      "pair": 1,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.107922600000165,
+      "frames_recorded": 600,
+      "simulation_fps": 55.524431656450176,
+      "simulation_speed_percent": 92.54454576759632,
+      "measured_wall_s": 9.7074384,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.1806,
+        "p95": 26.2712,
+        "p99": 29.5646
+      },
+      "post_wait_ms_mean": 8.325218518518518,
+      "pace_wait_ms_mean": 0.0015194444444444444,
+      "present_callback_fps": 55.59893524111951,
+      "present_interval_ms": {
+        "p50": 17.7092,
+        "p95": 25.7233,
+        "p99": 28.6818
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 19.61338847583643,
+      "zero_audio_queue_samples": 30,
+      "pair": 2,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.308630600004108,
+      "frames_recorded": 600,
+      "simulation_fps": 60.04058008022647,
+      "simulation_speed_percent": 100.07177102734144,
+      "measured_wall_s": 8.9772617,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.3207,
+        "p95": 25.7527,
+        "p99": 29.6573
+      },
+      "post_wait_ms_mean": 3.681483148148148,
+      "pace_wait_ms_mean": 2.7102325925925927,
+      "present_callback_fps": 60.26711728133088,
+      "present_interval_ms": {
+        "p50": 16.4421,
+        "p95": 25.8534,
+        "p99": 29.8253
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 49.15273840445269,
+      "zero_audio_queue_samples": 2,
+      "pair": 2,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.136975900000834,
+      "frames_recorded": 600,
+      "simulation_fps": 60.24305176591553,
+      "simulation_speed_percent": 100.40923778969986,
+      "measured_wall_s": 8.9470899,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.6107,
+        "p95": 28.8693,
+        "p99": 30.1248
+      },
+      "post_wait_ms_mean": 0.7240037037037037,
+      "pace_wait_ms_mean": 5.516508518518519,
+      "present_callback_fps": 60.48464924289827,
+      "present_interval_ms": {
+        "p50": 16.6723,
+        "p95": 25.3176,
+        "p99": 29.828
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 80.4279387755102,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.093786199999158,
+      "frames_recorded": 600,
+      "simulation_fps": 55.41988593826607,
+      "simulation_speed_percent": 92.37029569942527,
+      "measured_wall_s": 9.7257508,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.5619,
+        "p95": 26.222,
+        "p99": 28.7422
+      },
+      "post_wait_ms_mean": 8.375046851851852,
+      "pace_wait_ms_mean": 0.001484814814814815,
+      "present_callback_fps": 55.46318278154768,
+      "present_interval_ms": {
+        "p50": 17.9934,
+        "p95": 25.9159,
+        "p99": 28.4199
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 18.588620817843868,
+      "zero_audio_queue_samples": 51,
+      "pair": 3,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.147150999997393,
+      "frames_recorded": 600,
+      "simulation_fps": 59.76899891805914,
+      "simulation_speed_percent": 99.6186154120619,
+      "measured_wall_s": 9.018053,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0279,
+        "p95": 29.1445,
+        "p99": 30.515
+      },
+      "post_wait_ms_mean": 0.20197425925925927,
+      "pace_wait_ms_mean": 6.397283148148148,
+      "present_callback_fps": 59.502071623240845,
+      "present_interval_ms": {
+        "p50": 15.6987,
+        "p95": 28.5394,
+        "p99": 34.2752
+      },
+      "stutter_over_33ms": 9,
+      "audio_queue_mean_ms": 81.25774163568774,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "scale": 1,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.231965400002082,
+      "frames_recorded": 600,
+      "simulation_fps": 53.81639837777606,
+      "simulation_speed_percent": 89.69725426065534,
+      "measured_wall_s": 10.0155346,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 21.0948,
+        "p95": 26.5574,
+        "p99": 28.2734
+      },
+      "post_wait_ms_mean": 9.22763037037037,
+      "pace_wait_ms_mean": 0.001484814814814815,
+      "present_callback_fps": 53.7896997032251,
+      "present_interval_ms": {
+        "p50": 18.714,
+        "p95": 27.0181,
+        "p99": 30.2264
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 14.968396648044694,
+      "zero_audio_queue_samples": 35,
+      "pair": 0,
+      "scale": 2,
+      "warmup_only": true,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.19739280000067,
+      "frames_recorded": 600,
+      "simulation_fps": 59.497368439120876,
+      "simulation_speed_percent": 99.16588150810874,
+      "measured_wall_s": 9.0592242,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.011,
+        "p95": 29.004,
+        "p99": 30.5552
+      },
+      "post_wait_ms_mean": 1.2630983333333334,
+      "pace_wait_ms_mean": 5.412800370370371,
+      "present_callback_fps": 59.25103056244289,
+      "present_interval_ms": {
+        "p50": 16.0149,
+        "p95": 27.1405,
+        "p99": 33.8173
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 73.42770204841713,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.23706449999736,
+      "frames_recorded": 600,
+      "simulation_fps": 53.82402416045606,
+      "simulation_speed_percent": 89.70996435996716,
+      "measured_wall_s": 10.0141156,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 21.0761,
+        "p95": 26.5298,
+        "p99": 27.6645
+      },
+      "post_wait_ms_mean": 9.170711481481481,
+      "pace_wait_ms_mean": 0.0014133333333333333,
+      "present_callback_fps": 53.80072841377268,
+      "present_interval_ms": {
+        "p50": 18.8897,
+        "p95": 26.5175,
+        "p99": 29.1699
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 15.101230912476723,
+      "zero_audio_queue_samples": 32,
+      "pair": 1,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.145724399997562,
+      "frames_recorded": 600,
+      "simulation_fps": 54.13770947891129,
+      "simulation_speed_percent": 90.23279220827095,
+      "measured_wall_s": 9.9560917,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 20.9144,
+        "p95": 26.6422,
+        "p99": 29.0049
+      },
+      "post_wait_ms_mean": 9.082859444444445,
+      "pace_wait_ms_mean": 0.0016303703703703704,
+      "present_callback_fps": 54.112379077348876,
+      "present_interval_ms": {
+        "p50": 18.6795,
+        "p95": 26.9436,
+        "p99": 30.5572
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 18.65678398510242,
+      "zero_audio_queue_samples": 32,
+      "pair": 2,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.130626399994071,
+      "frames_recorded": 600,
+      "simulation_fps": 59.950315314189034,
+      "simulation_speed_percent": 99.92082037886631,
+      "measured_wall_s": 8.9907784,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.767,
+        "p95": 29.5219,
+        "p99": 30.5751
+      },
+      "post_wait_ms_mean": 0.25474537037037037,
+      "pace_wait_ms_mean": 6.365554259259259,
+      "present_callback_fps": 59.974012078922094,
+      "present_interval_ms": {
+        "p50": 16.2757,
+        "p95": 26.8247,
+        "p99": 33.8419
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 81.83146840148699,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=1"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.119664199999534,
+      "frames_recorded": 600,
+      "simulation_fps": 60.01277860222668,
+      "simulation_speed_percent": 100.02492963920253,
+      "measured_wall_s": 8.981420499999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0185,
+        "p95": 29.2834,
+        "p99": 30.5283
+      },
+      "post_wait_ms_mean": 0.20281222222222223,
+      "pace_wait_ms_mean": 6.470652037037037,
+      "present_callback_fps": 59.831371396309514,
+      "present_interval_ms": {
+        "p50": 16.0368,
+        "p95": 27.5828,
+        "p99": 34.6045
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 82.38415055762081,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "scale": 1,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [
+        "PS2_SCALE=2"
+      ],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.147492600000987,
+      "frames_recorded": 600,
+      "simulation_fps": 54.160004852093344,
+      "simulation_speed_percent": 90.26995251288868,
+      "measured_wall_s": 9.9519932,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 20.9235,
+        "p95": 26.603,
+        "p99": 27.9607
+      },
+      "post_wait_ms_mean": 9.00473888888889,
+      "pace_wait_ms_mean": 0.0016651851851851851,
+      "present_callback_fps": 54.13728089346959,
+      "present_interval_ms": {
+        "p50": 18.5981,
+        "p95": 26.7476,
+        "p99": 30.8786
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 15.699595903165736,
+      "zero_audio_queue_samples": 30,
+      "pair": 3,
+      "scale": 2,
+      "warmup_only": false,
+      "same_binary_and_path": true
+    }
+  ],
+  "captures": [
+    {
+      "scene": "Fuji-4",
+      "scale": 1,
+      "width": 640,
+      "height": 479,
+      "ppm_sha256": "8675a4c9f2ca2d35f9e9090ca18c15b08ef3f7fccacf21da4d3c67b47a60725a",
+      "png_sha256": "ef694f47fc8738e6d94faf384bdeede6c011d0da0aa459fc5e490ea0457afc9b",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    },
+    {
+      "scene": "Fuji-4",
+      "scale": 2,
+      "width": 1280,
+      "height": 958,
+      "ppm_sha256": "efcf419ecd4e8b4f5f3b8077530abab762dbcba3fb81800b8060b8e302e7947b",
+      "png_sha256": "31380960b2c6945ed05a39c763ba1bc425cbcd67b124ba13d4b7bae3e86b0501",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    },
+    {
+      "scene": "Skorost-1",
+      "scale": 1,
+      "width": 640,
+      "height": 479,
+      "ppm_sha256": "5ba312c9871e1bdd1c955e35f07b170fef8f65d65d5c2990ecb4d233da9f3d52",
+      "png_sha256": "c6a6adc9421383534827741fe7d9e291e932125833a73fe6941dc60105ae9395",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    },
+    {
+      "scene": "Skorost-1",
+      "scale": 2,
+      "width": 1280,
+      "height": 958,
+      "ppm_sha256": "2b6a1442d011d1bb771d67f3e0c4f3a3cec9ef63922644130f7e5fa267501ce2",
+      "png_sha256": "1d1eb0d26f308c9aec1dc58ab128ff0637eea9e940cb604c2f1de9132b3eebbb",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    },
+    {
+      "scene": "Skorost-2",
+      "scale": 1,
+      "width": 640,
+      "height": 479,
+      "ppm_sha256": "1cedf30dad9fde07d9ddc61e7e290251f2012fcda1a23a0c021a662c751b7325",
+      "png_sha256": "d4a0c37eea93da69495be348eea71de284363bf8858829f37e7ac9a179c45324",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    },
+    {
+      "scene": "Skorost-2",
+      "scale": 2,
+      "width": 1280,
+      "height": 958,
+      "ppm_sha256": "684ce501a33a2a05ac27819d3834091239545e3c1a29dfc01af7b7ecf3de2e95",
+      "png_sha256": "a94fa3fd2f1660833fcd68e4d5c1205785b3c99d6670de0e0fff040779f86c5d",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    },
+    {
+      "scene": "Grand-Prix-0",
+      "scale": 1,
+      "width": 640,
+      "height": 479,
+      "ppm_sha256": "80dea7feab0035a464c282d5db7a2e6d6e7b05520614926e31c1941901dd7ca6",
+      "png_sha256": "9d7d11d951bb81fb2e7a17f506dae10dd098718fa6b8779b2a82e1b2f1e56d79",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    },
+    {
+      "scene": "Grand-Prix-0",
+      "scale": 2,
+      "width": 1280,
+      "height": 958,
+      "ppm_sha256": "608e92d557e810407d8c63392185d87236c8cf3a4c98774ad7d026d8ce4302a6",
+      "png_sha256": "b6027676b73ee4e00035995436741b0ca1d1fdd4f8e880a01909450480a818e5",
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "synchronous_capture_only_not_FPS": true
+    }
+  ],
+  "visual_review": {
+    "inspected_images": 8,
+    "scenes": [
+      "Fuji-4",
+      "Skorost-1",
+      "Skorost-2",
+      "Grand-Prix-0"
+    ],
+    "scales": [
+      1,
+      2
+    ],
+    "dimensions": {
+      "1x": [
+        640,
+        479
+      ],
+      "2x": [
+        1280,
+        958
+      ]
+    },
+    "frame": 11200,
+    "method": "Direct inspection of all eight lossless PNG conversions of native PPM captures",
+    "observations": [
+      "Car, road, HUD and visible scene effects are present at these checkpoints at both scales.",
+      "2x provides more samples along geometry edges while original low-resolution texture/HUD detail remains.",
+      "Fine line/dither-like patterns and strong highlights remain visible; larger captures do not establish original PS2 parity or classify those effects as correct.",
+      "Four scene/frame pairs are limited spot checks, not full visual regression or a match to original hardware/PCSX2."
+    ],
+    "original_reference_available_for_these_pairs": false,
+    "renderer_or_assets_modified": false,
+    "2x_promoted": false,
+    "public_images_uploaded": false
+  },
+  "private_local_package": {
+    "folder": "SpeedRacer-Portable-local-v1",
+    "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+    "private_contains_own_ISO_and_ELF": true,
+    "public_release": false,
+    "new_native_build": false,
+    "copied_QA_card_initial_sha256": "b91326b1aa86a07d7c8f061a6ce3f715d80159c52fab209c061467dea3b7335d",
+    "final_package_smoke": [
+      {
+        "case": "race",
+        "exit": 0,
+        "frames_recorded": 600,
+        "wall_total_s": 13.702325699999989,
+        "minimal_system_PATH": true,
+        "unrelated_cwd": true,
+        "default_local_disc_ELF_and_save": true,
+        "card_sha256_after": "b91326b1aa86a07d7c8f061a6ce3f715d80159c52fab209c061467dea3b7335d",
+        "full_race_or_result_save_verified": false
+      },
+      {
+        "case": "reopen",
+        "exit": 0,
+        "frames_recorded": 1200,
+        "wall_total_s": 19.87797690000002,
+        "minimal_system_PATH": true,
+        "unrelated_cwd": true,
+        "default_local_disc_ELF_and_save": true,
+        "card_sha256_after": "b91326b1aa86a07d7c8f061a6ce3f715d80159c52fab209c061467dea3b7335d",
+        "full_race_or_result_save_verified": false
+      }
+    ]
+  },
+  "limitations": [
+    "Short600-VBlank samples do not validate full races, classes2–4, Mirror or30minutes.",
+    "Pre-present callback intervals do not measure scanout; zero SDL queue samples do not establish hardware underruns.",
+    "Original PS2 cadence/individual lap time and matched original/native graphic parity remain open.",
+    "Control does not reproduce the historical23.44% loss at the same magnitude; historical causes remain unresolved and all adverse data retained.",
+    "CPU counter intervals are single diagnostics, not paired FPS; samples do not isolate instruction-level causes.",
+    "1x/2x comparisons assess an existing scale feature; no AA/HD assets or renderer optimization was implemented/promoted.",
+    "Eight synchronous captures are separate from the native threaded FPS series; no claim of complete graphics fidelity.",
+    "Final package launches verify existing default local save discovery and bounded exit/reopen, not result-save write/read correctness.",
+    "This is the development Windows machine with minimal PATH, not second-PC/other-GPU certification.",
+    "Actual game IO Unicode, protected-folder saves, physical latency/controllers and audio underruns remain open.",
+    "The private playable local package contains the recovered own ISO/ELF and a copied QA card; it is not a public/friend alpha.",
+    "Prior26 CTests and52 preparer synthetic tests are historical; they were not rerun in this no-runtime-change iteration.",
+    "No new native compilation, public game source/binary/assets upload, pack integration or release-date promise."
+  ]
+}

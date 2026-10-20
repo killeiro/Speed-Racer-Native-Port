@@ -1,5 +1,7 @@
 # Preparação dos dados portáteis v1
 
+> Atualização posterior de20/10/2026: a ISO legítima foi recuperada. O [novo checkpoint](restored-media-v1.md) registra preparação/boot reais, controle Skorost, escala1x/2x e pacote privado. O texto abaixo preserva as condições e resultados desta etapa histórica.
+
 19/10/2026. **Implementado e testado como ferramenta de engenharia Windows.** O preparador cria uma pasta nova a partir da própria ISO legítima do usuário. A ISO completa ainda não está disponível neste ambiente; não houve boot do jogo, benchmark, comparação gráfica ou nova release.
 
 ## Evidência e implementação

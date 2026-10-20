@@ -1,5 +1,7 @@
 # Vanilla v14 — experimento Q não promovido
 
+> Atualização posterior de20/10/2026: a ISO legítima foi recuperada. O [novo checkpoint](restored-media-v1.md) registra preparação/boot reais, controle Skorost, escala1x/2x e pacote privado. O texto abaixo preserva as condições e resultados desta etapa histórica.
+
 19/10/2026. **Versão de trabalho mantida na v13.** O executável continua nativo Windows/Vulkan. A estabilização Vanilla permanece aberta; não há novo pacote jogável nesta iteração.
 
 ## Resultado e decisão

@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — Recovered media and real portable validation
+
+- Validate recovered legitimate ISO with the production preparer and complete actual portable boot/minimal-PATH checks.
+- Resume the three-pair Skorost control, pass89,922 exact-candidate Q checks and collect separate native CPU/sampling diagnostics; retain historical adverse data and isolate v14.
+- Complete32 warmed1x/2x short replay windows and eight separate captures; keep1x default after8–13% FPS losses at2x.
+- Assemble a private local package containing own ISO/ELF/copied QA card; verify default local data/save discovery, bounded race exit and reopening. No public/friend release or new native build.
+- Preserve runtime and older packages; update documentation/metrics only. Full-game, original parity, clean-PC and distribution gates remain open.
+
 ## 2026-10-19 — Portable data preparation v1
 
 - Add a private Windows/Python preparer for the audited USA ISO boot/ELF; use read-only input, streaming/hash verification and a new destination only.

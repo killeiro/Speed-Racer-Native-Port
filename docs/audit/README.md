@@ -1,9 +1,10 @@
 # Vanilla engineering evidence
 
-Documentation publication: **2026-10-19**. This directory contains original engineering reports, sanitized measurements and hashes from the maintainer's native Windows build. It contains no game-derived implementation, executable, ISO, BIOS, ELF, save state, memory card, screenshot, texture or model. Local source commit IDs identify the private working tree; they are not commits or downloadable artifacts in this documentation repository.
+Documentation publication: **2026-10-20**. This directory contains original engineering reports, sanitized measurements and hashes from the maintainer's native Windows build. It contains no game-derived implementation, executable, ISO, BIOS, ELF, save state, memory card, screenshot, texture or model. Local source commit IDs identify the private working tree; they are not commits or downloadable artifacts in this documentation repository.
 
 ## Read first
 
+- [Recovered media and real portable validation](restored-media-v1.md) and [metrics](restored-media-v1-metrics.json): real ISO/boot, resumed control/Q/CPU,32 scale windows, eight captures and private local package;1x remains default, broader acceptance open.
 - [Portable data preparation v1](data-preparation-v1.md) and [metrics](data-preparation-v1-metrics.json): exact USA ELF validation, new-directory preparation and52 synthetic tests; no full-disc/gameplay acceptance.
 - [Portable preflight v1](portable-preflight-v1.md) and [metrics](portable-preflight-v1-metrics.json): separate GUI target without development data fallbacks, nine media-absent scenarios and26 tests; no successful game boot or clean-PC acceptance claimed.
 - [Release readiness, aliasing and graphics candidates](release-readiness-and-graphics.md) and [research metadata](graphics-candidates.json): conditional low-confidence planning ranges, alpha gates and native1x/2x/3x audit; no new runtime/asset integration.

@@ -1,5 +1,7 @@
 # Portable preflight v1 — alvo Windows sem fallback de dados
 
+> Atualização posterior de20/10/2026: a ISO legítima foi recuperada. O [novo checkpoint](restored-media-v1.md) registra preparação/boot reais, controle Skorost, escala1x/2x e pacote privado. O texto abaixo preserva as condições e resultados desta etapa histórica.
+
 19/10/2026. **Implementado, compilado e verificado no contrato de dados ausentes.** A versão de desenvolvimento v13 foi preservada. O novo executável é uma preparação técnica para portabilidade, sem novo aceite de corrida, gráficos ou distribuição para amigos.
 
 ## Problema e mudança

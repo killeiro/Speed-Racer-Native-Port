@@ -1,5 +1,7 @@
 # Release readiness, serrilhado e pesquisa gráfica
 
+> Atualização posterior de20/10/2026: a ISO legítima foi recuperada. O [novo checkpoint](restored-media-v1.md) registra preparação/boot reais, controle Skorost, escala1x/2x e pacote privado. O texto abaixo preserva as condições e resultados desta etapa histórica.
+
 19/10/2026. **Pesquisa e planejamento; executável ativo v13 preservado.** Não houve nova alteração no renderer, download de assets, integração de mods, build ou teste de corrida nesta revisão. A imagem legítima local continua ausente no caminho conhecido. Resultados de performance anteriores estão no [relatório v14](vanilla-v14.md).
 
 ## Previsão realista

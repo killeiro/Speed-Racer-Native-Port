@@ -44,7 +44,7 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Current P0/P1 tasks](docs/audit/next-10-tasks.md).
+Status updated **2026-10-20**. [Evidence index](docs/audit/README.md) · [Current P0/P1 tasks](docs/audit/next-10-tasks.md).
 
 - [x] Separate EE simulation timing from presentation callbacks; capture percentiles and environment
 - [x] Fix DATE/CT24 and delayed VU MSKPATH3 regressions with focused tests
@@ -66,7 +66,8 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [x] Distinguish VU/renderer bottlenecks with native CPU and temporary stage diagnostics; restore probes before benchmarks in v12
 - [x] Reuse exact GS texture-read registration; validate 74,531 draws,26 tests,12 unchanged images, five paired scenes and36 short routes
 - [x] Evaluate incremental Q predecessor updates with seven-scene warmed pairs and26 tests; isolate the v14 experiment after adverse performance and restore v13
-- [ ] Recover the local legitimate disc input, explain the v14 Skorost-1 regression and finish native controls before promoting another candidate
+- [x] Recover/validate legitimate local media, boot the portable GUI and complete the declared Skorost control/exact-candidate Q/CPU follow-up ([report](docs/audit/restored-media-v1.md))
+- [ ] Explain historical v14 outliers where reproducible and reduce measured GS preparation cost before promoting another candidate
 - [x] Audit actual Ring layout and remove unnecessary counter/flag sharing; retain atomics/wake protocol and validate queue stress in v13
 - [ ] Resolve the v12 Fuji regression before recommending v12/v13 as a general performance upgrade; retain all comparisons and extend throughput replays
 - [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
@@ -75,12 +76,16 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [ ] Verify actual audio underruns, physical input latency, pause/restart, saves and shutdown
 - [x] Add opt-in separate portable GUI target with empty data fallbacks and a reusable checker; verify nine media-absent cases and26 tests, preserving v13
 - [x] Add a bounded Windows/Python data preparer with exact audited ELF checks, fresh destination and52 synthetic tests; real-disc/runtime validation remains open ([report](docs/audit/data-preparation-v1.md))
+- [x] Run32 same-binary1x/2x windows and eight separate captures; retain1x default after8–13% FPS losses at2x
+- [x] Assemble a private local package with own recovered media; verify default local save discovery, bounded race exit and reopen under minimal PATH
 - [ ] Reproducible Windows build and launch on a clean machine without development fallbacks ([#7](../../issues/7))
 - [ ] Complete source/dependency provenance and distribution review ([#1](../../issues/1), [#8](../../issues/8))
 
 **Performance remains P0.** Fuji, Grand Prix and some Skorost/Thunderhead samples still run below target. A 600-VBlank route sample is approximately ten simulated seconds; it does not validate every section of a track or a full race. V11 separately validates an active-scene clock; original PS2 cadence and per-player lap/result timing remain unconfirmed. Pre-present callbacks do not measure scanout. Regression agreement does not establish PS2 accuracy.
 
 **Vanilla definition of done:** repeatable tests show intended speed and original graphics, menus, physics, audio, controls and saving over typical full races and long sessions; authorized packaging passes clean-machine QA. These acceptance gates remain open. No milestone overrides distribution rights.
+
+The [recovered-media checkpoint](docs/audit/restored-media-v1.md) removes the ISO blocker and verifies local portable boot/short races. The Skorost control averages53.89→53.26FPS for v13/v14, without reproducing the old23.44% loss at that magnitude or explaining its cause. Renderer CPU is about18ms/frame in the separate diagnostic; GS preparation remains P0. The private package contains own game data and is not the friend-test alpha.
 
 ## Release readiness and graphics research — 2026-10-19
 
