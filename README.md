@@ -11,7 +11,7 @@
 | Feature | Status | Evidence |
 | --- | --- | --- |
 | Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
-| Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
+| Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by team |
 | Gameplay speed | 🔄 Improved; unresolved | V17 gains in all three target Skorost pairs; seven-scene controls and adverse tails retained; stable60/full-game pacing remains unresolved |
 | Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
 | Regression tests | 🟢 Local suite | 31/31 local CTest in v17; 1,115,619 differential primitives, 696,942 new native checks and 12 new unchanged image pairs |
@@ -20,11 +20,11 @@
 | Shutdown / card persistence | 🟡 Normal exit tested locally | Atomic close request, ordered drain/join and pending-card replacement/retry; real race-result save and restart remain open |
 | Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
 
-**Current private local portable build: Vanilla v17, 2026-10-20, with repeated mip snapshot unions removed and v16 shutdown/card fixes preserved. The original development v13 EXE and earlier packages/save are preserved.** These are maintainer-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
+**Current private local portable build: Vanilla v17, 2026-10-20, with repeated mip snapshot unions removed and v16 shutdown/card fixes preserved. The original development v13 EXE and earlier packages/save are preserved.** These are team-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
 
 The [v19 Fuji/VU audit](docs/audit/vanilla-v19.md) records a controller-driven Fuji victory reported from last place: 59.20 mean simulated FPS, with two of 63 five-second windows below55 and residual callback tails. The adaptive VU rejection experiment passes31 tests and21,078,049 native reference checks, and meets the Fuji throughput gates (+3.63%/+1.33%). It fails the predeclared consistent callback-p99 guard in Skorost-1 (+10–14% in all three pairs), so it is isolated and exact v17 remains current. All56 selected windows, the handover interruption and both human sessions are retained; no v19 image/route matrix or package is claimed.
 
-The [v18 timing and human-play audit](docs/audit/vanilla-v18.md) records two new human v17 sessions (keyboard and recognized Xbox360 controller), near60 mean simulated FPS with residual callback tails, a maintainer-reported keyboard victory, and seven independent native pause/reload/active checks. The earlier Windows256-frame audio experiment passes31 tests and improves mean callback p99 in seven-scene controls, but fails the predeclared Fuji FPS guard; exact v17 source/EXE remains current. All56 windows and the large baseline outlier are retained. Active-scene versus wall-clock differences, original cadence, result-save and full-game fluency remain open.
+The [v18 timing and human-play audit](docs/audit/vanilla-v18.md) records two new human v17 sessions (keyboard and recognized Xbox360 controller), near60 mean simulated FPS with residual callback tails, a team-reported keyboard victory, and seven independent native pause/reload/active checks. The earlier Windows256-frame audio experiment passes31 tests and improves mean callback p99 in seven-scene controls, but fails the predeclared Fuji FPS guard; exact v17 source/EXE remains current. All56 windows and the large baseline outlier are retained. Active-scene versus wall-clock differences, original cadence, result-save and full-game fluency remain open.
 
 The [v17 GS snapshot report](docs/audit/vanilla-v17.md) eliminates repeated whole-mip-range unions within an eligible descriptor run. Seven-scene warmed AB/BA/AB controls measure Skorost-1 at **58.32→59.89 simulated FPS (+2.69%)**, all three pairs positive. 31 tests, 696,942 new per-call native checks, 12 identical image pairs, 36 short routes and two final-folder launches pass. Matched callback p99 worsens in six of seven scenes; this passes the throughput gate, not general fluency/stutter acceptance. No stable60/full-game or original PS2 parity claim. 1x/legacy and v16 lifecycle/card behavior are preserved.
 
@@ -32,7 +32,7 @@ The [v16 lifecycle report](docs/audit/vanilla-v16.md) records an atomic host clo
 
 The [v15 GS snapshot report](docs/audit/vanilla-v15.md) records a rebuilt native GUI and seven-scene warmed comparisons: Skorost-1 averages **52.98→55.91 simulated FPS (+5.54%)**, with all three pairs positive. Fuji changes are small; adverse frame-time tails remain visible. Validation includes 27 tests, exact per-call payload checks, 12 identical native/native image pairs, 36 short Class 1 routes and two final-folder launches. That checkpoint left terminal drain/join open; v16 addresses normal shutdown above, while full races and stable 60 FPS remain open. A new private local package preserves the prior package/save and contains own ISO/ELF; it is not a public/friend release. 1x and legacy pacing remain default.
 
-The legitimate local ISO is recovered. [Recovered-media validation](docs/audit/restored-media-v1.md) records real portable boot,32 warmed1x/2x replay windows, eight separate captures, the resumed Skorost control and89,922 exact-candidate Q checks. The local private package now executes the game with its own data/save directory; it contains the maintainer's ISO/ELF and is not a public/friend alpha.1x remains default:2x loses8–13% FPS in the four scenes. V14 remains isolated; the v15 change above follows this earlier unchanged-runtime checkpoint, and prior packages are preserved. Full races/30min, original parity, second-PC and distribution gates remain open.
+The legitimate local ISO is recovered. [Recovered-media validation](docs/audit/restored-media-v1.md) records real portable boot,32 warmed1x/2x replay windows, eight separate captures, the resumed Skorost control and89,922 exact-candidate Q checks. The local private package now executes the game with its own data/save directory; it contains the team's ISO/ELF and is not a public/friend alpha.1x remains default:2x loses8–13% FPS in the four scenes. V14 remains isolated; the v15 change above follows this earlier unchanged-runtime checkpoint, and prior packages are preserved. Full races/30min, original parity, second-PC and distribution gates remain open.
 
 ## Earlier engineering evidence
 
@@ -65,7 +65,7 @@ The [portable data preparer](docs/audit/data-preparation-v1.md) now validates th
 | Track | Role | Status |
 | --- | --- | --- |
 | 🎮 **Vanilla** | Faithful native Windows port; original graphics, UI, physics, sound and controls | 🔄 Main priority |
-| ✨ **Remaster Core** | Maintainer-led UI/UX redesign, HD visuals, better shaders, materials, 3D models and curated skins | ⏳ Future |
+| ✨ **Remaster Core** | Team-led UI/UX redesign, HD visuals, better shaders, materials, 3D models and curated skins | ⏳ Future |
 | 📷 **Remaster Features** | Configurable cameras, Photo Mode, Replay Studio, Director Mode, Ghost Racing | 💡 Future |
 | 🧩 **Community Mods** | Separately installed liveries, shader/texture mods, vehicles and optional creator tools | 🔬 Future |
 | 🌐 **Multiplayer / Web** | Independent research into online racing and browser compatibility | 🔬 Research |
@@ -96,6 +96,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) and [test plan](docs/TEST_PLAN.md). Issu
 
 Speed Racer and associated game assets belong to their respective rights holders. **Ownership of an original disc does not automatically authorize redistribution of a compiled derivative.** Distribution of binaries, extracted assets, or recompiled game code is on hold pending review. No license is asserted over third-party components.
 
-## Maintainer
+## Project team
 
-Project initiated by [@killeiro](https://github.com/killeiro).
+Development and testing are attributed to the project team.
