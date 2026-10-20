@@ -4,6 +4,7 @@ Documentation publication: **2026-10-20**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v17: repeated mip snapshot unions](vanilla-v17.md) and [metrics](vanilla-v17-metrics.json): 31 tests, 696,942 new native checks, 12 unchanged image pairs, seven-scene warmed gate, 36 short routes and private package; adverse tails and full-game gates retained.
 - [Vanilla v16: ordered shutdown and card persistence](vanilla-v16.md) and [metrics](vanilla-v16-metrics.json): atomic request/drain/join, checked save/retry, 31 tests, seven native scenarios, 12 unchanged image pairs, warmed controls, 36 short routes and new private package; full-game/performance/result-save gates remain open.
 - [Vanilla v15: exact GS snapshot reuse](vanilla-v15.md) and [metrics](vanilla-v15-metrics.json): targeted Skorost gain, 27 tests, 697,211 native checks, 12 unchanged image pairs, 36 short routes and new private package; terminal counters/drain, pacing and full-game gates remain open.
 - [Recovered media and real portable validation](restored-media-v1.md) and [metrics](restored-media-v1-metrics.json): real ISO/boot, resumed control/Q/CPU,32 scale windows, eight captures and private local package;1x remains default, broader acceptance open.

@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — Vanilla v17 repeated mip snapshot union removal
+
+- Skip repeated eligible whole-mip range unions locally within snapshot_batch; keep own-word filtering, nonmip UV bounds, changed descriptors, hazards and GPU payloads.
+- Pass 31 tests: 6,786 cases/1,115,619 primitives against frozen v16; 696,942 new native per-call checks and 12 identical image pairs.
+- Pass the predeclared seven-scene warmed gate: Skorost-1 +2.69%, three positive pairs; retain all adverse pairs and frame-time tails. No stable60/full-game acceptance.
+- Verify 36 short Class1 routes and two final-folder launches; preserve v16 lifecycle/card fixes, package/save and prior artifacts. Publish only documentation/metrics; private package contains own ISO/ELF.
+
 ## 2026-10-20 — Vanilla v16 ordered shutdown and card persistence
 
 - Publish host close requests atomically; drain EE/VU/GS and GPU before final stats, join native workers and return normally, including early loading errors.
