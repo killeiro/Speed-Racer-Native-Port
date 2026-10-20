@@ -1,6 +1,6 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de 20/10/2026: [v17 e métricas](vanilla-v17.md). A união repetida de regiões mip foi eliminada dentro do snapshot GS: Skorost-1 +2.69%, com três pares positivos e controles em sete cenas. Passaram 31 testes, 696.942 checks nativos novos, 12 pares de imagem, 36 rotas curtas e dois smokes do novo pacote privado. Caudas adversas foram retidas; o aceite Vanilla continua aberto. A [v16](vanilla-v16.md) mantém os testes históricos de encerramento/card; os pacotes/saves anteriores estão preservados. [Ganho v15](vanilla-v15.md) · [ISO/escalas](restored-media-v1.md) · [v14 isolado](vanilla-v14.md) · [Roadmap](../../ROADMAP.md).
+Atualização de 20/10/2026: [auditoria v18 e métricas](vanilla-v18.md). O experimento de áudio menor não foi promovido: Fuji perde1,04% contra o limite prévio de1%. Os56 controles e outlier são mantidos; fonte/EXE v17 restaurados. Duas sessões humanas somam61.327 VBlanks, com vitória no teclado relatada pelo mantenedor e Xbox360 reconhecido na segunda. Persistem caudas de quadro e diferença entre relógio de cena/parede. Sete novos casos nativos verificam atividade, pausa e recarga/retomada; resultado/save/readback, cadência original e30min contínuos continuam abertos. [Compilação atual v17](vanilla-v17.md) · [Lifecycle/card v16](vanilla-v16.md) · [Roadmap](../../ROADMAP.md).
 
 | # | Prioridade | Próxima tarefa e aceite | Dependências |
 |---|---|---|---|
@@ -10,7 +10,7 @@ Atualização de 20/10/2026: [v17 e métricas](vanilla-v17.md). A união repetid
 | 4 | P0 | Usar relógio vivo em voltas/corridas completas, classes 2–4 e Mirror; confirmar jogo/parede, cadência PS2 e timing individual | Checkpoints, dados e referência original; issue #3 |
 | 5 | P0 | Fechar mip/hazards e cinco pares PS2 original/nativo a 1x; classificar filtragem/tramas/serrilhado com referência | Capturas sincronizadas; issues #5/#6 |
 | 6 | P1 | Corrigir dither16/CRTC/fog demonstrados; AA1 somente se observado. Avaliar custo/qualidade de escala depois de throughput | Referência original; 2x já perdeu 8–13% no checkpoint anterior |
-| 7 | P0 | Resolver caudas adversas de callback (v17: piora em6/7 cenas); usar controle separado legacy/deadline e exigir cadência sem perda de corrida; medir underruns reais, USB/Bluetooth e30min | Throughput, relógio e telemetria; issue #3 |
+| 7 | P0 | Isolar backpressure Fuji e avaliar pacing informado por áudio sem perda de throughput; bloco256 v18 e deadline v17 não foram promovidos. Usar timestamps e controles finais; medir underruns reais, USB/Bluetooth e30min | Throughput, relógio e telemetria; issue #3 |
 | 8 | P1 | Flush forçado/replacement/retry do card passaram em fixture; provar save de resultado real e leitura após reabertura, com QA separado | #3, corridas completas; issue #7 |
 | 9 | P1 | Testar outro Windows/GPU, Unicode no IO real e pasta protegida; manter preparador, dependências e pacote reproduzíveis | Boot/pacote local v17 passaram; não é aceite de segundo PC; issue #7 |
 | 10 | P1 | Concluir proveniência/licenças transitivas, CI e critérios para alpha distribuível; manter GitHub documental | PR23 aberto, sem merge novo; nenhum código/binário/dado do jogo publicado |

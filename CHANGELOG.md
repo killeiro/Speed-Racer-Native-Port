@@ -2,6 +2,15 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — Vanilla v18 audio timing audit (experiment not promoted)
+
+- Audit EE post/pacing and GS acquire/submit/present with temporary thread-owned timestamps; confirm software queue quantum and distinguish callbacks/API timing from scanout.
+- Test Windows256-frame audio request with fallback and startup spec log;31 tests and seven-scene warmed controls pass correctness but fail the predeclared1% Fuji mean-FPS guard. Preserve all adverse data and the large Skorost baseline outlier.
+- Isolate experiment; restore exact v17 source/EXE and verify pure rebuild code/data equivalence. No new gameplay package or default change retained.
+- Extend baseline QA with18,000 threaded automated VBlanks and separate end-state replay capture. The automated car is still on lap1/2; do not call this a completed race.
+- Analyze two human sessions (61,327 VBlanks total, about8m35 each including startup), recognized Xbox360 controller in the second, and maintainer-reported keyboard victory. Retain irregular callback tails and unresolved scene-clock/wall-clock differences.
+- Run seven independent native active/pause/state-reload/resume/effects cases. Save and shutdown preserved; original cadence, actual result-save and continuous30minute certification remain open. Documentation/metrics only; main unchanged.
+
 ## 2026-10-20 — Vanilla v17 repeated mip snapshot union removal
 
 - Skip repeated eligible whole-mip range unions locally within snapshot_batch; keep own-word filtering, nonmip UV bounds, changed descriptors, hazards and GPU payloads.
