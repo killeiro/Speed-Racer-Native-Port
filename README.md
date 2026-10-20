@@ -12,16 +12,18 @@
 | --- | --- | --- |
 | Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
 | Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
-| Gameplay speed | 🔄 Improved; unresolved | V13 queue-sharing measurements follow the mixed v12 results; all adverse data retained; full-game speed/pacing remain unresolved |
+| Gameplay speed | 🔄 Improved; unresolved | V15 GS snapshot reuse improves the targeted Skorost scene; Fuji gains are small and frame-time tails remain mixed; full-game speed/pacing remain unresolved |
 | Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
-| Regression tests | 🟢 Local suite | 26/26 local CTest in v13; differential VU/VIF/Q checks and 12 unchanged images |
+| Regression tests | 🟢 Local suite | 27/27 local CTest in v15; 1,078,317 frozen-snapshot primitives, 697,211 native checks and 12 unchanged image pairs |
 | Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
 | Clean PC installation | 🟡 Local portable boot verified | Empty data fallbacks; real local media/minimal-PATH boot passes; second PC/GPU still open |
 | Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
 
-**Active development baseline: local Vanilla v13, 2026-10-19; separate portable GUI uses the same runtime sources.** These are maintainer-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
+**Current private local portable build: Vanilla v15, 2026-10-20, based on the v13 runtime plus bounded GS snapshot reuse. The original development v13 EXE and earlier packages are preserved.** These are maintainer-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
 
-The legitimate local ISO is recovered. [Recovered-media validation](docs/audit/restored-media-v1.md) records real portable boot,32 warmed1x/2x replay windows, eight separate captures, the resumed Skorost control and89,922 exact-candidate Q checks. The local private package now executes the game with its own data/save directory; it contains the maintainer's ISO/ELF and is not a public/friend alpha.1x remains default:2x loses8–13% FPS in the four scenes. V14 remains isolated; runtime sources and prior packages are preserved. Full races/30min, original parity, second-PC and distribution gates remain open.
+The [v15 GS snapshot report](docs/audit/vanilla-v15.md) records a rebuilt native GUI and seven-scene warmed comparisons: Skorost-1 averages **52.98→55.91 simulated FPS (+5.54%)**, with all three pairs positive. Fuji changes are small; adverse frame-time tails remain visible. Validation includes 27 tests, exact per-call payload checks, 12 identical native/native image pairs, 36 short Class 1 routes and two final-folder launches. Terminal async counters differ slightly; drain/join, full races and stable 60 FPS remain open. A new private local package preserves the prior package/save and contains own ISO/ELF; it is not a public/friend release. 1x and legacy pacing remain default.
+
+The legitimate local ISO is recovered. [Recovered-media validation](docs/audit/restored-media-v1.md) records real portable boot,32 warmed1x/2x replay windows, eight separate captures, the resumed Skorost control and89,922 exact-candidate Q checks. The local private package now executes the game with its own data/save directory; it contains the maintainer's ISO/ELF and is not a public/friend alpha.1x remains default:2x loses8–13% FPS in the four scenes. V14 remains isolated; the v15 change above follows this earlier unchanged-runtime checkpoint, and prior packages are preserved. Full races/30min, original parity, second-PC and distribution gates remain open.
 
 ## Earlier engineering evidence
 
