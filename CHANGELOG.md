@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — Vanilla v15 GS snapshot reuse
+
+- Compile a new private local native GUI with snapshot-call-local descriptor/mip bounds reuse; preserve per-primitive bounds, all overlap tests and GPU payloads per checked call.
+- Pass 27 tests, 6,747 frozen-source cases / 1,078,317 primitives, 697,211 native snapshot reference checks, 12 identical image pairs and 36 short Class 1 route windows.
+- Retain all seven-scene warmed pairs: Skorost-1 52.98→55.91 simulated FPS (+5.54%); Fuji changes are small and adverse callback tails remain open.
+- Record slight terminal async counter differences and the unresolved explicit final drain/join; no full-stream equality or lossless shutdown claim.
+- Verify two launches of a new private local package while preserving the prior package/save and original v13. 1x and legacy pacing stay default; v14 stays isolated. No public/friend binary or assets upload.
+
 ## 2026-10-20 — Recovered media and real portable validation
 
 - Validate recovered legitimate ISO with the production preparer and complete actual portable boot/minimal-PATH checks.

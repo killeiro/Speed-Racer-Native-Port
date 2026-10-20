@@ -1,0 +1,4965 @@
+{
+  "iteration": "vanilla-v15",
+  "date": "2026-10-20",
+  "status": "promoted_to_new_private_local_portable_package; targeted_GS_gain; full_Vanilla_acceptance_open",
+  "environment": {
+    "CPU": "Intel Core i5-12400, 6 cores/12 threads",
+    "GPU": "NVIDIA RTX 3060",
+    "driver": "617.14",
+    "OS": "Windows 11 Pro 10.0.26200",
+    "power_plan": "Balanced",
+    "backend": "Vulkan/wgpu Mailbox",
+    "audio": "WASAPI 48k stereo",
+    "window": "960x720",
+    "render_scale": 1,
+    "host_load": "uncontrolled; no concurrent agent build/probe/capture/game during FPS",
+    "physical_controllers": "disabled for automation only; prior maintainer confirmation not recertified"
+  },
+  "source_checkpoint": {
+    "source_commit": "ba54286518d091c66590315ab245b6a5c6ca9a1b",
+    "parent": "4ec9fd0d9fd05cb3d025aca9c9e6d77dd4975bd0",
+    "files": {
+      "CMakeLists.txt": "b4e647594a4d2b5877c27f45114f1ea10c4d4d1352cc2e236c305613cb0214ae",
+      "runtime/src/gs/gpu/gpu.cpp": "abb8fda610dee6beeacba929935d33edd048bdb8ad597729399c390fdc3aafe4",
+      "tests/gs_snapshot.cpp": "d0c66b6029ff60158c75dbc96b02e489ea7cbcc95c9e5829b22d40ff157e229c",
+      "tests/gs_snapshot_reference.inc": "bf8884dab3c8d1bf3f3f12e5caf66eef3edda87da5cef6851ca858224ccfb2c4"
+    },
+    "portable_exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+    "pure_rebuild_equivalence": {
+      "measured_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "pure_relink_sha256": "3d3fc3ca066a5e95e7578e7e04c1ca4e31c14608b4e0f296a62da050783209af",
+      "all_bytes_equal_except_COFF_timestamp_and_PE_checksum": true,
+      "different_bytes": 4,
+      "metadata_ranges": [
+        {
+          "offset": 136,
+          "size": 4
+        },
+        {
+          "offset": 216,
+          "size": 4
+        }
+      ],
+      "package_uses_exact_measured_EXE": true
+    },
+    "temporary_probes_absent": true,
+    "original_development_exe_preserved": true,
+    "initial_dirty_state_preserved": true,
+    "fixture_EOF_normalization_only": true,
+    "production_code_unchanged_since_tests": true
+  },
+  "rebuild_audit_notes": [
+    "Initial fixture guard compared CRLF bytes with newline-normalized text and was corrected before writing the fixture.",
+    "Initial exact-SHA rebuild guard rejected linker timestamp/checksum changes; full-file comparison allows only those two PE header fields. Exact measured EXE is packaged."
+  ],
+  "executables": {
+    "baseline_portable_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+    "candidate_portable_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+    "default_scale": 1,
+    "default_pacing": "legacy",
+    "new_native_compilation": true,
+    "Q_v14_promoted": false,
+    "original_development_v13_EXE_preserved": true,
+    "shaders_physics_guest_clocks_input_changed": false,
+    "temporary_probes_in_production": false
+  },
+  "change": "snapshot-call-local last-descriptor cache of active mip bounds and PSM write compatibility; per-primitive read bounds and all overlap tests retained",
+  "tests": {
+    "ctest_passed": 27,
+    "ctest_failed": 0,
+    "ctest_seconds": 11.39,
+    "actual_source_frozen_snapshot_cases": 6747,
+    "snapshot_primitives": 1078317,
+    "positive_snapshots": 5589,
+    "candidate_texture_range_calls": 592323,
+    "reference_texture_range_calls": 2554497,
+    "helper_call_reduction_percent": 76.81253882858347,
+    "frozen_function_body_preserved": true,
+    "fixture_final_edit": "extra EOF blank line only; production code unchanged since tests"
+  },
+  "native_snapshot_reference_checks": [
+    {
+      "scene": "Skorost-1",
+      "checks": 212593,
+      "frames": 600,
+      "exit": 0,
+      "diagnostic_only_not_FPS": true,
+      "exe_sha256": "377a2f892fa55db6f0c0fe91948befe2e74a45c38ffe0e5d06367ff5804a5584"
+    },
+    {
+      "scene": "Skorost-2",
+      "checks": 211582,
+      "frames": 600,
+      "exit": 0,
+      "diagnostic_only_not_FPS": true,
+      "exe_sha256": "377a2f892fa55db6f0c0fe91948befe2e74a45c38ffe0e5d06367ff5804a5584"
+    },
+    {
+      "scene": "Fuji-4",
+      "checks": 273036,
+      "frames": 600,
+      "exit": 0,
+      "diagnostic_only_not_FPS": true,
+      "exe_sha256": "377a2f892fa55db6f0c0fe91948befe2e74a45c38ffe0e5d06367ff5804a5584"
+    }
+  ],
+  "synchronous_native_image_pairs": [
+    {
+      "scene": "Thunderhead-0",
+      "frame": "frame_10680.ppm",
+      "identical": true,
+      "baseline_sha256": "d646ac80df15531257d037b36e70448f2560c26984d558c5d3aa258826d65148",
+      "candidate_sha256": "d646ac80df15531257d037b36e70448f2560c26984d558c5d3aa258826d65148",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Thunderhead-0",
+      "frame": "frame_10800.ppm",
+      "identical": true,
+      "baseline_sha256": "117710130f9fa139f8f95b1b3984399ec26989b030845666ae004b4135de6141",
+      "candidate_sha256": "117710130f9fa139f8f95b1b3984399ec26989b030845666ae004b4135de6141",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Onuris-0",
+      "frame": "frame_10680.ppm",
+      "identical": true,
+      "baseline_sha256": "057c99d6dbf7cf9257a80d2a80af296fd1ef107f57f0247dfdb8f667d701919a",
+      "candidate_sha256": "057c99d6dbf7cf9257a80d2a80af296fd1ef107f57f0247dfdb8f667d701919a",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Onuris-0",
+      "frame": "frame_10800.ppm",
+      "identical": true,
+      "baseline_sha256": "338425840a72bbae75d0866204605b577f75b05738084669656a1e9ad7147fd9",
+      "candidate_sha256": "338425840a72bbae75d0866204605b577f75b05738084669656a1e9ad7147fd9",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Fuji-4",
+      "frame": "frame_10680.ppm",
+      "identical": true,
+      "baseline_sha256": "b17e2234ad0d352c2424b33dd4eede939109f7c5380eec1fadaccf3c6035fefa",
+      "candidate_sha256": "b17e2234ad0d352c2424b33dd4eede939109f7c5380eec1fadaccf3c6035fefa",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Fuji-4",
+      "frame": "frame_10800.ppm",
+      "identical": true,
+      "baseline_sha256": "979d5cead9339419288d285faadfdcbc02d92624f828b7cb00b80dae370fa491",
+      "candidate_sha256": "979d5cead9339419288d285faadfdcbc02d92624f828b7cb00b80dae370fa491",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Aurora-0",
+      "frame": "frame_10680.ppm",
+      "identical": true,
+      "baseline_sha256": "27f70765cced7cf623fdae01665bd197c52a3668cdb8b59577491c0546f3d1b8",
+      "candidate_sha256": "27f70765cced7cf623fdae01665bd197c52a3668cdb8b59577491c0546f3d1b8",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Aurora-0",
+      "frame": "frame_10800.ppm",
+      "identical": true,
+      "baseline_sha256": "177543f8c0157749b76677c055f35950053575468a7c57f6b5d84871eb6c9db5",
+      "candidate_sha256": "177543f8c0157749b76677c055f35950053575468a7c57f6b5d84871eb6c9db5",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Grand-Prix-0",
+      "frame": "frame_10680.ppm",
+      "identical": true,
+      "baseline_sha256": "2734b61944acc4e2c977a1b685672ce9c6810a5a8b6ae27b102b0b7e39a0d427",
+      "candidate_sha256": "2734b61944acc4e2c977a1b685672ce9c6810a5a8b6ae27b102b0b7e39a0d427",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Grand-Prix-0",
+      "frame": "frame_10800.ppm",
+      "identical": true,
+      "baseline_sha256": "01ae7bb1f991c90768512c1cb486dbbb7649066cf98fd72d592c9a57d4417caa",
+      "candidate_sha256": "01ae7bb1f991c90768512c1cb486dbbb7649066cf98fd72d592c9a57d4417caa",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Skorost-1",
+      "frame": "frame_10680.ppm",
+      "identical": true,
+      "baseline_sha256": "669b861736fcbe42a6692ff61b4b369c849eeac73c6570f497b26731aa38f8da",
+      "candidate_sha256": "669b861736fcbe42a6692ff61b4b369c849eeac73c6570f497b26731aa38f8da",
+      "synchronous_capture_not_FPS": true
+    },
+    {
+      "scene": "Skorost-1",
+      "frame": "frame_10800.ppm",
+      "identical": true,
+      "baseline_sha256": "cd9b88ff18fd4c2270e1b4e0800a5510623a22e44bdd6886302c42125286d000",
+      "candidate_sha256": "cd9b88ff18fd4c2270e1b4e0800a5510623a22e44bdd6886302c42125286d000",
+      "synchronous_capture_not_FPS": true
+    }
+  ],
+  "stage_probe": {
+    "sampling": "seeded 1/256 batches; temporary and separate from FPS",
+    "stages": [
+      "coverage_and_tile_counts",
+      "decode_plan_and_record_copies",
+      "metadata_prefix_totals",
+      "list_fill_clear_counts",
+      "snapshot_batch",
+      "dispatch_bookkeeping"
+    ],
+    "samples": [
+      {
+        "batches": 212386,
+        "prims": 40712207,
+        "samples": 824,
+        "outer_calls": 212927,
+        "outer_samples": 871,
+        "pre_ms": 0.0499,
+        "flush_ms": 4.5603,
+        "hist": [
+          193216,
+          2261,
+          4616,
+          6327,
+          3165,
+          2801
+        ],
+        "sampled_prims": 102708,
+        "sampled_spans": 131393,
+        "sampled_tiles": 25102,
+        "sampled_entries": 247317,
+        "stage_ms": [
+          2.0715,
+          1.0442,
+          0.087,
+          0.6802,
+          4.9546,
+          0.0472
+        ],
+        "scene": "Skorost-1",
+        "diagnostic_only_not_FPS": true
+      },
+      {
+        "batches": 212407,
+        "prims": 30257364,
+        "samples": 839,
+        "outer_calls": 212950,
+        "outer_samples": 856,
+        "pre_ms": 0.0511,
+        "flush_ms": 5.0624,
+        "hist": [
+          196143,
+          2667,
+          4440,
+          3247,
+          3154,
+          2756
+        ],
+        "sampled_prims": 105535,
+        "sampled_spans": 154727,
+        "sampled_tiles": 30329,
+        "sampled_entries": 302699,
+        "stage_ms": [
+          3.0505,
+          1.4127,
+          0.1043,
+          0.9902,
+          5.3047,
+          0.0486
+        ],
+        "scene": "Skorost-2",
+        "diagnostic_only_not_FPS": true
+      },
+      {
+        "batches": 273675,
+        "prims": 29968272,
+        "samples": 1071,
+        "outer_calls": 274216,
+        "outer_samples": 1106,
+        "pre_ms": 0.0623,
+        "flush_ms": 4.7226,
+        "hist": [
+          255382,
+          4260,
+          4136,
+          3052,
+          3216,
+          3629
+        ],
+        "sampled_prims": 104297,
+        "sampled_spans": 149568,
+        "sampled_tiles": 41870,
+        "sampled_entries": 291757,
+        "stage_ms": [
+          2.3119,
+          0.8832,
+          0.1256,
+          0.8049,
+          1.0606,
+          0.0622
+        ],
+        "scene": "Fuji-4",
+        "diagnostic_only_not_FPS": true
+      }
+    ],
+    "not_whole_frame_costs": true
+  },
+  "FPS_protocol": {
+    "frames_each": 600,
+    "discard_first": 60,
+    "same_path_name": true,
+    "same_checkpoint_and_input": true,
+    "warmup_order": "AB per scene",
+    "measured_order": "AB/BA/AB per scene",
+    "A": "baseline portable v13 runtime",
+    "B": "v15",
+    "warmup_windows": 14,
+    "measured_windows": 42,
+    "no_build_probe_capture_or_other_agent_game": true,
+    "predeclared_rule": "all three target pairs positive, target mean gain >=1%; no control loses >3% in all three pairs",
+    "assessment": {
+      "candidate_viable_for_matrix": true,
+      "not_full_acceptance": true,
+      "scene_pairs": {
+        "Skorost-1": {
+          "pairs": [
+            {
+              "pair": 1,
+              "before_fps": 54.53453991120927,
+              "after_fps": 54.97235787906567,
+              "change_percent": 0.802826921377231,
+              "before_callback_p95_ms": 27.7474,
+              "after_callback_p95_ms": 26.848,
+              "before_callback_p99_ms": 33.3178,
+              "after_callback_p99_ms": 34.5223
+            },
+            {
+              "pair": 2,
+              "before_fps": 53.23739566137152,
+              "after_fps": 56.58715656740251,
+              "change_percent": 6.292120161808623,
+              "before_callback_p95_ms": 27.753,
+              "after_callback_p95_ms": 26.4694,
+              "before_callback_p99_ms": 31.7748,
+              "after_callback_p99_ms": 30.1903
+            },
+            {
+              "pair": 3,
+              "before_fps": 51.156067328825486,
+              "after_fps": 56.17960781130439,
+              "change_percent": 9.820028678491166,
+              "before_callback_p95_ms": 30.4283,
+              "after_callback_p95_ms": 26.1985,
+              "before_callback_p99_ms": 36.6556,
+              "after_callback_p99_ms": 31.1902
+            }
+          ],
+          "positive_FPS_pairs": 3,
+          "all_pairs_loss_above_3_percent": false
+        },
+        "Skorost-2": {
+          "pairs": [
+            {
+              "pair": 1,
+              "before_fps": 60.0471839408118,
+              "after_fps": 60.06972679909334,
+              "change_percent": 0.037541907550164844,
+              "before_callback_p95_ms": 27.8318,
+              "after_callback_p95_ms": 28.0881,
+              "before_callback_p99_ms": 31.5424,
+              "after_callback_p99_ms": 33.1912
+            },
+            {
+              "pair": 2,
+              "before_fps": 60.05563201661341,
+              "after_fps": 60.01606760405826,
+              "change_percent": -0.06587960400484816,
+              "before_callback_p95_ms": 26.9614,
+              "after_callback_p95_ms": 27.3603,
+              "before_callback_p99_ms": 30.8479,
+              "after_callback_p99_ms": 31.6884
+            },
+            {
+              "pair": 3,
+              "before_fps": 60.26554789360673,
+              "after_fps": 59.96563424015909,
+              "change_percent": -0.497653574770629,
+              "before_callback_p95_ms": 26.8426,
+              "after_callback_p95_ms": 27.3149,
+              "before_callback_p99_ms": 30.8634,
+              "after_callback_p99_ms": 31.9052
+            }
+          ],
+          "positive_FPS_pairs": 1,
+          "all_pairs_loss_above_3_percent": false
+        },
+        "Fuji-4": {
+          "pairs": [
+            {
+              "pair": 1,
+              "before_fps": 55.876078178947395,
+              "after_fps": 56.24338162006775,
+              "change_percent": 0.6573536531036428,
+              "before_callback_p95_ms": 23.9722,
+              "after_callback_p95_ms": 23.3273,
+              "before_callback_p99_ms": 27.6626,
+              "after_callback_p99_ms": 27.1664
+            },
+            {
+              "pair": 2,
+              "before_fps": 56.21507918498815,
+              "after_fps": 55.8570228511495,
+              "change_percent": -0.6369400150809779,
+              "before_callback_p95_ms": 23.9541,
+              "after_callback_p95_ms": 23.9587,
+              "before_callback_p99_ms": 26.6801,
+              "after_callback_p99_ms": 26.9253
+            },
+            {
+              "pair": 3,
+              "before_fps": 55.31852576477785,
+              "after_fps": 55.9855746259665,
+              "change_percent": 1.2058326789564644,
+              "before_callback_p95_ms": 23.6774,
+              "after_callback_p95_ms": 23.964,
+              "before_callback_p99_ms": 26.8904,
+              "after_callback_p99_ms": 26.4545
+            }
+          ],
+          "positive_FPS_pairs": 2,
+          "all_pairs_loss_above_3_percent": false
+        },
+        "Fuji-3": {
+          "pairs": [
+            {
+              "pair": 1,
+              "before_fps": 57.215974092776776,
+              "after_fps": 57.74781857615328,
+              "change_percent": 0.9295384581132993,
+              "before_callback_p95_ms": 23.4901,
+              "after_callback_p95_ms": 22.8371,
+              "before_callback_p99_ms": 26.6315,
+              "after_callback_p99_ms": 25.7962
+            },
+            {
+              "pair": 2,
+              "before_fps": 58.34346261717863,
+              "after_fps": 58.24132842267808,
+              "change_percent": -0.17505679285905185,
+              "before_callback_p95_ms": 22.9336,
+              "after_callback_p95_ms": 22.4157,
+              "before_callback_p99_ms": 26.2854,
+              "after_callback_p99_ms": 24.5387
+            },
+            {
+              "pair": 3,
+              "before_fps": 56.576261404748266,
+              "after_fps": 56.872574790917845,
+              "change_percent": 0.5237415460342065,
+              "before_callback_p95_ms": 23.4747,
+              "after_callback_p95_ms": 23.3416,
+              "before_callback_p99_ms": 26.075,
+              "after_callback_p99_ms": 26.3483
+            }
+          ],
+          "positive_FPS_pairs": 2,
+          "all_pairs_loss_above_3_percent": false
+        },
+        "Grand-Prix-0": {
+          "pairs": [
+            {
+              "pair": 1,
+              "before_fps": 60.027636768515634,
+              "after_fps": 59.93512350910963,
+              "change_percent": -0.1541177770545299,
+              "before_callback_p95_ms": 28.1433,
+              "after_callback_p95_ms": 27.5654,
+              "before_callback_p99_ms": 33.8614,
+              "after_callback_p99_ms": 34.5512
+            },
+            {
+              "pair": 2,
+              "before_fps": 59.96446610314976,
+              "after_fps": 60.020816644567546,
+              "change_percent": 0.09397322294315558,
+              "before_callback_p95_ms": 27.7556,
+              "after_callback_p95_ms": 28.3562,
+              "before_callback_p99_ms": 35.0035,
+              "after_callback_p99_ms": 33.5768
+            },
+            {
+              "pair": 3,
+              "before_fps": 60.022456193740645,
+              "after_fps": 59.98803911954698,
+              "change_percent": -0.05734032956360435,
+              "before_callback_p95_ms": 27.9002,
+              "after_callback_p95_ms": 28.0244,
+              "before_callback_p99_ms": 33.3166,
+              "after_callback_p99_ms": 34.2455
+            }
+          ],
+          "positive_FPS_pairs": 1,
+          "all_pairs_loss_above_3_percent": false
+        },
+        "Thunderhead-0": {
+          "pairs": [
+            {
+              "pair": 1,
+              "before_fps": 60.01601213842218,
+              "after_fps": 59.953908903094295,
+              "change_percent": -0.10347777720493001,
+              "before_callback_p95_ms": 26.8283,
+              "after_callback_p95_ms": 27.5376,
+              "before_callback_p99_ms": 32.7592,
+              "after_callback_p99_ms": 33.1033
+            },
+            {
+              "pair": 2,
+              "before_fps": 60.021880703783836,
+              "after_fps": 60.02369610797779,
+              "change_percent": 0.0030245706610143586,
+              "before_callback_p95_ms": 27.1853,
+              "after_callback_p95_ms": 26.894,
+              "before_callback_p99_ms": 33.3421,
+              "after_callback_p99_ms": 33.8675
+            },
+            {
+              "pair": 3,
+              "before_fps": 60.02355440090084,
+              "after_fps": 60.02065824199336,
+              "change_percent": -0.004825037331412929,
+              "before_callback_p95_ms": 26.168,
+              "after_callback_p95_ms": 27.6037,
+              "before_callback_p99_ms": 33.9687,
+              "after_callback_p99_ms": 32.2868
+            }
+          ],
+          "positive_FPS_pairs": 1,
+          "all_pairs_loss_above_3_percent": false
+        },
+        "Aurora-3": {
+          "pairs": [
+            {
+              "pair": 1,
+              "before_fps": 60.02300295284221,
+              "after_fps": 60.00842700901144,
+              "change_percent": -0.0242839296831332,
+              "before_callback_p95_ms": 26.9808,
+              "after_callback_p95_ms": 27.3033,
+              "before_callback_p99_ms": 30.4258,
+              "after_callback_p99_ms": 31.9809
+            },
+            {
+              "pair": 2,
+              "before_fps": 60.02000458958165,
+              "after_fps": 59.95248248547732,
+              "change_percent": -0.11249933179121596,
+              "before_callback_p95_ms": 26.8752,
+              "after_callback_p95_ms": 26.1923,
+              "before_callback_p99_ms": 31.6874,
+              "after_callback_p99_ms": 34.1047
+            },
+            {
+              "pair": 3,
+              "before_fps": 60.02222893738694,
+              "after_fps": 59.96511921354956,
+              "change_percent": -0.09514762255322662,
+              "before_callback_p95_ms": 27.4154,
+              "after_callback_p95_ms": 27.4191,
+              "before_callback_p99_ms": 32.5318,
+              "after_callback_p99_ms": 32.5802
+            }
+          ],
+          "positive_FPS_pairs": 0,
+          "all_pairs_loss_above_3_percent": false
+        }
+      },
+      "seven_scene_means": {
+        "Skorost-1": {
+          "before": {
+            "simulation_fps": 52.97600096713543,
+            "simulation_speed_percent": 88.29601258044325,
+            "post_wait_ms_mean": 7.73518524691358,
+            "pace_wait_ms_mean": 0.6202404320987654,
+            "audio_queue_mean_ms": 28.928219118559902,
+            "zero_audio_queue_samples": 63.666666666666664,
+            "stutter_over_33ms": 8,
+            "interval_ms": {
+              "p50": 18.83396666666667,
+              "p95": 29.759333333333334,
+              "p99": 34.974266666666665
+            },
+            "present_interval_ms": {
+              "p50": 18.364933333333333,
+              "p95": 28.6429,
+              "p99": 33.916066666666666
+            }
+          },
+          "after": {
+            "simulation_fps": 55.91304075259086,
+            "simulation_speed_percent": 93.19122734017405,
+            "post_wait_ms_mean": 5.742096358024692,
+            "pace_wait_ms_mean": 1.4163272839506174,
+            "audio_queue_mean_ms": 36.843378026070766,
+            "zero_audio_queue_samples": 36.333333333333336,
+            "stutter_over_33ms": 3.6666666666666665,
+            "interval_ms": {
+              "p50": 18.427366666666668,
+              "p95": 27.9758,
+              "p99": 31.601966666666666
+            },
+            "present_interval_ms": {
+              "p50": 17.792766666666665,
+              "p95": 26.5053,
+              "p99": 31.9676
+            }
+          },
+          "FPS_change_percent": 5.544094933246235
+        },
+        "Skorost-2": {
+          "before": {
+            "simulation_fps": 60.12278795034398,
+            "simulation_speed_percent": 100.20878980937272,
+            "post_wait_ms_mean": 1.4120493209876543,
+            "pace_wait_ms_mean": 5.120082283950618,
+            "audio_queue_mean_ms": 77.76170006184292,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 3.6666666666666665,
+            "interval_ms": {
+              "p50": 18.326933333333333,
+              "p95": 28.920133333333332,
+              "p99": 30.3333
+            },
+            "present_interval_ms": {
+              "p50": 16.254333333333335,
+              "p95": 27.211933333333334,
+              "p99": 31.084566666666667
+            }
+          },
+          "after": {
+            "simulation_fps": 60.01714288110356,
+            "simulation_speed_percent": 100.03270741368188,
+            "post_wait_ms_mean": 0.22232413580246912,
+            "pace_wait_ms_mean": 6.378519320987654,
+            "audio_queue_mean_ms": 81.07276437847867,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 4.666666666666667,
+            "interval_ms": {
+              "p50": 19.017133333333334,
+              "p95": 28.880533333333332,
+              "p99": 30.249266666666667
+            },
+            "present_interval_ms": {
+              "p50": 16.149966666666668,
+              "p95": 27.587766666666667,
+              "p99": 32.2616
+            }
+          },
+          "FPS_change_percent": -0.17571551959245646
+        },
+        "Fuji-4": {
+          "before": {
+            "simulation_fps": 55.80322770957113,
+            "simulation_speed_percent": 93.00830659729928,
+            "post_wait_ms_mean": 7.503319691358025,
+            "pace_wait_ms_mean": 0.0011660493827160493,
+            "audio_queue_mean_ms": 14.70393358162632,
+            "zero_audio_queue_samples": 44.333333333333336,
+            "stutter_over_33ms": 0.6666666666666666,
+            "interval_ms": {
+              "p50": 17.941166666666668,
+              "p95": 24.101333333333333,
+              "p99": 27.0959
+            },
+            "present_interval_ms": {
+              "p50": 17.994733333333333,
+              "p95": 23.8679,
+              "p99": 27.0777
+            }
+          },
+          "after": {
+            "simulation_fps": 56.02865969906125,
+            "simulation_speed_percent": 93.38403840450691,
+            "post_wait_ms_mean": 7.52677524691358,
+            "pace_wait_ms_mean": 0.0012316666666666667,
+            "audio_queue_mean_ms": 17.311425822470515,
+            "zero_audio_queue_samples": 42,
+            "stutter_over_33ms": 0,
+            "interval_ms": {
+              "p50": 17.971233333333334,
+              "p95": 24.059833333333334,
+              "p99": 27.228866666666665
+            },
+            "present_interval_ms": {
+              "p50": 18.0279,
+              "p95": 23.75,
+              "p99": 26.848733333333332
+            }
+          },
+          "FPS_change_percent": 0.40397661343780644
+        },
+        "Fuji-3": {
+          "before": {
+            "simulation_fps": 57.37856603823456,
+            "simulation_speed_percent": 95.6361649408923,
+            "post_wait_ms_mean": 7.258778148148148,
+            "pace_wait_ms_mean": 0.1802072839506173,
+            "audio_queue_mean_ms": 30.777993792675357,
+            "zero_audio_queue_samples": 25,
+            "stutter_over_33ms": 0.6666666666666666,
+            "interval_ms": {
+              "p50": 17.441066666666668,
+              "p95": 23.6446,
+              "p99": 27.2102
+            },
+            "present_interval_ms": {
+              "p50": 17.504666666666665,
+              "p95": 23.299466666666667,
+              "p99": 26.33063333333333
+            }
+          },
+          "after": {
+            "simulation_fps": 57.620573929916404,
+            "simulation_speed_percent": 96.03953345014469,
+            "post_wait_ms_mean": 7.137761666666666,
+            "pace_wait_ms_mean": 0.2658443209876543,
+            "audio_queue_mean_ms": 27.770340782122904,
+            "zero_audio_queue_samples": 22.666666666666668,
+            "stutter_over_33ms": 0,
+            "interval_ms": {
+              "p50": 17.3122,
+              "p95": 23.1691,
+              "p99": 26.54093333333333
+            },
+            "present_interval_ms": {
+              "p50": 17.353533333333335,
+              "p95": 22.8648,
+              "p99": 25.561066666666665
+            }
+          },
+          "FPS_change_percent": 0.42177403234611166
+        },
+        "Grand-Prix-0": {
+          "before": {
+            "simulation_fps": 60.00485302180201,
+            "simulation_speed_percent": 100.01171985883923,
+            "post_wait_ms_mean": 0.4332852469135802,
+            "pace_wait_ms_mean": 6.725157901234568,
+            "audio_queue_mean_ms": 82.27868139401755,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 7.666666666666667,
+            "interval_ms": {
+              "p50": 19.034033333333333,
+              "p95": 28.9798,
+              "p99": 30.561366666666668
+            },
+            "present_interval_ms": {
+              "p50": 15.8636,
+              "p95": 27.933033333333334,
+              "p99": 34.060500000000005
+            }
+          },
+          "after": {
+            "simulation_fps": 59.98132642440805,
+            "simulation_speed_percent": 99.97250743935473,
+            "post_wait_ms_mean": 0.04396679012345679,
+            "pace_wait_ms_mean": 7.090568086419753,
+            "audio_queue_mean_ms": 83.0863722943723,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 8,
+            "interval_ms": {
+              "p50": 19.091,
+              "p95": 29.241933333333332,
+              "p99": 30.539633333333335
+            },
+            "present_interval_ms": {
+              "p50": 15.655566666666667,
+              "p95": 27.982,
+              "p99": 34.1245
+            }
+          },
+          "FPS_change_percent": -0.03920782438282533
+        },
+        "Thunderhead-0": {
+          "before": {
+            "simulation_fps": 60.02048241436895,
+            "simulation_speed_percent": 100.03733186568883,
+            "post_wait_ms_mean": 0.0007437037037037037,
+            "pace_wait_ms_mean": 6.874475493827161,
+            "audio_queue_mean_ms": 84.00701917130489,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 6,
+            "interval_ms": {
+              "p50": 19.065366666666666,
+              "p95": 29.212933333333332,
+              "p99": 30.534866666666666
+            },
+            "present_interval_ms": {
+              "p50": 15.539966666666666,
+              "p95": 26.7272,
+              "p99": 33.35666666666667
+            }
+          },
+          "after": {
+            "simulation_fps": 59.99942108435515,
+            "simulation_speed_percent": 100.00222852803854,
+            "post_wait_ms_mean": 0.0006962345679012345,
+            "pace_wait_ms_mean": 7.005523888888889,
+            "audio_queue_mean_ms": 84.22553865182437,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 5.666666666666667,
+            "interval_ms": {
+              "p50": 19.026333333333334,
+              "p95": 29.525266666666667,
+              "p99": 30.532
+            },
+            "present_interval_ms": {
+              "p50": 15.382966666666666,
+              "p95": 27.3451,
+              "p99": 33.08586666666667
+            }
+          },
+          "FPS_change_percent": -0.03509023780982057
+        },
+        "Aurora-3": {
+          "before": {
+            "simulation_fps": 60.02174549327027,
+            "simulation_speed_percent": 100.03883090952105,
+            "post_wait_ms_mean": 0.0007035802469135803,
+            "pace_wait_ms_mean": 6.76439537037037,
+            "audio_queue_mean_ms": 83.86765491651207,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 4,
+            "interval_ms": {
+              "p50": 19.005033333333333,
+              "p95": 29.051066666666667,
+              "p99": 30.335733333333334
+            },
+            "present_interval_ms": {
+              "p50": 15.8445,
+              "p95": 27.090466666666668,
+              "p99": 31.548333333333332
+            }
+          },
+          "after": {
+            "simulation_fps": 59.975342902679444,
+            "simulation_speed_percent": 99.96149125743779,
+            "post_wait_ms_mean": 0.0010843827160493826,
+            "pace_wait_ms_mean": 6.851177160493827,
+            "audio_queue_mean_ms": 84.3372560296846,
+            "zero_audio_queue_samples": 0,
+            "stutter_over_33ms": 6,
+            "interval_ms": {
+              "p50": 19.009633333333333,
+              "p95": 29.20156666666667,
+              "p99": 30.3886
+            },
+            "present_interval_ms": {
+              "p50": 15.6926,
+              "p95": 26.971566666666668,
+              "p99": 32.8886
+            }
+          },
+          "FPS_change_percent": -0.0773096320499822
+        }
+      },
+      "no_samples_discarded_except_predeclared_warmup_and_initial60": true
+    }
+  },
+  "comparison_summary": {
+    "Skorost-1": {
+      "before": {
+        "simulation_fps": 52.97600096713543,
+        "simulation_speed_percent": 88.29601258044325,
+        "post_wait_ms_mean": 7.73518524691358,
+        "pace_wait_ms_mean": 0.6202404320987654,
+        "audio_queue_mean_ms": 28.928219118559902,
+        "zero_audio_queue_samples": 63.666666666666664,
+        "stutter_over_33ms": 8,
+        "interval_ms": {
+          "p50": 18.83396666666667,
+          "p95": 29.759333333333334,
+          "p99": 34.974266666666665
+        },
+        "present_interval_ms": {
+          "p50": 18.364933333333333,
+          "p95": 28.6429,
+          "p99": 33.916066666666666
+        }
+      },
+      "after": {
+        "simulation_fps": 55.91304075259086,
+        "simulation_speed_percent": 93.19122734017405,
+        "post_wait_ms_mean": 5.742096358024692,
+        "pace_wait_ms_mean": 1.4163272839506174,
+        "audio_queue_mean_ms": 36.843378026070766,
+        "zero_audio_queue_samples": 36.333333333333336,
+        "stutter_over_33ms": 3.6666666666666665,
+        "interval_ms": {
+          "p50": 18.427366666666668,
+          "p95": 27.9758,
+          "p99": 31.601966666666666
+        },
+        "present_interval_ms": {
+          "p50": 17.792766666666665,
+          "p95": 26.5053,
+          "p99": 31.9676
+        }
+      },
+      "FPS_change_percent": 5.544094933246235
+    },
+    "Skorost-2": {
+      "before": {
+        "simulation_fps": 60.12278795034398,
+        "simulation_speed_percent": 100.20878980937272,
+        "post_wait_ms_mean": 1.4120493209876543,
+        "pace_wait_ms_mean": 5.120082283950618,
+        "audio_queue_mean_ms": 77.76170006184292,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 3.6666666666666665,
+        "interval_ms": {
+          "p50": 18.326933333333333,
+          "p95": 28.920133333333332,
+          "p99": 30.3333
+        },
+        "present_interval_ms": {
+          "p50": 16.254333333333335,
+          "p95": 27.211933333333334,
+          "p99": 31.084566666666667
+        }
+      },
+      "after": {
+        "simulation_fps": 60.01714288110356,
+        "simulation_speed_percent": 100.03270741368188,
+        "post_wait_ms_mean": 0.22232413580246912,
+        "pace_wait_ms_mean": 6.378519320987654,
+        "audio_queue_mean_ms": 81.07276437847867,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 4.666666666666667,
+        "interval_ms": {
+          "p50": 19.017133333333334,
+          "p95": 28.880533333333332,
+          "p99": 30.249266666666667
+        },
+        "present_interval_ms": {
+          "p50": 16.149966666666668,
+          "p95": 27.587766666666667,
+          "p99": 32.2616
+        }
+      },
+      "FPS_change_percent": -0.17571551959245646
+    },
+    "Fuji-4": {
+      "before": {
+        "simulation_fps": 55.80322770957113,
+        "simulation_speed_percent": 93.00830659729928,
+        "post_wait_ms_mean": 7.503319691358025,
+        "pace_wait_ms_mean": 0.0011660493827160493,
+        "audio_queue_mean_ms": 14.70393358162632,
+        "zero_audio_queue_samples": 44.333333333333336,
+        "stutter_over_33ms": 0.6666666666666666,
+        "interval_ms": {
+          "p50": 17.941166666666668,
+          "p95": 24.101333333333333,
+          "p99": 27.0959
+        },
+        "present_interval_ms": {
+          "p50": 17.994733333333333,
+          "p95": 23.8679,
+          "p99": 27.0777
+        }
+      },
+      "after": {
+        "simulation_fps": 56.02865969906125,
+        "simulation_speed_percent": 93.38403840450691,
+        "post_wait_ms_mean": 7.52677524691358,
+        "pace_wait_ms_mean": 0.0012316666666666667,
+        "audio_queue_mean_ms": 17.311425822470515,
+        "zero_audio_queue_samples": 42,
+        "stutter_over_33ms": 0,
+        "interval_ms": {
+          "p50": 17.971233333333334,
+          "p95": 24.059833333333334,
+          "p99": 27.228866666666665
+        },
+        "present_interval_ms": {
+          "p50": 18.0279,
+          "p95": 23.75,
+          "p99": 26.848733333333332
+        }
+      },
+      "FPS_change_percent": 0.40397661343780644
+    },
+    "Fuji-3": {
+      "before": {
+        "simulation_fps": 57.37856603823456,
+        "simulation_speed_percent": 95.6361649408923,
+        "post_wait_ms_mean": 7.258778148148148,
+        "pace_wait_ms_mean": 0.1802072839506173,
+        "audio_queue_mean_ms": 30.777993792675357,
+        "zero_audio_queue_samples": 25,
+        "stutter_over_33ms": 0.6666666666666666,
+        "interval_ms": {
+          "p50": 17.441066666666668,
+          "p95": 23.6446,
+          "p99": 27.2102
+        },
+        "present_interval_ms": {
+          "p50": 17.504666666666665,
+          "p95": 23.299466666666667,
+          "p99": 26.33063333333333
+        }
+      },
+      "after": {
+        "simulation_fps": 57.620573929916404,
+        "simulation_speed_percent": 96.03953345014469,
+        "post_wait_ms_mean": 7.137761666666666,
+        "pace_wait_ms_mean": 0.2658443209876543,
+        "audio_queue_mean_ms": 27.770340782122904,
+        "zero_audio_queue_samples": 22.666666666666668,
+        "stutter_over_33ms": 0,
+        "interval_ms": {
+          "p50": 17.3122,
+          "p95": 23.1691,
+          "p99": 26.54093333333333
+        },
+        "present_interval_ms": {
+          "p50": 17.353533333333335,
+          "p95": 22.8648,
+          "p99": 25.561066666666665
+        }
+      },
+      "FPS_change_percent": 0.42177403234611166
+    },
+    "Grand-Prix-0": {
+      "before": {
+        "simulation_fps": 60.00485302180201,
+        "simulation_speed_percent": 100.01171985883923,
+        "post_wait_ms_mean": 0.4332852469135802,
+        "pace_wait_ms_mean": 6.725157901234568,
+        "audio_queue_mean_ms": 82.27868139401755,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 7.666666666666667,
+        "interval_ms": {
+          "p50": 19.034033333333333,
+          "p95": 28.9798,
+          "p99": 30.561366666666668
+        },
+        "present_interval_ms": {
+          "p50": 15.8636,
+          "p95": 27.933033333333334,
+          "p99": 34.060500000000005
+        }
+      },
+      "after": {
+        "simulation_fps": 59.98132642440805,
+        "simulation_speed_percent": 99.97250743935473,
+        "post_wait_ms_mean": 0.04396679012345679,
+        "pace_wait_ms_mean": 7.090568086419753,
+        "audio_queue_mean_ms": 83.0863722943723,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 8,
+        "interval_ms": {
+          "p50": 19.091,
+          "p95": 29.241933333333332,
+          "p99": 30.539633333333335
+        },
+        "present_interval_ms": {
+          "p50": 15.655566666666667,
+          "p95": 27.982,
+          "p99": 34.1245
+        }
+      },
+      "FPS_change_percent": -0.03920782438282533
+    },
+    "Thunderhead-0": {
+      "before": {
+        "simulation_fps": 60.02048241436895,
+        "simulation_speed_percent": 100.03733186568883,
+        "post_wait_ms_mean": 0.0007437037037037037,
+        "pace_wait_ms_mean": 6.874475493827161,
+        "audio_queue_mean_ms": 84.00701917130489,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 6,
+        "interval_ms": {
+          "p50": 19.065366666666666,
+          "p95": 29.212933333333332,
+          "p99": 30.534866666666666
+        },
+        "present_interval_ms": {
+          "p50": 15.539966666666666,
+          "p95": 26.7272,
+          "p99": 33.35666666666667
+        }
+      },
+      "after": {
+        "simulation_fps": 59.99942108435515,
+        "simulation_speed_percent": 100.00222852803854,
+        "post_wait_ms_mean": 0.0006962345679012345,
+        "pace_wait_ms_mean": 7.005523888888889,
+        "audio_queue_mean_ms": 84.22553865182437,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 5.666666666666667,
+        "interval_ms": {
+          "p50": 19.026333333333334,
+          "p95": 29.525266666666667,
+          "p99": 30.532
+        },
+        "present_interval_ms": {
+          "p50": 15.382966666666666,
+          "p95": 27.3451,
+          "p99": 33.08586666666667
+        }
+      },
+      "FPS_change_percent": -0.03509023780982057
+    },
+    "Aurora-3": {
+      "before": {
+        "simulation_fps": 60.02174549327027,
+        "simulation_speed_percent": 100.03883090952105,
+        "post_wait_ms_mean": 0.0007035802469135803,
+        "pace_wait_ms_mean": 6.76439537037037,
+        "audio_queue_mean_ms": 83.86765491651207,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 4,
+        "interval_ms": {
+          "p50": 19.005033333333333,
+          "p95": 29.051066666666667,
+          "p99": 30.335733333333334
+        },
+        "present_interval_ms": {
+          "p50": 15.8445,
+          "p95": 27.090466666666668,
+          "p99": 31.548333333333332
+        }
+      },
+      "after": {
+        "simulation_fps": 59.975342902679444,
+        "simulation_speed_percent": 99.96149125743779,
+        "post_wait_ms_mean": 0.0010843827160493826,
+        "pace_wait_ms_mean": 6.851177160493827,
+        "audio_queue_mean_ms": 84.3372560296846,
+        "zero_audio_queue_samples": 0,
+        "stutter_over_33ms": 6,
+        "interval_ms": {
+          "p50": 19.009633333333333,
+          "p95": 29.20156666666667,
+          "p99": 30.3886
+        },
+        "present_interval_ms": {
+          "p50": 15.6926,
+          "p95": 26.971566666666668,
+          "p99": 32.8886
+        }
+      },
+      "FPS_change_percent": -0.0773096320499822
+    }
+  },
+  "comparison_samples": [
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.832945199999813,
+      "frames_recorded": 600,
+      "simulation_fps": 55.488366704352785,
+      "simulation_speed_percent": 92.4834157949221,
+      "measured_wall_s": 9.713747799999998,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.6818,
+        "p95": 29.3389,
+        "p99": 31.0707
+      },
+      "post_wait_ms_mean": 6.466577777777777,
+      "pace_wait_ms_mean": 1.565854074074074,
+      "present_callback_fps": 55.496544689016325,
+      "present_interval_ms": {
+        "p50": 17.8648,
+        "p95": 27.4519,
+        "p99": 31.807
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 43.45129981378026,
+      "zero_audio_queue_samples": 46,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.453361399999267,
+      "frames_recorded": 600,
+      "simulation_fps": 57.1693056364629,
+      "simulation_speed_percent": 95.2850656436645,
+      "measured_wall_s": 9.4281362,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9303,
+        "p95": 28.243,
+        "p99": 30.4091
+      },
+      "post_wait_ms_mean": 4.067987407407408,
+      "pace_wait_ms_mean": 3.283711851851852,
+      "present_callback_fps": 57.06971438637803,
+      "present_interval_ms": {
+        "p50": 17.5608,
+        "p95": 26.1767,
+        "p99": 30.1227
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 53.71322905027933,
+      "zero_audio_queue_samples": 20,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.93940290000046,
+      "frames_recorded": 600,
+      "simulation_fps": 54.53453991120927,
+      "simulation_speed_percent": 90.8936562625027,
+      "measured_wall_s": 9.8836444,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.3911,
+        "p95": 29.184,
+        "p99": 33.9058
+      },
+      "post_wait_ms_mean": 7.219569074074074,
+      "pace_wait_ms_mean": 0.8779148148148148,
+      "present_callback_fps": 54.57241259666647,
+      "present_interval_ms": {
+        "p50": 18.0342,
+        "p95": 27.7474,
+        "p99": 33.3178
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 34.97331471135941,
+      "zero_audio_queue_samples": 56,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.974978899999769,
+      "frames_recorded": 600,
+      "simulation_fps": 54.97235787906567,
+      "simulation_speed_percent": 91.62337500480214,
+      "measured_wall_s": 9.8049278,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.4079,
+        "p95": 28.1941,
+        "p99": 32.2881
+      },
+      "post_wait_ms_mean": 7.288429444444445,
+      "pace_wait_ms_mean": 0.0013418518518518519,
+      "present_callback_fps": 54.95422916490735,
+      "present_interval_ms": {
+        "p50": 18.0099,
+        "p95": 26.848,
+        "p99": 34.5223
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 21.2873947858473,
+      "zero_audio_queue_samples": 46,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.701368299999558,
+      "frames_recorded": 600,
+      "simulation_fps": 56.58715656740251,
+      "simulation_speed_percent": 94.31478777090967,
+      "measured_wall_s": 9.5251296,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.6366,
+        "p95": 28.2944,
+        "p99": 30.7103
+      },
+      "post_wait_ms_mean": 4.545571666666667,
+      "pace_wait_ms_mean": 2.6001153703703705,
+      "present_callback_fps": 56.503572804032835,
+      "present_interval_ms": {
+        "p50": 17.81,
+        "p95": 26.4694,
+        "p99": 30.1903
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 45.67600744878957,
+      "zero_audio_queue_samples": 24,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.324692700000014,
+      "frames_recorded": 600,
+      "simulation_fps": 53.23739566137152,
+      "simulation_speed_percent": 88.73168361618356,
+      "measured_wall_s": 10.1244622,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9207,
+        "p95": 29.275,
+        "p99": 33.4034
+      },
+      "post_wait_ms_mean": 8.258710925925925,
+      "pace_wait_ms_mean": 0.0013342592592592592,
+      "present_callback_fps": 53.23015023907573,
+      "present_interval_ms": {
+        "p50": 18.4594,
+        "p95": 27.753,
+        "p99": 31.7748
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 18.617035381750465,
+      "zero_audio_queue_samples": 61,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.625732399999833,
+      "frames_recorded": 600,
+      "simulation_fps": 51.156067328825486,
+      "simulation_speed_percent": 85.26269786264348,
+      "measured_wall_s": 10.5363846,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.1901,
+        "p95": 30.819,
+        "p99": 37.6136
+      },
+      "post_wait_ms_mean": 7.72727574074074,
+      "pace_wait_ms_mean": 0.9814722222222222,
+      "present_callback_fps": 51.11675741334815,
+      "present_interval_ms": {
+        "p50": 18.6012,
+        "p95": 30.4283,
+        "p99": 36.6556
+      },
+      "stutter_over_33ms": 16,
+      "audio_queue_mean_ms": 33.19430726256983,
+      "zero_audio_queue_samples": 74,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.04073150000022,
+      "frames_recorded": 600,
+      "simulation_fps": 56.17960781130439,
+      "simulation_speed_percent": 93.63551924481034,
+      "measured_wall_s": 9.5942286,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.2376,
+        "p95": 27.4389,
+        "p99": 31.8075
+      },
+      "post_wait_ms_mean": 5.392287962962963,
+      "pace_wait_ms_mean": 1.6475246296296295,
+      "present_callback_fps": 56.18477798679143,
+      "present_interval_ms": {
+        "p50": 17.5584,
+        "p95": 26.1985,
+        "p99": 31.1902
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 43.56673184357542,
+      "zero_audio_queue_samples": 39,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.112248600000385,
+      "frames_recorded": 600,
+      "simulation_fps": 60.060367912653724,
+      "simulation_speed_percent": 100.10475211168708,
+      "measured_wall_s": 8.974304,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.3395,
+        "p95": 25.6323,
+        "p99": 30.4189
+      },
+      "post_wait_ms_mean": 3.416787222222222,
+      "pace_wait_ms_mean": 3.06944962962963,
+      "present_callback_fps": 60.40825422420408,
+      "present_interval_ms": {
+        "p50": 16.6418,
+        "p95": 25.5536,
+        "p99": 30.597
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 64.84601484230056,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.108144699999684,
+      "frames_recorded": 600,
+      "simulation_fps": 60.21881371819434,
+      "simulation_speed_percent": 100.36883937318784,
+      "measured_wall_s": 8.9506911,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0062,
+        "p95": 29.2185,
+        "p99": 30.5136
+      },
+      "post_wait_ms_mean": 0.37921574074074077,
+      "pace_wait_ms_mean": 6.148535740740741,
+      "present_callback_fps": 60.39763832908085,
+      "present_interval_ms": {
+        "p50": 16.1667,
+        "p95": 27.149,
+        "p99": 32.3082
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 80.97215584415585,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 10.998309300000074,
+      "frames_recorded": 600,
+      "simulation_fps": 60.0471839408118,
+      "simulation_speed_percent": 100.08277791674035,
+      "measured_wall_s": 8.9762744,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0136,
+        "p95": 29.3324,
+        "p99": 30.4814
+      },
+      "post_wait_ms_mean": 0.15700833333333333,
+      "pace_wait_ms_mean": 6.557370185185185,
+      "present_callback_fps": 60.16310966884349,
+      "present_interval_ms": {
+        "p50": 16.1139,
+        "p95": 27.8318,
+        "p99": 31.5424
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 81.29006307977737,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.138682100000551,
+      "frames_recorded": 600,
+      "simulation_fps": 60.06972679909334,
+      "simulation_speed_percent": 100.12035090069953,
+      "measured_wall_s": 8.9729058,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0113,
+        "p95": 29.1713,
+        "p99": 30.2545
+      },
+      "post_wait_ms_mean": 0.1414227777777778,
+      "pace_wait_ms_mean": 6.495638518518518,
+      "present_callback_fps": 60.30876588807304,
+      "present_interval_ms": {
+        "p50": 15.9353,
+        "p95": 28.0881,
+        "p99": 33.1912
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 81.35930055658628,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.153288200000134,
+      "frames_recorded": 600,
+      "simulation_fps": 60.01606760405826,
+      "simulation_speed_percent": 100.03091521117275,
+      "measured_wall_s": 8.9809283,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0155,
+        "p95": 29.1171,
+        "p99": 30.4614
+      },
+      "post_wait_ms_mean": 0.1378937037037037,
+      "pace_wait_ms_mean": 6.462364074074074,
+      "present_callback_fps": 60.09513204344354,
+      "present_interval_ms": {
+        "p50": 16.225,
+        "p95": 27.3603,
+        "p99": 31.6884
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 81.2084025974026,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.03036659999998,
+      "frames_recorded": 600,
+      "simulation_fps": 60.05563201661341,
+      "simulation_speed_percent": 100.09685862525637,
+      "measured_wall_s": 8.975011700000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.945,
+        "p95": 29.1447,
+        "p99": 30.3925
+      },
+      "post_wait_ms_mean": 1.5128685185185184,
+      "pace_wait_ms_mean": 4.8994303703703705,
+      "present_callback_fps": 60.20432274856078,
+      "present_interval_ms": {
+        "p50": 16.5186,
+        "p95": 26.9614,
+        "p99": 30.8479
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 79.9690797773655,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.146602300000268,
+      "frames_recorded": 600,
+      "simulation_fps": 60.26554789360673,
+      "simulation_speed_percent": 100.44673288612142,
+      "measured_wall_s": 8.9437501,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.0222,
+        "p95": 28.2833,
+        "p99": 30.126
+      },
+      "post_wait_ms_mean": 2.566271111111111,
+      "pace_wait_ms_mean": 3.903446296296296,
+      "present_callback_fps": 60.52595278742113,
+      "present_interval_ms": {
+        "p50": 16.1305,
+        "p95": 26.8426,
+        "p99": 30.8634
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 72.0259573283859,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.10288169999967,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96563424015909,
+      "simulation_speed_percent": 99.94685612917334,
+      "measured_wall_s": 8.9884816,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0246,
+        "p95": 28.3532,
+        "p99": 30.0319
+      },
+      "post_wait_ms_mean": 0.3876559259259259,
+      "pace_wait_ms_mean": 6.177555370370371,
+      "present_callback_fps": 60.148793831996734,
+      "present_interval_ms": {
+        "p50": 16.2896,
+        "p95": 27.3149,
+        "p99": 31.9052
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 80.65058998144713,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.897122700000182,
+      "frames_recorded": 600,
+      "simulation_fps": 55.21089604549345,
+      "simulation_speed_percent": 92.0210560872293,
+      "measured_wall_s": 9.7625657,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.059,
+        "p95": 24.575,
+        "p99": 28.3931
+      },
+      "post_wait_ms_mean": 7.604927777777778,
+      "pace_wait_ms_mean": 0.0013068518518518518,
+      "present_callback_fps": 55.173845698418894,
+      "present_interval_ms": {
+        "p50": 18.1379,
+        "p95": 24.3851,
+        "p99": 27.9999
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 12.473035381750465,
+      "zero_audio_queue_samples": 49,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.749055100000078,
+      "frames_recorded": 600,
+      "simulation_fps": 55.79094134388847,
+      "simulation_speed_percent": 92.98782867669713,
+      "measured_wall_s": 9.6610666,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.8999,
+        "p95": 24.5442,
+        "p99": 27.8956
+      },
+      "post_wait_ms_mean": 7.437331111111111,
+      "pace_wait_ms_mean": 0.0012377777777777777,
+      "present_callback_fps": 55.74079248521943,
+      "present_interval_ms": {
+        "p50": 18.0514,
+        "p95": 24.5626,
+        "p99": 27.9916
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 18.294258845437618,
+      "zero_audio_queue_samples": 26,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.754135199999837,
+      "frames_recorded": 600,
+      "simulation_fps": 55.876078178947395,
+      "simulation_speed_percent": 93.1297278675306,
+      "measured_wall_s": 9.646346300000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.8163,
+        "p95": 24.3866,
+        "p99": 27.0344
+      },
+      "post_wait_ms_mean": 7.51028925925926,
+      "pace_wait_ms_mean": 0.0011461111111111112,
+      "present_callback_fps": 55.82015440623925,
+      "present_interval_ms": {
+        "p50": 17.9434,
+        "p95": 23.9722,
+        "p99": 27.6626
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 15.441366852886405,
+      "zero_audio_queue_samples": 42,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.722354699999414,
+      "frames_recorded": 600,
+      "simulation_fps": 56.24338162006775,
+      "simulation_speed_percent": 93.7419195357933,
+      "measured_wall_s": 9.5833498,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.9793,
+        "p95": 23.5431,
+        "p99": 27.0962
+      },
+      "post_wait_ms_mean": 7.440451851851852,
+      "pace_wait_ms_mean": 0.0012033333333333334,
+      "present_callback_fps": 56.198730431957884,
+      "present_interval_ms": {
+        "p50": 18.0492,
+        "p95": 23.3273,
+        "p99": 27.1664
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 18.16266108007449,
+      "zero_audio_queue_samples": 39,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.760282899999766,
+      "frames_recorded": 600,
+      "simulation_fps": 55.8570228511495,
+      "simulation_speed_percent": 93.09796798834653,
+      "measured_wall_s": 9.6496371,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.9081,
+        "p95": 24.2538,
+        "p99": 27.8473
+      },
+      "post_wait_ms_mean": 7.55125037037037,
+      "pace_wait_ms_mean": 0.0013164814814814814,
+      "present_callback_fps": 55.82358325593138,
+      "present_interval_ms": {
+        "p50": 18.002,
+        "p95": 23.9587,
+        "p99": 26.9253
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 16.664206703910615,
+      "zero_audio_queue_samples": 45,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.815889599999537,
+      "frames_recorded": 600,
+      "simulation_fps": 56.21507918498815,
+      "simulation_speed_percent": 93.69474732609544,
+      "measured_wall_s": 9.5881747,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.8321,
+        "p95": 24.0682,
+        "p99": 27.134
+      },
+      "post_wait_ms_mean": 7.380239074074074,
+      "pace_wait_ms_mean": 0.0011624074074074074,
+      "present_callback_fps": 56.173365525309315,
+      "present_interval_ms": {
+        "p50": 17.8541,
+        "p95": 23.9541,
+        "p99": 26.6801
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 15.559297951582868,
+      "zero_audio_queue_samples": 41,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 12.007995299999493,
+      "frames_recorded": 600,
+      "simulation_fps": 55.31852576477785,
+      "simulation_speed_percent": 92.20044459827179,
+      "measured_wall_s": 9.7435713,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.1751,
+        "p95": 23.8492,
+        "p99": 27.1193
+      },
+      "post_wait_ms_mean": 7.619430740740741,
+      "pace_wait_ms_mean": 0.0011896296296296297,
+      "present_callback_fps": 55.27698095946819,
+      "present_interval_ms": {
+        "p50": 18.1867,
+        "p95": 23.6774,
+        "p99": 26.8904
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 13.111135940409683,
+      "zero_audio_queue_samples": 50,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.78286769999977,
+      "frames_recorded": 600,
+      "simulation_fps": 55.9855746259665,
+      "simulation_speed_percent": 93.3122276893809,
+      "measured_wall_s": 9.62748,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.0263,
+        "p95": 24.3826,
+        "p99": 26.7431
+      },
+      "post_wait_ms_mean": 7.588623518518519,
+      "pace_wait_ms_mean": 0.0011751851851851851,
+      "present_callback_fps": 55.95353185257434,
+      "present_interval_ms": {
+        "p50": 18.0325,
+        "p95": 23.964,
+        "p99": 26.4545
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 17.107409683426443,
+      "zero_audio_queue_samples": 42,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.594697599999563,
+      "frames_recorded": 600,
+      "simulation_fps": 57.07645965712466,
+      "simulation_speed_percent": 95.13262681353181,
+      "measured_wall_s": 9.4434729,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.6516,
+        "p95": 23.1254,
+        "p99": 25.2919
+      },
+      "post_wait_ms_mean": 7.539771111111111,
+      "pace_wait_ms_mean": 0.04496351851851852,
+      "present_callback_fps": 57.04234243518795,
+      "present_interval_ms": {
+        "p50": 17.6063,
+        "p95": 22.6944,
+        "p99": 25.4025
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 23.4488156424581,
+      "zero_audio_queue_samples": 26,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.734954300000027,
+      "frames_recorded": 600,
+      "simulation_fps": 56.3929578483042,
+      "simulation_speed_percent": 93.99339493237616,
+      "measured_wall_s": 9.557931,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.6529,
+        "p95": 23.5879,
+        "p99": 27.6275
+      },
+      "post_wait_ms_mean": 7.628840740740741,
+      "pace_wait_ms_mean": 0.0011444444444444445,
+      "present_callback_fps": 56.37738158348317,
+      "present_interval_ms": {
+        "p50": 17.6571,
+        "p95": 23.5384,
+        "p99": 28.1244
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 16.418387337057727,
+      "zero_audio_queue_samples": 39,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.560174900000675,
+      "frames_recorded": 600,
+      "simulation_fps": 57.215974092776776,
+      "simulation_speed_percent": 95.36516356899502,
+      "measured_wall_s": 9.4204461,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.561,
+        "p95": 23.7725,
+        "p99": 26.9345
+      },
+      "post_wait_ms_mean": 7.4483003703703705,
+      "pace_wait_ms_mean": 0.10456037037037037,
+      "present_callback_fps": 57.166944212003386,
+      "present_interval_ms": {
+        "p50": 17.5405,
+        "p95": 23.4901,
+        "p99": 26.6315
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 34.10429981378026,
+      "zero_audio_queue_samples": 26,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.475952400000097,
+      "frames_recorded": 600,
+      "simulation_fps": 57.74781857615328,
+      "simulation_speed_percent": 96.25161944001147,
+      "measured_wall_s": 9.3336859,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.3076,
+        "p95": 23.1217,
+        "p99": 26.5524
+      },
+      "post_wait_ms_mean": 7.126563703703703,
+      "pace_wait_ms_mean": 0.2747598148148148,
+      "present_callback_fps": 57.68099830018288,
+      "present_interval_ms": {
+        "p50": 17.4291,
+        "p95": 22.8371,
+        "p99": 25.7962
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 30.897588454376162,
+      "zero_audio_queue_samples": 21,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.37857729999996,
+      "frames_recorded": 600,
+      "simulation_fps": 58.24132842267808,
+      "simulation_speed_percent": 97.07418076109346,
+      "measured_wall_s": 9.254596600000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.0438,
+        "p95": 22.941,
+        "p99": 26.7511
+      },
+      "post_wait_ms_mean": 6.728941481481481,
+      "pace_wait_ms_mean": 0.521657037037037,
+      "present_callback_fps": 58.18529428772862,
+      "present_interval_ms": {
+        "p50": 17.1548,
+        "p95": 22.4157,
+        "p99": 24.5387
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 34.883931098696465,
+      "zero_audio_queue_samples": 11,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.365970000000743,
+      "frames_recorded": 600,
+      "simulation_fps": 58.34346261717863,
+      "simulation_speed_percent": 97.24441371297398,
+      "measured_wall_s": 9.2383958,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.0991,
+        "p95": 23.5759,
+        "p99": 27.9125
+      },
+      "post_wait_ms_mean": 6.728953703703704,
+      "pace_wait_ms_mean": 0.4348925925925926,
+      "present_callback_fps": 58.29563114953774,
+      "present_interval_ms": {
+        "p50": 17.2365,
+        "p95": 22.9336,
+        "p99": 26.2854
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 38.90627374301676,
+      "zero_audio_queue_samples": 11,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.644264800000201,
+      "frames_recorded": 600,
+      "simulation_fps": 56.576261404748266,
+      "simulation_speed_percent": 94.29891754070792,
+      "measured_wall_s": 9.5269639,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.6631,
+        "p95": 23.5854,
+        "p99": 26.7836
+      },
+      "post_wait_ms_mean": 7.599080370370371,
+      "pace_wait_ms_mean": 0.0011688888888888888,
+      "present_callback_fps": 56.559129014690996,
+      "present_interval_ms": {
+        "p50": 17.737,
+        "p95": 23.4747,
+        "p99": 26.075
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 19.32340782122905,
+      "zero_audio_queue_samples": 38,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.621991399999388,
+      "frames_recorded": 600,
+      "simulation_fps": 56.872574790917845,
+      "simulation_speed_percent": 94.79280014932914,
+      "measured_wall_s": 9.4773272,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.5852,
+        "p95": 23.4446,
+        "p99": 26.3193
+      },
+      "post_wait_ms_mean": 7.557779814814815,
+      "pace_wait_ms_mean": 0.0011161111111111111,
+      "present_callback_fps": 56.840025463061245,
+      "present_interval_ms": {
+        "p50": 17.4767,
+        "p95": 23.3416,
+        "p99": 26.3483
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 17.52950279329609,
+      "zero_audio_queue_samples": 36,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.232445799999368,
+      "frames_recorded": 600,
+      "simulation_fps": 59.94586676918781,
+      "simulation_speed_percent": 99.913405867972,
+      "measured_wall_s": 8.9914456,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.034,
+        "p95": 29.479,
+        "p99": 30.5275
+      },
+      "post_wait_ms_mean": 0.04393685185185185,
+      "pace_wait_ms_mean": 7.06813962962963,
+      "present_callback_fps": 59.88660188610352,
+      "present_interval_ms": {
+        "p50": 15.8588,
+        "p95": 28.3064,
+        "p99": 33.6316
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 82.55041001855288,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.166924900000595,
+      "frames_recorded": 600,
+      "simulation_fps": 60.00637470318276,
+      "simulation_speed_percent": 100.01425608656582,
+      "measured_wall_s": 8.982379,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0575,
+        "p95": 29.2277,
+        "p99": 30.9595
+      },
+      "post_wait_ms_mean": 0.012281851851851851,
+      "pace_wait_ms_mean": 7.099495740740741,
+      "present_callback_fps": 59.950920105922485,
+      "present_interval_ms": {
+        "p50": 15.9057,
+        "p95": 27.9442,
+        "p99": 34.4868
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 83.1205974025974,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.048558699999376,
+      "frames_recorded": 600,
+      "simulation_fps": 60.027636768515634,
+      "simulation_speed_percent": 100.04969414889922,
+      "measured_wall_s": 8.9791974,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0665,
+        "p95": 28.3575,
+        "p99": 30.5892
+      },
+      "post_wait_ms_mean": 0.16259962962962962,
+      "pace_wait_ms_mean": 6.97865,
+      "present_callback_fps": 59.93418381533964,
+      "present_interval_ms": {
+        "p50": 15.8926,
+        "p95": 28.1433,
+        "p99": 33.8614
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 82.87323005565862,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.092428899999504,
+      "frames_recorded": 600,
+      "simulation_fps": 59.93512350910963,
+      "simulation_speed_percent": 99.89549978432709,
+      "measured_wall_s": 8.9930573,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0229,
+        "p95": 29.5406,
+        "p99": 30.5497
+      },
+      "post_wait_ms_mean": 0.08136592592592592,
+      "pace_wait_ms_mean": 7.033659444444444,
+      "present_callback_fps": 59.96723207978565,
+      "present_interval_ms": {
+        "p50": 15.8599,
+        "p95": 27.5654,
+        "p99": 34.5512
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 83.2257254174397,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.094086299999617,
+      "frames_recorded": 600,
+      "simulation_fps": 60.020816644567546,
+      "simulation_speed_percent": 100.03832686289901,
+      "measured_wall_s": 8.980217699999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.2293,
+        "p95": 29.0381,
+        "p99": 30.5291
+      },
+      "post_wait_ms_mean": 0.004609074074074074,
+      "pace_wait_ms_mean": 7.104983518518519,
+      "present_callback_fps": 59.8775128267575,
+      "present_interval_ms": {
+        "p50": 15.5623,
+        "p95": 28.3562,
+        "p99": 33.5768
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 83.14161966604824,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.095352399999683,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96446610314976,
+      "simulation_speed_percent": 99.94440588353888,
+      "measured_wall_s": 8.9886567,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0184,
+        "p95": 29.256,
+        "p99": 30.5603
+      },
+      "post_wait_ms_mean": 0.8978561111111111,
+      "pace_wait_ms_mean": 6.257723333333334,
+      "present_callback_fps": 59.82490850541956,
+      "present_interval_ms": {
+        "p50": 15.7838,
+        "p95": 27.7556,
+        "p99": 35.0035
+      },
+      "stutter_over_33ms": 9,
+      "audio_queue_mean_ms": 80.72738847583643,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.152099600000838,
+      "frames_recorded": 600,
+      "simulation_fps": 60.022456193740645,
+      "simulation_speed_percent": 100.04105954407959,
+      "measured_wall_s": 8.9799724,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0172,
+        "p95": 29.3259,
+        "p99": 30.5346
+      },
+      "post_wait_ms_mean": 0.2394,
+      "pace_wait_ms_mean": 6.939100370370371,
+      "present_callback_fps": 59.75690867337208,
+      "present_interval_ms": {
+        "p50": 15.9144,
+        "p95": 27.9002,
+        "p99": 33.3166
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 83.23542565055762,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.044868599999973,
+      "frames_recorded": 600,
+      "simulation_fps": 59.98803911954698,
+      "simulation_speed_percent": 99.98369567083807,
+      "measured_wall_s": 8.9851245,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0208,
+        "p95": 29.1471,
+        "p99": 30.5401
+      },
+      "post_wait_ms_mean": 0.04592537037037037,
+      "pace_wait_ms_mean": 7.1330612962962965,
+      "present_callback_fps": 59.95198235511941,
+      "present_interval_ms": {
+        "p50": 15.5445,
+        "p95": 28.0244,
+        "p99": 34.2455
+      },
+      "stutter_over_33ms": 10,
+      "audio_queue_mean_ms": 82.89177179962894,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.005103500000587,
+      "frames_recorded": 600,
+      "simulation_fps": 60.01986958339328,
+      "simulation_speed_percent": 100.03631044811227,
+      "measured_wall_s": 8.980359400000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.277,
+        "p95": 29.2506,
+        "p99": 30.3315
+      },
+      "post_wait_ms_mean": 0.0008551851851851852,
+      "pace_wait_ms_mean": 6.939709074074075,
+      "present_callback_fps": 60.03540328943665,
+      "present_interval_ms": {
+        "p50": 15.5381,
+        "p95": 27.1217,
+        "p99": 32.7991
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 84.61225231910946,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.072080700000697,
+      "frames_recorded": 600,
+      "simulation_fps": 60.0261313015828,
+      "simulation_speed_percent": 100.04674697836624,
+      "measured_wall_s": 8.9794226,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0305,
+        "p95": 29.0519,
+        "p99": 30.5321
+      },
+      "post_wait_ms_mean": 0.0007253703703703704,
+      "pace_wait_ms_mean": 6.9177116666666665,
+      "present_callback_fps": 59.973911237342904,
+      "present_interval_ms": {
+        "p50": 15.6482,
+        "p95": 27.3511,
+        "p99": 33.8938
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 83.89239332096474,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.097204300000158,
+      "frames_recorded": 600,
+      "simulation_fps": 60.01601213842218,
+      "simulation_speed_percent": 100.02988116785319,
+      "measured_wall_s": 8.9809366,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.062,
+        "p95": 29.0541,
+        "p99": 30.5235
+      },
+      "post_wait_ms_mean": 0.0007701851851851852,
+      "pace_wait_ms_mean": 6.873574259259259,
+      "present_callback_fps": 60.07382080634604,
+      "present_interval_ms": {
+        "p50": 15.3212,
+        "p95": 26.8283,
+        "p99": 32.7592
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 83.8528293135436,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.118267599999854,
+      "frames_recorded": 600,
+      "simulation_fps": 59.953908903094295,
+      "simulation_speed_percent": 99.92637247027996,
+      "measured_wall_s": 8.9902395,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9998,
+        "p95": 29.8572,
+        "p99": 30.5393
+      },
+      "post_wait_ms_mean": 0.0006868518518518518,
+      "pace_wait_ms_mean": 7.00430462962963,
+      "present_callback_fps": 60.05075369377869,
+      "present_interval_ms": {
+        "p50": 15.4868,
+        "p95": 27.5376,
+        "p99": 33.1033
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 84.36859369202226,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.112599900000532,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02369610797779,
+      "simulation_speed_percent": 100.04268819274802,
+      "measured_wall_s": 8.9797869,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0587,
+        "p95": 29.2647,
+        "p99": 30.5237
+      },
+      "post_wait_ms_mean": 0.0006529629629629629,
+      "pace_wait_ms_mean": 7.060231296296296,
+      "present_callback_fps": 59.94594477305783,
+      "present_interval_ms": {
+        "p50": 15.4192,
+        "p95": 26.894,
+        "p99": 33.8675
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 84.4193172541744,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.062799499999528,
+      "frames_recorded": 600,
+      "simulation_fps": 60.021880703783836,
+      "simulation_speed_percent": 100.03966242246901,
+      "measured_wall_s": 8.9800585,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.029,
+        "p95": 29.5336,
+        "p99": 30.5439
+      },
+      "post_wait_ms_mean": 0.0007540740740740741,
+      "pace_wait_ms_mean": 6.797445925925926,
+      "present_callback_fps": 59.94562609185981,
+      "present_interval_ms": {
+        "p50": 15.4298,
+        "p95": 27.1853,
+        "p99": 33.3421
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 83.87262337662338,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.057685200000378,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02355440090084,
+      "simulation_speed_percent": 100.04245200674427,
+      "measured_wall_s": 8.9798081,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.1051,
+        "p95": 29.0511,
+        "p99": 30.5372
+      },
+      "post_wait_ms_mean": 0.0007068518518518518,
+      "pace_wait_ms_mean": 6.952406296296297,
+      "present_callback_fps": 60.00388767303399,
+      "present_interval_ms": {
+        "p50": 15.8689,
+        "p95": 26.168,
+        "p99": 33.9687
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 84.29560482374768,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.040012299999944,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02065824199336,
+      "simulation_speed_percent": 100.03762492108767,
+      "measured_wall_s": 8.9802414,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0205,
+        "p95": 29.4539,
+        "p99": 30.533
+      },
+      "post_wait_ms_mean": 0.0007488888888888889,
+      "pace_wait_ms_mean": 6.952035740740741,
+      "present_callback_fps": 59.999553398500495,
+      "present_interval_ms": {
+        "p50": 15.2429,
+        "p95": 27.6037,
+        "p99": 32.2868
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 83.88870500927644,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.084707400000298,
+      "frames_recorded": 600,
+      "simulation_fps": 60.024997571716014,
+      "simulation_speed_percent": 100.04425118050892,
+      "measured_wall_s": 8.979592199999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.026,
+        "p95": 29.1543,
+        "p99": 30.1574
+      },
+      "post_wait_ms_mean": 0.009567962962962962,
+      "pace_wait_ms_mean": 6.87651074074074,
+      "present_callback_fps": 60.04845832601899,
+      "present_interval_ms": {
+        "p50": 15.8102,
+        "p95": 27.6875,
+        "p99": 33.9762
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 84.23253988868275,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "before",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.028692399999272,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02264134210092,
+      "simulation_speed_percent": 100.04032402953868,
+      "measured_wall_s": 8.979944699999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9562,
+        "p95": 29.5113,
+        "p99": 30.5726
+      },
+      "post_wait_ms_mean": 0.005198148148148149,
+      "pace_wait_ms_mean": 6.6809887037037035,
+      "present_callback_fps": 59.97437102629457,
+      "present_interval_ms": {
+        "p50": 15.7329,
+        "p95": 27.7378,
+        "p99": 33.4713
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 83.40877551020408,
+      "zero_audio_queue_samples": 0,
+      "pair": 0,
+      "variant": "after",
+      "warmup_only": true,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.08478439999999,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02300295284221,
+      "simulation_speed_percent": 100.04092672970188,
+      "measured_wall_s": 8.9798906,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9816,
+        "p95": 29.0892,
+        "p99": 30.1946
+      },
+      "post_wait_ms_mean": 0.000716111111111111,
+      "pace_wait_ms_mean": 6.805446111111111,
+      "present_callback_fps": 59.98056051177239,
+      "present_interval_ms": {
+        "p50": 16.1083,
+        "p95": 26.9808,
+        "p99": 30.4258
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 84.06803339517626,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.071409899999708,
+      "frames_recorded": 600,
+      "simulation_fps": 60.00842700901144,
+      "simulation_speed_percent": 100.01663286140048,
+      "measured_wall_s": 8.9820718,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9799,
+        "p95": 29.4174,
+        "p99": 30.4829
+      },
+      "post_wait_ms_mean": 0.000662037037037037,
+      "pace_wait_ms_mean": 6.802426481481482,
+      "present_callback_fps": 59.95495725328343,
+      "present_interval_ms": {
+        "p50": 15.7521,
+        "p95": 27.3033,
+        "p99": 31.9809
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 84.22016883116883,
+      "zero_audio_queue_samples": 0,
+      "pair": 1,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.023406100000102,
+      "frames_recorded": 600,
+      "simulation_fps": 59.95248248547732,
+      "simulation_speed_percent": 99.9233895762519,
+      "measured_wall_s": 8.9904534,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0191,
+        "p95": 29.131,
+        "p99": 30.529
+      },
+      "post_wait_ms_mean": 0.001869074074074074,
+      "pace_wait_ms_mean": 6.834478703703704,
+      "present_callback_fps": 60.03778459594632,
+      "present_interval_ms": {
+        "p50": 15.5304,
+        "p95": 26.1923,
+        "p99": 34.1047
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 84.63575139146567,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.109224300000278,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02000458958165,
+      "simulation_speed_percent": 100.03592932829737,
+      "measured_wall_s": 8.9803392,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0202,
+        "p95": 29.0369,
+        "p99": 30.3564
+      },
+      "post_wait_ms_mean": 0.0007283333333333333,
+      "pace_wait_ms_mean": 6.694517222222222,
+      "present_callback_fps": 60.04780273002266,
+      "present_interval_ms": {
+        "p50": 15.7388,
+        "p95": 26.8752,
+        "p99": 31.6874
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 83.73035992578849,
+      "zero_audio_queue_samples": 0,
+      "pair": 2,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.055690399999548,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02222893738694,
+      "simulation_speed_percent": 100.03963667056391,
+      "measured_wall_s": 8.9800064,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0133,
+        "p95": 29.0271,
+        "p99": 30.4562
+      },
+      "post_wait_ms_mean": 0.0006662962962962963,
+      "pace_wait_ms_mean": 6.793222777777777,
+      "present_callback_fps": 59.97842000929053,
+      "present_interval_ms": {
+        "p50": 15.6864,
+        "p95": 27.4154,
+        "p99": 32.5318
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 83.80457142857144,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "before",
+      "warmup_only": false,
+      "same_executable_path": true
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.034233700000186,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96511921354956,
+      "simulation_speed_percent": 99.94445133466097,
+      "measured_wall_s": 8.9885588,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0299,
+        "p95": 29.0563,
+        "p99": 30.1539
+      },
+      "post_wait_ms_mean": 0.000722037037037037,
+      "pace_wait_ms_mean": 6.916626296296296,
+      "present_callback_fps": 59.965243966592524,
+      "present_interval_ms": {
+        "p50": 15.7953,
+        "p95": 27.4191,
+        "p99": 32.5802
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 84.1558478664193,
+      "zero_audio_queue_samples": 0,
+      "pair": 3,
+      "variant": "after",
+      "warmup_only": false,
+      "same_executable_path": true
+    }
+  ],
+  "separate_thread_CPU_diagnostics": [
+    {
+      "scene": "Skorost-1",
+      "variant": "before",
+      "no_instruction_suspension_inside_counter_interval": true,
+      "start_frame": 10720,
+      "end_frame": 11080,
+      "frames": 360,
+      "wall_s": 6.3148720000008325,
+      "exe_sha256": "8bb240d0053670750beb4764d29e2873501732b054d249b0b275b7965c66330f",
+      "roles": {
+        "renderer": {
+          "kernel_s": 0.515625,
+          "user_s": 5.6875,
+          "cpu_ms_per_frame": 17.23090277777778,
+          "kernel_ms_per_frame": 1.4322916666666667,
+          "cycles_per_frame": 43088041.61111111
+        },
+        "ee": {
+          "kernel_s": 0.34375,
+          "user_s": 3.34375,
+          "cpu_ms_per_frame": 10.243055555555555,
+          "kernel_ms_per_frame": 0.9548611111111112,
+          "cycles_per_frame": 25338291.81388889
+        },
+        "vu": {
+          "kernel_s": 0.09375,
+          "user_s": 5.75,
+          "cpu_ms_per_frame": 16.23263888888889,
+          "kernel_ms_per_frame": 0.2604166666666667,
+          "cycles_per_frame": 40240969.594444446
+        }
+      },
+      "diagnostic_only_not_paired_fps": true
+    },
+    {
+      "scene": "Skorost-1",
+      "variant": "after",
+      "no_instruction_suspension_inside_counter_interval": true,
+      "start_frame": 10720,
+      "end_frame": 11080,
+      "frames": 360,
+      "wall_s": 6.12013879999995,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "roles": {
+        "renderer": {
+          "kernel_s": 0.171875,
+          "user_s": 5.6875,
+          "cpu_ms_per_frame": 16.276041666666668,
+          "kernel_ms_per_frame": 0.4774305555555556,
+          "cycles_per_frame": 41264156.983333334
+        },
+        "ee": {
+          "kernel_s": 0.234375,
+          "user_s": 3.453125,
+          "cpu_ms_per_frame": 10.243055555555555,
+          "kernel_ms_per_frame": 0.6510416666666666,
+          "cycles_per_frame": 25744573.277777776
+        },
+        "vu": {
+          "kernel_s": 0.171875,
+          "user_s": 5.671875,
+          "cpu_ms_per_frame": 16.23263888888889,
+          "kernel_ms_per_frame": 0.4774305555555556,
+          "cycles_per_frame": 40830312.01111111
+        }
+      },
+      "diagnostic_only_not_paired_fps": true
+    }
+  ],
+  "aggregate_counter_audit": {
+    "pairs": [
+      {
+        "scene": "Skorost-1",
+        "pair": 1,
+        "before": {
+          "raster_batches": 235103,
+          "raster_primitives": 44394055,
+          "raster_tiles": 8568284,
+          "key_flushes": 9780,
+          "feedback_flushes": 191030,
+          "feedback_checks": 396184,
+          "UV_fallback": 175911,
+          "framebuffer_overlap": 15119,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 235104,
+          "raster_primitives": 44435692,
+          "raster_tiles": 8569484,
+          "key_flushes": 9780,
+          "feedback_flushes": 191030,
+          "feedback_checks": 396184,
+          "UV_fallback": 175911,
+          "framebuffer_overlap": 15119,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.09378958511450097
+      },
+      {
+        "scene": "Skorost-1",
+        "pair": 2,
+        "before": {
+          "raster_batches": 235103,
+          "raster_primitives": 44394055,
+          "raster_tiles": 8568284,
+          "key_flushes": 9780,
+          "feedback_flushes": 191030,
+          "feedback_checks": 396184,
+          "UV_fallback": 175911,
+          "framebuffer_overlap": 15119,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 235104,
+          "raster_primitives": 44435692,
+          "raster_tiles": 8569484,
+          "key_flushes": 9780,
+          "feedback_flushes": 191030,
+          "feedback_checks": 396184,
+          "UV_fallback": 175911,
+          "framebuffer_overlap": 15119,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.09378958511450097
+      },
+      {
+        "scene": "Skorost-1",
+        "pair": 3,
+        "before": {
+          "raster_batches": 235104,
+          "raster_primitives": 44435692,
+          "raster_tiles": 8569484,
+          "key_flushes": 9780,
+          "feedback_flushes": 191030,
+          "feedback_checks": 396184,
+          "UV_fallback": 175911,
+          "framebuffer_overlap": 15119,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 235103,
+          "raster_primitives": 44394055,
+          "raster_tiles": 8568284,
+          "key_flushes": 9780,
+          "feedback_flushes": 191030,
+          "feedback_checks": 396184,
+          "UV_fallback": 175911,
+          "framebuffer_overlap": 15119,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": -0.09370170267630762
+      },
+      {
+        "scene": "Skorost-2",
+        "pair": 1,
+        "before": {
+          "raster_batches": 234077,
+          "raster_primitives": 33851918,
+          "raster_tiles": 8596715,
+          "key_flushes": 9820,
+          "feedback_flushes": 189496,
+          "feedback_checks": 301672,
+          "UV_fallback": 176866,
+          "framebuffer_overlap": 12615,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 234077,
+          "raster_primitives": 33851918,
+          "raster_tiles": 8596715,
+          "key_flushes": 9820,
+          "feedback_flushes": 189496,
+          "feedback_checks": 301672,
+          "UV_fallback": 176866,
+          "framebuffer_overlap": 12615,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Skorost-2",
+        "pair": 2,
+        "before": {
+          "raster_batches": 234077,
+          "raster_primitives": 33851918,
+          "raster_tiles": 8596715,
+          "key_flushes": 9820,
+          "feedback_flushes": 189496,
+          "feedback_checks": 301672,
+          "UV_fallback": 176866,
+          "framebuffer_overlap": 12615,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 234077,
+          "raster_primitives": 33851918,
+          "raster_tiles": 8596715,
+          "key_flushes": 9820,
+          "feedback_flushes": 189496,
+          "feedback_checks": 301672,
+          "UV_fallback": 176866,
+          "framebuffer_overlap": 12615,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Skorost-2",
+        "pair": 3,
+        "before": {
+          "raster_batches": 234077,
+          "raster_primitives": 33851918,
+          "raster_tiles": 8596715,
+          "key_flushes": 9820,
+          "feedback_flushes": 189496,
+          "feedback_checks": 301672,
+          "UV_fallback": 176866,
+          "framebuffer_overlap": 12615,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 234077,
+          "raster_primitives": 33851918,
+          "raster_tiles": 8596715,
+          "key_flushes": 9820,
+          "feedback_flushes": 189496,
+          "feedback_checks": 301672,
+          "UV_fallback": 176866,
+          "framebuffer_overlap": 12615,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Fuji-4",
+        "pair": 1,
+        "before": {
+          "raster_batches": 302510,
+          "raster_primitives": 32082296,
+          "raster_tiles": 10857522,
+          "key_flushes": 12867,
+          "feedback_flushes": 245192,
+          "feedback_checks": 359275,
+          "UV_fallback": 210291,
+          "framebuffer_overlap": 34878,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 302510,
+          "raster_primitives": 32082296,
+          "raster_tiles": 10857522,
+          "key_flushes": 12867,
+          "feedback_flushes": 245192,
+          "feedback_checks": 359275,
+          "UV_fallback": 210291,
+          "framebuffer_overlap": 34878,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Fuji-4",
+        "pair": 2,
+        "before": {
+          "raster_batches": 302510,
+          "raster_primitives": 32082296,
+          "raster_tiles": 10857522,
+          "key_flushes": 12867,
+          "feedback_flushes": 245192,
+          "feedback_checks": 359275,
+          "UV_fallback": 210291,
+          "framebuffer_overlap": 34878,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 302510,
+          "raster_primitives": 32082296,
+          "raster_tiles": 10857522,
+          "key_flushes": 12867,
+          "feedback_flushes": 245192,
+          "feedback_checks": 359275,
+          "UV_fallback": 210291,
+          "framebuffer_overlap": 34878,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Fuji-4",
+        "pair": 3,
+        "before": {
+          "raster_batches": 302510,
+          "raster_primitives": 32082296,
+          "raster_tiles": 10857522,
+          "key_flushes": 12867,
+          "feedback_flushes": 245192,
+          "feedback_checks": 359275,
+          "UV_fallback": 210291,
+          "framebuffer_overlap": 34878,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 302793,
+          "raster_primitives": 32136276,
+          "raster_tiles": 10866361,
+          "key_flushes": 12880,
+          "feedback_flushes": 245421,
+          "feedback_checks": 359727,
+          "UV_fallback": 210482,
+          "framebuffer_overlap": 34916,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.1682547907419174
+      },
+      {
+        "scene": "Fuji-3",
+        "pair": 1,
+        "before": {
+          "raster_batches": 305646,
+          "raster_primitives": 32526746,
+          "raster_tiles": 11033568,
+          "key_flushes": 13174,
+          "feedback_flushes": 248096,
+          "feedback_checks": 367913,
+          "UV_fallback": 212774,
+          "framebuffer_overlap": 35217,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 305647,
+          "raster_primitives": 32565946,
+          "raster_tiles": 11034768,
+          "key_flushes": 13174,
+          "feedback_flushes": 248096,
+          "feedback_checks": 368604,
+          "UV_fallback": 212965,
+          "framebuffer_overlap": 35265,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.12051620534068164
+      },
+      {
+        "scene": "Fuji-3",
+        "pair": 2,
+        "before": {
+          "raster_batches": 305935,
+          "raster_primitives": 32569299,
+          "raster_tiles": 11041266,
+          "key_flushes": 13186,
+          "feedback_flushes": 248335,
+          "feedback_checks": 368604,
+          "UV_fallback": 212965,
+          "framebuffer_overlap": 35265,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 305647,
+          "raster_primitives": 32565946,
+          "raster_tiles": 11034768,
+          "key_flushes": 13174,
+          "feedback_flushes": 248096,
+          "feedback_checks": 368391,
+          "UV_fallback": 212774,
+          "framebuffer_overlap": 35243,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": -0.01029497134709123
+      },
+      {
+        "scene": "Fuji-3",
+        "pair": 3,
+        "before": {
+          "raster_batches": 305646,
+          "raster_primitives": 32526746,
+          "raster_tiles": 11033568,
+          "key_flushes": 13174,
+          "feedback_flushes": 248096,
+          "feedback_checks": 368585,
+          "UV_fallback": 212965,
+          "framebuffer_overlap": 35246,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 305926,
+          "raster_primitives": 32568327,
+          "raster_tiles": 11038962,
+          "key_flushes": 13184,
+          "feedback_flushes": 248335,
+          "feedback_checks": 368604,
+          "UV_fallback": 212965,
+          "framebuffer_overlap": 35265,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.12783633505792924
+      },
+      {
+        "scene": "Grand-Prix-0",
+        "pair": 1,
+        "before": {
+          "raster_batches": 256280,
+          "raster_primitives": 25693784,
+          "raster_tiles": 8854839,
+          "key_flushes": 9190,
+          "feedback_flushes": 211178,
+          "feedback_checks": 388185,
+          "UV_fallback": 176484,
+          "framebuffer_overlap": 34607,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 256544,
+          "raster_primitives": 25732710,
+          "raster_tiles": 8859858,
+          "key_flushes": 9197,
+          "feedback_flushes": 211404,
+          "feedback_checks": 389131,
+          "UV_fallback": 176675,
+          "framebuffer_overlap": 34642,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.15149967789875873
+      },
+      {
+        "scene": "Grand-Prix-0",
+        "pair": 2,
+        "before": {
+          "raster_batches": 255956,
+          "raster_primitives": 25652907,
+          "raster_tiles": 8841822,
+          "key_flushes": 9176,
+          "feedback_flushes": 210914,
+          "feedback_checks": 387202,
+          "UV_fallback": 176293,
+          "framebuffer_overlap": 34534,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 256280,
+          "raster_primitives": 25693784,
+          "raster_tiles": 8854839,
+          "key_flushes": 9190,
+          "feedback_flushes": 211178,
+          "feedback_checks": 388185,
+          "UV_fallback": 176484,
+          "framebuffer_overlap": 34607,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.15934646315132195
+      },
+      {
+        "scene": "Grand-Prix-0",
+        "pair": 3,
+        "before": {
+          "raster_batches": 255401,
+          "raster_primitives": 25611049,
+          "raster_tiles": 8829218,
+          "key_flushes": 9158,
+          "feedback_flushes": 210443,
+          "feedback_checks": 386260,
+          "UV_fallback": 176102,
+          "framebuffer_overlap": 34499,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 256280,
+          "raster_primitives": 25693784,
+          "raster_tiles": 8854839,
+          "key_flushes": 9190,
+          "feedback_flushes": 211178,
+          "feedback_checks": 388185,
+          "UV_fallback": 176484,
+          "framebuffer_overlap": 34607,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.32304416738260233
+      },
+      {
+        "scene": "Thunderhead-0",
+        "pair": 1,
+        "before": {
+          "raster_batches": 301097,
+          "raster_primitives": 28834772,
+          "raster_tiles": 11050108,
+          "key_flushes": 10869,
+          "feedback_flushes": 247716,
+          "feedback_checks": 400013,
+          "UV_fallback": 208572,
+          "framebuffer_overlap": 39121,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 301097,
+          "raster_primitives": 28834772,
+          "raster_tiles": 11050108,
+          "key_flushes": 10869,
+          "feedback_flushes": 247716,
+          "feedback_checks": 400013,
+          "UV_fallback": 208572,
+          "framebuffer_overlap": 39121,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Thunderhead-0",
+        "pair": 2,
+        "before": {
+          "raster_batches": 300853,
+          "raster_primitives": 28823838,
+          "raster_tiles": 11044613,
+          "key_flushes": 10862,
+          "feedback_flushes": 247512,
+          "feedback_checks": 399788,
+          "UV_fallback": 208381,
+          "framebuffer_overlap": 39108,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 301097,
+          "raster_primitives": 28834772,
+          "raster_tiles": 11050108,
+          "key_flushes": 10869,
+          "feedback_flushes": 247716,
+          "feedback_checks": 400013,
+          "UV_fallback": 208572,
+          "framebuffer_overlap": 39121,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.037933879589524544
+      },
+      {
+        "scene": "Thunderhead-0",
+        "pair": 3,
+        "before": {
+          "raster_batches": 300852,
+          "raster_primitives": 28808975,
+          "raster_tiles": 11043413,
+          "key_flushes": 10862,
+          "feedback_flushes": 247512,
+          "feedback_checks": 399788,
+          "UV_fallback": 208381,
+          "framebuffer_overlap": 39108,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 301097,
+          "raster_primitives": 28834772,
+          "raster_tiles": 11050108,
+          "key_flushes": 10869,
+          "feedback_flushes": 247716,
+          "feedback_checks": 400013,
+          "UV_fallback": 208572,
+          "framebuffer_overlap": 39121,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": false,
+        "primitive_total_change_percent": 0.08954501158058292
+      },
+      {
+        "scene": "Aurora-3",
+        "pair": 1,
+        "before": {
+          "raster_batches": 326121,
+          "raster_primitives": 21585173,
+          "raster_tiles": 11655176,
+          "key_flushes": 13968,
+          "feedback_flushes": 267632,
+          "feedback_checks": 472000,
+          "UV_fallback": 226144,
+          "framebuffer_overlap": 40221,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 326121,
+          "raster_primitives": 21585173,
+          "raster_tiles": 11655176,
+          "key_flushes": 13968,
+          "feedback_flushes": 267632,
+          "feedback_checks": 472000,
+          "UV_fallback": 226144,
+          "framebuffer_overlap": 40221,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Aurora-3",
+        "pair": 2,
+        "before": {
+          "raster_batches": 326121,
+          "raster_primitives": 21585173,
+          "raster_tiles": 11655176,
+          "key_flushes": 13968,
+          "feedback_flushes": 267632,
+          "feedback_checks": 472000,
+          "UV_fallback": 226144,
+          "framebuffer_overlap": 40221,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 326121,
+          "raster_primitives": 21585173,
+          "raster_tiles": 11655176,
+          "key_flushes": 13968,
+          "feedback_flushes": 267632,
+          "feedback_checks": 472000,
+          "UV_fallback": 226144,
+          "framebuffer_overlap": 40221,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      },
+      {
+        "scene": "Aurora-3",
+        "pair": 3,
+        "before": {
+          "raster_batches": 326121,
+          "raster_primitives": 21585173,
+          "raster_tiles": 11655176,
+          "key_flushes": 13968,
+          "feedback_flushes": 267632,
+          "feedback_checks": 472000,
+          "UV_fallback": 226144,
+          "framebuffer_overlap": 40221,
+          "depth_overlap": 0
+        },
+        "after": {
+          "raster_batches": 326121,
+          "raster_primitives": 21585173,
+          "raster_tiles": 11655176,
+          "key_flushes": 13968,
+          "feedback_flushes": 267632,
+          "feedback_checks": 472000,
+          "UV_fallback": 226144,
+          "framebuffer_overlap": 40221,
+          "depth_overlap": 0
+        },
+        "all_counters_equal": true,
+        "primitive_total_change_percent": 0.0
+      }
+    ],
+    "equal_pairs": 9,
+    "total_measured_pairs": 21,
+    "largest_absolute_primitive_count_delta_percent": 0.32304416738260233,
+    "comparison_is_not_a_full_async_GPU_payload_equivalence_proof": true,
+    "source_limit": "system::run prints GS stats before returning; host::run_window leaves render loop when EE done, joins EE only and calls _Exit; VU worker is detached. Final drain/join is unmodified/open."
+  },
+  "route_protocol": {
+    "Class": 1,
+    "environments": 6,
+    "variants_each": 6,
+    "frames_each": 600,
+    "short_checkpoint_windows_not_full_races": true,
+    "paired_performance_comparison": false
+  },
+  "route_samples": [
+    {
+      "track": "Thunderhead-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "9509c1dca200397da4ecd9995f264eedf3b7c4d34678604cdab9cad556c7d09b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.125568700000258,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02150306538391,
+      "simulation_speed_percent": 100.03903300503652,
+      "measured_wall_s": 8.980115,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.026,
+        "p95": 29.5278,
+        "p99": 30.7783
+      },
+      "post_wait_ms_mean": 0.0006648148148148148,
+      "pace_wait_ms_mean": 7.010414814814815,
+      "present_callback_fps": 59.998660438071035,
+      "present_interval_ms": {
+        "p50": 15.4647,
+        "p95": 27.2927,
+        "p99": 33.4521
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 84.18552875695732,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Thunderhead-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "e4d7056d0c92ca8c885648318dd556f4070ac645b80ad8630e84fe5eaf28685e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.072925100000248,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02486722226531,
+      "simulation_speed_percent": 100.04698544533808,
+      "measured_wall_s": 8.9796117,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0212,
+        "p95": 29.4578,
+        "p99": 30.5421
+      },
+      "post_wait_ms_mean": 0.000692037037037037,
+      "pace_wait_ms_mean": 6.936401296296296,
+      "present_callback_fps": 60.05034759291413,
+      "present_interval_ms": {
+        "p50": 15.5438,
+        "p95": 26.4603,
+        "p99": 30.3172
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 84.01484601113172,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Thunderhead-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "ffa391cb37135c8755baf29a4db05c96ff0b76b54d939568bd1ab9942b28558d",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 10.991067900000417,
+      "frames_recorded": 600,
+      "simulation_fps": 59.95835997577682,
+      "simulation_speed_percent": 99.93558348989947,
+      "measured_wall_s": 8.9895721,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0239,
+        "p95": 29.0618,
+        "p99": 30.5111
+      },
+      "post_wait_ms_mean": 0.0007248148148148149,
+      "pace_wait_ms_mean": 7.152761666666667,
+      "present_callback_fps": 59.97719531278776,
+      "present_interval_ms": {
+        "p50": 15.0229,
+        "p95": 26.6951,
+        "p99": 33.4997
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 84.23747124304268,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Thunderhead-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8b5e93810c75295f80c07587fc3137b40872332045821053dfbd8c75c1382cc9",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.045947900000101,
+      "frames_recorded": 600,
+      "simulation_fps": 59.9727561237803,
+      "simulation_speed_percent": 99.95755653188935,
+      "measured_wall_s": 8.9874142,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0217,
+        "p95": 29.0202,
+        "p99": 30.1909
+      },
+      "post_wait_ms_mean": 0.00076,
+      "pace_wait_ms_mean": 7.078588703703704,
+      "present_callback_fps": 60.00348086983273,
+      "present_interval_ms": {
+        "p50": 17.172,
+        "p95": 27.2098,
+        "p99": 32.2001
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 84.67903525046383,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Thunderhead-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "33c4807f1abe503c0bb99894ba094fa05c3a1109fe842a9f817447849205334f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 10.960458499999731,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02382043643598,
+      "simulation_speed_percent": 100.0437821150954,
+      "measured_wall_s": 8.9797683,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0363,
+        "p95": 29.5821,
+        "p99": 31.0513
+      },
+      "post_wait_ms_mean": 0.0007924074074074074,
+      "pace_wait_ms_mean": 7.1598007407407405,
+      "present_callback_fps": 60.09572099958339,
+      "present_interval_ms": {
+        "p50": 17.1589,
+        "p95": 28.9841,
+        "p99": 32.4083
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 84.76191094619666,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Thunderhead-5",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "d51be364b0ed26aaa4d4d8b50d6ec20b93fde78c1f0494eece2b7981a0c0d304",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.025916300000063,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02406642113965,
+      "simulation_speed_percent": 100.04616561273103,
+      "measured_wall_s": 8.9797315,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0214,
+        "p95": 29.4372,
+        "p99": 30.5724
+      },
+      "post_wait_ms_mean": 0.0009364814814814815,
+      "pace_wait_ms_mean": 7.044015740740741,
+      "present_callback_fps": 60.04706152240335,
+      "present_interval_ms": {
+        "p50": 16.7254,
+        "p95": 28.8027,
+        "p99": 33.642
+      },
+      "stutter_over_33ms": 8,
+      "audio_queue_mean_ms": 84.45516697588126,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Onuris-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8cc7940aeb71d32a36fd6577d0aac1ec484c5d56e8670027a2170ddeba89fe8e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.050895299999866,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02722897472245,
+      "simulation_speed_percent": 100.04885869530833,
+      "measured_wall_s": 8.9792584,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0383,
+        "p95": 29.1435,
+        "p99": 30.5173
+      },
+      "post_wait_ms_mean": 0.0006648148148148148,
+      "pace_wait_ms_mean": 6.998802777777778,
+      "present_callback_fps": 60.07924731381394,
+      "present_interval_ms": {
+        "p50": 16.73,
+        "p95": 28.0064,
+        "p99": 31.89
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 84.5813228200371,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Onuris-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "91b5d8bb214059b1f0d947216aa05f54eb7f9f182f20ee6be3de3f2e9e0bf1a8",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.020825599999625,
+      "frames_recorded": 600,
+      "simulation_fps": 60.05248787987042,
+      "simulation_speed_percent": 100.09134877904286,
+      "measured_wall_s": 8.9754816,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0233,
+        "p95": 29.2265,
+        "p99": 30.5461
+      },
+      "post_wait_ms_mean": 0.0006638888888888889,
+      "pace_wait_ms_mean": 7.059464444444444,
+      "present_callback_fps": 60.09009322169702,
+      "present_interval_ms": {
+        "p50": 16.3503,
+        "p95": 26.7892,
+        "p99": 32.4935
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 84.82622077922078,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Onuris-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "4f4c63b421fab667230aa50edd6c0cfed0dcf1e627fc8c2305f5b74c28733639",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.080296900000576,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96227204991852,
+      "simulation_speed_percent": 99.94073183177416,
+      "measured_wall_s": 8.9889856,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0115,
+        "p95": 29.1813,
+        "p99": 30.5407
+      },
+      "post_wait_ms_mean": 0.0007985185185185185,
+      "pace_wait_ms_mean": 6.93422462962963,
+      "present_callback_fps": 60.045396547819706,
+      "present_interval_ms": {
+        "p50": 16.6339,
+        "p95": 28.4288,
+        "p99": 31.5771
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 84.5343172541744,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Onuris-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "9ee083086ccd034e7db175a8c6cd89742d1554795afe9ae33fba94b206dcde16",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.081800900000417,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96978212800136,
+      "simulation_speed_percent": 99.95328190335219,
+      "measured_wall_s": 8.987859899999998,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0464,
+        "p95": 29.1448,
+        "p99": 30.5769
+      },
+      "post_wait_ms_mean": 0.0006677777777777778,
+      "pace_wait_ms_mean": 6.9371875925925925,
+      "present_callback_fps": 60.03461357462362,
+      "present_interval_ms": {
+        "p50": 16.2707,
+        "p95": 25.7306,
+        "p99": 31.0117
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 84.48484415584416,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Onuris-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "f4767141716a570c43058dec8eaabe2dcbcc18b60c5613443bb6d04cba85a93e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.065711999999621,
+      "frames_recorded": 600,
+      "simulation_fps": 60.03793105145977,
+      "simulation_speed_percent": 100.06667967993086,
+      "measured_wall_s": 8.9776578,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.1253,
+        "p95": 29.0507,
+        "p99": 30.5114
+      },
+      "post_wait_ms_mean": 0.0007507407407407407,
+      "pace_wait_ms_mean": 7.202542222222222,
+      "present_callback_fps": 60.09307916257541,
+      "present_interval_ms": {
+        "p50": 16.2144,
+        "p95": 26.1564,
+        "p99": 32.4382
+      },
+      "stutter_over_33ms": 3,
+      "audio_queue_mean_ms": 84.6951038961039,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Onuris-5",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8e59f03ee8a8fd5528b2cc24169fbf318eb87470909c32612aa1087f8b209e5e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.05105360000016,
+      "frames_recorded": 600,
+      "simulation_fps": 59.97183526789419,
+      "simulation_speed_percent": 99.95693833329591,
+      "measured_wall_s": 8.9875522,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0442,
+        "p95": 29.259,
+        "p99": 30.9472
+      },
+      "post_wait_ms_mean": 0.0007635185185185185,
+      "pace_wait_ms_mean": 7.142159814814815,
+      "present_callback_fps": 59.99168664367572,
+      "present_interval_ms": {
+        "p50": 15.785,
+        "p95": 27.93,
+        "p99": 32.8695
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 84.82993320964749,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Fuji-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "4c69fc89e195966bfeb30d0c5c474c96f1d999bbfd6de4d684c12a7df3c234e7",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.245116600000074,
+      "frames_recorded": 600,
+      "simulation_fps": 59.23203653599049,
+      "simulation_speed_percent": 98.72473778428353,
+      "measured_wall_s": 9.099805300000002,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.2519,
+        "p95": 21.5428,
+        "p99": 29.5276
+      },
+      "post_wait_ms_mean": 4.895867777777778,
+      "pace_wait_ms_mean": 2.1573640740740743,
+      "present_callback_fps": 59.34428361114069,
+      "present_interval_ms": {
+        "p50": 17.0414,
+        "p95": 22.1316,
+        "p99": 25.7166
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 43.17224907063197,
+      "zero_audio_queue_samples": 11
+    },
+    {
+      "track": "Fuji-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "e74861b42beadcbdc742fcd970ebecb260b4dca72d9a04048b0f263d54f6906c",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.05455880000045,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96510386962825,
+      "simulation_speed_percent": 99.94628834404851,
+      "measured_wall_s": 8.9885611,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.0988,
+        "p95": 21.834,
+        "p99": 29.9074
+      },
+      "post_wait_ms_mean": 3.6652624074074076,
+      "pace_wait_ms_mean": 3.272870740740741,
+      "present_callback_fps": 60.08699705344069,
+      "present_interval_ms": {
+        "p50": 16.8669,
+        "p95": 22.4283,
+        "p99": 25.5879
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 63.452076066790355,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Fuji-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "91da58e939ed795e96f5035c957b85d02b59161c91aca6897512d177c9719551",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.267603700000109,
+      "frames_recorded": 600,
+      "simulation_fps": 59.43478205927031,
+      "simulation_speed_percent": 99.06259715389822,
+      "measured_wall_s": 9.0687638,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.5628,
+        "p95": 22.5221,
+        "p99": 29.5211
+      },
+      "post_wait_ms_mean": 4.997797407407408,
+      "pace_wait_ms_mean": 1.797042962962963,
+      "present_callback_fps": 59.59580400870567,
+      "present_interval_ms": {
+        "p50": 17.3854,
+        "p95": 23.5073,
+        "p99": 26.8323
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 40.006196660482374,
+      "zero_audio_queue_samples": 8
+    },
+    {
+      "track": "Fuji-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "c73983ae1f8fdfb92967f441462e12824a9a759937c725cbd394f99c6f44a9c6",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.974827600000026,
+      "frames_recorded": 600,
+      "simulation_fps": 54.864810866644554,
+      "simulation_speed_percent": 91.4463442323893,
+      "measured_wall_s": 9.8241476,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.1424,
+        "p95": 24.0011,
+        "p99": 28.8293
+      },
+      "post_wait_ms_mean": 7.885910925925926,
+      "pace_wait_ms_mean": 0.0011487037037037036,
+      "present_callback_fps": 54.816240649543666,
+      "present_interval_ms": {
+        "p50": 18.1224,
+        "p95": 24.0631,
+        "p99": 28.6134
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 14.576046554934823,
+      "zero_audio_queue_samples": 43
+    },
+    {
+      "track": "Fuji-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "7ed248cad864926417d872ad439f1612a4020883a4430fd9e20d2efa9f93b94b",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.61600610000005,
+      "frames_recorded": 600,
+      "simulation_fps": 57.043911281075864,
+      "simulation_speed_percent": 95.07617762815279,
+      "measured_wall_s": 9.4488612,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.5956,
+        "p95": 23.8982,
+        "p99": 27.6097
+      },
+      "post_wait_ms_mean": 7.4037618518518515,
+      "pace_wait_ms_mean": 0.0011744444444444445,
+      "present_callback_fps": 57.00007339953586,
+      "present_interval_ms": {
+        "p50": 17.6529,
+        "p95": 23.6123,
+        "p99": 26.7741
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 15.410327746741155,
+      "zero_audio_queue_samples": 33
+    },
+    {
+      "track": "Fuji-5",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "0231da8c7582752bf85afd677235fb2398617ba6a1a6206692a56d531d1d0674",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.83102400000007,
+      "frames_recorded": 600,
+      "simulation_fps": 55.914555007852265,
+      "simulation_speed_percent": 93.19387949670391,
+      "measured_wall_s": 9.639708299999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.8306,
+        "p95": 24.7078,
+        "p99": 28.1459
+      },
+      "post_wait_ms_mean": 7.7006381481481485,
+      "pace_wait_ms_mean": 0.0012337037037037037,
+      "present_callback_fps": 55.94619681289699,
+      "present_interval_ms": {
+        "p50": 17.8014,
+        "p95": 23.8823,
+        "p99": 27.3199
+      },
+      "stutter_over_33ms": 0,
+      "audio_queue_mean_ms": 12.390353159851301,
+      "zero_audio_queue_samples": 51
+    },
+    {
+      "track": "Aurora-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "fa46ba909c337a92fc75e4903047798a354fe2eaa3d91dc98903669b31b0cb59",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.123697699999866,
+      "frames_recorded": 600,
+      "simulation_fps": 59.95712075850229,
+      "simulation_speed_percent": 99.93317459376377,
+      "measured_wall_s": 8.9897579,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0401,
+        "p95": 29.2231,
+        "p99": 30.5597
+      },
+      "post_wait_ms_mean": 0.0007833333333333334,
+      "pace_wait_ms_mean": 6.891339259259259,
+      "present_callback_fps": 59.95814054121399,
+      "present_interval_ms": {
+        "p50": 16.6201,
+        "p95": 27.9826,
+        "p99": 31.6082
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 84.85714842300557,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Aurora-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "3f8a02c2974afb7cae444e9b3f4c1d95624463659d746bae37ced3e19c3e6631",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.433219300000019,
+      "frames_recorded": 600,
+      "simulation_fps": 57.912816713402535,
+      "simulation_speed_percent": 96.5245731479556,
+      "measured_wall_s": 9.307093499999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0169,
+        "p95": 29.4551,
+        "p99": 30.6022
+      },
+      "post_wait_ms_mean": 0.0007768518518518518,
+      "pace_wait_ms_mean": 6.682781296296296,
+      "present_callback_fps": 58.00868621421635,
+      "present_interval_ms": {
+        "p50": 15.4877,
+        "p95": 28.2684,
+        "p99": 33.318
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 83.80457513914656,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Aurora-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "91373e33859f4a2e7c2a066f5106f1163c961e89c9c4e24bdd6cb6153d04927d",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.119718100000682,
+      "frames_recorded": 600,
+      "simulation_fps": 59.90249074778802,
+      "simulation_speed_percent": 99.84161752282643,
+      "measured_wall_s": 8.9979564,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0126,
+        "p95": 29.5072,
+        "p99": 30.5146
+      },
+      "post_wait_ms_mean": 0.0006857407407407408,
+      "pace_wait_ms_mean": 6.900019074074074,
+      "present_callback_fps": 59.91896488042748,
+      "present_interval_ms": {
+        "p50": 15.6803,
+        "p95": 28.1987,
+        "p99": 33.2438
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 84.21396289424861,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Aurora-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "ec246477350b705c86a8737bfaf3c274a5151302b1f5d1b0c7428967985a15ed",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.296414299999924,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02398687695241,
+      "simulation_speed_percent": 100.04256664565033,
+      "measured_wall_s": 8.9797434,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9442,
+        "p95": 28.5428,
+        "p99": 30.5181
+      },
+      "post_wait_ms_mean": 0.0007253703703703704,
+      "pace_wait_ms_mean": 6.232602407407407,
+      "present_callback_fps": 59.973398070481096,
+      "present_interval_ms": {
+        "p50": 16.3177,
+        "p95": 26.6638,
+        "p99": 30.5891
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 82.71489981447124,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Aurora-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "5b293c65efb50a20e4b3afb552bf468d9a5baa9ce564aaf01c9145a1b24ae2d0",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.105934800000796,
+      "frames_recorded": 600,
+      "simulation_fps": 59.95861076010108,
+      "simulation_speed_percent": 99.93507255702652,
+      "measured_wall_s": 8.989534500000001,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0228,
+        "p95": 29.5208,
+        "p99": 30.6066
+      },
+      "post_wait_ms_mean": 0.000867962962962963,
+      "pace_wait_ms_mean": 6.691898703703703,
+      "present_callback_fps": 60.047101659531435,
+      "present_interval_ms": {
+        "p50": 15.7741,
+        "p95": 28.9317,
+        "p99": 33.8885
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 84.15461410018553,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Aurora-5",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "87087b5d00275046ed4afa0cbbb6af9f6e897fc72c1b183e33b9fc8e9091fb68",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.114383000000089,
+      "frames_recorded": 600,
+      "simulation_fps": 60.01873274844206,
+      "simulation_speed_percent": 100.03647885706964,
+      "measured_wall_s": 8.9805295,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0395,
+        "p95": 29.517,
+        "p99": 30.5472
+      },
+      "post_wait_ms_mean": 0.0006988888888888889,
+      "pace_wait_ms_mean": 6.97968,
+      "present_callback_fps": 60.10621828156389,
+      "present_interval_ms": {
+        "p50": 15.8642,
+        "p95": 27.2743,
+        "p99": 33.504
+      },
+      "stutter_over_33ms": 7,
+      "audio_queue_mean_ms": 84.53804081632653,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Grand-Prix-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "de851ca21c824d8cc66d419e2dc418b785c5e7b9ec4b59d9dfc72701eea59c11",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.076425899999776,
+      "frames_recorded": 600,
+      "simulation_fps": 60.026535069495246,
+      "simulation_speed_percent": 100.04785791719048,
+      "measured_wall_s": 8.9793622,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0254,
+        "p95": 29.0276,
+        "p99": 30.3831
+      },
+      "post_wait_ms_mean": 0.08824074074074074,
+      "pace_wait_ms_mean": 6.58735925925926,
+      "present_callback_fps": 59.87573514576219,
+      "present_interval_ms": {
+        "p50": 15.9196,
+        "p95": 27.7501,
+        "p99": 32.4127
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 82.30979553903346,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Grand-Prix-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "6865e7a204eeff00bfb4023bcacf35b1b0fcdb4eb1cdaa51d4ba3199d93b7696",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.136063800000557,
+      "frames_recorded": 600,
+      "simulation_fps": 59.65032734638823,
+      "simulation_speed_percent": 99.42090329579479,
+      "measured_wall_s": 9.035994,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.8089,
+        "p95": 29.0337,
+        "p99": 30.5337
+      },
+      "post_wait_ms_mean": 1.425915,
+      "pace_wait_ms_mean": 5.153981666666667,
+      "present_callback_fps": 59.52398601996209,
+      "present_interval_ms": {
+        "p50": 16.0721,
+        "p95": 27.4365,
+        "p99": 33.2566
+      },
+      "stutter_over_33ms": 6,
+      "audio_queue_mean_ms": 77.30482156133829,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Grand-Prix-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "05b1e2a37ffbc3c8fbab267ad498d4b1e9fb0ea9a5d1ef54cf4d803eef023b21",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.159084500000063,
+      "frames_recorded": 600,
+      "simulation_fps": 59.95001258950265,
+      "simulation_speed_percent": 99.91978992875903,
+      "measured_wall_s": 8.9908238,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.7608,
+        "p95": 29.4158,
+        "p99": 30.5369
+      },
+      "post_wait_ms_mean": 0.03703555555555556,
+      "pace_wait_ms_mean": 6.312272962962963,
+      "present_callback_fps": 59.926684648896945,
+      "present_interval_ms": {
+        "p50": 15.3447,
+        "p95": 28.9252,
+        "p99": 35.9098
+      },
+      "stutter_over_33ms": 13,
+      "audio_queue_mean_ms": 82.1162560296846,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Grand-Prix-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "5e3db0cd5bfe42622a9f3d3c45bee4e47bc6dd1b7e8826632b0a9b4f89b433f3",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.152681000000484,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96401780679903,
+      "simulation_speed_percent": 99.94395746424763,
+      "measured_wall_s": 8.9887239,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0184,
+        "p95": 29.1816,
+        "p99": 30.5365
+      },
+      "post_wait_ms_mean": 0.014592222222222222,
+      "pace_wait_ms_mean": 6.543478518518518,
+      "present_callback_fps": 59.96271898601908,
+      "present_interval_ms": {
+        "p50": 16.2826,
+        "p95": 26.7705,
+        "p99": 32.1375
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 82.30425788497217,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Grand-Prix-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "540896a43cf8ad36e661cd715006670379f8edb1640fc1400ef51dfe925240e9",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.129751199999191,
+      "frames_recorded": 600,
+      "simulation_fps": 59.96355484111533,
+      "simulation_speed_percent": 99.94293873883463,
+      "measured_wall_s": 8.9887933,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9812,
+        "p95": 29.338,
+        "p99": 30.4978
+      },
+      "post_wait_ms_mean": 0.10589518518518519,
+      "pace_wait_ms_mean": 6.298181111111111,
+      "present_callback_fps": 59.94869016123434,
+      "present_interval_ms": {
+        "p50": 16.2668,
+        "p95": 27.3284,
+        "p99": 32.743
+      },
+      "stutter_over_33ms": 5,
+      "audio_queue_mean_ms": 81.99751115241635,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Grand-Prix-5",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "3e59b3175114212f17db7bcad8899d1fa7ce26b7999f098ec32dcb6862804832",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.15143640000042,
+      "frames_recorded": 600,
+      "simulation_fps": 60.020459070322964,
+      "simulation_speed_percent": 100.03760469429812,
+      "measured_wall_s": 8.980271199999999,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0178,
+        "p95": 29.4746,
+        "p99": 30.5435
+      },
+      "post_wait_ms_mean": 0.013149814814814814,
+      "pace_wait_ms_mean": 6.947595,
+      "present_callback_fps": 59.92311963807592,
+      "present_interval_ms": {
+        "p50": 15.4882,
+        "p95": 28.0905,
+        "p99": 34.2325
+      },
+      "stutter_over_33ms": 11,
+      "audio_queue_mean_ms": 83.5151280148423,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Skorost-0",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "665c4a739db8ea793879b79134319b0f690e2ebe66da8e5ab2a3c721134b341e",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.314794999999322,
+      "frames_recorded": 600,
+      "simulation_fps": 58.81301072116448,
+      "simulation_speed_percent": 98.02440604760666,
+      "measured_wall_s": 9.1646388,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.1767,
+        "p95": 23.7898,
+        "p99": 29.4656
+      },
+      "post_wait_ms_mean": 4.572888333333333,
+      "pace_wait_ms_mean": 1.8185737037037037,
+      "present_callback_fps": 59.026415240712396,
+      "present_interval_ms": {
+        "p50": 17.7107,
+        "p95": 23.8303,
+        "p99": 28.5717
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 37.816964749536176,
+      "zero_audio_queue_samples": 13
+    },
+    {
+      "track": "Skorost-1",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "8b5ea07418d6c0f779fb8df23d3206b8daf0796500329e5b6219b2b822e13104",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.682631100000435,
+      "frames_recorded": 600,
+      "simulation_fps": 56.12537972489921,
+      "simulation_speed_percent": 93.54513635988069,
+      "measured_wall_s": 9.6034985,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 17.992,
+        "p95": 28.9161,
+        "p99": 31.306
+      },
+      "post_wait_ms_mean": 5.09790962962963,
+      "pace_wait_ms_mean": 2.0739624074074072,
+      "present_callback_fps": 56.03634987231069,
+      "present_interval_ms": {
+        "p50": 17.9328,
+        "p95": 27.2898,
+        "p99": 29.8953
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 49.32713966480447,
+      "zero_audio_queue_samples": 37
+    },
+    {
+      "track": "Skorost-2",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "b9c241d0730ba3a97f5e4dde7f3807e8f1e69b8b553d1e8ec12affd3516d288f",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.059492899999896,
+      "frames_recorded": 600,
+      "simulation_fps": 59.98727401700418,
+      "simulation_speed_percent": 99.98292391517126,
+      "measured_wall_s": 8.9852391,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 18.9507,
+        "p95": 28.9136,
+        "p99": 30.6776
+      },
+      "post_wait_ms_mean": 0.27391351851851853,
+      "pace_wait_ms_mean": 5.9599281481481485,
+      "present_callback_fps": 60.109341903966424,
+      "present_interval_ms": {
+        "p50": 16.2214,
+        "p95": 27.5597,
+        "p99": 30.6963
+      },
+      "stutter_over_33ms": 1,
+      "audio_queue_mean_ms": 80.83983116883117,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Skorost-3",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "9a692c2abf916309b5dc67e4a2b5d1028e4dd5e4a574d14791529826b8f2fd16",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.108147800000552,
+      "frames_recorded": 600,
+      "simulation_fps": 59.44175742213604,
+      "simulation_speed_percent": 99.07283431176734,
+      "measured_wall_s": 9.0676996,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0276,
+        "p95": 29.4996,
+        "p99": 30.5347
+      },
+      "post_wait_ms_mean": 0.015027962962962962,
+      "pace_wait_ms_mean": 6.638114444444445,
+      "present_callback_fps": 59.522201703934,
+      "present_interval_ms": {
+        "p50": 15.9908,
+        "p95": 27.2434,
+        "p99": 32.166
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 83.07607421150279,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Skorost-4",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "d8648bb0dc8b645d2d594d75b354a1faf5e8467de0330adb5e4f485fd0bb22d8",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.15893800000049,
+      "frames_recorded": 600,
+      "simulation_fps": 60.02098373679665,
+      "simulation_speed_percent": 100.03799906182074,
+      "measured_wall_s": 8.9801927,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0244,
+        "p95": 29.0739,
+        "p99": 30.6009
+      },
+      "post_wait_ms_mean": 0.0006388888888888889,
+      "pace_wait_ms_mean": 6.949100185185185,
+      "present_callback_fps": 60.05306797141594,
+      "present_interval_ms": {
+        "p50": 15.7399,
+        "p95": 26.7721,
+        "p99": 31.8611
+      },
+      "stutter_over_33ms": 4,
+      "audio_queue_mean_ms": 84.15460296846011,
+      "zero_audio_queue_samples": 0
+    },
+    {
+      "track": "Skorost-5",
+      "repeat": 1,
+      "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+      "state_sha256": "1b308377cf019ead81ee8f317c6d50b6ee8c28a6ca373dbc88015ab857cb7fef",
+      "env_overrides": [],
+      "maneuvers": true,
+      "exit": 0,
+      "wall_total_s": 11.080713199999991,
+      "frames_recorded": 600,
+      "simulation_fps": 60.023340504693394,
+      "simulation_speed_percent": 100.04332929171194,
+      "measured_wall_s": 8.9798401,
+      "nominal_hz": 60,
+      "interval_ms": {
+        "p50": 19.0313,
+        "p95": 29.5357,
+        "p99": 30.539
+      },
+      "post_wait_ms_mean": 0.0006622222222222222,
+      "pace_wait_ms_mean": 7.107623148148148,
+      "present_callback_fps": 60.03753916753263,
+      "present_interval_ms": {
+        "p50": 15.6532,
+        "p95": 26.7472,
+        "p99": 31.6838
+      },
+      "stutter_over_33ms": 2,
+      "audio_queue_mean_ms": 84.55907421150279,
+      "zero_audio_queue_samples": 0
+    }
+  ],
+  "private_local_package": {
+    "folder": "SpeedRacer-Portable-local-v15",
+    "exe_sha256": "a2101e11bafb9da8616fb51d29d6217a7ef4c36e2c25f1d80de2e9708e5a7b7e",
+    "private_contains_own_ISO_ELF": true,
+    "previous_package_not_written": true,
+    "copied_user_card_preserved_sha256": "b91326b1aa86a07d7c8f061a6ce3f715d80159c52fab209c061467dea3b7335d",
+    "final_package_smokes": [
+      {
+        "case": "race",
+        "exit": 0,
+        "frames": 600,
+        "wall_s": 16.808995499999583,
+        "minimal_system_PATH": true,
+        "unrelated_cwd": true,
+        "default_data_discovery": true,
+        "default_save_discovery": false,
+        "explicit_private_QA_card": true,
+        "result_save_verified": false
+      },
+      {
+        "case": "reopen",
+        "exit": 0,
+        "frames": 1200,
+        "wall_s": 20.028858599999694,
+        "minimal_system_PATH": true,
+        "unrelated_cwd": true,
+        "default_data_discovery": true,
+        "default_save_discovery": true,
+        "explicit_private_QA_card": false,
+        "result_save_verified": false
+      }
+    ],
+    "public_release_or_ZIP": false
+  },
+  "limitations": [
+    "Skorost-1 mean gain is local and targeted; no stable60FPS or full-game acceptance.",
+    "Fuji changes are small/inconclusive; adverse callback p99 in Skorost-2 and Aurora-3 retained.",
+    "Native reference checks establish per-call snapshot results and ordered payloads, not complete asynchronous GPU stream identity.",
+    "Only9/21 measured pairs have identical terminal aggregate counters; maximum absolute primitive-count delta is0.3231%. End-of-run drain/join is unresolved.",
+    "CPU diagnostics are one interval per binary; renderer user time is identical while kernel time differs, so no instruction-level causality claim.",
+    "Synchronous native/native images do not establish original PS2 parity.",
+    "Callbacks are pre-present intervals, not physical scanout; zero SDL audio queue samples do not establish hardware underruns.",
+    "36 short Class1 windows do not cover complete races, classes2-4, Mirror, results/save or30minutes.",
+    "Original cadence/individual lap timing, physical USB/Bluetooth latency, audio underruns and lifecycle remain open.",
+    "Minimal-PATH same-machine boot is not independent second-PC/GPU, protected-folder or actual Unicode game-IO certification.",
+    "Private local bundle contains own ISO/ELF; no public/friend alpha, source, executable or assets uploaded.",
+    "Historical v12/v14 regressions and failed/incomplete earlier checks are preserved; Q v14 remains isolated."
+  ]
+}

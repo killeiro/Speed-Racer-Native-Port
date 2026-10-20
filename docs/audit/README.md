@@ -4,6 +4,7 @@ Documentation publication: **2026-10-20**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v15: exact GS snapshot reuse](vanilla-v15.md) and [metrics](vanilla-v15-metrics.json): targeted Skorost gain, 27 tests, 697,211 native checks, 12 unchanged image pairs, 36 short routes and new private package; terminal counters/drain, pacing and full-game gates remain open.
 - [Recovered media and real portable validation](restored-media-v1.md) and [metrics](restored-media-v1-metrics.json): real ISO/boot, resumed control/Q/CPU,32 scale windows, eight captures and private local package;1x remains default, broader acceptance open.
 - [Portable data preparation v1](data-preparation-v1.md) and [metrics](data-preparation-v1-metrics.json): exact USA ELF validation, new-directory preparation and52 synthetic tests; no full-disc/gameplay acceptance.
 - [Portable preflight v1](portable-preflight-v1.md) and [metrics](portable-preflight-v1-metrics.json): separate GUI target without development data fallbacks, nine media-absent scenarios and26 tests; no successful game boot or clean-PC acceptance claimed.

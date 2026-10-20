@@ -46,6 +46,8 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 Status updated **2026-10-20**. [Evidence index](docs/audit/README.md) · [Current P0/P1 tasks](docs/audit/next-10-tasks.md).
 
+**Latest checkpoint — [v15](docs/audit/vanilla-v15.md):** a new private local native GUI reuses immutable snapshot mip bounds per descriptor. Skorost-1 improves 52.98→55.91 simulated FPS (+5.54%) in three warmed pairs; Fuji differences are small and callback tails remain mixed. 27 tests, 697,211 native snapshot checks, 12 identical image pairs, 36 short Class 1 routes and two final-folder launches pass. Same-machine short windows do not establish full-game speed or original parity. Terminal aggregate differences and the missing explicit final VU/render drain keep lifecycle/save acceptance open. Prior packages/save and original v13 remain preserved; v14 stays isolated, 1x/legacy pacing default. Next: residual GS/VU costs, deterministic drain/join, then full races/timing/graphics/portability gates. GitHub publication remains documentary.
+
 - [x] Separate EE simulation timing from presentation callbacks; capture percentiles and environment
 - [x] Fix DATE/CT24 and delayed VU MSKPATH3 regressions with focused tests
 - [x] Implement mipmapping/LOD/filtering and relevant GS hazard tests
