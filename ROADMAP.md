@@ -65,6 +65,8 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [x] Trace the live active-scene clock and validate optional native telemetry through active/pause/resume cases; original cadence still open
 - [x] Distinguish VU/renderer bottlenecks with native CPU and temporary stage diagnostics; restore probes before benchmarks in v12
 - [x] Reuse exact GS texture-read registration; validate 74,531 draws,26 tests,12 unchanged images, five paired scenes and36 short routes
+- [x] Evaluate incremental Q predecessor updates with seven-scene warmed pairs and26 tests; isolate the v14 experiment after adverse performance and restore v13
+- [ ] Recover the local legitimate disc input, explain the v14 Skorost-1 regression and finish native controls before promoting another candidate
 - [x] Audit actual Ring layout and remove unnecessary counter/flag sharing; retain atomics/wake protocol and validate queue stress in v13
 - [ ] Resolve the v12 Fuji regression before recommending v12/v13 as a general performance upgrade; retain all comparisons and extend throughput replays
 - [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))

@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — V14 Q experiment not promoted
+
+- Preserve two Q-index prototypes locally;26 tests,225,036 Q differentials and883,499 instrumented native reference checks pass.
+- Retain14 warm-ups and42 measured windows across seven scenes, including the strong Skorost-1 loss and other adverse data.
+- Restore v13 source/executable byte-for-byte; isolate the experiment on a private local branch. No new gameplay package.
+- Mark additional native diagnosis/visual/matrix/package QA incomplete after the legitimate local disc image became unavailable. Public update is documentary only.
+
 ## 2026-10-19 — Local Vanilla v13 queue sharing
 
 - Separate queue waiter flags and defer freed snapshots to the full path without changing atomics, wake ownership or packet order.
