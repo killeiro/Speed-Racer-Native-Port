@@ -1,5 +1,7 @@
 # Vanilla v12 — reutilização exata do registro de leituras GS
 
+> **Errata de interpretação, v13:** o campo `stutter_over_33ms` conta intervalos dos callbacks antes do present acima de33,3333ms. Referências neste relatório a “intervalos de simulação” para esse contador devem ser lidas como “intervalos de callbacks”. Valores, pares, resultados adversos e hashes históricos permanecem inalterados. Veja [a definição corrigida e a v13](vanilla-v13.md).
+
 19/10/2026. **Candidato experimental: preparação GS reduzida com equivalência funcional verificada, mas desempenho misto entre cenas. O aceite global de Vanilla permanece aberto.** O executável continua nativo Windows/Vulkan. Gráficos, resolução, controles, física, clocks emulados, profundidade das filas e pacing legado foram preservados. A v11 e as baselines anteriores permanecem disponíveis.
 
 ## Comparação do executável final

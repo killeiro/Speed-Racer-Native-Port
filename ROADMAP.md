@@ -65,7 +65,8 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 - [x] Trace the live active-scene clock and validate optional native telemetry through active/pause/resume cases; original cadence still open
 - [x] Distinguish VU/renderer bottlenecks with native CPU and temporary stage diagnostics; restore probes before benchmarks in v12
 - [x] Reuse exact GS texture-read registration; validate 74,531 draws,26 tests,12 unchanged images, five paired scenes and36 short routes
-- [ ] Resolve v12 Fuji regressions before recommending a general performance upgrade; retain the prior packages
+- [x] Audit actual Ring layout and remove unnecessary counter/flag sharing; retain atomics/wake protocol and validate queue stress in v13
+- [ ] Resolve the v12 Fuji regression before recommending v12/v13 as a general performance upgrade; retain all comparisons and extend throughput replays
 - [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
 - [ ] Confirm original cadence using the live scene clock; complete laps/races, classes 2–4, Mirror and 30-minute sessions
 - [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
@@ -130,5 +131,3 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 | 🔒 Gated | Needs technical, QA or legal review |
 
 No made-up completion percentages. Issues, build SHA, benchmarks, screenshots and tests are the source of truth. **No commercial PS2 ISO, copyrighted assets or game-derived binaries are being published here.**
-
-

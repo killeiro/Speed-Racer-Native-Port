@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-19 — Local Vanilla v13 queue sharing
+
+- Separate queue waiter flags and defer freed snapshots to the full path without changing atomics, wake ownership or packet order.
+- Retain warmed v11/v12/v13 triplets in Fuji/Skorost and paired comparisons in three other scenes, including all adverse data.
+- Pass26 tests, ten expanded queue stress runs,12 unchanged images and36 short native route windows.
+- Keep legacy pacing and prior packages; full-game acceptance stays open. Publish documentation/metrics only.
+
 ## 2026-10-19 — Local Vanilla v12 GS read-set reuse
 
 - Trace EE/VU/GS work and waits in Fuji/Skorost; keep diagnostic probes separate and absent from the final artifact.
@@ -60,5 +67,3 @@ All notable project updates will be recorded here. Dates refer to documentation 
 - Repository documentation and public development roadmap.
 - Created investigation track for speed, graphical fidelity and clean builds.
 - Public executable distribution remains blocked by rights and verification review.
-
-
