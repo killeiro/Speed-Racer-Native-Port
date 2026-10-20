@@ -41,6 +41,8 @@ The [v14 experimental audit](docs/audit/vanilla-v14.md) records incremental Q pr
 
 [Release readiness and graphics research](docs/audit/release-readiness-and-graphics.md) separates the existing native prototype from a friend-test alpha. Low-confidence planning ranges are2–4 active working weeks for a limited alpha and6–12+ for broader Vanilla acceptance after legitimate data is restored; these are not release commitments. The audit explains1x aliasing, existing2x/3x scaling and why the identified PCSX2 texture pack requires a native loader. No renderer change, pack integration or new gameplay validation is claimed.
 
+The [portable preflight report](docs/audit/portable-preflight-v1.md) records an opt-in separate native GUI target with development game-data fallbacks disabled, plus a reusable private checker. The build passes nine media-absent scenarios with bundled DLLs/minimal PATH and26 tests; the original v13 executable is preserved. Successful game boot, clean-PC acceptance and gameplay validation remain open because the legitimate local ISO is unavailable. No gameplay release is claimed.
+
 ## 🗺️ Roadmap: preservation → remaster → community
 
 | Track | Role | Status |
