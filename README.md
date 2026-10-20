@@ -12,9 +12,9 @@
 | --- | --- | --- |
 | Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
 | Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
-| Gameplay speed | 🔄 Improved; unresolved | V12 GS read reuse has mixed five-scene performance; all adverse results retained; full-game speed/pacing remain unresolved |
+| Gameplay speed | 🔄 Improved; unresolved | V13 queue-sharing measurements follow the mixed v12 results; all adverse data retained; full-game speed/pacing remain unresolved |
 | Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
-| Regression tests | 🟢 Local suite | 26/26 local CTest in v12; differential VU/VIF/Q checks and 12 unchanged images |
+| Regression tests | 🟢 Local suite | 26/26 local CTest in v13; differential VU/VIF/Q checks and 12 unchanged images |
 | Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
 | Clean PC installation | ⚪ Untested | Development-path fallback still present |
 | Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
@@ -35,6 +35,8 @@ The [v11 VU validation and scene-clock report](docs/audit/vanilla-v11.md) record
 
 The [v12 GS read-registration report](docs/audit/vanilla-v12.md) distinguishes VU-heavy Fuji from renderer-heavy Skorost using native thread CPU samples and a temporary stage probe. Exact descriptor reuse now skips repeated base/mip read-set searches within a batch, preserving all hazards, commands and GPU payloads. Validation includes 74,531 differential draws,26 tests,12 unchanged images and36 short route windows. Five-scene warmed pairs and adverse results remain visible; original cadence and full-game acceptance stay open.
 
+The [v13 queue-sharing report](docs/audit/vanilla-v13.md) separates waiter flags from a per-packet counter and avoids reading that counter on non-full posts, preserving the wake protocol and every atomic order. It records 26 passing tests, ten expanded queue stress runs,12 unchanged images,36 short routes and warmed five-scene comparisons, including rotating v11/v12/v13 triplets in Fuji/Skorost. All adverse results remain available; stable60FPS and full-game acceptance are open.
+
 ## 🗺️ Roadmap: preservation → remaster → community
 
 | Track | Role | Status |
@@ -51,7 +53,7 @@ The [v12 GS read-registration report](docs/audit/vanilla-v12.md) distinguishes V
 
 ## Project priorities
 
-1. Resolve adverse Fuji results before promoting v12; profile VU/queue interaction there and remaining GS preparation/binning in Skorost.
+1. Keep Fuji throughput P0: profile VU kernels and notification/idle transitions with CPU counters; fixed64-spin screening remains rejected, and the prior v12 regression is not closed.
 2. Use the verified live scene clock to confirm original cadence and extend short replays to full laps/races, classes and long sessions.
 3. Compare matched original/native scenes at 1x, then address remaining dithering/CRTC/fog behavior using evidence.
 4. Measure frame pacing, physical input latency and actual audio underruns; finish shutdown and clean-machine validation.
@@ -74,5 +76,3 @@ Speed Racer and associated game assets belong to their respective rights holders
 ## Maintainer
 
 Project initiated by [@killeiro](https://github.com/killeiro).
-
-
