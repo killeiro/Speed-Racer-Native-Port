@@ -4,6 +4,7 @@ Documentation publication: **2026-10-20**. This directory contains original engi
 
 ## Read first
 
+- [Vanilla v23: native coverage and normalization audit](vanilla-v23.md) and [metrics](vanilla-v23-metrics.json):all2^32 values equivalent,32 tests,53,665 full native checks,three identical WAV pairs and56 controls. The candidate is not promoted. Generated coverage is restored and guarded; exact v17 remains playable. The timing comparison also contains a native-coverage confound. Host sticky flags and physical/full-game limits are explicit.
 - [Vanilla v22: shared-entry VU discriminator](vanilla-v22.md) and [metrics](vanilla-v22-metrics.json):31 tests,21.08M native references,three identical WAV pairs and56 final performance windows. The candidate fails the predeclared screen, stays isolated, and exact v17 source/EXE remain current.
 - [Vanilla v21: publication diagnosis](vanilla-v21.md) and [metrics](vanilla-v21-metrics.json):15 controlled diagnostic runs,all6 counter pairs equal,no ring-full waits; separates VU-limited Fuji from balanced GS/VU Skorost. No optimization/release implied by instrumentation.
 - [Six-environment controller baseline](vanilla-v20.md#seis-sessões-da-equipe-no-exe-de-referência-v17):76,301 VBlanks on exact v17, all six normal exits/cards preserved, sustained Fuji dips and cadence tails retained. Separate sessions do not close full-race/30min acceptance.

@@ -2,6 +2,15 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-20 — V23 native coverage recovery and normalization audit
+
+- Recover310 extra VU programs from preserved capture generation; a partial3-program source was masked by a stale object. Restored VU rebuild/relink reproduces the frozen reference except timestamp/checksum.
+- Add an always-run manifest hash/count guard;32 tests and actual stale-mtime/partial-source rejection pass, preserving the EXE.
+- Isolate the integer-normalization experiment: value equivalence holds, but its artifact also lost native coverage; no single-change FPS attribution.
+- Exhaust all2^32 encodings,16 masked FP configurations,32 CTests,53,665 complete native register/memory/GIF checks and three identical generated-WAV pairs. Host sticky flags differ; guest flags remain separately validated.
+- Retain all56 warmed performance windows and prior gates. The candidate is not promoted. Generated coverage is restored and guarded; exact v17 remains playable. The timing comparison also contains a native-coverage confound.
+- Keep earlier rejected experiments and six reference controller sessions intact; anonymous documentation only, main unchanged and full-game/distribution gates open.
+
 ## 2026-10-20 — V21 attribution / V22 shared-entry VU filter
 
 - Separate EE ring insertion, outstanding-frame guard, VU forwarding and renderer boundaries in three controlled diagnostic scenes;31 tests and all6 terminal pairs pass, sources/probes restored.
