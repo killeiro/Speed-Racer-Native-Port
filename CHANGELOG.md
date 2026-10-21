@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-21 — V27 native Vulkan GS runtime integration
+
+- Connect ordered game GIF, privileged-register snapshots, synchronous guest FIFO, resets and shutdown to the native hardware GS.
+- Fix missing dynamically loaded shader compiler; cover PACKED and CT24-to-CT16 render-target sampling with cold-cache tests. Supply NTSC/PAL CRT identity and retain the complete 479-line game HUD.
+- Pass 44 runtime tests, three fresh-library tests and real Fuji/Thunderhead 3x scene checks; verify a separate private Windows GUI package with minimal PATH. V25 remains preserved.
+- Retain adverse results and headless diagnostic limits. No stable60, general speed gain, full-race acceptance or public release claimed; next is normal threaded stage attribution.
+- Publish documentation only; no implementation, binaries, shader resources or game data.
+
 ## 2026-10-21 — V26 isolated native hardware GS bridge
 
 - Compile a pinned Vulkan GS library with Clang/MinGW and a versioned C ABI; retain GPL notices and a hash-checked fresh-build recipe.
