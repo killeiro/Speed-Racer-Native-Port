@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-21 — V28 SPU2 and direct Win32 presentation
+
+- Correct the SDL HWND contract: the game now presents directly through Vulkan instead of silently reading back every image into SDL. The actual host-contract regression fails before the fix and passes after.
+- Defer SPU2 endpoint/loop effects to consumption, read updated stream buffers, saturate the mix before master volume and define negative envelope arithmetic.
+- Pass 45 CTests and 11 mixer checks under UBSan trap; retain 30 identical scene images, private generated-WAV evidence and native WASAPI/3x window observations.
+- Preserve the v27 renderer/DLL, package and current save. Supply a separate private v28 GUI package. Championship 2 stages 2/3, physical audio underruns and full-race acceptance remain open; no public release or general FPS gain claimed.
+
 ## 2026-10-21 — V27 native Vulkan GS runtime integration
 
 - Connect ordered game GIF, privileged-register snapshots, synchronous guest FIFO, resets and shutdown to the native hardware GS.

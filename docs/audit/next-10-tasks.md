@@ -1,10 +1,10 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de 21/10/2026: a [v27](vanilla-v27.md) integra o GS Vulkan, passa 44 testes e verifica cenas Fuji/Thunderhead em 3x. Há um pacote GUI experimental privado; a v25 foi preservada. O próximo trabalho é medir o pipeline normal com threads, sem outra matriz ampla ou rodada manual repetida.
+Atualização de 21/10/2026: a [v28](vanilla-v28.md) corrige o contrato de janela Win32 e defeitos de consumo/mistura SPU2; 45 testes passam. **Prioridade imediata: áudio do Championship 2, sobretudo a progressão para as etapas2/3; ainda não aceito.** Histórico: a [v27](vanilla-v27.md) integra o GS Vulkan, passa 44 testes e verifica cenas Fuji/Thunderhead em 3x. Há um pacote GUI experimental privado; a v25 foi preservada. O próximo trabalho é medir o pipeline normal com threads, sem outra matriz ampla ou rodada manual repetida.
 
 | # | Prioridade | Entrega e critério de conclusão |
 |---|---|---|
-| 1 | P0 | Registrar uma janela normal com threads em Fuji e uma de controle; separar EE/VU, GIF/preparação, espera e GPU, sem captura/trace pesado no intervalo |
+| 1 | P0 | Reproduzir Championship 2 em sequência, distinguir música/vozes/efeitos e confirmar áudio nas etapas2/3 antes de fechar o relato. Depois registrar uma janela normal com threads em Fuji e uma de controle; separar EE/VU, GIF/preparação, espera e GPU, sem captura/trace pesado no intervalo |
 | 2 | P0 | Otimizar a etapa dominante indicada por essa medição; se considerar agrupar GIFs, provar ordem entre paths, EOP, CSR/reset/FIFO e limites antes de promover |
 | 3 | P0 | Comparar imagem/eventos com referência original/PCSX2, incluindo bloom, feedback, mip, dither, deinterlace e áreas de HUD |
 | 4 | P0 | Comparar presets 1x/2x/3x no pipeline normal; escolher padrão por estabilidade medida, sem inferir FPS da janela a partir do headless |

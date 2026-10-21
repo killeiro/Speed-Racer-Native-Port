@@ -44,7 +44,7 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-21**. Current private playable build: [v25](docs/audit/vanilla-v25.md). [V27](docs/audit/vanilla-v27.md) now integrates the hardware GS and supplies a separate private experimental GUI package, initially 3x. It has not replaced the v25 baseline or passed full-race/FPS promotion. Preserved throughput reference: v17 at 1x. Fullscreen now fills the monitor, and internal resolution is selectable from 1x to 4x, with 2x as the GUI default. Higher scales lose substantial FPS in Fuji; this is a quality option, not a fluency milestone.
+Updated **2026-10-21**. Latest experiment: [v28 audio and direct presentation](docs/audit/vanilla-v28.md), with 45 passing tests. **P0: reproduce and accept Championship 2 race-to-race audio; the reported later silence remains open.** Updated **2026-10-21**. Current private playable build: [v25](docs/audit/vanilla-v25.md). [V27](docs/audit/vanilla-v27.md) now integrates the hardware GS and supplies a separate private experimental GUI package, initially 3x. It has not replaced the v25 baseline or passed full-race/FPS promotion. Preserved throughput reference: v17 at 1x. Fullscreen now fills the monitor, and internal resolution is selectable from 1x to 4x, with 2x as the GUI default. Higher scales lose substantial FPS in Fuji; this is a quality option, not a fluency milestone.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|

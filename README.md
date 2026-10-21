@@ -8,7 +8,7 @@
 
 ## Current status
 
-**Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. New private experiment: v27 hardware Vulkan GS, separate GUI EXE, initial 3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
+**Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. New private experiment: v28 hardware Vulkan GS with direct Win32 presentation and SPU2 audio corrections, separate GUI EXE, initial 3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
 
 | Area | Status |
 |---|---|
@@ -25,6 +25,8 @@
 The v24 diagnostic session used syscall tracing and generated 184 MB of log; there was also a brief overlap of test processes. It cannot measure normal gameplay fluency or isolate controller/automation cost. V25 resolution measurements use one process, no syscall trace and separate capture runs.
 
 [V27](docs/audit/vanilla-v27.md) connects the [v26](docs/audit/vanilla-v26.md) library to the native game. It fixes missing dynamic shader compilation and active-display cropping, passes 44 runtime tests and verifies two fresh-boot 3x scenes at 1920×1437. A separate local experimental package exists; no stable60, full-race or general FPS improvement is claimed. Next is a normal threaded CPU/GPU attribution run in Fuji and one control scene. V17 remains the preserved 1x throughput reference; earlier rejected experiments and all adverse evidence remain recorded.
+
+[V28 audio/presentation audit](docs/audit/vanilla-v28.md): fix the SDL Win32 handle contract that forced GPU readback, plus SPU2 endpoint/stream/clip defects. 45 tests pass and the native 3x window opens WASAPI successfully. The team reported smooth graphics, but Championship 2 audio remains a P0 issue: later-race silence and full progression have not been reproduced or accepted.
 
 ## Earlier engineering evidence
 
