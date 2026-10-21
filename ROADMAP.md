@@ -44,13 +44,13 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-21**. Current private feature build: [v25](docs/audit/vanilla-v25.md). Preserved throughput reference: v17 at 1x. Fullscreen now fills the monitor, and internal resolution is selectable from 1x to 4x, with 2x as the GUI default. Higher scales lose substantial FPS in Fuji; this is a quality option, not a fluency milestone.
+Updated **2026-10-21**. Current private playable build: [v25](docs/audit/vanilla-v25.md). [V26](docs/audit/vanilla-v26.md) is an isolated hardware GS bridge, not a new game build. Preserved throughput reference: v17 at 1x. Fullscreen now fills the monitor, and internal resolution is selectable from 1x to 4x, with 2x as the GUI default. Higher scales lose substantial FPS in Fuji; this is a quality option, not a fluency milestone.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|
 | Reproducible native build | v23 coverage repaired/guarded; v24 clean build; v25 retains 332 generated inputs and 310 extra VU symbols | Keep manifests and complete native coverage in every candidate |
 | Modern display controls | Fullscreen adaptation and 1x–4x selection implemented; 39 tests and four real-resolution captures pass | Accept native selector/shortcut interaction and monitor changes; arbitrary ultrawide camera remains separate |
-| Efficient graphics at higher resolution — P0 | Architecture differs from PCSX2 HW; v25 Fuji samples fall from 59.28 at 1x to 19.29 at 4x | Bounded GS hardware-library/adapter prototype with ordered GIF, privileged registers, interrupts, reset and readback; compare one Fuji and one control scene before wider tests |
+| Efficient graphics at higher resolution — P0 | [V26 isolated Vulkan library/C ABI](docs/audit/vanilla-v26.md): fresh build, three tests, synthetic 1x–4x output, FIFO and native VRAM restore | Integrate ordered game GIF, privileged registers, interrupts/readback and checkpoint import; validate one Fuji and one control scene before 1x/2x/3x timing |
 | Vanilla gameplay acceptance | Six v17 human controller sessions and 36 short Class1 routes retained | Verify full races/results/save/reopen, classes2–4/Mirror/30 minutes, original timing/graphics, physical audio/input and another Windows/GPU |
 
 [Architecture decision and references](docs/audit/vanilla-v24.md) · [Resolution cost and limits](docs/audit/vanilla-v25.md) · [Ten concrete tasks](docs/audit/next-10-tasks.md).

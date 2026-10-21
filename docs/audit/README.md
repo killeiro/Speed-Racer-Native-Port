@@ -4,6 +4,7 @@ Documentation publication: **2026-10-21**. This directory contains original engi
 
 ## Read first
 
+- [V26: native Vulkan GS library and C ABI](vanilla-v26.md) and [metrics](vanilla-v26-metrics.json): fresh reproducible build, three synthetic tests and 1x–4x output. The player build remains v25; game/Fuji integration is pending.
 - [V25: internal resolution 1x–4x](vanilla-v25.md) and [metrics](vanilla-v25-metrics.json): 39 tests, real GPU supersamples/captures and four short Fuji samples. 2x default is a quality choice with throughput cost, not stable60 acceptance.
 - [V24: PCSX2/native-port architecture, file audit and display](vanilla-v24.md) and [metrics](vanilla-v24-metrics.json): clean build, SQ cache invalidation fix, archive CRC verification and fullscreen adaptation; next P0 is a bounded GS hardware prototype.
 - [Vanilla v23: native coverage and normalization audit](vanilla-v23.md) and [metrics](vanilla-v23-metrics.json):all2^32 values equivalent,32 tests,53,665 full native checks,three identical WAV pairs and56 controls. The candidate is not promoted. Generated coverage is restored and guarded; exact v17 remains playable. The timing comparison also contains a native-coverage confound. Host sticky flags and physical/full-game limits are explicit.

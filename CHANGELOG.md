@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-21 — V26 isolated native hardware GS bridge
+
+- Compile a pinned Vulkan GS library with Clang/MinGW and a versioned C ABI; retain GPL notices and a hash-checked fresh-build recipe.
+- Pass three synthetic CTests: native hidden window, surfaceless, and GIF packet boundaries. Validate 1x–4x, guest FIFO buffers, reset, native VRAM restore and a full next-frame redraw.
+- Reject incomplete PATH1 before forwarding; retain fragmented PATH2/3. D3D11 transition failed in the upstream probe and is not accepted by this ABI.
+- Keep v25 playable/default2x intact. Game queue/register/interrupt/readback/checkpoint integration and Fuji/control scene acceptance remain next; no new game FPS or release claim.
+- Update GitHub documentation only, with anonymous team attribution and no implementation or game data.
+
 ## 2026-10-21 — V24 architecture/display and V25 internal resolution
 
 - Complete a clean build with the recovered 310-program VU coverage; reproduce and fix stale VU dispatch after 128-bit EE stores.

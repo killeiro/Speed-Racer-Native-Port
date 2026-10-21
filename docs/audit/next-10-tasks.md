@@ -1,11 +1,11 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de 21/10/2026: v24 encerra a base de build limpo/cache128 e v25 entrega resolução 1x–4x. O foco passa para eficiência do renderer, sem outra bateria ampla de FPS antes de uma mudança arquitetural concreta. [Análise](vanilla-v24.md) · [Medições](vanilla-v25.md) · [Roadmap](../../ROADMAP.md).
+Atualização de 21/10/2026: v24 encerra a base de build limpo/cache128 e v25 entrega resolução 1x–4x. A v26 conclui a biblioteca Vulkan/ponte C isolada e seus testes sintéticos; a integração no jogo continua pendente. O foco passa para eficiência do renderer, sem outra bateria ampla de FPS antes de uma mudança arquitetural concreta. [Análise](vanilla-v24.md) · [Medições](vanilla-v25.md) · [Roadmap](../../ROADMAP.md).
 
 | # | Prioridade | Entrega e critério de conclusão |
 |---|---|---|
-| 1 | P0 | Definir adaptador GS gráfico nativo: ABI/toolchain/licenças, pacotes GIF, registradores, VSync, reset, readback e proprietário de cada thread |
-| 2 | P0 | Prova de renderer com uma cena Fuji e uma cena de controle; confrontar imagem/eventos com a referência antes de medir 1x/2x |
+| 1 | P0 | Integrar a ponte Vulkan/C ABI v26 à fila do port: GIF ordenado, snapshots completos de registradores, leitura do guest, resets/ciclo de vida e interrupções sob o host |
+| 2 | P0 | Tratar importação dos checkpoints entre renderers; provar uma cena Fuji e uma de controle, confrontando imagem/eventos antes de medir 1x/2x/3x |
 | 3 | P0 | Medir etapas EE/VU/GS no protótipo correto; avaliar microVU ou kernels AOT apenas se o VU continuar limitante, sem acelerar o relógio |
 | 4 | P1 | Aceitar interação do seletor de resolução, atalhos fullscreen, mudança de monitor/DPI e mensagens de falha; não confundir preenchimento com câmera ultrawide |
 | 5 | P0 | Comparar cenas sincronizadas original/nativo a 1x e upscale; validar bloom/feedback, mip, dither/CRTC/fog e serrilhado |
@@ -16,3 +16,5 @@ Atualização de 21/10/2026: v24 encerra a base de build limpo/cache128 e v25 en
 | 10 | P1 | Concluir proveniência/licenças/CI e critérios da alpha; manter GitHub documental até revisão de distribuição |
 
 Concluído nesta etapa: build em diretório novo, 332 inputs preservados, 310 programas extra, invalidação128 reproduzida/corrigida, 39 testes, quatro níveis reais GPU e quatro capturas. Quatro amostras curtas de resolução não substituem aceite de fluidez. 2x é uma escolha de qualidade; o baseline1x e todos os dados adversos anteriores permanecem preservados. Mods HD/câmeras/remaster/multiplayer seguem posteriores à Vanilla estável.
+
+Concluído na v26: biblioteca/ABI com build novo e três testes sintéticos, incluindo 405/403 verificações em janela oculta/sem superfície. O jogo não usa essa ponte ainda; nenhum ganho de FPS ou novo pacote jogável é afirmado. [Relatório](vanilla-v26.md).

@@ -14,6 +14,7 @@
 |---|---|
 | Display and resolution | Implemented locally; saved native selector, DPI/resize handling and 39 passing tests; physical dialog/fullscreen-shortcut acceptance pending |
 | Image quality | Higher-resolution geometry verified in native captures; original textures/HUD, bloom alignment and PS2/PCSX2 parity remain open |
+| Hardware GS prototype (v26) | Separate native Vulkan DLL and C ABI built from pinned sources; synthetic 1x–4x tests pass; game integration pending |
 | Fuji performance | Unresolved: short v25 fullscreen samples reach 59.28/49.37/28.76/19.29 simulated FPS at 1x/2x/3x/4x; higher resolution costs throughput |
 | Build integrity | Clean v24 build, 332 unchanged generated inputs and 310 extra VU programs; always-run manifest guard preserved |
 | Runtime correctness | EE 128-bit VU-code writes now invalidate the real dispatch cache; regression reproduced before fixing |
@@ -23,7 +24,7 @@
 
 The v24 diagnostic session used syscall tracing and generated 184 MB of log; there was also a brief overlap of test processes. It cannot measure normal gameplay fluency or isolate controller/automation cost. V25 resolution measurements use one process, no syscall trace and separate capture runs.
 
-The next engineering milestone is a bounded hardware GS backend prototype, preserving the native game code and validating GIF/register/interrupt/reset/readback behavior before another broad FPS campaign. V17 remains the preserved 1x throughput reference; earlier rejected experiments and all adverse evidence remain recorded.
+[V26](docs/audit/vanilla-v26.md) completes the isolated Vulkan library/C-ABI proof with a fresh reproducible build and three passing synthetic tests. Next is game GIF/register/interrupt/readback/checkpoint integration, followed by one Fuji and one control scene before timing 1x/2x/3x. No new playable build or game FPS gain is claimed. V17 remains the preserved 1x throughput reference; earlier rejected experiments and all adverse evidence remain recorded.
 
 ## Earlier engineering evidence
 
