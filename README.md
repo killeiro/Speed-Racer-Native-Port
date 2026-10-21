@@ -8,39 +8,22 @@
 
 ## Current status
 
-| Feature | Status | Evidence |
-| --- | --- | --- |
-| Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
-| Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by team |
-| Gameplay speed | 🔄 Improved; unresolved | V17 gains in all three target Skorost pairs; seven-scene controls and adverse tails retained; stable60/full-game pacing remains unresolved |
-| Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
-| Regression tests | 🟢 Local suite | 31/31 local CTest in v17; 1,115,619 differential primitives, 696,942 new native checks and 12 new unchanged image pairs |
-| Track coverage | 🟡 Checkpoints and six controller sessions | 36 short Class1 routes plus one human session per environment on v17; complete-race/classes/Mirror acceptance remains open |
-| Clean PC installation | 🟡 Local portable boot verified | Empty data fallbacks; real local media/minimal-PATH boot passes; second PC/GPU still open |
-| Shutdown / card persistence | 🟡 Normal exit tested locally | Atomic close request, ordered drain/join and pending-card replacement/retry; real race-result save and restart remain open |
-| Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
+**Current private build: v25, Windows native GUI, fullscreen adapted to the monitor and selectable 1x/2x/3x/4x internal resolution. 2x is the new GUI default.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
 
-**Current private local portable build: Vanilla v17, 2026-10-20, with repeated mip snapshot unions removed and v16 shutdown/card fixes preserved. The original development v13 EXE and earlier packages/save are preserved.** These are team-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
+| Area | Status |
+|---|---|
+| Display and resolution | Implemented locally; saved native selector, DPI/resize handling and 39 passing tests; physical dialog/fullscreen-shortcut acceptance pending |
+| Image quality | Higher-resolution geometry verified in native captures; original textures/HUD, bloom alignment and PS2/PCSX2 parity remain open |
+| Fuji performance | Unresolved: short v25 fullscreen samples reach 59.28/49.37/28.76/19.29 simulated FPS at 1x/2x/3x/4x; higher resolution costs throughput |
+| Build integrity | Clean v24 build, 332 unchanged generated inputs and 310 extra VU programs; always-run manifest guard preserved |
+| Runtime correctness | EE 128-bit VU-code writes now invalidate the real dispatch cache; regression reproduced before fixing |
+| Full-game/release acceptance | Full races/result saves/reopen, classes/Mirror/long sessions, physical latency, second PC/GPU and redistribution remain open |
 
-The [v23 build-integrity audit](docs/audit/vanilla-v23.md) recovers310 extra VU programs from a partial3-program source that was hidden by a stale object. Rebuilding the restored VU inputs and relinking reproduces frozen v17 except timestamp/checksum. An always-run manifest guard passes32 tests and rejects the actual partial-source/old-mtime failure. The normalization experiment passes value/native/WAV checks but its56 timing windows also contain this coverage confound. The candidate is not promoted. Generated coverage is restored and guarded; exact v17 remains playable. The timing comparison also contains a native-coverage confound. Host exception sticky flags differ and are not guest flags. Static code is not smaller; all adverse controls remain. No whole-game fluency claim.
+[V25 resolution results](docs/audit/vanilla-v25.md) · [V24 PCSX2/native-port architecture and file audit](docs/audit/vanilla-v24.md) · [Evidence index](docs/audit/README.md).
 
-The [v21 publication diagnosis](docs/audit/vanilla-v21.md) separates queue insertion from the two-pending-present wait: no ring-full waits, Fuji VU17.17/17.19ms CPU/frame versus renderer15.66/15.48, with all6 diagnostic terminal-counter pairs matching. The [v22 shared-entry discriminator](docs/audit/vanilla-v22.md) passes31 tests,21,078,049 old-validator native comparisons and three identical generated-WAV pairs before all56 pure performance windows. The candidate fails the predeclared screen, stays isolated, and exact v17 source/EXE remain current. All adverse results and prior rejected experiments remain. No new human candidate run or whole-game fluency claim.
+The v24 diagnostic session used syscall tracing and generated 184 MB of log; there was also a brief overlap of test processes. It cannot measure normal gameplay fluency or isolate controller/automation cost. V25 resolution measurements use one process, no syscall trace and separate capture runs.
 
-The team completed six separate controller sessions on the exact v17 reference, one Class1 checkpoint per environment: Skorost58.58, Fuji58.13, GrandPrix59.69, Thunderhead59.93, Aurora59.72 and Onuris59.95 mean simulated FPS. All76,301 VBlanks and adverse data are retained;216/248 full five-second buckets reach58FPS,13 fall below55. Fuji still has sustained dips and every scene retains callback spikes. All exits drain/join and preserve the original/QA cards. These are descriptive unpaired sessions, not six independently verified complete races, result-save acceptance, continuous30min or validation of candidate v20. [Full table and limits](docs/audit/vanilla-v20.md#seis-sessões-da-equipe-no-exe-de-referência-v17).
-
-The [v20 VU/audio-cadence audit](docs/audit/vanilla-v20.md) tests adaptive VU rejection with a512-frame Windows SDL audio request.31 tests,21,078,049 fresh native reference decisions and three byte-identical generated-WAV pairs pass before the56-window performance series. The combined candidate fails the prior performance screen, stays isolated, and exact v17 remains current. No new v20 image/route matrix or gameplay package follows rejection. Every adverse pair and earlier rejected experiment remains retained; software-block size and callback timings do not certify hardware latency or whole-game fluency.
-
-The [v19 Fuji/VU audit](docs/audit/vanilla-v19.md) records a controller-driven Fuji victory reported from last place: 59.20 mean simulated FPS, with two of 63 five-second windows below55 and residual callback tails. The adaptive VU rejection experiment passes31 tests and21,078,049 native reference checks, and meets the Fuji throughput gates (+3.63%/+1.33%). It fails the predeclared consistent callback-p99 guard in Skorost-1 (+10–14% in all three pairs), so it is isolated and exact v17 remains current. All56 selected windows, the handover interruption and both human sessions are retained; no v19 image/route matrix or package is claimed.
-
-The [v18 timing and human-play audit](docs/audit/vanilla-v18.md) records two new human v17 sessions (keyboard and recognized Xbox360 controller), near60 mean simulated FPS with residual callback tails, a team-reported keyboard victory, and seven independent native pause/reload/active checks. The earlier Windows256-frame audio experiment passes31 tests and improves mean callback p99 in seven-scene controls, but fails the predeclared Fuji FPS guard; exact v17 source/EXE remains current. All56 windows and the large baseline outlier are retained. Active-scene versus wall-clock differences, original cadence, result-save and full-game fluency remain open.
-
-The [v17 GS snapshot report](docs/audit/vanilla-v17.md) eliminates repeated whole-mip-range unions within an eligible descriptor run. Seven-scene warmed AB/BA/AB controls measure Skorost-1 at **58.32→59.89 simulated FPS (+2.69%)**, all three pairs positive. 31 tests, 696,942 new per-call native checks, 12 identical image pairs, 36 short routes and two final-folder launches pass. Matched callback p99 worsens in six of seven scenes; this passes the throughput gate, not general fluency/stutter acceptance. No stable60/full-game or original PS2 parity claim. 1x/legacy and v16 lifecycle/card behavior are preserved.
-
-The [v16 lifecycle report](docs/audit/vanilla-v16.md) records an atomic host close request, ordered EE/VU/GS completion, joined workers and a final pending-card flush with checked file replacement/retry. Validation includes 31 tests, seven native lifecycle/error scenarios, 12 identical image pairs, three-scene warmed controls, 36 short routes and two final-folder launches. This is a correctness update with no new FPS-gain claim; full races/result-save, original parity, restart/long sessions and second-PC/distribution gates stay open.
-
-The [v15 GS snapshot report](docs/audit/vanilla-v15.md) records a rebuilt native GUI and seven-scene warmed comparisons: Skorost-1 averages **52.98→55.91 simulated FPS (+5.54%)**, with all three pairs positive. Fuji changes are small; adverse frame-time tails remain visible. Validation includes 27 tests, exact per-call payload checks, 12 identical native/native image pairs, 36 short Class 1 routes and two final-folder launches. That checkpoint left terminal drain/join open; v16 addresses normal shutdown above, while full races and stable 60 FPS remain open. A new private local package preserves the prior package/save and contains own ISO/ELF; it is not a public/friend release. 1x and legacy pacing remain default.
-
-The legitimate local ISO is recovered. [Recovered-media validation](docs/audit/restored-media-v1.md) records real portable boot,32 warmed1x/2x replay windows, eight separate captures, the resumed Skorost control and89,922 exact-candidate Q checks. The local private package now executes the game with its own data/save directory; it contains the team's ISO/ELF and is not a public/friend alpha.1x remains default:2x loses8–13% FPS in the four scenes. V14 remains isolated; the v15 change above follows this earlier unchanged-runtime checkpoint, and prior packages are preserved. Full races/30min, original parity, second-PC and distribution gates remain open.
+The next engineering milestone is a bounded hardware GS backend prototype, preserving the native game code and validating GIF/register/interrupt/reset/readback behavior before another broad FPS campaign. V17 remains the preserved 1x throughput reference; earlier rejected experiments and all adverse evidence remain recorded.
 
 ## Earlier engineering evidence
 
@@ -84,11 +67,10 @@ The [portable data preparer](docs/audit/data-preparation-v1.md) now validates th
 
 ## Project priorities
 
-1. Keep Fuji throughput P0: profile VU kernels and notification/idle transitions with CPU counters; fixed64-spin screening remains rejected, and the prior v12 regression is not closed.
-2. Use the verified live scene clock to confirm original cadence and extend short replays to full laps/races, classes and long sessions.
-3. Compare matched original/native scenes at 1x, then address remaining dithering/CRTC/fog behavior using evidence.
-4. Measure frame pacing, physical input latency and actual audio underruns; finish shutdown and clean-machine validation.
-5. Publish verified documentation now; review source provenance and distribution permissions before publishing a playable build.
+1. Validate a hardware GS backend prototype against one Fuji scene and one control scene, then measure 1x/2x.
+2. Revisit VU/microVU only where stage timings justify it; keep code coverage and pipeline/interrupt semantics intact.
+3. Confirm original timing/graphics, full races/results/save/reopen, classes/Mirror and long sessions.
+4. Finish physical audio/input, second-PC, provenance and distribution checks before a public alpha.
 
 ## Technical references
 
