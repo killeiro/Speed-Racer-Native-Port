@@ -1,0 +1,28 @@
+{
+  "commit": "14e5e236c28a338f605c304585c032b6bacd7ced",
+  "ctest": "34/34 PASS",
+  "interface_automation_stopped_by_user": true,
+  "shortcuts_not_verified": true,
+  "gui_runs": {
+    "gui-auto": {
+      "exit": 0,
+      "seconds": 356.875
+    },
+    "gui-checkpoint": {
+      "exit": 0,
+      "seconds": 245.7190000000046
+    }
+  },
+  "trace_log_bytes": 184104887,
+  "untraced_log_bytes": 6927,
+  "local_date": "2026-10-20",
+  "clean_build_directory": true,
+  "generated_files": 332,
+  "source_bytes": 124084962,
+  "extra_native_programs": 310,
+  "iso_files": 87,
+  "archive_entries": 1319,
+  "archive_crc_failures": 0,
+  "archive_track_files": 36,
+  "limits": "Archive CRC integrity is not resource-decoding or complete overlay coverage. No Fuji performance cure established."
+}

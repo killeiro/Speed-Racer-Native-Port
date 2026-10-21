@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-21 — V24 architecture/display and V25 internal resolution
+
+- Complete a clean build with the recovered 310-program VU coverage; reproduce and fix stale VU dispatch after 128-bit EE stores.
+- Add fullscreen fill, explicit aspect options, monitor/DPI resize handling and fresh-boot PS2 screen selection. Shortcut interaction remains unaccepted after interrupted UI verification.
+- Add a saved native resolution selector and validated 1x/2x/3x/4x rasterization, with 2x GUI default, adapter-size checks and 39 passing tests.
+- Retain four native captures and short fullscreen Fuji samples: 59.28/49.37/28.76/19.29 simulated FPS. Higher quality has material cost; no stable60 or renderer parity claim.
+- Prioritize a bounded hardware GS adapter prototype based on primary PCSX2/native-port research. Public changes remain documentation only; earlier packages/cards/evidence stay intact.
+
 ## 2026-10-20 — V23 native coverage recovery and normalization audit
 
 - Recover310 extra VU programs from preserved capture generation; a partial3-program source was masked by a stale object. Restored VU rebuild/relink reproduces the frozen reference except timestamp/checksum.
