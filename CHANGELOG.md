@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-22 — V35 bounded optimization completed / private package
+
+- Complete the four remaining Thunderhead controls under the original protocol; retain all 18 completed runs and the earlier interrupted attempt. All original bounded optimization criteria pass; Fuji mean +8.011%.
+- Compare three original-disc image/generated-PCM pairs: identical outputs. Final build and 47 tests pass; all 332 generated inputs remain unchanged.
+- Verify the private Windows GUI package at default High 3×, bilinear HUD/textures and FXAA. Copy the latest team driving progress and warm cache while preserving v30 and earlier cards.
+- Residual stalls, result/save/reopen, remaining variants and second-PC acceptance remain open. No public source/binary/game-data release.
+
 ## 2026-10-22 — V35 VU AVX2 / human-session analysis
 
 - VU-only opt-in AVX2 preserves FP contraction, generic EE/runtime and all332 generated inputs; 47 tests,1,048,576 dual-ISA cases and71,225 complete native checks pass.

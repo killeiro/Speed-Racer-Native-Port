@@ -1,6 +1,6 @@
 # Vanilla engineering evidence
 
-- [V35: AVX2 e análise da pilotagem](vanilla-v35.md) e [métricas](vanilla-v35-metrics.json): 29min08s/104.220 quadros, quatro ambientes/cinco variantes, média ativa59,62, picos preservados. Matriz automática incompleta por solicitação da equipe; sem promoção.
+- [V35: AVX2 e análise da pilotagem](vanilla-v35.md) e [métricas](vanilla-v35-metrics.json): 18 execuções automáticas concluídas, critérios VU aprovados, Fuji +8.011%, 47 testes e três pares idênticos de imagem/áudio gerado. Compilação privada verificada; picos e aceitação integral continuam abertos.
 
 - [V34: especialização de flags](vanilla-v34.md) e [métricas](vanilla-v34-metrics.json): ambas as políticas,4.800 diferenciais e 46 testes passam; veredicto de desempenho explicitado.
 - [V33: conversão de status adiada, rejeitada](vanilla-v33.md) e [métricas](vanilla-v33-metrics.json): 23 milhões de checks de histórico,71.225 checks nativos, sem ganho reproduzido; base restaurada.

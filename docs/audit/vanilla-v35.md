@@ -1,6 +1,6 @@
 # Vanilla v35 — AVX2 VU e análise da sessão humana
 
-22/10/2026. **Avaliação experimental, sem promoção de patch ou pacote novo.** A equipe pilotou por 29min08s em Alta 3×, com controle Xbox, fullscreen adaptado a 2560×1440, Vulkan nativo, bilinear do HUD e FXAA. A v30 e seus saves originais permanecem preservados.
+22/10/2026. **Perfil VU AVX2 aprovado nos critérios delimitados e compilação privada verificada.** Os quatro controles automáticos restantes foram concluídos, totalizando 18 execuções; imagens e áudio gerado coincidem com a referência. Ganho médio de **+8.011% em Fuji** na janela medida. Alta 3×, som/HUD, controles, fullscreen, v30 e cartões anteriores preservados. A estabilização integral ainda está aberta: os picos da pilotagem abaixo não foram declarados resolvidos.
 
 ## Resultado da pilotagem
 
@@ -26,6 +26,8 @@ O caminho padrão `legacy_pacing()` permanece ativo quando `PS2_EXPERIMENTAL_PAC
 
 O GS cria pipelines ausentes de forma síncrona em `GetTFXPipeline`→`CreateTFXPipeline`; shaders ausentes passam por `CompileAndAddShaderSPV`. O cache usado começou com 176 shaders e terminou com 207, **31 novos**; pipelines passaram de 2.062.003 para 2.419.008 bytes. Compilação durante a corrida é uma hipótese concreta para picos isolados. Sem timestamps de compilação por evento, não se atribuem individualmente os 12 picos a ela; IO e agendamento do host também não foram isolados.
 
+A [documentação oficial do SDL](https://wiki.libsdl.org/SDL2/SDL_GetQueuedAudioSize) confirma que a quantidade enfileirada não é um cursor exato de reprodução. A [referência da Khronos sobre pipelines](https://docs.vulkan.org/samples/latest/samples/performance/pipeline_cache/README.html) descreve custos de criação e reutilização de cache. Essas referências orientam o diagnóstico; não atribuem automaticamente os picos desta sessão a uma causa.
+
 O cache aquecido e o cartão de teste da sessão estão preservados. O launcher humano passou a reutilizar cópias de cache/progresso de uma sessão anterior concluída, com hashes do EXE/DLL/cartão verificados, em vez de sempre reiniciar do cache curto de Fuji. Isso muda somente o harness privado, sem alterar runtime/qualidade/áudio.
 
 O contador de callback omite seu primeiro intervalo: 104.219 linhas para 104.220 frames EE. A análise inicialmente parou no guard de igualdade; a inspeção de `trace_frame()` confirmou que o callback N termina no frame EE N+1. O alinhamento foi corrigido e verificado para todas as linhas. Não se descartou uma linha válida nem se inventou um intervalo inicial.
@@ -44,44 +46,62 @@ Três boots headless separados com ISO original,12.500 quadros cada, compararam 
 | skorost | 7,121 | 326,747 | 0 |
 | thunderhead | 2,863 | 374,255 | 0 |
 
-## Comparação automática preservada
+## Comparação automática concluída
 
-O protocolo anterior às edições exige três pares Fuji positivos/média>=3%, três pares de cada controle, limites de perda média/cauda e contadores iguais. Fuji e Skorost completaram três pares cada. Thunderhead completou um par. A equipe pediu assumir o controle para pilotar percursos completos; a automação foi encerrada no terceiro boot Thunderhead. A tentativa parcial fica identificada como interrupção solicitada, sem classificá-la como crash ou medição completa.
+O protocolo anterior às edições exige três pares Fuji positivos/média>=3%, três pares de cada controle, limites de perda média/cauda e contadores iguais. A primeira campanha foi interrompida a pedido da equipe para pilotagem; 14 execuções completas e a tentativa parcial ficaram preservadas. Os quatro controles Thunderhead restantes foram retomados em sequência candidata/referência/referência/candidata, sem alterar limites ou escolher novas janelas.
 
-Há14 execuções completas preservadas, todas saída0/contadores iguais. Média Fuji **+8.011%** na janela medida. A referência Skorost variou bastante; a carga externa não foi isolada. São simulação/callback em janelas curtas, não FPS físico ou prova causal isolada. A pilotagem humana amplia cobertura de uso, mas não substitui os pares restantes ou os gates audiovisuais de promoção. A candidata permanece experimental; não foi rejeitada/restaurada nem promovida por essa matriz incompleta.
+As **18 execuções completas** têm saída 0 e contadores terminais iguais. Todos os critérios definidos passam: Fuji positivo nos três pares e média >=3%; perda média por cena até 1%; sem duas perdas >2%; sem piora de p99 >5% nos três pares de uma cena; média de p99 Skorost até 2% pior. A carga externa não foi isolada; a retomada ocorreu após a pilotagem e pode ter condições do host diferentes. Todos os resultados adversos e máximos são mantidos.
+
+Mesmos binários, fontes, ISO/ELF, caminho/nome do aplicativo, threads normais, Vulkan/Win32 direto, Alta 3×/bilinear/FXAA, WASAPI, cartões QA e caches equivalentes. Cada boot tem 12.500 quadros; janela 10.650–12.400, com 1.751 amostras. Nenhum build, captura, profiler ou outro jogo do agente durante timing. São taxas de simulação/callback; não FPS físico nem corridas completas.
 
 | Par | Ganho de simulação | Variação p99 callback | Contadores iguais |
 |---|---:|---:|---|
-| fuji 1 | +8.257% | -0.433% | sim |
-| fuji 2 | +8.027% | -4.565% | sim |
-| fuji 3 | +7.751% | -8.311% | sim |
-| skorost 1 | -0.273% | +7.856% | sim |
-| skorost 2 | +15.047% | -26.426% | sim |
-| skorost 3 | +6.345% | -13.216% | sim |
-| thunderhead 1 | -0.239% | +4.990% | sim |
+| Fuji 1 | +8.257% | -0.433% | sim |
+| Fuji 2 | +8.027% | -4.565% | sim |
+| Fuji 3 | +7.751% | -8.311% | sim |
+| Skorost 1 | -0.273% | +7.856% | sim |
+| Skorost 2 | +15.047% | -26.426% | sim |
+| Skorost 3 | +6.345% | -13.216% | sim |
+| Thunderhead 1 | -0.239% | +4.990% | sim |
+| Thunderhead 2 | -1.391% | +1.893% | sim |
+| Thunderhead 3 | +0.307% | +6.015% | sim |
 
 | Execução | Variante | Quadros simulados/s | Callback p99, ms | Máximo, ms |
 |---|---|---:|---:|---:|
-| fuji 1 | baseline | 39.789 | 39.627 | 85.286 |
-| fuji 2 | candidate | 43.074 | 39.455 | 65.851 |
-| fuji 3 | candidate | 43.747 | 37.319 | 77.123 |
-| fuji 4 | baseline | 40.496 | 39.104 | 51.898 |
-| fuji 5 | baseline | 39.725 | 44.615 | 68.083 |
-| fuji 6 | candidate | 42.804 | 40.907 | 375.385 |
-| skorost 1 | baseline | 49.812 | 31.639 | 36.061 |
-| skorost 2 | candidate | 49.676 | 34.124 | 42.966 |
-| skorost 3 | candidate | 50.656 | 32.601 | 336.639 |
-| skorost 4 | baseline | 44.031 | 44.311 | 91.209 |
-| skorost 5 | baseline | 47.654 | 36.688 | 44.870 |
-| skorost 6 | candidate | 50.678 | 31.840 | 45.135 |
-| thunderhead 1 | baseline | 59.593 | 33.039 | 54.054 |
-| thunderhead 2 | candidate | 59.450 | 34.688 | 296.098 |
+| Fuji 1 | baseline | 39.789 | 39.627 | 85.286 |
+| Fuji 2 | candidate | 43.074 | 39.455 | 65.851 |
+| Fuji 3 | candidate | 43.747 | 37.319 | 77.123 |
+| Fuji 4 | baseline | 40.496 | 39.104 | 51.898 |
+| Fuji 5 | baseline | 39.725 | 44.615 | 68.083 |
+| Fuji 6 | candidate | 42.804 | 40.907 | 375.385 |
+| Skorost 1 | baseline | 49.812 | 31.639 | 36.061 |
+| Skorost 2 | candidate | 49.676 | 34.124 | 42.966 |
+| Skorost 3 | candidate | 50.656 | 32.601 | 336.639 |
+| Skorost 4 | baseline | 44.031 | 44.311 | 91.209 |
+| Skorost 5 | baseline | 47.654 | 36.688 | 44.870 |
+| Skorost 6 | candidate | 50.678 | 31.840 | 45.135 |
+| Thunderhead 1 | baseline | 59.593 | 33.039 | 54.054 |
+| Thunderhead 2 | candidate | 59.450 | 34.688 | 296.098 |
+| Thunderhead 3 | candidate | 59.177 | 33.792 | 164.196 |
+| Thunderhead 4 | baseline | 60.011 | 33.165 | 36.367 |
+| Thunderhead 5 | baseline | 59.386 | 32.200 | 39.640 |
+| Thunderhead 6 | candidate | 59.568 | 34.137 | 58.091 |
+
+## Imagem, áudio e compilação privada
+
+Três pares separados, com a ISO original em Fuji, Skorost e Thunderhead: imagem final e WAV gerado **idênticos byte a byte** entre referência e AVX2, nas mesmas entradas. Identidade de pista, relógio ativo e ausência de pausa conferidos. São diagnósticos headless a 3×/bilinear/FXAA, fora do timing; não certificam saída acústica ou latência física.
+
+Build final e **47/47 testes** passaram. Os 332 inputs gerados e as fontes congeladas continuam com os mesmos hashes. O commit de implementação e o pacote permanecem privados. A GUI do pacote foi aberta sem argumentos de ISO/ELF, usando apenas diretórios do Windows no PATH: Alta 3×, bilinear/FXAA, Win32/Vulkan, saída 0 e fechamento normal confirmados. Subsistema Windows GUI mantém a inicialização sem janela de CMD.
+
+A primeira execução da suíte no sandbox passou 46/47: o teste de save falhou na substituição de arquivo da pasta temporária restrita. A reexecução isolada precisou do PATH correto das DLLs do compilador; depois, o mesmo teste e a suíte completa passaram no Windows normal, sem alteração de implementação. As tentativas anteriores ficaram preservadas; não se ocultou a falha.
+
+Progresso e cache aquecido da última sessão foram copiados para a pasta nova, sem sobrescrever a v30 nem os cartões anteriores. O cache depende da GPU/driver; não se distribui como garantia universal. A promoção cobre **esta otimização VU delimitada**, não uma certificação de jogo final ou eliminação dos engasgos.
 
 ## Próximos passos delimitados
 
 1. Isolar cadência ligada ao áudio e custo de criação de pipelines, usando os dados existentes e cache aquecido, sem repetir uma campanha manual inteira.
 2. Tratar o custo residual de Fuji preservando Alta 3× e a correção de áudio; evitar simplesmente aumentar filas ou remover precisão.
-3. Fechar controles automáticos restantes, cobertura Grand Prix/Skorost e resultado/save/reabertura; classes/Mirror, latência física e segundo PC continuam abertos.
+3. Fechar a cobertura humana restante, incluindo Grand Prix/Skorost, e resultado/save/reabertura; classes/Mirror, latência física e segundo PC continuam abertos. Os controles automáticos da otimização VU estão concluídos.
 
 [V33](vanilla-v33.md) e [v34](vanilla-v34.md) falharam nos respectivos gates e foram retiradas; seus dados adversos e restaurações exatas estão preservados. O GS não mudou; seus cinco testes unitários upstream são evidência anterior v31, enquanto a suíte atual do runtime foi executada separadamente.
 

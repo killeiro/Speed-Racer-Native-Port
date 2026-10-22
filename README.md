@@ -8,33 +8,35 @@
 
 ## Current status
 
-**Preserved playable baseline: [v30](docs/audit/vanilla-v30.md)**, High 3× + bilinear HUD/textures + FXAA, sound/HUD accepted. **Latest evaluation: [v35](docs/audit/vanilla-v35.md)** VU AVX2; 29min08s human session,104,220 frames,59.62 simulated frames/s during validated advancing scenes. Four environments/five variants, residual spikes and Fuji slow windows remain. Automatic Fuji gain +8.011%; 14 paired runs retained, remaining Thunderhead matrix interrupted at the team’s request. **No performance patch/package promoted.** V33/V34 remain rejected; public distribution remains open.
+**Accepted sound/HUD baseline: [v30](docs/audit/vanilla-v30.md)**, High 3× + bilinear HUD/textures + FXAA. **Latest private build: [v35](docs/audit/vanilla-v35.md)** completes all 18 bounded timing runs and passes its original gates: Fuji mean **+8.011%**, 47 tests and three identical image/generated-audio pairs. Private GUI package verified; original cards and the latest team driving progress preserved. The 29min08s human session still shows residual stalls; full-game acceptance and public distribution remain open. V33/V34 remain rejected.
 
-**Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. Current hardware candidate: v30 with direct Win32 Vulkan, confirmed audio corrections and High-quality HUD filtering, separate GUI EXE, initial3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
+**Native Windows GUI:** direct Win32/Vulkan, adaptive fullscreen, controller support and saved 1×–4× internal-resolution selection. The current private v35 build starts at High 3× with bilinear HUD/textures and FXAA, preserving accepted v30 audio/visual settings. No PCSX2 executable or browser is launched. This repository contains documentation; a public playable download is not available.
 
 | Area | Status |
 |---|---|
 | Display and resolution | Implemented locally; saved native selector, DPI/resize handling and 39 passing tests; physical dialog/fullscreen-shortcut acceptance pending |
 | Image quality | The team accepts V30 HUD/High quality: 3×, bilinear HUD/textures and FXAA; original texture detail, bloom alignment and reference parity remain open |
 | Hardware GS integration (v27) | Real game GIF/register/FIFO lifecycle connected; 44 runtime tests, fresh library build and Fuji/Thunderhead 3x scene smoke checks pass; normal threaded performance remains open |
-| Fuji performance | V31 identifies medium/reverse and pause. Two3× threaded windows show21.1ms VU CPU/frame in Fuji versus10.4ms in Thunderhead, with an underfed native GS queue. V32 SIMD packing passes equivalence but fails performance; inspect compiled kernels next. Other variants remain open |
+| Fuji performance | V35 scoped VU AVX2 passes the original bounded criteria: +8.011% mean across three pairs, with all 18 control runs completed. The human Fuji short/forward average remains 58.93 and rare stalls remain open |
 | Build integrity | Clean v24 build, 332 unchanged generated inputs and 310 extra VU programs; always-run manifest guard preserved |
 | Runtime correctness | EE 128-bit VU-code writes now invalidate the real dispatch cache; regression reproduced before fixing |
 | Full-game/release acceptance | Full races/result saves/reopen, classes/Mirror/long sessions, physical latency, second PC/GPU and redistribution remain open |
 
 [V25 resolution results](docs/audit/vanilla-v25.md) · [V24 PCSX2/native-port architecture and file audit](docs/audit/vanilla-v24.md) · [Evidence index](docs/audit/README.md).
 
+## Earlier engineering evidence
+
+The entries below describe evidence at each historical iteration. Current acceptance and remaining work are summarized above; older next steps do not reopen tasks completed later.
+
 The v24 diagnostic session used syscall tracing and generated 184 MB of log; there was also a brief overlap of test processes. It cannot measure normal gameplay fluency or isolate controller/automation cost. V25 resolution measurements use one process, no syscall trace and separate capture runs.
 
 [V27](docs/audit/vanilla-v27.md) connects the [v26](docs/audit/vanilla-v26.md) library to the native game. It fixes missing dynamic shader compilation and active-display cropping, passes 44 runtime tests and verifies two fresh-boot 3x scenes at 1920×1437. A separate local experimental package exists; no stable60, full-race or general FPS improvement is claimed. Next is a normal threaded CPU/GPU attribution run in Fuji and one control scene. V17 remains the preserved 1x throughput reference; earlier rejected experiments and all adverse evidence remain recorded.
 
-[V28 audio/presentation audit](docs/audit/vanilla-v28.md): fix the SDL Win32 handle contract that forced GPU readback, plus SPU2 endpoint/stream/clip defects. 45 tests pass and the native 3x window opens WASAPI successfully. The team reported smooth graphics, but Championship 2 audio remains a P0 issue: later-race silence and full progression have not been reproduced or accepted.
-
-## Earlier engineering evidence
+[V28 audio/presentation audit](docs/audit/vanilla-v28.md): fix the SDL Win32 handle contract that forced GPU readback, plus SPU2 endpoint/stream/clip defects. 45 tests pass and the native 3x window opens WASAPI successfully. At this iteration, Championship 2 audio was still a P0 issue. Later [v29 audio fixes](docs/audit/vanilla-v29.md) and [v30 sound/HUD acceptance](docs/audit/vanilla-v30.md) supersede that status.
 
 On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40→57.94 simulated FPS in Thunderhead-0**, **35.67→40.07 in Fuji-3** and **47.04→53.69 in Grand-Prix-0**. Background applications were active; Skorost's smaller improvement was inconclusive. These are short scene measurements, not a claim of stable 60 FPS across the game. The v6 VIF parser-context change adds a small, scene-dependent improvement; its [final-artifact comparisons and 36-route matrix](docs/audit/vanilla-v6.md) remain below target in several scenes. See the [audit index](docs/audit/README.md), [v5 report](docs/audit/vanilla-v5.md) and [machine-readable metrics](docs/audit/vanilla-v5-metrics.json) for protocol, build hashes, percentiles and limits.
 
-The latest experimental [v7 report](docs/audit/vanilla-v7.md) documents VU register-access optimization with audited helper contracts and unchanged generated instruction bodies. Three alternating adjacent v6/v7 pairs measured Fuji-3 at **40.13→42.23 simulated FPS (+5.22%)**. Substantial concurrent host load was observed; the earlier grouped measurements, including negative results, are retained separately. Grand Prix had a lower mean and higher p95 in the final set; Skorost was essentially unchanged, and Thunderhead p95 increased. This is a mixed-performance candidate, not a confirmed general upgrade. The v6 baseline remains available and full-game acceptance is open. Additional native threaded VU/Q checks passed in Fuji and Grand Prix; they are diagnostic runs, not FPS benchmarks.
+The historical experimental [v7 report](docs/audit/vanilla-v7.md) documents VU register-access optimization with audited helper contracts and unchanged generated instruction bodies. Three alternating adjacent v6/v7 pairs measured Fuji-3 at **40.13→42.23 simulated FPS (+5.22%)**. Substantial concurrent host load was observed; the earlier grouped measurements, including negative results, are retained separately. Grand Prix had a lower mean and higher p95 in the final set; Skorost was essentially unchanged, and Thunderhead p95 increased. This is a mixed-performance candidate, not a confirmed general upgrade. The v6 baseline remains available and full-game acceptance is open. Additional native threaded VU/Q checks passed in Fuji and Grand Prix; they are diagnostic runs, not FPS benchmarks.
 
 The [v8 pacing investigation](docs/audit/vanilla-v8.md) isolates audio-queue-driven frame irregularity. A deadline improves menu cadence, but race measurements remain mixed, so it stays opt-in and the default pacing is preserved. It adds a reproducible same-binary comparison helper, 22 passing tests and 12 unchanged images. This is not a general speed upgrade or a new recommended release.
 

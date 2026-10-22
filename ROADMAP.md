@@ -44,20 +44,22 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-22**. Accepted sound/HUD and High 3× [v30](docs/audit/vanilla-v30.md) preserved. [V33](docs/audit/vanilla-v33.md)/[v34](docs/audit/vanilla-v34.md) rejected and restored. [V35](docs/audit/vanilla-v35.md) remains experimental: 47 tests,71,225 complete native checks,14 automatic timing runs and29min08s human driving. Active average59.62 simulated frames/s, with residual stalls and Fuji pressure. **Next: isolate audio-driven cadence and cold pipeline compilation; preserve the warmed cache/progress.** Complete remaining control/coverage, result/save/reopen and second-PC acceptance before promotion.
+Updated **2026-10-22**. Sound/HUD and High 3× [v30](docs/audit/vanilla-v30.md) preserved. [V35](docs/audit/vanilla-v35.md) completes all 18 bounded timing runs, passes the original VU optimization gates (Fuji **+8.011%**), 47 tests and three identical image/generated-audio pairs. Private GUI package verified; this does not close full-game acceptance or the residual stalls observed in team driving. **Next: attribute audio-driven cadence and synchronous pipeline costs, then result/save/reopen and remaining coverage/second-PC checks.** V33/V34 remain rejected; public distribution remains open.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|
 | Reproducible native build | v23 coverage repaired/guarded; v24 clean build; v25 retains 332 generated inputs and 310 extra VU symbols | Keep manifests and complete native coverage in every candidate |
 | Modern display controls | Fullscreen adaptation and 1x–4x selection implemented; 39 tests and four real-resolution captures pass | Accept native selector/shortcut interaction and monitor changes; arbitrary ultrawide camera remains separate |
-| Efficient high-resolution pipeline — P0 | V30 HUD/High accepted; V31 normal3× windows attribute the observed Fuji limit to VU-side CPU, with no native ring-space wait | V32 full references pass but SIMD packing fails performance; inspect compiled temporaries/flag history next. Other variants, GPU timestamp timing and original parity remain open |
+| Efficient high-resolution pipeline — P0 | High 3×/HUD/audio retained; V35 scoped VU AVX2 passes bounded criteria (+8.011% Fuji), 47 tests and three identical output pairs | Attribute remaining audio-driven cadence and synchronous pipeline costs with timestamps; preserve exactness, quality and frame-queue limits |
 | Vanilla gameplay acceptance | Six v17 human controller sessions and 36 short Class1 routes retained | Verify full races/results/save/reopen, classes2–4/Mirror/30 minutes, original timing/graphics, physical audio/input and another Windows/GPU |
 
 [Architecture decision and references](docs/audit/vanilla-v24.md) · [Resolution cost and limits](docs/audit/vanilla-v25.md) · [Ten concrete tasks](docs/audit/next-10-tasks.md).
 
 No new unchanged-build manual driving round is requested. New performance campaigns require a concrete renderer/VU change and intact source coverage. The 128-bit invalidation bug is corrected but not established as Fuji's performance cause. Prior rejected timing candidates remain rejected; the v25 quality default does not waive their gates. Full-game stability and public distribution are still open.
 
-## Release readiness and graphics research — 2026-10-19
+## Historical release-readiness planning — 2026-10-19
+
+The following is the archived planning snapshot. Original media has since been recovered and v35 privately packaged; follow the current acceptance gates above. No public release date is committed.
 
 The native GUI/controller prototype exists. Active v13 still has throughput gaps; the v14 experiment is isolated after regressions. A limited friend-test alpha has a **low-confidence2–4 active-working-week planning range**, and broader Vanilla acceptance6–12+ weeks, conditional on restored legitimate media, continuous engineering/QA and all distribution gates. These are not committed release dates or automatic background work. Re-estimate after the Skorost control and a full-race/portable-data boot milestone.
 

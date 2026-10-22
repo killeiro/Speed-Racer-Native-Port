@@ -1,16 +1,16 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de 22/10/2026: som/HUD e Alta 3× v30 preservados. [V33](vanilla-v33.md)/[v34](vanilla-v34.md) rejeitadas. [V35](vanilla-v35.md) experimental: 29min08s de pilotagem,104.220 quadros,59,62 quadros simulados/s nas cenas ativas; picos e custo residual de Fuji permanecem. Fuji automático +8,011%, mas controles Thunderhead incompletos após a equipe assumir a pilotagem. **Próximo: cadência ligada ao áudio e compilação síncrona de pipelines, usando cache aquecido.** Não há novo patch/pacote promovido.
+Atualização de 22/10/2026: som/HUD e Alta 3× v30 preservados. [V35](vanilla-v35.md) concluiu as 18 execuções automáticas e passou nos critérios originais da otimização VU (Fuji **+8.011%**), 47 testes e três pares idênticos de imagem/áudio gerado. Compilação privada verificada; progresso da pilotagem e cartões anteriores preservados. **Próximo: atribuir cadência ligada ao áudio e custo síncrono de pipelines; depois resultado/save/reabertura, cobertura restante e segundo PC.** Os picos da pilotagem permanecem abertos. V33/V34 rejeitadas; sem distribuição pública.
 
 | # | Prioridade | Entrega e critério de conclusão |
 |---|---|---|
-| 1 | P0 | Isolar cadência ligada ao áudio e compilação de pipelines nos picos observados; usar cache aquecido e preservar os dados adversos, sem outra campanha manual inteira |
+| 1 | P0 | Correlacionar timestamps de compilação SPIR-V/criação de pipeline com os picos, em uma rota fixa e cópias de cache inicial/aquecido; manter diagnóstico separado do benchmark e preservar todos os intervalos |
 | 2 | P0 | Somente após causa concreta, propor outra mudança isolada; definir controles/limites antes, preservar equivalência VU/memória/GIF e todos os dados adversos |
 | 3 | P0 | Comparar HUD e eventos com referência original/PCSX2, incluindo textura/AA, bloom, feedback, mip e deinterlace; preservar a correção de som já confirmada pela equipe |
-| 4 | P0 | Comparar presets 1x/2x/3x no pipeline normal; escolher padrão por estabilidade medida, sem inferir FPS da janela a partir do headless |
+| 4 | P0 | Preservar Alta 3× como padrão; comparar custo dos presets no pipeline normal somente se a atribuição apontar limite de GPU, sem confundir FPS headless com apresentação real |
 | 5 | P1 | Aceitar seletor, fullscreen/monitor/DPI e interação física de controles USB/Bluetooth no novo backend |
 | 6 | P0 | Aceitar corridas/resultados por pista e classes2–4/Mirror; sessão humana de 42min37s já concluída sem crash, sem certificar todas as rotas ou vazamentos |
-| 7 | P1 | Salvar resultado normal do jogo, encerrar e confirmar leitura após reabrir; decidir se importador de checkpoints de desenvolvimento realmente é necessário |
+| 7 | P0 | Confirmar resultado natural, persistência e leitura após reabrir na pasta final, preservando o progresso da equipe; não depender de checkpoints incompatíveis |
 | 8 | P1 | Medir underruns e latência física, distinguindo simulação, callbacks e apresentação real |
 | 9 | P1 | Verificar outro Windows/GPU, dependências, CPU AVX2/Vulkan, IO Unicode e diretório protegido |
 | 10 | P1 | Fechar proveniência/licenças/CI e gate da alpha; manter publicação documental até revisão de distribuição |

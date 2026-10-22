@@ -1,11 +1,11 @@
 {
   "version": 35,
   "date": "2026-10-22",
-  "status": "Experimental AVX2 candidate; human session analyzed; full automatic promotion gates incomplete",
-  "performance_patch_promoted": false,
+  "status": "V35 scoped VU optimization passes completed bounded gates; private package verified; full-game release acceptance open",
+  "performance_patch_promoted": true,
   "public_playable_release": false,
-  "private_new_package": false,
-  "accepted_playable_baseline": "v30 High3x/linearHUD/FXAA",
+  "private_new_package": true,
+  "accepted_playable_baseline": "v30 sound/HUD/High3x preserved; v35 scoped VU improvement privately packaged",
   "baseline_private_commit": "7b974c25c3d16c865c30fa16395b4e02fd828458",
   "baseline_exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
   "candidate_exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
@@ -23,7 +23,7 @@
   "protocol_sha256": "0bf7764413ddb623c021a427b1b0e9381889824eb985bae51be6a112ab61f7e0",
   "candidate_tests_passed": 47,
   "restored_tests_passed": null,
-  "source_retained_experimental": true,
+  "source_retained_experimental": false,
   "dual_ISA_raw_bit_cases": 1048576,
   "FP_modes": 16,
   "MXCSR_identical": true,
@@ -51,7 +51,7 @@
   "continuation_entries": 37,
   "extra_programs": 310,
   "original_dirty_paths_preserved": 24,
-  "experimental_source_paths_retained": 8,
+  "experimental_source_paths_retained": 0,
   "native_library_changed": false,
   "native_library_tests_note": "Five prior v31 upstream native-DLL unit tests, unchanged DLL; full current runtime CTest suite separately rerun.",
   "native_checks": [
@@ -122,7 +122,7 @@
   "complete_native_checks": 71225,
   "Q_checks": 2486891,
   "automatic_timing": {
-    "total_completed_runs": 14,
+    "total_completed_runs": 18,
     "frames_per_run": 12500,
     "analysis_window": [
       10650,
@@ -997,10 +997,258 @@
         },
         "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
         "simulation_rate": 59.4500186089423
+      },
+      {
+        "scene": "thunderhead",
+        "variant": "candidate",
+        "index": 3,
+        "exit": 0,
+        "wall_s": 209.20400000000154,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 16.898495773843518,
+          "p95": 29.094749999999998,
+          "p99": 30.9116,
+          "max": 164.8073
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 16.896449857224443,
+          "p95": 28.6979,
+          "p99": 33.79245,
+          "max": 164.1962
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 0.10293163906339234,
+          "p95": 0.0083,
+          "p99": 0.0116,
+          "max": 154.2486
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 5.842690633923473,
+          "p95": 18.371299999999998,
+          "p99": 20.9095,
+          "max": 23.3779
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 78.3312427184466,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=13698139 bytes=21503112208 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:118060040 01:27417398 04:5376789 05:20427 06:20427 11:3057222 13:249050 14:5376789 20:9372585 30:1696765 31:20427 4A:2561670 50:3397312 60:23115 64:362264 65:3931291 68:23115 6C:12427228 6E:1277800 7C:5625682 7E:3746903",
+          "vu-cont": "[vu-cont] native_segments=2122825 interpreted_instructions=9177692 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 59.17686481585294
+      },
+      {
+        "scene": "thunderhead",
+        "variant": "baseline",
+        "index": 4,
+        "exit": 0,
+        "wall_s": 208.96900000000096,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 16.663514163335236,
+          "p95": 26.648200000000003,
+          "p99": 30.46985,
+          "max": 33.2694
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 16.644545117075957,
+          "p95": 26.48485,
+          "p99": 33.16475,
+          "max": 36.3671
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 0.00279988577955454,
+          "p95": 0.0065,
+          "p99": 0.01175,
+          "max": 0.0319
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 4.779009594517419,
+          "p95": 12.995899999999999,
+          "p99": 19.644750000000002,
+          "max": 22.6681
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 81.26708909194747,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=13698139 bytes=21503112208 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:118060040 01:27417398 04:5376789 05:20427 06:20427 11:3057222 13:249050 14:5376789 20:9372585 30:1696765 31:20427 4A:2561670 50:3397312 60:23115 64:362264 65:3931291 68:23115 6C:12427228 6E:1277800 7C:5625682 7E:3746903",
+          "vu-cont": "[vu-cont] native_segments=2122825 interpreted_instructions=9177692 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 60.011351159067154
+      },
+      {
+        "scene": "thunderhead",
+        "variant": "baseline",
+        "index": 5,
+        "exit": 0,
+        "wall_s": 209.40599999999904,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 16.839021701884636,
+          "p95": 26.01015,
+          "p99": 30.078400000000002,
+          "max": 38.3194
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 16.837560536836094,
+          "p95": 26.92015,
+          "p99": 32.2,
+          "max": 39.64
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 0.29206242147344375,
+          "p95": 2.7394999999999996,
+          "p99": 5.45475,
+          "max": 12.8167
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 3.60018012564249,
+          "p95": 12.062149999999999,
+          "p99": 19.619500000000002,
+          "max": 22.1671
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 68.98611136493433,
+          "p95": 91.333,
+          "p99": 94.0,
+          "max": 96.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=13698139 bytes=21503112208 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:118060040 01:27417398 04:5376789 05:20427 06:20427 11:3057222 13:249050 14:5376789 20:9372585 30:1696765 31:20427 4A:2561670 50:3397312 60:23115 64:362264 65:3931291 68:23115 6C:12427228 6E:1277800 7C:5625682 7E:3746903",
+          "vu-cont": "[vu-cont] native_segments=2122825 interpreted_instructions=9177692 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 59.38587274865732
+      },
+      {
+        "scene": "thunderhead",
+        "variant": "candidate",
+        "index": 6,
+        "exit": 0,
+        "wall_s": 208.375,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 16.78754940034266,
+          "p95": 26.490299999999998,
+          "p99": 30.5786,
+          "max": 62.953
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 16.779915248429468,
+          "p95": 26.9181,
+          "p99": 34.136849999999995,
+          "max": 58.0913
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 0.004186236436322101,
+          "p95": 0.0118,
+          "p99": 0.015649999999999997,
+          "max": 0.1796
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 3.5728045117075955,
+          "p95": 11.98425,
+          "p99": 19.445050000000002,
+          "max": 21.8232
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 72.84294174757281,
+          "p95": 90.667,
+          "p99": 93.333,
+          "max": 96.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=13698139 bytes=21503112208 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:118060040 01:27417398 04:5376789 05:20427 06:20427 11:3057222 13:249050 14:5376789 20:9372585 30:1696765 31:20427 4A:2561670 50:3397312 60:23115 64:362264 65:3931291 68:23115 6C:12427228 6E:1277800 7C:5625682 7E:3746903",
+          "vu-cont": "[vu-cont] native_segments=2122825 interpreted_instructions=9177692 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 59.56795576009376
       }
     ],
     "assessment": {
-      "stage": "User requested complete human driving; automatic matrix interrupted after14 completed runs",
+      "stage": "final",
       "pairs": {
         "fuji": [
           {
@@ -1041,6 +1289,16 @@
             "gain_percent": -0.23942332137446565,
             "callback_p99_percent": 4.989535142399237,
             "counters_equal": true
+          },
+          {
+            "gain_percent": -1.390547499925987,
+            "callback_p99_percent": 1.8926721895989207,
+            "counters_equal": true
+          },
+          {
+            "gain_percent": 0.3066099781122711,
+            "callback_p99_percent": 6.015062111801228,
+            "counters_equal": true
           }
         ]
       },
@@ -1048,20 +1306,37 @@
       "gates": {
         "Fuji_all_three_positive": true,
         "Fuji_mean_gain_at_least3": true,
-        "Skorost_mean_loss_at_most1": true,
+        "no_scene_mean_loss_over1": true,
+        "no_two_pair_losses_over2": true,
+        "no_consistent_callback_p99_loss_over5": true,
         "Skorost_mean_p99_loss_at_most2": true,
-        "all_recorded_counters_equal": true,
-        "Thunderhead_three_pairs_complete": false
+        "all_terminal_counters_equal": true
       },
-      "promote": false,
-      "benchmark_incomplete": true,
-      "interrupted_attempt": "Thunderhead3candidate, not a crash or complete measurement",
-      "protocol_departure": "Human explicitly requested takeover; remaining automatic control pairs and later audiovisual/package gates not run. Human acceptance does not replace paired proof."
+      "promote": true
     },
     "Fuji_mean_gain_percent": 8.011315305355215,
     "external_load_isolated": false,
     "physical_scanout_FPS": false,
-    "all_attempts_and_maxima_retained": true
+    "all_attempts_and_maxima_retained": true,
+    "resumed_controls": {
+      "prior_completed_runs": 14,
+      "original_protocol_sha256": "0bf7764413ddb623c021a427b1b0e9381889824eb985bae51be6a112ab61f7e0",
+      "remaining_sequence": [
+        "candidate",
+        "baseline",
+        "baseline",
+        "candidate"
+      ],
+      "same_original_analysis_window": [
+        10650,
+        12400
+      ],
+      "previous_interrupted_attempt_retained": true,
+      "separate_day_or_host_load_possible": true,
+      "thresholds_unchanged": true,
+      "new_audio_or_shader_changes": false
+    },
+    "original_interrupted_attempt_retained": true
   },
   "human": {
     "session_wall_s": 1748.3899999999994,
@@ -2729,34 +3004,467 @@
   },
   "integrity": {
     "integrity_pass": true,
-    "performance_patch_promoted": false,
-    "benchmark_incomplete": true,
-    "candidate_source_retained_experimental": true,
-    "source_commit": null,
-    "private_package": null,
-    "baseline_private_commit": "7b974c25c3d16c865c30fa16395b4e02fd828458",
+    "performance_patch_promoted": true,
+    "benchmark_incomplete": false,
+    "promotion_scope": "Bounded VU optimization only; full-game release acceptance remains open",
+    "source_commit": "c20649b4f081d09c8280b92aa5939efcede3348f",
+    "source_private_only": true,
     "original_dirty_paths_preserved": 24,
-    "original_dirty_hashes_exact": true,
-    "candidate_source_paths_retained": 8,
     "generated_input_count": 332,
     "all332_hashes_exact": true,
-    "candidate_tests_passed": 47,
-    "no_new_tests_claimed_after_human_session": true,
     "original_ISO_hash_verified": true,
     "immutable_v30_files_verified": 59,
-    "delivered_card_hashes_and_mtimes_unchanged": true,
-    "human_session_card_preserved": true,
-    "human_analysis_sha256": "3566637cedf7e8a70bad46152acd75d79a2ccdaf9aa5ee99613598c2e580ce78",
-    "all14_completed_runs_preserved": true,
-    "original_protocol_and_assessment_retained": true
+    "delivered_cards_untouched": true,
+    "private_package": {
+      "name": "SpeedRacer-Hardware-VU-AVX2-v35",
+      "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+      "immutable_files": 60,
+      "GUI_subsystem": true,
+      "default_scale": 3,
+      "latest_pilot_progress_copied": true,
+      "session_card_sha256": "f90dce55afc166cb0fea767c4ab64a2f43270905836d3b38e363076269d03872",
+      "warmed_cache_copied": true,
+      "portable_startup_smoke": {
+        "exit": 0,
+        "frames": 1200,
+        "PATH": "Windows system directories only",
+        "no_ELF_or_ISO_arguments": true,
+        "default_High3x_verified": true,
+        "normal_drain_join": true,
+        "QA_card_only": true,
+        "physical_controller_or_latency_certification": false
+      }
+    },
+    "visual_audio_validation": [
+      {
+        "scene": "fuji",
+        "cases": [
+          {
+            "variant": "baseline",
+            "exit": 0,
+            "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+            "image_sha256": "b9a29846add7f243b755e36aaba26fdaa1d9ffacfbbe759df4e5bee9d047bcbd",
+            "generated_WAV_sha256": "4351a96980664b96a1bc4c8890ef30518bea9d897cfd2403e23fb38b7df85f17",
+            "audio": {
+              "sample_frames": 9940864,
+              "channels": 2,
+              "sample_bytes": 2,
+              "rate": 48000
+            },
+            "identity": [
+              [
+                "1",
+                "3",
+                "1",
+                "1",
+                "1",
+                "0"
+              ]
+            ],
+            "headless": true,
+            "quality": "High3x/linearHUD/FXAA",
+            "reused_completed_output_after_validator_correction": true
+          },
+          {
+            "variant": "candidate",
+            "exit": 0,
+            "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+            "image_sha256": "b9a29846add7f243b755e36aaba26fdaa1d9ffacfbbe759df4e5bee9d047bcbd",
+            "generated_WAV_sha256": "4351a96980664b96a1bc4c8890ef30518bea9d897cfd2403e23fb38b7df85f17",
+            "audio": {
+              "sample_frames": 9940864,
+              "channels": 2,
+              "sample_bytes": 2,
+              "rate": 48000
+            },
+            "identity": [
+              [
+                "1",
+                "3",
+                "1",
+                "1",
+                "1",
+                "0"
+              ]
+            ],
+            "headless": true,
+            "quality": "High3x/linearHUD/FXAA",
+            "reused_completed_output_after_validator_correction": false
+          }
+        ],
+        "generated_WAV_identical": true,
+        "image_pixels_identical": true,
+        "mean_absolute_channel_difference": 0.0,
+        "max_channel_difference": 0,
+        "not_performance_or_physical_playback_test": true
+      },
+      {
+        "scene": "skorost",
+        "cases": [
+          {
+            "variant": "baseline",
+            "exit": 0,
+            "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+            "image_sha256": "bcfdb3676e8c672827ec5b4acba57ca9183d4e13c313b2dd80dd4bee20fddd1a",
+            "generated_WAV_sha256": "8793514eae1d3f8fc0ddd37b5e59ed9473570caa23d602c3df302cc6e0e7a87c",
+            "audio": {
+              "sample_frames": 9940864,
+              "channels": 2,
+              "sample_bytes": 2,
+              "rate": 48000
+            },
+            "identity": [
+              [
+                "1",
+                "6",
+                "1",
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "headless": true,
+            "quality": "High3x/linearHUD/FXAA",
+            "reused_completed_output_after_validator_correction": false
+          },
+          {
+            "variant": "candidate",
+            "exit": 0,
+            "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+            "image_sha256": "bcfdb3676e8c672827ec5b4acba57ca9183d4e13c313b2dd80dd4bee20fddd1a",
+            "generated_WAV_sha256": "8793514eae1d3f8fc0ddd37b5e59ed9473570caa23d602c3df302cc6e0e7a87c",
+            "audio": {
+              "sample_frames": 9940864,
+              "channels": 2,
+              "sample_bytes": 2,
+              "rate": 48000
+            },
+            "identity": [
+              [
+                "1",
+                "6",
+                "1",
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "headless": true,
+            "quality": "High3x/linearHUD/FXAA",
+            "reused_completed_output_after_validator_correction": false
+          }
+        ],
+        "generated_WAV_identical": true,
+        "image_pixels_identical": true,
+        "mean_absolute_channel_difference": 0.0,
+        "max_channel_difference": 0,
+        "not_performance_or_physical_playback_test": true
+      },
+      {
+        "scene": "thunderhead",
+        "cases": [
+          {
+            "variant": "baseline",
+            "exit": 0,
+            "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+            "image_sha256": "7b21308a7339ece9fba8f27a142b88979197ce75350aab08c7614b3f3b31bf4b",
+            "generated_WAV_sha256": "46ab40b42b05ba8647933eb998c5821c54a0d7b8e7003da15c7298877681705d",
+            "audio": {
+              "sample_frames": 9940864,
+              "channels": 2,
+              "sample_bytes": 2,
+              "rate": 48000
+            },
+            "identity": [
+              [
+                "1",
+                "1",
+                "1",
+                "1",
+                "1",
+                "0"
+              ]
+            ],
+            "headless": true,
+            "quality": "High3x/linearHUD/FXAA",
+            "reused_completed_output_after_validator_correction": false
+          },
+          {
+            "variant": "candidate",
+            "exit": 0,
+            "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+            "image_sha256": "7b21308a7339ece9fba8f27a142b88979197ce75350aab08c7614b3f3b31bf4b",
+            "generated_WAV_sha256": "46ab40b42b05ba8647933eb998c5821c54a0d7b8e7003da15c7298877681705d",
+            "audio": {
+              "sample_frames": 9940864,
+              "channels": 2,
+              "sample_bytes": 2,
+              "rate": 48000
+            },
+            "identity": [
+              [
+                "1",
+                "1",
+                "1",
+                "1",
+                "1",
+                "0"
+              ]
+            ],
+            "headless": true,
+            "quality": "High3x/linearHUD/FXAA",
+            "reused_completed_output_after_validator_correction": false
+          }
+        ],
+        "generated_WAV_identical": true,
+        "image_pixels_identical": true,
+        "mean_absolute_channel_difference": 0.0,
+        "max_channel_difference": 0,
+        "not_performance_or_physical_playback_test": true
+      }
+    ],
+    "human_analysis_sha256": "3566637cedf7e8a70bad46152acd75d79a2ccdaf9aa5ee99613598c2e580ce78"
   },
   "limitations": [
     "Human driving is not paired causal performance proof",
-    "Automatic Thunderhead control matrix was interrupted at explicit user request; all promotion gates remain incomplete",
     "Human scene clock does not prove every natural finish/result or save-reopen",
     "Four environments/five variants recorded; no active Grand Prix/Skorost in this session",
     "Audio queue observations are not acoustic proof of silence/underruns",
     "Cold compilation is supported by synchronous draw-path code and31 new shaders, not per-spike timestamps",
-    "Existing experimental deadline pacing was not enabled; prior rejected pacing work must not be blindly re-enabled"
+    "Existing experimental deadline pacing was not enabled; prior rejected pacing work must not be blindly re-enabled",
+    "Four remaining Thunderhead controls resumed after human driving; same original protocol, settings, source/binaries and analysis window; host load or conditions may differ",
+    "Private promotion covers the scoped VU optimization; residual frame spikes and full-game acceptance remain open",
+    "Image/generated-PCM comparisons are headless diagnostics, not physical audio or scanout tests"
+  ],
+  "source_commit": "c20649b4f081d09c8280b92aa5939efcede3348f",
+  "scoped_source_paths_privately_committed": 8,
+  "private_package": {
+    "name": "SpeedRacer-Hardware-VU-AVX2-v35",
+    "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+    "immutable_files": 60,
+    "GUI_subsystem": true,
+    "default_scale": 3,
+    "latest_pilot_progress_copied": true,
+    "session_card_sha256": "f90dce55afc166cb0fea767c4ab64a2f43270905836d3b38e363076269d03872",
+    "warmed_cache_copied": true,
+    "portable_startup_smoke": {
+      "exit": 0,
+      "frames": 1200,
+      "PATH": "Windows system directories only",
+      "no_ELF_or_ISO_arguments": true,
+      "default_High3x_verified": true,
+      "normal_drain_join": true,
+      "QA_card_only": true,
+      "physical_controller_or_latency_certification": false
+    }
+  },
+  "visual_audio_validation": [
+    {
+      "scene": "fuji",
+      "cases": [
+        {
+          "variant": "baseline",
+          "exit": 0,
+          "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+          "image_sha256": "b9a29846add7f243b755e36aaba26fdaa1d9ffacfbbe759df4e5bee9d047bcbd",
+          "generated_WAV_sha256": "4351a96980664b96a1bc4c8890ef30518bea9d897cfd2403e23fb38b7df85f17",
+          "audio": {
+            "sample_frames": 9940864,
+            "channels": 2,
+            "sample_bytes": 2,
+            "rate": 48000
+          },
+          "identity": [
+            [
+              "1",
+              "3",
+              "1",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          "headless": true,
+          "quality": "High3x/linearHUD/FXAA",
+          "reused_completed_output_after_validator_correction": true
+        },
+        {
+          "variant": "candidate",
+          "exit": 0,
+          "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+          "image_sha256": "b9a29846add7f243b755e36aaba26fdaa1d9ffacfbbe759df4e5bee9d047bcbd",
+          "generated_WAV_sha256": "4351a96980664b96a1bc4c8890ef30518bea9d897cfd2403e23fb38b7df85f17",
+          "audio": {
+            "sample_frames": 9940864,
+            "channels": 2,
+            "sample_bytes": 2,
+            "rate": 48000
+          },
+          "identity": [
+            [
+              "1",
+              "3",
+              "1",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          "headless": true,
+          "quality": "High3x/linearHUD/FXAA",
+          "reused_completed_output_after_validator_correction": false
+        }
+      ],
+      "generated_WAV_identical": true,
+      "image_pixels_identical": true,
+      "mean_absolute_channel_difference": 0.0,
+      "max_channel_difference": 0,
+      "not_performance_or_physical_playback_test": true
+    },
+    {
+      "scene": "skorost",
+      "cases": [
+        {
+          "variant": "baseline",
+          "exit": 0,
+          "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+          "image_sha256": "bcfdb3676e8c672827ec5b4acba57ca9183d4e13c313b2dd80dd4bee20fddd1a",
+          "generated_WAV_sha256": "8793514eae1d3f8fc0ddd37b5e59ed9473570caa23d602c3df302cc6e0e7a87c",
+          "audio": {
+            "sample_frames": 9940864,
+            "channels": 2,
+            "sample_bytes": 2,
+            "rate": 48000
+          },
+          "identity": [
+            [
+              "1",
+              "6",
+              "1",
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "headless": true,
+          "quality": "High3x/linearHUD/FXAA",
+          "reused_completed_output_after_validator_correction": false
+        },
+        {
+          "variant": "candidate",
+          "exit": 0,
+          "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+          "image_sha256": "bcfdb3676e8c672827ec5b4acba57ca9183d4e13c313b2dd80dd4bee20fddd1a",
+          "generated_WAV_sha256": "8793514eae1d3f8fc0ddd37b5e59ed9473570caa23d602c3df302cc6e0e7a87c",
+          "audio": {
+            "sample_frames": 9940864,
+            "channels": 2,
+            "sample_bytes": 2,
+            "rate": 48000
+          },
+          "identity": [
+            [
+              "1",
+              "6",
+              "1",
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "headless": true,
+          "quality": "High3x/linearHUD/FXAA",
+          "reused_completed_output_after_validator_correction": false
+        }
+      ],
+      "generated_WAV_identical": true,
+      "image_pixels_identical": true,
+      "mean_absolute_channel_difference": 0.0,
+      "max_channel_difference": 0,
+      "not_performance_or_physical_playback_test": true
+    },
+    {
+      "scene": "thunderhead",
+      "cases": [
+        {
+          "variant": "baseline",
+          "exit": 0,
+          "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+          "image_sha256": "7b21308a7339ece9fba8f27a142b88979197ce75350aab08c7614b3f3b31bf4b",
+          "generated_WAV_sha256": "46ab40b42b05ba8647933eb998c5821c54a0d7b8e7003da15c7298877681705d",
+          "audio": {
+            "sample_frames": 9940864,
+            "channels": 2,
+            "sample_bytes": 2,
+            "rate": 48000
+          },
+          "identity": [
+            [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          "headless": true,
+          "quality": "High3x/linearHUD/FXAA",
+          "reused_completed_output_after_validator_correction": false
+        },
+        {
+          "variant": "candidate",
+          "exit": 0,
+          "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+          "image_sha256": "7b21308a7339ece9fba8f27a142b88979197ce75350aab08c7614b3f3b31bf4b",
+          "generated_WAV_sha256": "46ab40b42b05ba8647933eb998c5821c54a0d7b8e7003da15c7298877681705d",
+          "audio": {
+            "sample_frames": 9940864,
+            "channels": 2,
+            "sample_bytes": 2,
+            "rate": 48000
+          },
+          "identity": [
+            [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          "headless": true,
+          "quality": "High3x/linearHUD/FXAA",
+          "reused_completed_output_after_validator_correction": false
+        }
+      ],
+      "generated_WAV_identical": true,
+      "image_pixels_identical": true,
+      "mean_absolute_channel_difference": 0.0,
+      "max_channel_difference": 0,
+      "not_performance_or_physical_playback_test": true
+    }
+  ],
+  "final_build_tests": {
+    "stages": [
+      {
+        "stage": "build",
+        "exit": 0,
+        "wall_s": 0.3279999999977008
+      },
+      {
+        "stage": "tests",
+        "exit": 0,
+        "wall_s": 9.203000000001339
+      }
+    ],
+    "all47_tests_passed": true
+  },
+  "retained_validation_attempts": [
+    "First final suite in the Windows sandbox passed46/47; sio2_save failed replacing a card in the sandbox temporary directory. No implementation source changed.",
+    "An isolated normal-Windows retry initially lacked compiler runtime DLLs in PATH and did not start; correcting the toolchain PATH allowed the unchanged save test to pass.",
+    "Complete final build/suite rerun in normal Windows with the correct runtime environment passed47/47, including actual SIO2 atomic replacement/failure/retry/reload coverage. Failed-attempt logs remain private.",
+    "The first audiovisual baseline exited0 and produced its image/WAV; its validator incorrectly required window-thread lifecycle messages in headless direct-call mode. Source inspection corrected the validator; the completed baseline output was retained/reused without rerunning it."
   ]
 }
