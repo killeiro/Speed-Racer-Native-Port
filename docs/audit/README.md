@@ -1,5 +1,7 @@
 # Vanilla engineering evidence
 
+- [V36: logo e caminhos Unicode](vanilla-v36.md) e [métricas](vanilla-v36-metrics.json): 48 testes runtime, 52 do importador e três boots nativos; ícone incorporado, cartões preservados e kit privado sem mídia. Save de corrida/segundo PC/distribuição continuam abertos.
+
 - [V35: AVX2 e análise da pilotagem](vanilla-v35.md) e [métricas](vanilla-v35-metrics.json): 18 execuções automáticas concluídas, critérios VU aprovados, Fuji +8.011%, 47 testes e três pares idênticos de imagem/áudio gerado. Compilação privada verificada; picos e aceitação integral continuam abertos.
 
 - [V34: especialização de flags](vanilla-v34.md) e [métricas](vanilla-v34-metrics.json): ambas as políticas,4.800 diferenciais e 46 testes passam; veredicto de desempenho explicitado.
@@ -15,7 +17,7 @@
 
 - [Vanilla v28: áudio SPU2 e apresentação Win32 direta](vanilla-v28.md) e [métricas](vanilla-v28-metrics.json): 45 testes, regressões reproduzidas e pacote local 3x. Áudio das etapas seguintes do Championship 2 continua P0 aberto.
 
-Documentation publication: **2026-10-21**. This directory contains original engineering reports, sanitized measurements and hashes from the maintainer's native Windows build. It contains no game-derived implementation, executable, ISO, BIOS, ELF, save state, memory card, screenshot, texture or model. Local source commit IDs identify the private working tree; they are not commits or downloadable artifacts in this documentation repository.
+Documentation publication: **2026-10-22**. This directory contains original engineering reports, sanitized measurements and hashes from the maintainer's native Windows build. It contains no game-derived implementation, executable, ISO, BIOS, ELF, save state, memory card, screenshot, texture or model. Local source commit IDs identify the private working tree; they are not commits or downloadable artifacts in this documentation repository.
 
 ## Read first
 

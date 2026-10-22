@@ -44,7 +44,7 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-22**. Sound/HUD and High 3× [v30](docs/audit/vanilla-v30.md) preserved. [V35](docs/audit/vanilla-v35.md) completes all 18 bounded timing runs, passes the original VU optimization gates (Fuji **+8.011%**), 47 tests and three identical image/generated-audio pairs. Private GUI package verified; this does not close full-game acceptance or the residual stalls observed in team driving. **Next: attribute audio-driven cadence and synchronous pipeline costs, then result/save/reopen and remaining coverage/second-PC checks.** V33/V34 remain rejected; public distribution remains open.
+Updated **2026-10-22**. Sound/HUD and High 3× [v30](docs/audit/vanilla-v30.md) preserved. [V36](docs/audit/vanilla-v36.md) adds application branding and fixes native Unicode ELF/ISO/save paths; 48 runtime tests, 52 synthetic import tests and three native boots pass. A private media-free engineering kit is prepared; the importer still requires Python during setup. [V35](docs/audit/vanilla-v35.md) retains its completed bounded AVX2 results. **Next: close natural result/save/reopen and GUI import/dependency packaging, attribute residual stalls, then finish coverage and second-PC validation.** No new FPS gain or public release is claimed; distribution review remains open.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|

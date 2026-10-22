@@ -1,0 +1,76 @@
+{
+  "version": 36,
+  "date": "2026-10-22",
+  "status": "private logo and UTF-8 path build verified; alpha acceptance remains open",
+  "private_source_commit": "2da2815ea4eb0304f7073b5d211fb3b070347424",
+  "candidate_exe_sha256": "fa89a67752a711420e87ef3d68ab281f461261b0a1517b2cc4dc5ad437d0c32f",
+  "native_GS_sha256": "7d2992096708714225a399f092153ecb1a0f7234ca503e97143d7aec2ada0dc2",
+  "source_files_changed": 17,
+  "GUI_subsystem": 2,
+  "supplied_original_PNG_preserved": true,
+  "icon_sizes": [
+    16,
+    24,
+    32,
+    48,
+    64,
+    128,
+    256
+  ],
+  "embedded_icon_payloads_verified": true,
+  "runtime_tests_passed": 48,
+  "import_tests_passed": 52,
+  "native_boots": [
+    {
+      "name": "unicode-auto",
+      "exit": 0,
+      "frames": 600,
+      "wall_s": 1.8589999999967404,
+      "system_only_PATH": true,
+      "unrelated_working_directory": true,
+      "exe_sha256": "fa89a67752a711420e87ef3d68ab281f461261b0a1517b2cc4dc5ad437d0c32f"
+    },
+    {
+      "name": "unicode-explicit",
+      "exit": 0,
+      "frames": 600,
+      "wall_s": 1.0310000000026776,
+      "system_only_PATH": true,
+      "unrelated_working_directory": true,
+      "exe_sha256": "fa89a67752a711420e87ef3d68ab281f461261b0a1517b2cc4dc5ad437d0c32f"
+    },
+    {
+      "name": "packaged-gui",
+      "exit": 0,
+      "frames": 1200,
+      "wall_s": 20.31199999999808,
+      "system_only_PATH": true,
+      "unrelated_working_directory": true,
+      "exe_sha256": "fa89a67752a711420e87ef3d68ab281f461261b0a1517b2cc4dc5ad437d0c32f"
+    }
+  ],
+  "original_dirty_paths_preserved": 24,
+  "generated_inputs_unchanged": 332,
+  "played_cards_hashes_and_timestamps_unchanged": 3,
+  "default_scale": 3,
+  "default_quality": "bilinear textures/HUD + FXAA",
+  "new_FPS_benchmark": false,
+  "game_result_save_reopen_accepted": false,
+  "second_physical_PC_accepted": false,
+  "public_playable_release": false,
+  "public_source_or_assets": false,
+  "clean_kit_prepared": true,
+  "clean_kit_contains_media_saves_cache": false,
+  "clean_kit_distribution_approved": false,
+  "known_limitations": [
+    "residual stalls; V35 timing evidence stays tied to V35 binary",
+    "natural race-result/save/reopen and remaining variants not certified",
+    "some diagnostic environment paths still use Windows ANSI APIs",
+    "import helper requires Python 3.10+ on Windows; no GUI importer yet",
+    "second machine and complete redistribution/provenance review remain open"
+  ],
+  "adverse_attempts_preserved": [
+    "Unicode diagnostic cache environment override failed; ordinary adjacent-cache Unicode launch passes",
+    "52 import tests failed in restricted sandbox TEMP; same unchanged suite passed on normal Windows"
+  ]
+}

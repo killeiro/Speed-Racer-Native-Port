@@ -8,9 +8,9 @@
 
 ## Current status
 
-**Accepted sound/HUD baseline: [v30](docs/audit/vanilla-v30.md)**, High 3× + bilinear HUD/textures + FXAA. **Latest private build: [v35](docs/audit/vanilla-v35.md)** completes all 18 bounded timing runs and passes its original gates: Fuji mean **+8.011%**, 47 tests and three identical image/generated-audio pairs. Private GUI package verified; original cards and the latest team driving progress preserved. The 29min08s human session still shows residual stalls; full-game acceptance and public distribution remain open. V33/V34 remain rejected.
+**Accepted sound/HUD baseline: [v30](docs/audit/vanilla-v30.md)**, High 3× + bilinear HUD/textures + FXAA. **Latest private build: [v36](docs/audit/vanilla-v36.md)** adds the supplied application logo and fixes UTF-8 media/save paths on Windows: 48 runtime tests, 52 synthetic import tests and three fresh native boots pass. A private media-free preparation kit exists; the GUI importer, natural result/save/reopen, remaining coverage, second PC and distribution review stay open. [V35](docs/audit/vanilla-v35.md) retains its completed bounded VU performance evidence (Fuji mean +8.011%); residual stalls remain.
 
-**Native Windows GUI:** direct Win32/Vulkan, adaptive fullscreen, controller support and saved 1×–4× internal-resolution selection. The current private v35 build starts at High 3× with bilinear HUD/textures and FXAA, preserving accepted v30 audio/visual settings. No PCSX2 executable or browser is launched. This repository contains documentation; a public playable download is not available.
+**Native Windows GUI:** direct Win32/Vulkan, adaptive fullscreen, controller support and saved 1×–4× internal-resolution selection. The current private v36 build starts at High 3× with bilinear HUD/textures and FXAA, preserving accepted v30 audio/visual settings. No PCSX2 executable or browser is launched. This repository contains documentation; a public playable download is not available.
 
 | Area | Status |
 |---|---|
