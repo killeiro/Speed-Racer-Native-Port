@@ -44,13 +44,13 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-22**. Latest private candidate: [v30](docs/audit/vanilla-v30.md), High quality by default:3× Vulkan, bilinear texture filtering including HUD sprites and FXAA;46 runtime/4 library tests pass. The team confirms that v29 resolved the sound report. HUD filtering is visibly improved; original detail/reference parity remains open. **Current P0: attribute graphical posting waits and residual Fuji slowdown, then verify natural results/save/reopen.** The normal threaded quality-preset pair is a short Thunderhead diagnostic, not a whole-game FPS claim. The42min37s v28 human session and earlier versions remain preserved; no stable60 or public release promotion.
+Updated **2026-10-22**. Playable: [v30](docs/audit/vanilla-v30.md), High3× Vulkan + bilinear HUD/textures + FXAA, sound/HUD accepted by the team. [V31](docs/audit/vanilla-v31.md) adds guarded race/pause identity and attributes one medium-reverse Fuji/control window: VU21.1ms CPU/frame versus10.4ms in Thunderhead, native GS frequently underfed.46/5 tests pass. **P0: audit the two hot native VU kernels and validate an isolated improvement with cadence controls.** No FPS patch/new gameplay package promoted. Other variants, results/save/reopen and whole-game/release acceptance remain open.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|
 | Reproducible native build | v23 coverage repaired/guarded; v24 clean build; v25 retains 332 generated inputs and 310 extra VU symbols | Keep manifests and complete native coverage in every candidate |
 | Modern display controls | Fullscreen adaptation and 1x–4x selection implemented; 39 tests and four real-resolution captures pass | Accept native selector/shortcut interaction and monitor changes; arbitrary ultrawide camera remains separate |
-| Efficient graphics at higher resolution — P0 | [V27 runtime integration](docs/audit/vanilla-v27.md): 44 tests, fresh library, cold shader compilation, exact FIFO, full HUD and two real 3x scenes | Measure the normal threaded pipeline and attribute EE/VU/GIF/GPU cost; compare reference image/events and measured presets. Old runtime checkpoints remain explicitly unsupported |
+| Efficient high-resolution pipeline — P0 | V30 HUD/High accepted; V31 normal3× windows attribute the observed Fuji limit to VU-side CPU, with no native ring-space wait | Audit hot VU kernels, full references and Fuji/Skorost/Thunderhead controls; other variants, GPU timestamp timing and original parity remain explicit |
 | Vanilla gameplay acceptance | Six v17 human controller sessions and 36 short Class1 routes retained | Verify full races/results/save/reopen, classes2–4/Mirror/30 minutes, original timing/graphics, physical audio/input and another Windows/GPU |
 
 [Architecture decision and references](docs/audit/vanilla-v24.md) · [Resolution cost and limits](docs/audit/vanilla-v25.md) · [Ten concrete tasks](docs/audit/next-10-tasks.md).

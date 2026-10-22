@@ -8,16 +8,16 @@
 
 ## Current status
 
-**Latest private candidate: [v30](docs/audit/vanilla-v30.md)** defaults to High quality:3×, bilinear texture filtering including HUD sprites and FXAA. The team confirms the v29 sound fix.46 runtime/4 library tests pass; the new preset was checked in a native threaded window pair. Residual Fuji slowdowns remain open. No public download.
+**Playable private candidate: [v30](docs/audit/vanilla-v30.md)**, High3× + bilinear HUD/textures + FXAA. The team accepts sound and HUD. **Latest engineering stage: [v31](docs/audit/vanilla-v31.md)** adds guarded race/pause identity and native tracing;46 runtime/5 library tests pass. Measured medium-reverse Fuji is VU-side CPU limited. No FPS patch/new package promoted; no public download.
 
 **Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. Current hardware candidate: v30 with direct Win32 Vulkan, confirmed audio corrections and High-quality HUD filtering, separate GUI EXE, initial3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
 
 | Area | Status |
 |---|---|
 | Display and resolution | Implemented locally; saved native selector, DPI/resize handling and 39 passing tests; physical dialog/fullscreen-shortcut acceptance pending |
-| Image quality | V30 defaults to3×, bilinear HUD/textures and FXAA; original texture detail, bloom alignment and reference parity remain open |
+| Image quality | The team accepts V30 HUD/High quality:3×, bilinear HUD/textures and FXAA; original texture detail, bloom alignment and reference parity remain open |
 | Hardware GS integration (v27) | Real game GIF/register/FIFO lifecycle connected; 44 runtime tests, fresh library build and Fuji/Thunderhead 3x scene smoke checks pass; normal threaded performance remains open |
-| Fuji performance | Residual slowdown reported; v28 long-session evidence identifies graphical posting waits without track identity. V30 quality-preset checks do not close the Fuji performance gate |
+| Fuji performance | V31 identifies medium/reverse and pause. Two3× threaded windows show21.1ms VU CPU/frame in Fuji versus10.4ms in Thunderhead, with an underfed native GS queue. Optimize hot VU kernels next; other variants remain open |
 | Build integrity | Clean v24 build, 332 unchanged generated inputs and 310 extra VU programs; always-run manifest guard preserved |
 | Runtime correctness | EE 128-bit VU-code writes now invalidate the real dispatch cache; regression reproduced before fixing |
 | Full-game/release acceptance | Full races/result saves/reopen, classes/Mirror/long sessions, physical latency, second PC/GPU and redistribution remain open |
@@ -72,8 +72,8 @@ The [portable data preparer](docs/audit/data-preparation-v1.md) now validates th
 
 ## Project priorities
 
-1. Validate a hardware GS backend prototype against one Fuji scene and one control scene, then measure 1x/2x.
-2. Revisit VU/microVU only where stage timings justify it; keep code coverage and pipeline/interrupt semantics intact.
+1. Audit the two hot VU kernels identified in V31, preserving the accepted3× High visual/audio baseline.
+2. Require full native equivalence and Fuji/Skorost/Thunderhead cadence controls for an isolated change; do not repeat rejected cache filters as new work.
 3. Confirm original timing/graphics, full races/results/save/reopen, classes/Mirror and long sessions.
 4. Finish physical audio/input, second-PC, provenance and distribution checks before a public alpha.
 

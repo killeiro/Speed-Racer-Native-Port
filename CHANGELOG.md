@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-22 — V31 race identity and native-pipeline attribution
+
+- Record team acceptance of v30 HUD/High quality and v29 sound; preserve the playable package.
+- Add bounded default-off native GS tracing and guarded EE-thread race/pause fields;46 runtime/5 library tests pass.
+- Two original-disc3× threaded windows show21.1ms VU CPU/frame in Fuji medium-reverse versus10.4ms in Thunderhead, with an underfed native GS queue.
+- Retain observer/exit-code limits and failed checker attempts. Withdraw an unmeasured repeat of rejected v19 filtering. No FPS patch/new package promoted; audit the hot VU kernels next.
+
 ## 2026-10-22 — V30 High-quality HUD filtering by default
 
 - The team confirms the v29 sound fix; audio implementation is unchanged.

@@ -1,6 +1,6 @@
 # Vanilla v30 — HUD suavizado e alta qualidade padrão
 
-Atualizado em 22/10/2026. A equipe confirmou que o som da v29 foi resolvido, mas o HUD
+Atualizado em 22/10/2026. **Aceite posterior da equipe: HUD e Alta qualidade resolvidos; a v30 permanece jogável. A [v31](vanilla-v31.md) segue na atribuição de Fuji.** A equipe confirmou que o som da v29 foi resolvido, mas o HUD
 continuava serrilhado. A v30 adiciona a filtragem das texturas à suavização final e
 inicia em **Alta qualidade: 3× + bilinear incluindo sprites + FXAA**. O código de áudio
 permanece exatamente o da v29. Executável e cartão anteriores foram preservados.
