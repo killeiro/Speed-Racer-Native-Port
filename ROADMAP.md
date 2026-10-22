@@ -44,13 +44,13 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-22**. Playable: [v30](docs/audit/vanilla-v30.md), High3× Vulkan + bilinear HUD/textures + FXAA, sound/HUD accepted by the team. [V31](docs/audit/vanilla-v31.md) adds guarded race/pause identity and attributes one medium-reverse Fuji/control window: VU21.1ms CPU/frame versus10.4ms in Thunderhead, native GS frequently underfed.46/5 tests pass. **P0: audit the two hot native VU kernels and validate an isolated improvement with cadence controls.** No FPS patch/new gameplay package promoted. Other variants, results/save/reopen and whole-game/release acceptance remain open.
+Updated **2026-10-22**. Playable: [v30](docs/audit/vanilla-v30.md), High 3× Vulkan + bilinear HUD/textures + FXAA, sound/HUD accepted. [V31](docs/audit/vanilla-v31.md) attributes a medium-reverse Fuji window to VU-side CPU. [V32](docs/audit/vanilla-v32.md) audits/tests a distinct SIMD flags change; 47 tests and 71,225 complete native checks pass, but the performance gate fails (Fuji mean +1.358%). Exact source baseline restored, 46 tests pass. **P0: inspect compiled hot-loop temporaries and flag-history work before another isolated optimization.** No new gameplay package. Full-race/results/save/reopen and release acceptance remain open.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|
 | Reproducible native build | v23 coverage repaired/guarded; v24 clean build; v25 retains 332 generated inputs and 310 extra VU symbols | Keep manifests and complete native coverage in every candidate |
 | Modern display controls | Fullscreen adaptation and 1x–4x selection implemented; 39 tests and four real-resolution captures pass | Accept native selector/shortcut interaction and monitor changes; arbitrary ultrawide camera remains separate |
-| Efficient high-resolution pipeline — P0 | V30 HUD/High accepted; V31 normal3× windows attribute the observed Fuji limit to VU-side CPU, with no native ring-space wait | Audit hot VU kernels, full references and Fuji/Skorost/Thunderhead controls; other variants, GPU timestamp timing and original parity remain explicit |
+| Efficient high-resolution pipeline — P0 | V30 HUD/High accepted; V31 normal3× windows attribute the observed Fuji limit to VU-side CPU, with no native ring-space wait | V32 full references pass but SIMD packing fails performance; inspect compiled temporaries/flag history next. Other variants, GPU timestamp timing and original parity remain open |
 | Vanilla gameplay acceptance | Six v17 human controller sessions and 36 short Class1 routes retained | Verify full races/results/save/reopen, classes2–4/Mirror/30 minutes, original timing/graphics, physical audio/input and another Windows/GPU |
 
 [Architecture decision and references](docs/audit/vanilla-v24.md) · [Resolution cost and limits](docs/audit/vanilla-v25.md) · [Ten concrete tasks](docs/audit/next-10-tasks.md).

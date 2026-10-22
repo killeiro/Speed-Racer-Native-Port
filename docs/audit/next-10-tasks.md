@@ -1,11 +1,11 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de22/10/2026: a equipe aceitou HUD/Alta qualidade v30 e som v29. A [v31](vanilla-v31.md) entrega identidade/pausa e atribuição de uma janela Fuji médio reverso e uma de Thunderhead no pipeline3×. O limite observado é CPU/VU;46/5 testes passam. **P0: auditar os dois kernels VU quentes e buscar uma alteração isolada que preserve caudas.** A v30 continua jogável; nenhum patch de FPS novo foi promovido.
+Atualização de22/10/2026: som v29 e HUD/Alta qualidade v30 aceitos. A [v31](vanilla-v31.md) atribui a janela Fuji à VU. A [v32](vanilla-v32.md) testa flags SSE2, com 47 testes e 71.225 checks nativos completos, mas falha no gate de desempenho (média Fuji +1.358%). Código de referência restaurado, 46 testes passam. **P0: inspecionar temporários/código de máquina e histórico de flags dos kernels quentes antes de outra candidata.** A v30 continua jogável; sem novo patch promovido.
 
 | # | Prioridade | Entrega e critério de conclusão |
 |---|---|---|
-| 1 | P0 | Auditar os dois kernels VU quentes e transições/Q; confrontar v19/v22/v23 rejeitados antes de propor outra otimização, preservando cobertura e preset Alto |
-| 2 | P0 | Implementar uma alteração isolada com equivalência de registradores/memória/pacotes GIF; definir antes controles Fuji/Skorost/Thunderhead e limites de regressão, mantendo dados adversos |
+| 1 | P0 | Inspecionar código de máquina, temporários e histórico de flags dos dois kernels quentes; v32 SSE2 rejeitada, sem repetir v19/v22/v23 |
+| 2 | P0 | Somente após causa concreta, propor outra mudança isolada; definir controles/limites antes, preservar equivalência VU/memória/GIF e todos os dados adversos |
 | 3 | P0 | Comparar HUD e eventos com referência original/PCSX2, incluindo textura/AA, bloom, feedback, mip e deinterlace; preservar a correção de som já confirmada pela equipe |
 | 4 | P0 | Comparar presets 1x/2x/3x no pipeline normal; escolher padrão por estabilidade medida, sem inferir FPS da janela a partir do headless |
 | 5 | P1 | Aceitar seletor, fullscreen/monitor/DPI e interação física de controles USB/Bluetooth no novo backend |

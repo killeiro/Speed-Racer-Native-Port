@@ -1,5 +1,7 @@
 # Vanilla engineering evidence
 
+- [V32: flags SSE2, candidata rejeitada](vanilla-v32.md) e [métricas](vanilla-v32-metrics.json):47 testes e 71.225 checks completos passam; gate de desempenho falha, código restaurado e46 testes passam. V30 preservada.
+
 - [V31: identidade/pausa e atribuição de Fuji](vanilla-v31.md) e [métricas](vanilla-v31-metrics.json):46/5 testes; duas janelas3× apontam limite CPU/VU. HUD v30 aceito, sem patch de FPS/pacote novo promovido.
 
 - [Vanilla v30: HUD e alta qualidade padrão](vanilla-v30.md) e [métricas](vanilla-v30-metrics.json): bilinear incluindo sprites,3× e FXAA,46/4 testes e par de janelas nativas; som v29 confirmado pela equipe, desempenho Fuji ainda aberto.

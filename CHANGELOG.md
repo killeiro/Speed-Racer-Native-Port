@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-22 — V32 isolated VU SIMD flags evaluation
+
+- Test distinct integer-SSE2 packing for three/four-lane MAC/status flags; preserve current arithmetic/Q/CLIP and 310 native programs.
+- 47 tests, 4,314,112 independent bit/status cases and 71,225 full native register/memory/GIF checks pass; 2,486,891 Q references pass.
+- Performance gate fails (Fuji mean +1.358%); retain all measurements and failed capture-wrapper evidence. Candidate isolated; exact source baseline rebuilt, 46 tests pass.
+- Keep v30 High 3×, accepted sound/HUD and delivered cards untouched. No FPS patch, new gameplay package or public binary release.
+
 ## 2026-10-22 — V31 race identity and native-pipeline attribution
 
 - Record team acceptance of v30 HUD/High quality and v29 sound; preserve the playable package.
