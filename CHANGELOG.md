@@ -2,6 +2,13 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-22 — V30 High-quality HUD filtering by default
+
+- The team confirms the v29 sound fix; audio implementation is unchanged.
+- Enable the renderer's bilinear texture sampler including sprites in the High preset, alongside FXAA at3×. Preserve optional lightweight/original filtering and saved1×–4× selection.
+- Compare original-disc menu/HUD captures and add a real-DLL nearest-versus-bilinear sprite regression. Pass46 runtime/4 library tests and native threaded quality-preset checks.
+- Preserve saves and previous versions; residual Fuji performance, original detail/parity and wider acceptance remain open. Documentation-only publication continues.
+
 ## 2026-10-21 — V29 pause audio and optional FXAA
 
 - Analyze a42min37s human v28 session; retain measured slow blocks and distinguish stationary-clock intervals from active progression.

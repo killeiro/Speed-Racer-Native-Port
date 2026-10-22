@@ -1,12 +1,12 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de21/10/2026: a [v29](vanilla-v29.md) corrige áudio de saída na pausa/envelopes e oferece FXAA opcional.46 testes do runtime e3 da biblioteca passam. A sessão real v28 durou42min37s e mostrou espera gráfica em um bloco ativo lento. **O próximo trabalho usa essa evidência para atribuir o gargalo, sem repetir matrizes amplas ou exigir outra rodada genérica de pilotagem.** Championship2/Class1 é Thunderhead→Onuris; a música em Onuris foi verificada por avanço diagnóstico, sem conclusão natural.
+Atualização de22/10/2026: a [v30](vanilla-v30.md) melhora o HUD com filtragem bilinear e torna Alta qualidade3×+FXAA o padrão.46 testes do runtime e4 da biblioteca passam. A equipe confirmou o som da v29 resolvido. **O próximo P0 é atribuir o gargalo gráfico de Fuji usando a evidência existente, sem repetir rodadas genéricas de pilotagem.** A comparação curta de presets em Thunderhead não encerra a estabilidade global.
 
 | # | Prioridade | Entrega e critério de conclusão |
 |---|---|---|
 | 1 | P0 | Identificar variante e estado de pausa nos registros; atribuir a espera de postagem observada entre preparação GS, consumidor e GPU em uma janela Fuji e uma de controle, sem captura pesada |
 | 2 | P0 | Corrigir a etapa dominante medida e provar ordem entre paths, EOP, CSR/reset/FIFO se houver agrupamento de GIFs; manter todos os resultados adversos |
-| 3 | P0 | Validar chiado da pausa após o bloqueador DC, áudio após resultado natural Thunderhead→Onuris e música/vozes/efeitos; distinguir fila SDL de underruns físicos |
+| 3 | P0 | Comparar HUD e eventos com referência original/PCSX2, incluindo textura/AA, bloom, feedback, mip e deinterlace; preservar a correção de som já confirmada pela equipe |
 | 4 | P0 | Comparar presets 1x/2x/3x no pipeline normal; escolher padrão por estabilidade medida, sem inferir FPS da janela a partir do headless |
 | 5 | P1 | Aceitar seletor, fullscreen/monitor/DPI e interação física de controles USB/Bluetooth no novo backend |
 | 6 | P0 | Aceitar corridas/resultados por pista e classes2–4/Mirror; sessão humana de42min37s já concluída sem crash, sem certificar todas as rotas ou vazamentos |

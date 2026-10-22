@@ -8,16 +8,16 @@
 
 ## Current status
 
-**Latest private candidate: [v29](docs/audit/vanilla-v29.md)** adds an output DC blocker for paused voices, correct exponential releases and optional saved FXAA. A42min37s human v28 session completed without a crash; recorded slow segments and original HUD texture limits remain open.46 runtime tests and3 library tests pass. No public download.
+**Latest private candidate: [v30](docs/audit/vanilla-v30.md)** defaults to High quality:3×, bilinear texture filtering including HUD sprites and FXAA. The team confirms the v29 sound fix.46 runtime/4 library tests pass; the new preset was checked in a native threaded window pair. Residual Fuji slowdowns remain open. No public download.
 
-**Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. Current hardware candidate: v29 with direct Win32 Vulkan, audio corrections and optional FXAA, separate GUI EXE, initial3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
+**Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. Current hardware candidate: v30 with direct Win32 Vulkan, confirmed audio corrections and High-quality HUD filtering, separate GUI EXE, initial3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
 
 | Area | Status |
 |---|---|
 | Display and resolution | Implemented locally; saved native selector, DPI/resize handling and 39 passing tests; physical dialog/fullscreen-shortcut acceptance pending |
-| Image quality | Higher-resolution geometry verified in native captures; original textures/HUD, bloom alignment and PS2/PCSX2 parity remain open |
+| Image quality | V30 defaults to3×, bilinear HUD/textures and FXAA; original texture detail, bloom alignment and reference parity remain open |
 | Hardware GS integration (v27) | Real game GIF/register/FIFO lifecycle connected; 44 runtime tests, fresh library build and Fuji/Thunderhead 3x scene smoke checks pass; normal threaded performance remains open |
-| Fuji performance | Unresolved: short v25 fullscreen samples reach 59.28/49.37/28.76/19.29 simulated FPS at 1x/2x/3x/4x; higher resolution costs throughput |
+| Fuji performance | Residual slowdown reported; v28 long-session evidence identifies graphical posting waits without track identity. V30 quality-preset checks do not close the Fuji performance gate |
 | Build integrity | Clean v24 build, 332 unchanged generated inputs and 310 extra VU programs; always-run manifest guard preserved |
 | Runtime correctness | EE 128-bit VU-code writes now invalidate the real dispatch cache; regression reproduced before fixing |
 | Full-game/release acceptance | Full races/result saves/reopen, classes/Mirror/long sessions, physical latency, second PC/GPU and redistribution remain open |

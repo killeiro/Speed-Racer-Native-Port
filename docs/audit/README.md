@@ -1,5 +1,7 @@
 # Vanilla engineering evidence
 
+- [Vanilla v30: HUD e alta qualidade padrão](vanilla-v30.md) e [métricas](vanilla-v30-metrics.json): bilinear incluindo sprites,3× e FXAA,46/4 testes e par de janelas nativas; som v29 confirmado pela equipe, desempenho Fuji ainda aberto.
+
 - [Vanilla v29: pausa, HUD e sessão longa](vanilla-v29.md) e [métricas](vanilla-v29-metrics.json): bloqueador DC, envelope exponencial, FXAA opcional,46/3 testes; queda em Fuji e aceitação global continuam abertas.
 
 - [Vanilla v28: áudio SPU2 e apresentação Win32 direta](vanilla-v28.md) e [métricas](vanilla-v28-metrics.json): 45 testes, regressões reproduzidas e pacote local 3x. Áudio das etapas seguintes do Championship 2 continua P0 aberto.

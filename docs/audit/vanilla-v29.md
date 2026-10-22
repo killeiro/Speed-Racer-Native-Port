@@ -95,3 +95,7 @@ GitHub recebe somente documentos/métricas anônimas; PR23 continua aberto, sem 
 - [PCSX2: filtro de saída para vozes pausadas](https://github.com/PCSX2/pcsx2/blob/master/pcsx2/SPU2/spu2.cpp).
 - [PCSX2: envelopes e passos exponenciais](https://github.com/PCSX2/pcsx2/blob/master/pcsx2/SPU2/ADSR.cpp).
 - [PCSX2: pós-processamento FXAA](https://github.com/PCSX2/pcsx2/blob/646df006a4688063e56c0826e7ea4b8bb0c112c4/pcsx2/GS/Renderers/Common/GSRenderer.cpp).
+
+## Confirmação da equipe —22/10/2026
+
+A equipe confirmou que o som foi resolvido na v29. O relato restante é serrilhado do HUD; a v30 melhora sua filtragem e passa a Alta qualidade padrão. Latência/underruns físicos e a queda residual em Fuji continuam critérios independentes de aceitação.

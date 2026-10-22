@@ -44,7 +44,7 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-21**. Latest private candidate: [v29](docs/audit/vanilla-v29.md),3x Vulkan, optional FXAA, output DC blocker and corrected exponential envelopes;46 runtime/3 library tests pass. A42min37s human session on v28 completed with seven scene instances, no scripted input, normal shutdown and preserved progress. **Current P0: investigate measured graphical posting waits and residual Fuji slowdown; verify pause audio on the final output and natural championship results/save/reopen.** Class1 Championship2 has two stages: Thunderhead→Onuris. Diagnostic stage advance confirms music in Onuris but does not establish natural championship completion. Earlier v17/v25/v27/v28 artifacts remain preserved; no stable60 or public release promotion.
+Updated **2026-10-22**. Latest private candidate: [v30](docs/audit/vanilla-v30.md), High quality by default:3× Vulkan, bilinear texture filtering including HUD sprites and FXAA;46 runtime/4 library tests pass. The team confirms that v29 resolved the sound report. HUD filtering is visibly improved; original detail/reference parity remains open. **Current P0: attribute graphical posting waits and residual Fuji slowdown, then verify natural results/save/reopen.** The normal threaded quality-preset pair is a short Thunderhead diagnostic, not a whole-game FPS claim. The42min37s v28 human session and earlier versions remain preserved; no stable60 or public release promotion.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|
