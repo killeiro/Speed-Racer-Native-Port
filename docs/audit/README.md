@@ -1,5 +1,7 @@
 # Vanilla engineering evidence
 
+- [Vanilla v29: pausa, HUD e sessão longa](vanilla-v29.md) e [métricas](vanilla-v29-metrics.json): bloqueador DC, envelope exponencial, FXAA opcional,46/3 testes; queda em Fuji e aceitação global continuam abertas.
+
 - [Vanilla v28: áudio SPU2 e apresentação Win32 direta](vanilla-v28.md) e [métricas](vanilla-v28-metrics.json): 45 testes, regressões reproduzidas e pacote local 3x. Áudio das etapas seguintes do Championship 2 continua P0 aberto.
 
 Documentation publication: **2026-10-21**. This directory contains original engineering reports, sanitized measurements and hashes from the maintainer's native Windows build. It contains no game-derived implementation, executable, ISO, BIOS, ELF, save state, memory card, screenshot, texture or model. Local source commit IDs identify the private working tree; they are not commits or downloadable artifacts in this documentation repository.

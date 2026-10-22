@@ -44,7 +44,7 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-21**. Latest experiment: [v28 audio and direct presentation](docs/audit/vanilla-v28.md), with 45 passing tests. **P0: reproduce and accept Championship 2 race-to-race audio; the reported later silence remains open.** Updated **2026-10-21**. Current private playable build: [v25](docs/audit/vanilla-v25.md). [V27](docs/audit/vanilla-v27.md) now integrates the hardware GS and supplies a separate private experimental GUI package, initially 3x. It has not replaced the v25 baseline or passed full-race/FPS promotion. Preserved throughput reference: v17 at 1x. Fullscreen now fills the monitor, and internal resolution is selectable from 1x to 4x, with 2x as the GUI default. Higher scales lose substantial FPS in Fuji; this is a quality option, not a fluency milestone.
+Updated **2026-10-21**. Latest private candidate: [v29](docs/audit/vanilla-v29.md),3x Vulkan, optional FXAA, output DC blocker and corrected exponential envelopes;46 runtime/3 library tests pass. A42min37s human session on v28 completed with seven scene instances, no scripted input, normal shutdown and preserved progress. **Current P0: investigate measured graphical posting waits and residual Fuji slowdown; verify pause audio on the final output and natural championship results/save/reopen.** Class1 Championship2 has two stages: Thunderhead→Onuris. Diagnostic stage advance confirms music in Onuris but does not establish natural championship completion. Earlier v17/v25/v27/v28 artifacts remain preserved; no stable60 or public release promotion.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|

@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-21",
+  "version": "v29",
+  "source_commit": "a767b48329976e1ecbf3f292e8f8635ff9079776",
+  "source_hashes": {
+    "CMakeLists.txt": "bd28e6a6819147615138f304a6c71310918173578f6abf4453951a45933a0d54",
+    "host/audio_output.hpp": "a8d3bf78a035d9764071a76c11d2b6e9a1f34dac8658660fbf549e63f244c006",
+    "host/speedracer_graphics.hpp": "65d829c27ddb048afe4840b9c2745efeca0c6a098c921469e9924a11eeb9e5fe",
+    "host/speedracer_main.cpp": "a95f74dbdde351291cec35872d1b18d9a6e9b076eb787d99881276a8281e99b0",
+    "host/window.cpp": "adf0639cd5833ae72004f8a2d1089e46e7b100c93beb6999d9d2cbb8c9c29ac8",
+    "native/gs_hw/README.md": "38980d042017a1f96a15764604d535a271026ec255ea0da628e14f2b7a4fb222",
+    "native/gs_hw/bridge.cpp": "a1eee7f4f66e2354466bc947fe5b5ad74347862f338ae1f4b7ef5353d54de3c2",
+    "runtime/src/iop/spu2.cpp": "3b7ec38493ae9fb0eaf2343938800b54bf23c2e0a34b86d3fc37205df1763734",
+    "tests/audio_output.cpp": "5eea7570b49604d88c50fde1276eeb46a3727120b7d18c9de60a9feb901d1ad9",
+    "tests/gs_hw_bridge.c": "26aa43497c1a8f328ec1d09d107ae80df444e002230b02a6c59992a59ad966df",
+    "tests/render_scale.cpp": "6c38ab036728afa2e90f5246befe87875c041e5547c25c8c6cb07061668dfad1",
+    "tests/spu2_audio.cpp": "c1f6d9d4622f6cd723746709d162b1555f0e4a439354fe6e8128e3036d24b1c7"
+  },
+  "package": {
+    "exe_SHA256": "f2d38aa9ac71f3fab76342c88e21edb69f92f403b0164a8f028124e90b67291f",
+    "dll_SHA256": "b4a574304b159a6ca038cae54be0f394ca957c651bc7366e3f2bc71e344bdd9b",
+    "source_card_preserved": true,
+    "old_v28_exe_preserved": true,
+    "old_v28_card_preserved": true,
+    "GUI_subsystem": true,
+    "default_scale": 3,
+    "default_FXAA": true,
+    "modified_ISO": false
+  },
+  "runtime_tests": 46,
+  "native_GS_tests": 3,
+  "mixer_assertions_UBSan_trap": 15,
+  "original_dirty_files_preserved": 24,
+  "generated_inputs_preserved": 332,
+  "human_v28": {
+    "wall_seconds": 2557.266,
+    "emulated_frames": 150052,
+    "exit_code": 0,
+    "human_control": true,
+    "scripted_inputs": false,
+    "original_card_preserved": true,
+    "scene_instances": 7,
+    "track_names_not_recorded": true,
+    "overall_callback_timing_includes_menus_and_pause": {
+      "samples": 150051,
+      "mean_ms": 17.030769918227804,
+      "p50_ms": 16.641,
+      "p95_ms": 29.8951,
+      "p99_ms": 36.2086,
+      "max_ms": 853.6063,
+      "over_33ms": 3148,
+      "over_50ms": 68
+    },
+    "slowest_progressing_clock_block": {
+      "first_frame": 107401,
+      "mean_callback_ms": 21.245568333333335,
+      "post_wait_ms": 10.720229333333334,
+      "pace_wait_ms": 0.0009186666666666665,
+      "software_queue_mean_ms": 6.587816666666667
+    },
+    "limits": "Host callbacks and scene clock, not scanout/individual result timer or a track-identified benchmark."
+  },
+  "pause": {
+    "raw_constant_PCM_last5s": [
+      1074,
+      1191
+    ],
+    "filtered_constant_PCM_last5s": [
+      0,
+      0
+    ],
+    "method": "Original-disc scripted pause; raw PCM replay through exact production output filter. Not acoustic capture.",
+    "guest_voice_pitch_zero_confirmed": true,
+    "guest_SPU_RAM_and_clock_unchanged_by_filter": true
+  },
+  "championship2": {
+    "speed_class": 1,
+    "stages": [
+      "Thunderhead short",
+      "Onuris medium"
+    ],
+    "stages_count": 2,
+    "corrected_v28_first_track_label": "Thunderhead, not Grand Prix",
+    "diagnostic_stage_advance_not_natural_race_completion": true,
+    "music_only_Onuris_PCM_nonzero": true,
+    "category_gains": {
+      "effects": 0,
+      "speech": 0,
+      "music": 0.3
+    },
+    "tail_software_queue": {
+      "samples": 1200,
+      "mean_ms": 9.597800000000001,
+      "min_ms": 0.0,
+      "zeros": 217
+    }
+  },
+  "visual": {
+    "whole": {
+      "changed_pixels": 461105,
+      "pixels": 2759040,
+      "mean_absolute_RGB_difference": 0.4623634790845125
+    },
+    "lap": {
+      "changed_pixels": 17312,
+      "pixels": 88500,
+      "mean_absolute_RGB_difference": 0.5674500941619586
+    },
+    "health_boost": {
+      "changed_pixels": 38797,
+      "pixels": 205800,
+      "mean_absolute_RGB_difference": 0.38037900874635566
+    },
+    "dimensions": [
+      1920,
+      1437
+    ]
+  },
+  "package_smoke": {
+    "exit_code": 0,
+    "wall_seconds": 40.328999999997905,
+    "FXAA_enabled": true,
+    "DC_blocker_enabled": true,
+    "scale3_Win32": true,
+    "direct": true,
+    "audio": true,
+    "joined": true,
+    "graphics_failed": false,
+    "enqueue_failed": false,
+    "recognized_controller": false,
+    "minimal_PATH": true,
+    "no_explicit_ELF_disc_DLL_renderer_scale": true
+  },
+  "remaining": [
+    "Fuji variant attribution and graphical backpressure profiling",
+    "Physical audio/input latency and residual stutter",
+    "Original HUD texture/AA parity",
+    "Natural results and saved result reopen verification",
+    "All classes/Mirror and second Windows/GPU"
+  ]
+}

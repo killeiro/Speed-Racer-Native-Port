@@ -30,7 +30,7 @@ o teste de retomada compara o PCM gerado. Checkpoints antigos de GS continuam in
   corrigidas. Três adicionais cobrem substituição de buffer, key-off e retomada idêntica.
 - **11 verificações** passam também com UBSan em modo trap. O primeiro link com a
   biblioteca UBSan não estava disponível; a variante trap usa o compilador existente.
-- Duas partidas headless novas até 18.000 VBlanks, entrando em Championship 2/Grand Prix:
+- Duas partidas headless novas até 18.000 VBlanks, entrando em Championship 2/Thunderhead:
   30/30 imagens idênticas e 14.341.056 quadros PCM em cada WAV estéreo16/48kHz.
   O áudio mudou em 3.178 amostras intercaladas. Em 132,772 segundos do trecho ativo,
   ambos os WAVs já tinham sinal contínuo. Isso limita a atribuição do relato aos defeitos do mixer.
@@ -73,3 +73,7 @@ DLL, imagem, WAV, ISO/ELF, save ou logs brutos. PR23 permanece aberto, sem merge
 - [PCSX2 Mixer.cpp no commit auditado](https://github.com/PCSX2/pcsx2/blob/646df006a4688063e56c0826e7ea4b8bb0c112c4/pcsx2/SPU2/Mixer.cpp): consumo do fim/loop e saturação do barramento de vozes.
 - [SDL2: áudio enfileirado](https://github.com/libsdl-org/SDL/blob/release-2.32.10/src/audio/SDL_audio.c): fila de software e preenchimento de silêncio.
 - [PS2SDK: interface de som](https://github.com/ps2dev/ps2sdk/blob/master/common/include/libsd-common.h).
+
+## Errata de identificação —21/10/2026, v29
+
+A primeira pista é Thunderhead, não Grand Prix. A equipe confirmou Class1: Championship2/Tallabe Trophy tem duas etapas, Thunderhead short→Onuris medium. A rota automatizada estava correta; o nome anterior e a hipótese de terceira etapa estavam incorretos. O relato inicial de etapas2/3 acima é histórico, não a estrutura confirmada. Consulte a v29 para as novas evidências e limites.

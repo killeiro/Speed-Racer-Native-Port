@@ -2,6 +2,14 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-21 — V29 pause audio and optional FXAA
+
+- Analyze a42min37s human v28 session; retain measured slow blocks and distinguish stationary-clock intervals from active progression.
+- Reproduce paused voices with DC output and add an output blocker; correct negative exponential-step rounding so release reaches silence.
+- Add persistent optional FXAA and resolution/smoothing selectors; catch and fix cross-runtime environment propagation in the package smoke.
+- Pass46 runtime tests,3 library tests and15 UBSan mixer assertions; preserve played progress in a separate private GUI package. Residual Fuji performance and physical audio remain open.
+- Correct the Class1 Championship2 route: Thunderhead→Onuris, two stages. Controlled stage advance is not natural race/result acceptance.
+
 ## 2026-10-21 — V28 SPU2 and direct Win32 presentation
 
 - Correct the SDL HWND contract: the game now presents directly through Vulkan instead of silently reading back every image into SDL. The actual host-contract regression fails before the fix and passes after.

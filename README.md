@@ -8,7 +8,9 @@
 
 ## Current status
 
-**Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. New private experiment: v28 hardware Vulkan GS with direct Win32 presentation and SPU2 audio corrections, separate GUI EXE, initial 3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
+**Latest private candidate: [v29](docs/audit/vanilla-v29.md)** adds an output DC blocker for paused voices, correct exponential releases and optional saved FXAA. A42min37s human v28 session completed without a crash; recorded slow segments and original HUD texture limits remain open.46 runtime tests and3 library tests pass. No public download.
+
+**Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. Current hardware candidate: v29 with direct Win32 Vulkan, audio corrections and optional FXAA, separate GUI EXE, initial3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
 
 | Area | Status |
 |---|---|
