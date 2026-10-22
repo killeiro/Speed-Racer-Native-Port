@@ -2,6 +2,19 @@
 
 All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
 
+## 2026-10-22 — V35 VU AVX2 / human-session analysis
+
+- VU-only opt-in AVX2 preserves FP contraction, generic EE/runtime and all332 generated inputs; 47 tests,1,048,576 dual-ISA cases and71,225 complete native checks pass.
+- Retain14 automatic paired runs; Fuji mean+8.011%. Remaining Thunderhead pairs interrupted at explicit team request for physical-controller driving. No promotion/new package.
+- Analyze29min08s human session,104,220 frames, four environments/five variants,59.62 simulated frames/s active average. Preserve12 callback stalls>100ms, residual Fuji/audio-queue pressure, all maxima and original cards.
+- Audit default audio-driven pacing and synchronous draw-path compilation; cache grows176→207 shaders. Preserve/reuse verified warmed cache and QA progress; investigate causes without declaring all stalls solved.
+
+## 2026-10-22 — V33/V34 VU compiler evaluation
+
+- Retain rejected deferred-STATUS candidate: 23,068,672 history comparisons and71,225 native checks pass; timing screen fails and exact source/332inputs are restored.
+- Evaluate compile-time flag-policy specialization, preserving all37 entries/310extras and original pipeline layout. Both policies and 4,800 full fixture differentials pass; 46 tests pass.
+- V34 failed the predeclared performance gate; exact source baseline restored; Fuji mean +0.019%. Keep all paired data/maxima and external-load limits. Sound/HUD/High 3× and played cards preserved; public repository remains documentation only.
+
 ## 2026-10-22 — V32 isolated VU SIMD flags evaluation
 
 - Test distinct integer-SSE2 packing for three/four-lane MAC/status flags; preserve current arithmetic/Q/CLIP and 310 native programs.
@@ -12,7 +25,7 @@ All notable project updates will be recorded here. Dates refer to documentation 
 ## 2026-10-22 — V31 race identity and native-pipeline attribution
 
 - Record team acceptance of v30 HUD/High quality and v29 sound; preserve the playable package.
-- Add bounded default-off native GS tracing and guarded EE-thread race/pause fields;46 runtime/5 library tests pass.
+- Add bounded default-off native GS tracing and guarded EE-thread race/pause fields; 46 runtime/5 library tests pass.
 - Two original-disc3× threaded windows show21.1ms VU CPU/frame in Fuji medium-reverse versus10.4ms in Thunderhead, with an underfed native GS queue.
 - Retain observer/exit-code limits and failed checker attempts. Withdraw an unmeasured repeat of rejected v19 filtering. No FPS patch/new package promoted; audit the hot VU kernels next.
 
@@ -25,7 +38,7 @@ All notable project updates will be recorded here. Dates refer to documentation 
 
 ## 2026-10-21 — V29 pause audio and optional FXAA
 
-- Analyze a42min37s human v28 session; retain measured slow blocks and distinguish stationary-clock intervals from active progression.
+- Analyze a 42min37s human v28 session; retain measured slow blocks and distinguish stationary-clock intervals from active progression.
 - Reproduce paused voices with DC output and add an output blocker; correct negative exponential-step rounding so release reaches silence.
 - Add persistent optional FXAA and resolution/smoothing selectors; catch and fix cross-runtime environment propagation in the package smoke.
 - Pass46 runtime tests,3 library tests and15 UBSan mixer assertions; preserve played progress in a separate private GUI package. Residual Fuji performance and physical audio remain open.
@@ -65,7 +78,7 @@ All notable project updates will be recorded here. Dates refer to documentation 
 ## 2026-10-20 — V23 native coverage recovery and normalization audit
 
 - Recover310 extra VU programs from preserved capture generation; a partial3-program source was masked by a stale object. Restored VU rebuild/relink reproduces the frozen reference except timestamp/checksum.
-- Add an always-run manifest hash/count guard;32 tests and actual stale-mtime/partial-source rejection pass, preserving the EXE.
+- Add an always-run manifest hash/count guard; 32 tests and actual stale-mtime/partial-source rejection pass, preserving the EXE.
 - Isolate the integer-normalization experiment: value equivalence holds, but its artifact also lost native coverage; no single-change FPS attribution.
 - Exhaust all2^32 encodings,16 masked FP configurations,32 CTests,53,665 complete native register/memory/GIF checks and three identical generated-WAV pairs. Host sticky flags differ; guest flags remain separately validated.
 - Retain all56 warmed performance windows and prior gates. The candidate is not promoted. Generated coverage is restored and guarded; exact v17 remains playable. The timing comparison also contains a native-coverage confound.
@@ -73,7 +86,7 @@ All notable project updates will be recorded here. Dates refer to documentation 
 
 ## 2026-10-20 — V21 attribution / V22 shared-entry VU filter
 
-- Separate EE ring insertion, outstanding-frame guard, VU forwarding and renderer boundaries in three controlled diagnostic scenes;31 tests and all6 terminal pairs pass, sources/probes restored.
+- Separate EE ring insertion, outstanding-frame guard, VU forwarding and renderer boundaries in three controlled diagnostic scenes; 31 tests and all6 terminal pairs pass, sources/probes restored.
 - Implement one shared discriminator per VU cache entry, retaining full validation on every acceptance and normal fallback for absent addresses/collisions.
 - Pass31 tests,21,078,049 native validator decisions and three identical generated-WAV pairs; retain all56 pure FPS controls and prior gates. The candidate fails the predeclared screen, stays isolated, and exact v17 source/EXE remain current.
 - Preserve six human v17 sessions, previous packages/save and all open full-game/graphics/physical-latency/distribution gates; GitHub anonymous docs only.
@@ -96,13 +109,13 @@ All notable project updates will be recorded here. Dates refer to documentation 
 - Add a private adaptive mismatch-word rejection experiment; retain complete reachable-code validation on every acceptance, candidate order and invalidation semantics.
 - Pass31 tests, expanded actual-cache mutation coverage and21,078,049 native old/new decision checks without a mismatch; remove probes and verify pure rebuild before FPS.
 - Complete seven-scene controls: Fuji throughput gates pass; all three Skorost-1 callback-p99 pairs regress beyond the prior10% guard. Isolate experiment and restore exact v17; no new image/36-route matrix or package after rejection.
-- Retain the interrupted automation and restart only its unfinished warmup pair after the maintainer requests the wheel. Candidate human Fuji:59.20 mean simulated FPS, victory from last reported, two five-second windows below55. Timing tails and result-save verification remain open.
+- Retain the interrupted automation and restart only its unfinished warmup pair after the maintainer requests the wheel. Candidate human Fuji: 59.20 mean simulated FPS, victory from last reported, two five-second windows below55. Timing tails and result-save verification remain open.
 - Preserve previous packages/cards and keep GitHub documentation-only. Main unchanged; PR23 open.
 
 ## 2026-10-20 — Vanilla v18 audio timing audit (experiment not promoted)
 
 - Audit EE post/pacing and GS acquire/submit/present with temporary thread-owned timestamps; confirm software queue quantum and distinguish callbacks/API timing from scanout.
-- Test Windows256-frame audio request with fallback and startup spec log;31 tests and seven-scene warmed controls pass correctness but fail the predeclared1% Fuji mean-FPS guard. Preserve all adverse data and the large Skorost baseline outlier.
+- Test Windows256-frame audio request with fallback and startup spec log; 31 tests and seven-scene warmed controls pass correctness but fail the predeclared1% Fuji mean-FPS guard. Preserve all adverse data and the large Skorost baseline outlier.
 - Isolate experiment; restore exact v17 source/EXE and verify pure rebuild code/data equivalence. No new gameplay package or default change retained.
 - Extend baseline QA with18,000 threaded automated VBlanks and separate end-state replay capture. The automated car is still on lap1/2; do not call this a completed race.
 - Analyze two human sessions (61,327 VBlanks total, about8m35 each including startup), recognized Xbox360 controller in the second, and maintainer-reported keyboard victory. Retain irregular callback tails and unresolved scene-clock/wall-clock differences.
@@ -162,7 +175,7 @@ All notable project updates will be recorded here. Dates refer to documentation 
 
 ## 2026-10-19 — V14 Q experiment not promoted
 
-- Preserve two Q-index prototypes locally;26 tests,225,036 Q differentials and883,499 instrumented native reference checks pass.
+- Preserve two Q-index prototypes locally; 26 tests,225,036 Q differentials and883,499 instrumented native reference checks pass.
 - Retain14 warm-ups and42 measured windows across seven scenes, including the strong Skorost-1 loss and other adverse data.
 - Restore v13 source/executable byte-for-byte; isolate the experiment on a private local branch. No new gameplay package.
 - Mark additional native diagnosis/visual/matrix/package QA incomplete after the legitimate local disc image became unavailable. Public update is documentary only.

@@ -1,0 +1,2762 @@
+{
+  "version": 35,
+  "date": "2026-10-22",
+  "status": "Experimental AVX2 candidate; human session analyzed; full automatic promotion gates incomplete",
+  "performance_patch_promoted": false,
+  "public_playable_release": false,
+  "private_new_package": false,
+  "accepted_playable_baseline": "v30 High3x/linearHUD/FXAA",
+  "baseline_private_commit": "7b974c25c3d16c865c30fa16395b4e02fd828458",
+  "baseline_exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+  "candidate_exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+  "candidate_source_sha256": {
+    "CMakeLists.txt": "5b5f84dec874dcaeab57548a5cd2d8b5ce258072492dd8b3b847160291464a9b",
+    "host/main.cpp": "2121882762a13a4c9fbf5f442d64cd65b0410005d88f697f6d97e4c8621a8413",
+    "host/speedracer_main.cpp": "ca8c44ce09e68077ca34d9f0222af6c70080ecdb5ca7bf33efec9636bc88624e",
+    "tests/vu_cont_programs.hpp": "9a7d65a2c8e7773be0922e9c3ec05660e75229a99273a708b64f4716bfa2dd2e",
+    "tests/vu_continuation.cpp": "4af465714ecb544ffa8df1b986d115fce1619fe82e44c0b1ff9b204ef23a2c53",
+    "tests/vu_cont_fixtures.cpp": "10adb8592ef3933a2cc59dc48cfbc3fe4bcde888dae2d34c8dae37077dad7f25",
+    "tests/vu_isa.cpp": "a70ac4bef06d02bd54bbd6fdd8112715028bbb68d66105854b8b91a5d00002f2",
+    "tests/vu_isa_kernel.cpp": "96b8e823f40b2737e90fe6e6ccb6a74fe88899a662375c1f9bda4a95fa75e07e"
+  },
+  "native_DLL_sha256": "7d2992096708714225a399f092153ecb1a0f7234ca503e97143d7aec2ada0dc2",
+  "protocol_sha256": "0bf7764413ddb623c021a427b1b0e9381889824eb985bae51be6a112ab61f7e0",
+  "candidate_tests_passed": 47,
+  "restored_tests_passed": null,
+  "source_retained_experimental": true,
+  "dual_ISA_raw_bit_cases": 1048576,
+  "FP_modes": 16,
+  "MXCSR_identical": true,
+  "full_generated_fixture_checks": 4800,
+  "native_policy_cases": {
+    "live": 2600,
+    "dead": 1600
+  },
+  "compilation": {
+    "option": "PS2_VU_AVX2",
+    "default": "OFF",
+    "scope": "Generated VU only; generic EE/runtime/hosts",
+    "flags": [
+      "-mavx2",
+      "-mno-fma",
+      "-ffp-contract=off"
+    ],
+    "compile_units": 27,
+    "CPU_OS_guard_before_registration": true,
+    "unsupported_CPU_exercised": false,
+    "accepted_GS_already_AVX2": true
+  },
+  "generated_inputs": 332,
+  "generated_input_changes": 0,
+  "continuation_entries": 37,
+  "extra_programs": 310,
+  "original_dirty_paths_preserved": 24,
+  "experimental_source_paths_retained": 8,
+  "native_library_changed": false,
+  "native_library_tests_note": "Five prior v31 upstream native-DLL unit tests, unchanged DLL; full current runtime CTest suite separately rerun.",
+  "native_checks": [
+    {
+      "name": "fuji",
+      "exit": 0,
+      "wall_s": 117.46900000000096,
+      "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+      "complete_native_checks": 61241,
+      "Q_checks": 1785889,
+      "identity": [
+        [
+          "1",
+          "3",
+          "1",
+          "1",
+          "1",
+          "0"
+        ]
+      ],
+      "functional_diagnostic_only": true,
+      "FPS_benchmark": false,
+      "headless": true
+    },
+    {
+      "name": "skorost",
+      "exit": 0,
+      "wall_s": 96.45300000000134,
+      "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+      "complete_native_checks": 7121,
+      "Q_checks": 326747,
+      "identity": [
+        [
+          "1",
+          "6",
+          "1",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "functional_diagnostic_only": true,
+      "FPS_benchmark": false,
+      "headless": true
+    },
+    {
+      "name": "thunderhead",
+      "exit": 0,
+      "wall_s": 83.43800000000192,
+      "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+      "complete_native_checks": 2863,
+      "Q_checks": 374255,
+      "identity": [
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ]
+      ],
+      "functional_diagnostic_only": true,
+      "FPS_benchmark": false,
+      "headless": true
+    }
+  ],
+  "complete_native_checks": 71225,
+  "Q_checks": 2486891,
+  "automatic_timing": {
+    "total_completed_runs": 14,
+    "frames_per_run": 12500,
+    "analysis_window": [
+      10650,
+      12400
+    ],
+    "samples_per_run": 1751,
+    "runs": [
+      {
+        "scene": "fuji",
+        "variant": "baseline",
+        "index": 1,
+        "exit": 0,
+        "wall_s": 231.48400000000038,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 25.132651913192458,
+          "p95": 34.92295,
+          "p99": 39.6295,
+          "max": 85.2803
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 25.133547801256423,
+          "p95": 34.90415,
+          "p99": 39.626549999999995,
+          "max": 85.2856
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 13.25161547687036,
+          "p95": 21.544249999999998,
+          "p99": 25.4062,
+          "max": 61.687
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0011107938320959452,
+          "p95": 0.0015,
+          "p99": 0.002,
+          "max": 0.0663
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 3.95280982295831,
+          "p95": 16.667,
+          "p99": 16.667,
+          "max": 26.0
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 39.78887717277009
+      },
+      {
+        "scene": "fuji",
+        "variant": "candidate",
+        "index": 2,
+        "exit": 0,
+        "wall_s": 227.71900000000096,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 23.215802512849802,
+          "p95": 32.634699999999995,
+          "p99": 39.37665,
+          "max": 78.2189
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 23.212995488292403,
+          "p95": 32.61755,
+          "p99": 39.4549,
+          "max": 65.851
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 10.998196173615076,
+          "p95": 18.5013,
+          "p99": 23.1677,
+          "max": 46.4411
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0010109080525414049,
+          "p95": 0.0015,
+          "p99": 0.0018,
+          "max": 0.0033
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 5.351634494574529,
+          "p95": 16.667,
+          "p99": 22.0,
+          "max": 48.0
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 43.07410865708847
+      },
+      {
+        "scene": "fuji",
+        "variant": "candidate",
+        "index": 3,
+        "exit": 0,
+        "wall_s": 224.48400000000038,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 22.858839234723014,
+          "p95": 32.1117,
+          "p99": 37.324349999999995,
+          "max": 80.2137
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 22.857883952027414,
+          "p95": 32.1173,
+          "p99": 37.31885,
+          "max": 77.1234
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 10.851021245002856,
+          "p95": 18.692,
+          "p99": 22.904600000000002,
+          "max": 64.0602
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0010589377498572245,
+          "p95": 0.0016,
+          "p99": 0.0021,
+          "max": 0.003
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 5.174978869217591,
+          "p95": 16.667,
+          "p99": 17.0,
+          "max": 28.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 43.74675326824911
+      },
+      {
+        "scene": "fuji",
+        "variant": "baseline",
+        "index": 4,
+        "exit": 0,
+        "wall_s": 229.34300000000076,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 24.693606110793834,
+          "p95": 33.503,
+          "p99": 39.10755,
+          "max": 51.8905
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 24.68931776127927,
+          "p95": 33.53665,
+          "p99": 39.1041,
+          "max": 51.8976
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 13.020364191890348,
+          "p95": 20.515,
+          "p99": 24.504550000000002,
+          "max": 37.3179
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.001019988577955454,
+          "p95": 0.0015,
+          "p99": 0.0019,
+          "max": 0.0221
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 3.7175168475157054,
+          "p95": 16.667,
+          "p99": 16.667,
+          "max": 20.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 40.49631291247047
+      },
+      {
+        "scene": "fuji",
+        "variant": "baseline",
+        "index": 5,
+        "exit": 0,
+        "wall_s": 232.125,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 25.172917875499714,
+          "p95": 35.65305,
+          "p99": 44.66415000000001,
+          "max": 68.0815
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 25.18516316390634,
+          "p95": 35.8376,
+          "p99": 44.6147,
+          "max": 68.0827
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 13.2913075385494,
+          "p95": 21.86495,
+          "p99": 28.554000000000002,
+          "max": 49.6569
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0010310108509423185,
+          "p95": 0.0015,
+          "p99": 0.0018,
+          "max": 0.0206
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 3.8271747572815533,
+          "p95": 16.667,
+          "p99": 16.667,
+          "max": 26.0
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 39.72523189190076
+      },
+      {
+        "scene": "fuji",
+        "variant": "candidate",
+        "index": 6,
+        "exit": 0,
+        "wall_s": 229.68699999999808,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 23.362167961165053,
+          "p95": 32.57315,
+          "p99": 40.3061,
+          "max": 460.3448
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 23.36375059965734,
+          "p95": 32.6417,
+          "p99": 40.90685,
+          "max": 375.385
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 11.166238834951455,
+          "p95": 18.4839,
+          "p99": 22.8668,
+          "max": 443.9015
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0010614505996573386,
+          "p95": 0.0015,
+          "p99": 0.0019,
+          "max": 0.0571
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 5.457096516276414,
+          "p95": 16.667,
+          "p99": 19.333,
+          "max": 33.333
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 42.80424666333624
+      },
+      {
+        "scene": "skorost",
+        "variant": "baseline",
+        "index": 1,
+        "exit": 0,
+        "wall_s": 217.36000000000058,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "6",
+            "1",
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 20.075442775556827,
+          "p95": 28.80395,
+          "p99": 31.63725,
+          "max": 36.0645
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 20.082545459737293,
+          "p95": 28.800449999999998,
+          "p99": 31.63875,
+          "max": 36.0606
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 9.248031924614505,
+          "p95": 17.39265,
+          "p99": 19.06765,
+          "max": 23.732
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.001022615648201028,
+          "p95": 0.0014,
+          "p99": 0.0017,
+          "max": 0.1071
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 7.996607081667619,
+          "p95": 18.0,
+          "p99": 24.3335,
+          "max": 33.333
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=14218440 bytes=33772334768 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:189497779 01:47646259 04:9233540 05:18419 06:18419 11:3473119 13:212835 14:9233540 20:17294004 30:2300524 31:18419 4A:3170830 50:3763518 60:17645 64:355356 65:7832449 68:17645 6C:20750065 6E:1379095 7C:9552485 7E:7741519",
+          "vu-cont": "[vu-cont] native_segments=3703794 interpreted_instructions=17222892 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 49.81210183904715
+      },
+      {
+        "scene": "skorost",
+        "variant": "candidate",
+        "index": 2,
+        "exit": 0,
+        "wall_s": 217.38999999999942,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "6",
+            "1",
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 20.130463677898344,
+          "p95": 30.248199999999997,
+          "p99": 34.121750000000006,
+          "max": 42.9755
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 20.141090748143917,
+          "p95": 30.26335,
+          "p99": 34.12425,
+          "max": 42.9661
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 7.919362021701885,
+          "p95": 16.6122,
+          "p99": 18.76495,
+          "max": 28.0268
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0012368932038834951,
+          "p95": 0.0016,
+          "p99": 0.002,
+          "max": 0.1627
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 7.990509994288978,
+          "p95": 18.667,
+          "p99": 25.6665,
+          "max": 36.0
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=14218440 bytes=33772334768 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:189497779 01:47646259 04:9233540 05:18419 06:18419 11:3473119 13:212835 14:9233540 20:17294004 30:2300524 31:18419 4A:3170830 50:3763518 60:17645 64:355356 65:7832449 68:17645 6C:20750065 6E:1379095 7C:9552485 7E:7741519",
+          "vu-cont": "[vu-cont] native_segments=3703794 interpreted_instructions=17222892 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 49.67595461290446
+      },
+      {
+        "scene": "skorost",
+        "variant": "candidate",
+        "index": 3,
+        "exit": 0,
+        "wall_s": 217.56299999999828,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "6",
+            "1",
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 19.741094231867507,
+          "p95": 28.40905,
+          "p99": 31.98925,
+          "max": 501.4422
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 19.748801484865794,
+          "p95": 28.57555,
+          "p99": 32.60125,
+          "max": 336.6385
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 7.87514957167333,
+          "p95": 15.7141,
+          "p99": 18.268250000000002,
+          "max": 430.5566
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0010326670474014848,
+          "p95": 0.0015,
+          "p99": 0.002,
+          "max": 0.0755
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 9.680591661907481,
+          "p95": 24.0,
+          "p99": 40.3335,
+          "max": 56.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=14218440 bytes=33772334768 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:189497779 01:47646259 04:9233540 05:18419 06:18419 11:3473119 13:212835 14:9233540 20:17294004 30:2300524 31:18419 4A:3170830 50:3763518 60:17645 64:355356 65:7832449 68:17645 6C:20750065 6E:1379095 7C:9552485 7E:7741519",
+          "vu-cont": "[vu-cont] native_segments=3703794 interpreted_instructions=17222892 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 50.65575333639447
+      },
+      {
+        "scene": "skorost",
+        "variant": "baseline",
+        "index": 4,
+        "exit": 0,
+        "wall_s": 224.21900000000096,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "6",
+            "1",
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 22.711448943460876,
+          "p95": 35.63464999999999,
+          "p99": 44.31385,
+          "max": 91.2318
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 22.727249743004,
+          "p95": 35.63865,
+          "p99": 44.310649999999995,
+          "max": 91.2093
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 10.483347230154198,
+          "p95": 20.6248,
+          "p99": 27.0054,
+          "max": 72.4222
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0010458023986293545,
+          "p95": 0.0016,
+          "p99": 0.0019,
+          "max": 0.0027
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 5.899904625928041,
+          "p95": 16.667,
+          "p99": 19.333,
+          "max": 33.333
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=14218440 bytes=33772334768 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:189497779 01:47646259 04:9233540 05:18419 06:18419 11:3473119 13:212835 14:9233540 20:17294004 30:2300524 31:18419 4A:3170830 50:3763518 60:17645 64:355356 65:7832449 68:17645 6C:20750065 6E:1379095 7C:9552485 7E:7741519",
+          "vu-cont": "[vu-cont] native_segments=3703794 interpreted_instructions=17222892 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 44.03065618972416
+      },
+      {
+        "scene": "skorost",
+        "variant": "baseline",
+        "index": 5,
+        "exit": 0,
+        "wall_s": 220.68799999999828,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "6",
+            "1",
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 20.984748886350655,
+          "p95": 31.272199999999998,
+          "p99": 36.6618,
+          "max": 44.8817
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 20.996064705882354,
+          "p95": 31.2611,
+          "p99": 36.68835,
+          "max": 44.8703
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 9.614632552826956,
+          "p95": 18.60265,
+          "p99": 21.8726,
+          "max": 27.5815
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0010076527698458025,
+          "p95": 0.0015,
+          "p99": 0.0018,
+          "max": 0.017
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 6.942735579668761,
+          "p95": 16.667,
+          "p99": 23.333,
+          "max": 33.333
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=14218440 bytes=33772334768 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:189497779 01:47646259 04:9233540 05:18419 06:18419 11:3473119 13:212835 14:9233540 20:17294004 30:2300524 31:18419 4A:3170830 50:3763518 60:17645 64:355356 65:7832449 68:17645 6C:20750065 6E:1379095 7C:9552485 7E:7741519",
+          "vu-cont": "[vu-cont] native_segments=3703794 interpreted_instructions=17222892 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 47.65365577714591
+      },
+      {
+        "scene": "skorost",
+        "variant": "candidate",
+        "index": 6,
+        "exit": 0,
+        "wall_s": 217.1720000000023,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "6",
+            "1",
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 19.732616047972588,
+          "p95": 28.95025,
+          "p99": 31.80645,
+          "max": 45.1336
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 19.743314277555687,
+          "p95": 28.96705,
+          "p99": 31.8398,
+          "max": 45.1352
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 7.856900571102227,
+          "p95": 15.74615,
+          "p99": 18.026699999999998,
+          "max": 26.3495
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0009785265562535694,
+          "p95": 0.0015,
+          "p99": 0.0019,
+          "max": 0.0075
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 8.923697315819531,
+          "p95": 21.333,
+          "p99": 29.6665,
+          "max": 44.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=14218440 bytes=33772334768 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:189497779 01:47646259 04:9233540 05:18419 06:18419 11:3473119 13:212835 14:9233540 20:17294004 30:2300524 31:18419 4A:3170830 50:3763518 60:17645 64:355356 65:7832449 68:17645 6C:20750065 6E:1379095 7C:9552485 7E:7741519",
+          "vu-cont": "[vu-cont] native_segments=3703794 interpreted_instructions=17222892 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 50.677517748729734
+      },
+      {
+        "scene": "thunderhead",
+        "variant": "baseline",
+        "index": 1,
+        "exit": 0,
+        "wall_s": 209.125,
+        "exe_sha256": "b5ff4b22085e90f0aa2f53d66c1f165d48cdff07fe84a39d85cd510935bdf013",
+        "identity": [
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 16.780579554540264,
+          "p95": 26.56175,
+          "p99": 30.5369,
+          "max": 47.7586
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 16.756692404340377,
+          "p95": 26.627299999999998,
+          "p99": 33.03915,
+          "max": 54.0539
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 0.5642549400342661,
+          "p95": 4.9856,
+          "p99": 7.17225,
+          "max": 11.6801
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 4.344526384922902,
+          "p95": 12.58685,
+          "p99": 20.0377,
+          "max": 22.6984
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 72.6636253569389,
+          "p95": 91.333,
+          "p99": 96.0,
+          "max": 96.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=13698139 bytes=21503112208 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:118060040 01:27417398 04:5376789 05:20427 06:20427 11:3057222 13:249050 14:5376789 20:9372585 30:1696765 31:20427 4A:2561670 50:3397312 60:23115 64:362264 65:3931291 68:23115 6C:12427228 6E:1277800 7C:5625682 7E:3746903",
+          "vu-cont": "[vu-cont] native_segments=2122825 interpreted_instructions=9177692 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 59.592697424412464
+      },
+      {
+        "scene": "thunderhead",
+        "variant": "candidate",
+        "index": 2,
+        "exit": 0,
+        "wall_s": 208.51499999999942,
+        "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+        "identity": [
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 16.82085259851513,
+          "p95": 28.8659,
+          "p99": 30.5486,
+          "max": 158.5157
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 16.81780982295831,
+          "p95": 28.287100000000002,
+          "p99": 34.68765,
+          "max": 296.0982
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 0.23620102798400916,
+          "p95": 0.0082,
+          "p99": 0.01225,
+          "max": 150.4255
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 5.637789091947459,
+          "p95": 17.3197,
+          "p99": 20.7026,
+          "max": 23.6557
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 81.48753512278698,
+          "p95": 92.0,
+          "p99": 96.667,
+          "max": 96.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=13698139 bytes=21503112208 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:118060040 01:27417398 04:5376789 05:20427 06:20427 11:3057222 13:249050 14:5376789 20:9372585 30:1696765 31:20427 4A:2561670 50:3397312 60:23115 64:362264 65:3931291 68:23115 6C:12427228 6E:1277800 7C:5625682 7E:3746903",
+          "vu-cont": "[vu-cont] native_segments=2122825 interpreted_instructions=9177692 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 59.4500186089423
+      }
+    ],
+    "assessment": {
+      "stage": "User requested complete human driving; automatic matrix interrupted after14 completed runs",
+      "pairs": {
+        "fuji": [
+          {
+            "gain_percent": 8.25665793496344,
+            "callback_p99_percent": -0.4331691757167633,
+            "counters_equal": true
+          },
+          {
+            "gain_percent": 8.026509383222624,
+            "callback_p99_percent": -4.565378054986569,
+            "counters_equal": true
+          },
+          {
+            "gain_percent": 7.750778597879582,
+            "callback_p99_percent": -8.310825804051136,
+            "counters_equal": true
+          }
+        ],
+        "skorost": [
+          {
+            "gain_percent": -0.2733215847478321,
+            "callback_p99_percent": 7.855872940618713,
+            "counters_equal": true
+          },
+          {
+            "gain_percent": 15.046555559207109,
+            "callback_p99_percent": -26.425701270462053,
+            "counters_equal": true
+          },
+          {
+            "gain_percent": 6.345498414067174,
+            "callback_p99_percent": -13.21550301389951,
+            "counters_equal": true
+          }
+        ],
+        "thunderhead": [
+          {
+            "gain_percent": -0.23942332137446565,
+            "callback_p99_percent": 4.989535142399237,
+            "counters_equal": true
+          }
+        ]
+      },
+      "screen_pass": true,
+      "gates": {
+        "Fuji_all_three_positive": true,
+        "Fuji_mean_gain_at_least3": true,
+        "Skorost_mean_loss_at_most1": true,
+        "Skorost_mean_p99_loss_at_most2": true,
+        "all_recorded_counters_equal": true,
+        "Thunderhead_three_pairs_complete": false
+      },
+      "promote": false,
+      "benchmark_incomplete": true,
+      "interrupted_attempt": "Thunderhead3candidate, not a crash or complete measurement",
+      "protocol_departure": "Human explicitly requested takeover; remaining automatic control pairs and later audiovisual/package gates not run. Human acceptance does not replace paired proof."
+    },
+    "Fuji_mean_gain_percent": 8.011315305355215,
+    "external_load_isolated": false,
+    "physical_scanout_FPS": false,
+    "all_attempts_and_maxima_retained": true
+  },
+  "human": {
+    "session_wall_s": 1748.3899999999994,
+    "total_frames": 104220,
+    "exit_code": 0,
+    "exe_sha256": "99f37d3e7998847d8cabeea9c56bec67c079b5a9bdadaaf91efb49159f18994d",
+    "capture_files_sha256": {
+      "sim.csv": "6d5ba1d9880d34f71704a15fab8e95ef104db8fdf42cb136a15b861b850f0ea0",
+      "present.csv": "a695cdeda7711d1848cb2a87a1968cadcdd2aad3b043ea7e4f53684820b76202",
+      "race-clock.csv": "e10af2a266c91f3060a73cfade763124a9777b7fd86d68984970cfa5819a8d58",
+      "run.log": "8f3b9202b4fdca1178832537ffd2a43a880d13f841dadb00a11da0d3c493c35d",
+      "pilot.ps2": "f90dce55afc166cb0fea767c4ab64a2f43270905836d3b38e363076269d03872"
+    },
+    "alignment": "104220 scene/simulation rows and104219 callback intervals; trace_frame intentionally omits first interval, so callback number N aligns to EE frame N+1. All indices checked, absent first interval explicit.",
+    "method": "Only validated scene/setup/pause rows; unpaused, same scene+track setup, scene clock advances since previous frame. Stationary clock/start/results/menus/explicit pauses excluded from active metrics; this is scene clock, not per-player race result timer. No outliers trimmed.",
+    "all_active": {
+      "active_samples": 90430,
+      "simulated_frames_per_wall_second": 59.62064646011216,
+      "sim_interval_ms": {
+        "samples": 90430,
+        "mean": 16.77271313502156,
+        "p50": 18.9538,
+        "p95": 29.160655,
+        "p99": 31.02226500000001,
+        "max": 916.9675,
+        "over33_333": 33,
+        "over50": 23,
+        "over100": 12
+      },
+      "callback_ms": {
+        "samples": 90430,
+        "mean": 16.779100868074757,
+        "p50": 16.121450000000003,
+        "p95": 29.061785,
+        "p99": 35.972384,
+        "max": 921.6357,
+        "over33_333": 1604,
+        "over50": 29,
+        "over100": 12
+      },
+      "posting_wait_ms": {
+        "samples": 90430,
+        "mean": 0.37385321795864207,
+        "p50": 0.0018,
+        "p95": 0.01635500000000029,
+        "p99": 13.436292000000034,
+        "max": 678.5321,
+        "over33_333": 2,
+        "over50": 2,
+        "over100": 1
+      },
+      "pacing_wait_ms": {
+        "samples": 90430,
+        "mean": 6.483373332964724,
+        "p50": 7.802099999999999,
+        "p95": 19.12946,
+        "p99": 21.778892000000035,
+        "max": 25.3575,
+        "over33_333": 0,
+        "over50": 0,
+        "over100": 0
+      },
+      "audio_queue_ms": {
+        "samples": 90430,
+        "mean": 80.80492019241403,
+        "p50": 84.0,
+        "p95": 92.0,
+        "p99": 96.0,
+        "max": 97.333,
+        "over33_333": 87243,
+        "over50": 86670,
+        "over100": 0
+      },
+      "audio_queue_zero_observations": 432,
+      "longest_audio_zero_run_frames": 7,
+      "active_observed_wall_s": 1516.7564487999998
+    },
+    "variants": [
+      {
+        "track": "Thunderhead",
+        "environment": 1,
+        "circuit": 0,
+        "direction": 0,
+        "scene_instances": 1,
+        "active_samples": 6786,
+        "simulated_frames_per_wall_second": 59.55997631907278,
+        "sim_interval_ms": {
+          "samples": 6786,
+          "mean": 16.78979848216917,
+          "p50": 18.91215,
+          "p95": 29.51425,
+          "p99": 31.090854999999998,
+          "max": 916.9675,
+          "over33_333": 2,
+          "over50": 2,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 6786,
+          "mean": 16.798983893309757,
+          "p50": 16.069699999999997,
+          "p95": 29.43875,
+          "p99": 37.30343999999999,
+          "max": 921.6357,
+          "over33_333": 139,
+          "over50": 3,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 6786,
+          "mean": 0.0038929118773946367,
+          "p50": 0.0018,
+          "p95": 0.0036,
+          "p99": 0.0082,
+          "max": 7.3957,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 6786,
+          "mean": 6.807546198054818,
+          "p50": 8.24765,
+          "p95": 19.698,
+          "p99": 22.06438499999999,
+          "max": 24.0962,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 6786,
+          "mean": 83.78210521662247,
+          "p50": 84.667,
+          "p95": 92.0,
+          "p99": 95.333,
+          "max": 96.667,
+          "over33_333": 6780,
+          "over50": 6777,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 113.9355725
+      },
+      {
+        "track": "Thunderhead",
+        "environment": 1,
+        "circuit": 2,
+        "direction": 1,
+        "scene_instances": 1,
+        "active_samples": 21561,
+        "simulated_frames_per_wall_second": 59.72277015837936,
+        "sim_interval_ms": {
+          "samples": 21561,
+          "mean": 16.744032424284587,
+          "p50": 18.8613,
+          "p95": 29.1048,
+          "p99": 30.738360000000018,
+          "max": 837.9987,
+          "over33_333": 5,
+          "over50": 5,
+          "over100": 4
+        },
+        "callback_ms": {
+          "samples": 21561,
+          "mean": 16.748503979407264,
+          "p50": 16.1055,
+          "p95": 29.3311,
+          "p99": 36.360700000000016,
+          "max": 835.7834,
+          "over33_333": 412,
+          "over50": 6,
+          "over100": 4
+        },
+        "posting_wait_ms": {
+          "samples": 21561,
+          "mean": 0.0030196790501368217,
+          "p50": 0.0018,
+          "p95": 0.0047,
+          "p99": 0.009040000000000145,
+          "max": 7.0438,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 21561,
+          "mean": 6.62262856082742,
+          "p50": 8.028,
+          "p95": 18.9263,
+          "p99": 21.517580000000006,
+          "max": 24.298,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 21561,
+          "mean": 83.8273448819628,
+          "p50": 84.0,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667,
+          "over33_333": 21549,
+          "over50": 21540,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 361.0180831
+      },
+      {
+        "track": "Onuris",
+        "environment": 2,
+        "circuit": 1,
+        "direction": 0,
+        "scene_instances": 1,
+        "active_samples": 15094,
+        "simulated_frames_per_wall_second": 59.67474613692276,
+        "sim_interval_ms": {
+          "samples": 15094,
+          "mean": 16.757507400291505,
+          "p50": 18.856749999999998,
+          "p95": 29.271709999999995,
+          "p99": 31.076221999999998,
+          "max": 784.174,
+          "over33_333": 3,
+          "over50": 3,
+          "over100": 2
+        },
+        "callback_ms": {
+          "samples": 15094,
+          "mean": 16.758370027825627,
+          "p50": 16.2222,
+          "p95": 28.852734999999992,
+          "p99": 35.289677999999995,
+          "max": 782.6595,
+          "over33_333": 247,
+          "over50": 4,
+          "over100": 2
+        },
+        "posting_wait_ms": {
+          "samples": 15094,
+          "mean": 0.05519319597190936,
+          "p50": 0.0018,
+          "p95": 0.0053,
+          "p99": 0.0092,
+          "max": 678.5321,
+          "over33_333": 2,
+          "over50": 2,
+          "over100": 1
+        },
+        "pacing_wait_ms": {
+          "samples": 15094,
+          "mean": 6.611963435802306,
+          "p50": 8.0282,
+          "p95": 19.16268999999998,
+          "p99": 21.775920999999997,
+          "max": 23.919,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 15094,
+          "mean": 83.32498767722274,
+          "p50": 84.0,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667,
+          "over33_333": 15081,
+          "over50": 15077,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 1,
+        "longest_audio_zero_run_frames": 1,
+        "active_observed_wall_s": 252.93781669999998
+      },
+      {
+        "track": "Fuji",
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "scene_instances": 1,
+        "active_samples": 14989,
+        "simulated_frames_per_wall_second": 58.92571704795071,
+        "sim_interval_ms": {
+          "samples": 14989,
+          "mean": 16.97051898725732,
+          "p50": 18.6152,
+          "p95": 28.850519999999996,
+          "p99": 31.048436,
+          "max": 444.5428,
+          "over33_333": 15,
+          "over50": 6,
+          "over100": 3
+        },
+        "callback_ms": {
+          "samples": 14989,
+          "mean": 16.973263152978852,
+          "p50": 16.2403,
+          "p95": 27.77142,
+          "p99": 33.39285599999993,
+          "max": 450.718,
+          "over33_333": 152,
+          "over50": 7,
+          "over100": 3
+        },
+        "posting_wait_ms": {
+          "samples": 14989,
+          "mean": 2.177110147441457,
+          "p50": 0.0021,
+          "p95": 13.990899999999986,
+          "p99": 17.430011999999998,
+          "max": 25.4769,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 14989,
+          "mean": 4.916934058309427,
+          "p50": 0.0014,
+          "p95": 16.933699999999973,
+          "p99": 21.724711999999993,
+          "max": 24.9186,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 14989,
+          "mean": 66.25339388885183,
+          "p50": 81.333,
+          "p95": 92.0,
+          "p99": 95.333,
+          "max": 96.667,
+          "over33_333": 11848,
+          "over50": 11310,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 431,
+        "longest_audio_zero_run_frames": 7,
+        "active_observed_wall_s": 254.3711091
+      },
+      {
+        "track": "Aurora",
+        "environment": 4,
+        "circuit": 2,
+        "direction": 0,
+        "scene_instances": 1,
+        "active_samples": 32000,
+        "simulated_frames_per_wall_second": 59.869723399561686,
+        "sim_interval_ms": {
+          "samples": 32000,
+          "mean": 16.70293335625,
+          "p50": 19.0174,
+          "p95": 29.235815000000002,
+          "p99": 30.841524999999997,
+          "max": 807.3075,
+          "over33_333": 8,
+          "over50": 7,
+          "over100": 2
+        },
+        "callback_ms": {
+          "samples": 32000,
+          "mean": 16.714331684375,
+          "p50": 16.05025,
+          "p95": 29.422225,
+          "p99": 36.737192999999984,
+          "max": 827.2745,
+          "over33_333": 654,
+          "over50": 9,
+          "over100": 2
+        },
+        "posting_wait_ms": {
+          "samples": 32000,
+          "mean": 0.00781974375,
+          "p50": 0.0018,
+          "p95": 0.0036,
+          "p99": 0.0082,
+          "max": 12.8328,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 32000,
+          "mean": 6.993876465625,
+          "p50": 8.71505,
+          "p95": 19.504915,
+          "p99": 21.859426999999997,
+          "max": 25.3575,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 32000,
+          "mean": 83.76445934375,
+          "p50": 84.667,
+          "p95": 92.667,
+          "p99": 96.0,
+          "max": 97.333,
+          "over33_333": 31985,
+          "over50": 31966,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 534.4938674
+      }
+    ],
+    "paused_frames": 304,
+    "lifecycle": {
+      "GS_drained": true,
+      "workers_joined": true,
+      "card_replace_error": false
+    },
+    "session_card_changed": true,
+    "limits": [
+      "Host simulation/present callback intervals, not physical scanout FPS",
+      "No acoustic recording or physical input/audio latency",
+      "No independent natural finish/result/save-reopen proof; card changed without replacement error",
+      "Human drive is not a paired baseline comparison; other track variants/classes/Mirror remain open"
+    ],
+    "host_pacing_source_audit": {
+      "default": "legacy audio-queue clock",
+      "experimental_deadline_pacing_enabled": false,
+      "high_water_ms": 80,
+      "device_samples": 1024,
+      "sample_rate": 48000,
+      "device_chunk_ms": 21.333333333333332,
+      "source": "host/window.cpp legacy_pacing/pace_legacy; pilot environment removes all PS2_ variables",
+      "inference": "Device-sized queue changes and SDL_Delay polling are consistent with uneven cadence at nearly60 average; this is not an isolated causal experiment or the cause of every long spike."
+    },
+    "cache_audit": {
+      "initial_shader_entries": 176,
+      "final_shader_entries": 207,
+      "new_shader_entries": 31,
+      "initial_pipeline_bytes": 2062003,
+      "final_pipeline_bytes": 2419008,
+      "index_header_bytes": 36,
+      "index_entry_bytes": 32,
+      "source": "Pinned VKShaderCache CacheIndexEntry and header; GetTFXPipeline creates missing pipelines synchronously in draw path.",
+      "inference": "Cold shader/pipeline compilation is a supported hypothesis for isolated spikes; no per-event compilation timestamps were collected, so individual spikes cannot be attributed.",
+      "preserved": true,
+      "next_human_session_reuses_verified_cache_and_QA_progress": true
+    },
+    "original_analysis_guard_note": "Initial equal-row-count guard stopped before metrics; inspected production trace_frame, verified deliberate first-interval omission, then aligned by audited N+1 semantics. No rows/outliers discarded.",
+    "track_mapping_source": "Original T01..06 setup ABI plus captured menu enumeration: Thunderhead/Onuris/Fuji/Aurora/Grand Prix/Skorost. Circuits0/1/2 short/medium/long, directions0/1 forward/reverse.",
+    "scenes": [
+      {
+        "index": 1,
+        "track": "Onuris",
+        "environment": 2,
+        "circuit": 1,
+        "direction": 0,
+        "first_frame": 4356,
+        "last_frame": 19600,
+        "scene_clock_start": 0.0,
+        "scene_clock_end": 243.668029785,
+        "observed_wall_s": 255.3939061,
+        "pause_frames": 59,
+        "active_samples": 15094,
+        "simulated_frames_per_wall_second": 59.67474613692276,
+        "sim_interval_ms": {
+          "samples": 15094,
+          "mean": 16.757507400291505,
+          "p50": 18.856749999999998,
+          "p95": 29.271709999999995,
+          "p99": 31.076221999999998,
+          "max": 784.174,
+          "over33_333": 3,
+          "over50": 3,
+          "over100": 2
+        },
+        "callback_ms": {
+          "samples": 15094,
+          "mean": 16.758370027825627,
+          "p50": 16.2222,
+          "p95": 28.852734999999992,
+          "p99": 35.289677999999995,
+          "max": 782.6595,
+          "over33_333": 247,
+          "over50": 4,
+          "over100": 2
+        },
+        "posting_wait_ms": {
+          "samples": 15094,
+          "mean": 0.05519319597190936,
+          "p50": 0.0018,
+          "p95": 0.0053,
+          "p99": 0.0092,
+          "max": 678.5321,
+          "over33_333": 2,
+          "over50": 2,
+          "over100": 1
+        },
+        "pacing_wait_ms": {
+          "samples": 15094,
+          "mean": 6.611963435802306,
+          "p50": 8.0282,
+          "p95": 19.16268999999998,
+          "p99": 21.775920999999997,
+          "max": 23.919,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 15094,
+          "mean": 83.32498767722274,
+          "p50": 84.0,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667,
+          "over33_333": 15081,
+          "over50": 15077,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 1,
+        "longest_audio_zero_run_frames": 1,
+        "active_observed_wall_s": 252.93781669999998
+      },
+      {
+        "index": 2,
+        "track": "Fuji",
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 20160,
+        "last_frame": 35305,
+        "scene_clock_start": 0.0,
+        "scene_clock_end": 241.925811768,
+        "observed_wall_s": 257.6978795,
+        "pause_frames": 67,
+        "active_samples": 14989,
+        "simulated_frames_per_wall_second": 58.92571704795071,
+        "sim_interval_ms": {
+          "samples": 14989,
+          "mean": 16.97051898725732,
+          "p50": 18.6152,
+          "p95": 28.850519999999996,
+          "p99": 31.048436,
+          "max": 444.5428,
+          "over33_333": 15,
+          "over50": 6,
+          "over100": 3
+        },
+        "callback_ms": {
+          "samples": 14989,
+          "mean": 16.973263152978852,
+          "p50": 16.2403,
+          "p95": 27.77142,
+          "p99": 33.39285599999993,
+          "max": 450.718,
+          "over33_333": 152,
+          "over50": 7,
+          "over100": 3
+        },
+        "posting_wait_ms": {
+          "samples": 14989,
+          "mean": 2.177110147441457,
+          "p50": 0.0021,
+          "p95": 13.990899999999986,
+          "p99": 17.430011999999998,
+          "max": 25.4769,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 14989,
+          "mean": 4.916934058309427,
+          "p50": 0.0014,
+          "p95": 16.933699999999973,
+          "p99": 21.724711999999993,
+          "max": 24.9186,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 14989,
+          "mean": 66.25339388885183,
+          "p50": 81.333,
+          "p95": 92.0,
+          "p99": 95.333,
+          "max": 96.667,
+          "over33_333": 11848,
+          "over50": 11310,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 431,
+        "longest_audio_zero_run_frames": 7,
+        "active_observed_wall_s": 254.3711091
+      },
+      {
+        "index": 3,
+        "track": "Thunderhead",
+        "environment": 1,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 35901,
+        "last_frame": 42777,
+        "scene_clock_start": 0.0,
+        "scene_clock_end": 102.85836792,
+        "observed_wall_s": 115.43468289999998,
+        "pause_frames": 0,
+        "active_samples": 6786,
+        "simulated_frames_per_wall_second": 59.55997631907278,
+        "sim_interval_ms": {
+          "samples": 6786,
+          "mean": 16.78979848216917,
+          "p50": 18.91215,
+          "p95": 29.51425,
+          "p99": 31.090854999999998,
+          "max": 916.9675,
+          "over33_333": 2,
+          "over50": 2,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 6786,
+          "mean": 16.798983893309757,
+          "p50": 16.069699999999997,
+          "p95": 29.43875,
+          "p99": 37.30343999999999,
+          "max": 921.6357,
+          "over33_333": 139,
+          "over50": 3,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 6786,
+          "mean": 0.0038929118773946367,
+          "p50": 0.0018,
+          "p95": 0.0036,
+          "p99": 0.0082,
+          "max": 7.3957,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 6786,
+          "mean": 6.807546198054818,
+          "p50": 8.24765,
+          "p95": 19.698,
+          "p99": 22.06438499999999,
+          "max": 24.0962,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 6786,
+          "mean": 83.78210521662247,
+          "p50": 84.667,
+          "p95": 92.0,
+          "p99": 95.333,
+          "max": 96.667,
+          "over33_333": 6780,
+          "over50": 6777,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 113.9355725
+      },
+      {
+        "index": 4,
+        "track": "Thunderhead",
+        "environment": 1,
+        "circuit": 2,
+        "direction": 1,
+        "first_frame": 47206,
+        "last_frame": 68869,
+        "scene_clock_start": 0.0,
+        "scene_clock_end": 352.629455566,
+        "observed_wall_s": 362.6446771000001,
+        "pause_frames": 0,
+        "active_samples": 21561,
+        "simulated_frames_per_wall_second": 59.72277015837936,
+        "sim_interval_ms": {
+          "samples": 21561,
+          "mean": 16.744032424284587,
+          "p50": 18.8613,
+          "p95": 29.1048,
+          "p99": 30.738360000000018,
+          "max": 837.9987,
+          "over33_333": 5,
+          "over50": 5,
+          "over100": 4
+        },
+        "callback_ms": {
+          "samples": 21561,
+          "mean": 16.748503979407264,
+          "p50": 16.1055,
+          "p95": 29.3311,
+          "p99": 36.360700000000016,
+          "max": 835.7834,
+          "over33_333": 412,
+          "over50": 6,
+          "over100": 4
+        },
+        "posting_wait_ms": {
+          "samples": 21561,
+          "mean": 0.0030196790501368217,
+          "p50": 0.0018,
+          "p95": 0.0047,
+          "p99": 0.009040000000000145,
+          "max": 7.0438,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 21561,
+          "mean": 6.62262856082742,
+          "p50": 8.028,
+          "p95": 18.9263,
+          "p99": 21.517580000000006,
+          "max": 24.298,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 21561,
+          "mean": 83.8273448819628,
+          "p50": 84.0,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667,
+          "over33_333": 21549,
+          "over50": 21540,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 361.0180831
+      },
+      {
+        "index": 5,
+        "track": "Aurora",
+        "environment": 4,
+        "circuit": 2,
+        "direction": 0,
+        "first_frame": 69480,
+        "last_frame": 101803,
+        "scene_clock_start": 0.0,
+        "scene_clock_end": 507.470947266,
+        "observed_wall_s": 539.9248422000001,
+        "pause_frames": 178,
+        "active_samples": 32000,
+        "simulated_frames_per_wall_second": 59.869723399561686,
+        "sim_interval_ms": {
+          "samples": 32000,
+          "mean": 16.70293335625,
+          "p50": 19.0174,
+          "p95": 29.235815000000002,
+          "p99": 30.841524999999997,
+          "max": 807.3075,
+          "over33_333": 8,
+          "over50": 7,
+          "over100": 2
+        },
+        "callback_ms": {
+          "samples": 32000,
+          "mean": 16.714331684375,
+          "p50": 16.05025,
+          "p95": 29.422225,
+          "p99": 36.737192999999984,
+          "max": 827.2745,
+          "over33_333": 654,
+          "over50": 9,
+          "over100": 2
+        },
+        "posting_wait_ms": {
+          "samples": 32000,
+          "mean": 0.00781974375,
+          "p50": 0.0018,
+          "p95": 0.0036,
+          "p99": 0.0082,
+          "max": 12.8328,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 32000,
+          "mean": 6.993876465625,
+          "p50": 8.71505,
+          "p95": 19.504915,
+          "p99": 21.859426999999997,
+          "max": 25.3575,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 32000,
+          "mean": 83.76445934375,
+          "p50": 84.667,
+          "p95": 92.667,
+          "p99": 96.0,
+          "max": 97.333,
+          "over33_333": 31985,
+          "over50": 31966,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 534.4938674
+      }
+    ],
+    "slowest_contiguous600_active_frame_windows": [
+      {
+        "scene": 2,
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 28560,
+        "last_frame": 29159,
+        "wall_start": 479.9752401,
+        "wall_end": 491.0788285,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 53.95204531799161,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 18.534978499999998,
+          "p50": 18.2932,
+          "p95": 28.89179,
+          "p99": 31.007928999999997,
+          "max": 34.3486,
+          "over33_333": 2,
+          "over50": 0,
+          "over100": 0
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 18.550726333333333,
+          "p50": 16.2261,
+          "p95": 28.88881,
+          "p99": 32.328306,
+          "max": 34.6707,
+          "over33_333": 3,
+          "over50": 0,
+          "over100": 0
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 6.688533166666667,
+          "p50": 3.9297000000000004,
+          "p95": 17.221689999999995,
+          "p99": 19.587521999999996,
+          "max": 22.5353,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 1.7298716666666663,
+          "p50": 0.0008,
+          "p95": 11.148459999999996,
+          "p99": 19.184337999999997,
+          "max": 22.3481,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 32.130024999999996,
+          "p50": 16.667,
+          "p95": 89.333,
+          "p99": 92.0,
+          "max": 94.0,
+          "over33_333": 210,
+          "over50": 187,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 108,
+        "longest_audio_zero_run_frames": 4,
+        "active_observed_wall_s": 11.120987099999999
+      },
+      {
+        "scene": 3,
+        "environment": 1,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 37701,
+        "last_frame": 38300,
+        "wall_start": 634.5640126,
+        "wall_end": 645.3822187,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 55.4023055964953,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 18.04979033333333,
+          "p50": 19.019,
+          "p95": 29.552315,
+          "p99": 31.124053,
+          "max": 916.9675,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 18.034741833333335,
+          "p50": 16.9483,
+          "p95": 30.51032999999999,
+          "p99": 39.25030199999999,
+          "max": 921.6357,
+          "over33_333": 16,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 0.016982,
+          "p50": 0.0017499999999999998,
+          "p95": 0.0034049999999999953,
+          "p99": 0.015315999999999984,
+          "max": 7.3957,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 7.215038333333333,
+          "p50": 9.0705,
+          "p95": 20.378919999999997,
+          "p99": 22.440085,
+          "max": 23.4708,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 83.49778166666665,
+          "p50": 84.667,
+          "p95": 92.667,
+          "p99": 96.00667,
+          "max": 96.667,
+          "over33_333": 597,
+          "over50": 595,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 10.829874199999999
+      },
+      {
+        "scene": 4,
+        "environment": 1,
+        "circuit": 2,
+        "direction": 1,
+        "first_frame": 61606,
+        "last_frame": 62205,
+        "wall_start": 1033.9787183,
+        "wall_end": 1044.6977486,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 55.879310449681576,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.89571116666667,
+          "p50": 18.61215,
+          "p95": 29.067905,
+          "p99": 31.044151,
+          "max": 837.9987,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.901309333333334,
+          "p50": 16.4312,
+          "p95": 28.75613,
+          "p99": 35.824358,
+          "max": 835.7834,
+          "over33_333": 10,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 0.022907500000000004,
+          "p50": 0.0018,
+          "p95": 0.007204999999999995,
+          "p99": 0.011003999999999996,
+          "max": 7.0438,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 6.369432333333334,
+          "p50": 8.0123,
+          "p95": 18.480799999999995,
+          "p99": 21.418544999999998,
+          "max": 22.3652,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 83.22888333333334,
+          "p50": 84.0,
+          "p95": 92.0,
+          "p99": 96.00667,
+          "max": 96.667,
+          "over33_333": 597,
+          "over50": 595,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 10.7374267
+      },
+      {
+        "scene": 1,
+        "environment": 2,
+        "circuit": 1,
+        "direction": 0,
+        "first_frame": 4956,
+        "last_frame": 5555,
+        "wall_start": 82.2204288,
+        "wall_end": 92.8849154,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 56.12401176606232,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.81768566666667,
+          "p50": 18.657649999999997,
+          "p95": 29.219749999999998,
+          "p99": 31.09011,
+          "max": 784.174,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.807104666666667,
+          "p50": 15.37875,
+          "p95": 28.820674999999998,
+          "p99": 37.955845999999966,
+          "max": 782.6595,
+          "over33_333": 9,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 0.0024208333333333334,
+          "p50": 0.0019,
+          "p95": 0.006704999999999996,
+          "p99": 0.010301999999999999,
+          "max": 0.0121,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 6.278824833333333,
+          "p50": 7.29885,
+          "p95": 18.683484999999997,
+          "p99": 22.151606,
+          "max": 23.4772,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 83.052235,
+          "p50": 84.0,
+          "p95": 92.0,
+          "p99": 95.333,
+          "max": 96.667,
+          "over33_333": 596,
+          "over50": 594,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 10.690611400000002
+      },
+      {
+        "scene": 1,
+        "environment": 2,
+        "circuit": 1,
+        "direction": 0,
+        "first_frame": 9756,
+        "last_frame": 10355,
+        "wall_start": 162.8938278,
+        "wall_end": 173.4953088,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 56.44035320448289,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.717819666666667,
+          "p50": 18.728949999999998,
+          "p95": 28.934614999999994,
+          "p99": 31.051679,
+          "max": 691.3488,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.693896666666667,
+          "p50": 16.13045,
+          "p95": 28.224974999999997,
+          "p99": 33.357589000000004,
+          "max": 732.5528,
+          "over33_333": 7,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 1.1382223333333334,
+          "p50": 0.0018,
+          "p95": 0.0034,
+          "p99": 0.0047,
+          "max": 678.5321,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 6.476372166666667,
+          "p50": 8.24145,
+          "p95": 18.59814,
+          "p99": 21.352764999999998,
+          "max": 22.4126,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 81.05333666666667,
+          "p50": 83.333,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667,
+          "over33_333": 594,
+          "over50": 593,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 1,
+        "longest_audio_zero_run_frames": 1,
+        "active_observed_wall_s": 10.630691800000001
+      },
+      {
+        "scene": 5,
+        "environment": 4,
+        "circuit": 2,
+        "direction": 0,
+        "first_frame": 77280,
+        "last_frame": 77879,
+        "wall_start": 1297.4236638,
+        "wall_end": 1307.8549615,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 57.41743167579224,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.416313666666667,
+          "p50": 19.0186,
+          "p95": 29.31835999999999,
+          "p99": 31.056216,
+          "max": 544.3713,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.407317333333335,
+          "p50": 16.1164,
+          "p95": 29.337174999999977,
+          "p99": 37.052298999999984,
+          "max": 546.8344,
+          "over33_333": 16,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 0.002284833333333333,
+          "p50": 0.0017,
+          "p95": 0.004309999999999991,
+          "p99": 0.0088,
+          "max": 0.0978,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 6.853809333333333,
+          "p50": 8.741800000000001,
+          "p95": 19.671245,
+          "p99": 21.812087000000002,
+          "max": 23.0416,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 83.24332833333334,
+          "p50": 84.667,
+          "p95": 93.333,
+          "p99": 96.667,
+          "max": 96.667,
+          "over33_333": 596,
+          "over50": 593,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 10.4497882
+      },
+      {
+        "scene": 4,
+        "environment": 1,
+        "circuit": 2,
+        "direction": 1,
+        "first_frame": 67006,
+        "last_frame": 67605,
+        "wall_start": 1124.723601,
+        "wall_end": 1135.1241194,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 57.58323618401576,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.36616533333333,
+          "p50": 18.92625,
+          "p95": 29.296974999999996,
+          "p99": 31.068895,
+          "max": 511.0657,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.35023166666667,
+          "p50": 15.9861,
+          "p95": 28.398474999999998,
+          "p99": 34.992734999999996,
+          "max": 513.1615,
+          "over33_333": 9,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 0.005002166666666667,
+          "p50": 0.0017,
+          "p95": 0.003644999999999959,
+          "p99": 0.010507999999999993,
+          "max": 0.8284,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 6.6576525,
+          "p50": 8.15295,
+          "p95": 19.545094999999996,
+          "p99": 21.537086,
+          "max": 22.3457,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 83.25668666666667,
+          "p50": 84.0,
+          "p95": 92.0,
+          "p99": 96.0,
+          "max": 96.667,
+          "over33_333": 598,
+          "over50": 596,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 10.419699199999998
+      },
+      {
+        "scene": 2,
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 27360,
+        "last_frame": 27959,
+        "wall_start": 459.5661748,
+        "wall_end": 469.9584752,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 57.68764941461746,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.334733,
+          "p50": 18.2407,
+          "p95": 26.066494999999993,
+          "p99": 30.694602,
+          "max": 401.5062,
+          "over33_333": 1,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.350044666666665,
+          "p50": 17.5783,
+          "p95": 25.474375,
+          "p99": 27.250282999999996,
+          "max": 389.6785,
+          "over33_333": 3,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 2.7301591666666667,
+          "p50": 0.0024,
+          "p95": 13.168879999999998,
+          "p99": 14.976543999999999,
+          "max": 15.6688,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 3.8813168333333334,
+          "p50": 0.0009,
+          "p95": 12.739704999999999,
+          "p99": 20.652995,
+          "max": 21.7047,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 59.774455,
+          "p50": 74.0,
+          "p95": 91.333,
+          "p99": 94.667,
+          "max": 96.667,
+          "over33_333": 423,
+          "over50": 414,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 14,
+        "longest_audio_zero_run_frames": 2,
+        "active_observed_wall_s": 10.4008398
+      },
+      {
+        "scene": 2,
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 33360,
+        "last_frame": 33959,
+        "wall_start": 561.7956178,
+        "wall_end": 572.1560064,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 57.85787969790434,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.2837305,
+          "p50": 14.58155,
+          "p95": 26.39724,
+          "p99": 29.497788,
+          "max": 36.4053,
+          "over33_333": 1,
+          "over50": 0,
+          "over100": 0
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.240336666666664,
+          "p50": 14.1085,
+          "p95": 26.313424999999995,
+          "p99": 28.996854,
+          "max": 36.6613,
+          "over33_333": 2,
+          "over50": 0,
+          "over100": 0
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 5.943816999999999,
+          "p50": 3.0141999999999998,
+          "p95": 15.616419999999996,
+          "p99": 17.603766999999998,
+          "max": 22.4519,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 1.403024,
+          "p50": 0.0008,
+          "p95": 10.872579999999994,
+          "p99": 19.253697999999996,
+          "max": 22.1621,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 30.61557,
+          "p50": 19.333,
+          "p95": 87.333,
+          "p99": 92.0,
+          "max": 93.333,
+          "over33_333": 181,
+          "over50": 137,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 53,
+        "longest_audio_zero_run_frames": 6,
+        "active_observed_wall_s": 10.3702383
+      },
+      {
+        "scene": 2,
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 30360,
+        "last_frame": 30959,
+        "wall_start": 511.0766558,
+        "wall_end": 521.4251204,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 57.91627605758233,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.2663035,
+          "p50": 18.97785,
+          "p95": 29.523205,
+          "p99": 31.06572,
+          "max": 444.5428,
+          "over33_333": 2,
+          "over50": 1,
+          "over100": 1
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.247010166666666,
+          "p50": 16.03385,
+          "p95": 28.72732999999998,
+          "p99": 34.676171999999994,
+          "max": 450.718,
+          "over33_333": 10,
+          "over50": 1,
+          "over100": 1
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 0.0021834999999999997,
+          "p50": 0.0017,
+          "p95": 0.004914999999999986,
+          "p99": 0.008801,
+          "max": 0.0159,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 6.7400096666666665,
+          "p50": 8.36535,
+          "p95": 19.54536499999999,
+          "p99": 21.712671999999994,
+          "max": 23.573,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 82.61223000000001,
+          "p50": 84.0,
+          "p95": 93.333,
+          "p99": 96.0,
+          "max": 96.667,
+          "over33_333": 595,
+          "over50": 593,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 0,
+        "longest_audio_zero_run_frames": 0,
+        "active_observed_wall_s": 10.3597821
+      },
+      {
+        "scene": 2,
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 21360,
+        "last_frame": 21959,
+        "wall_start": 357.9578093,
+        "wall_end": 368.2861197,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 58.04301531104125,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.228601833333332,
+          "p50": 15.22925,
+          "p95": 28.547255,
+          "p99": 31.062549,
+          "max": 35.3028,
+          "over33_333": 2,
+          "over50": 0,
+          "over100": 0
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.218688333333333,
+          "p50": 14.9983,
+          "p95": 28.412394999999997,
+          "p99": 33.718321999999986,
+          "max": 36.8807,
+          "over33_333": 8,
+          "over50": 0,
+          "over100": 0
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 4.778270333333333,
+          "p50": 3.2993,
+          "p95": 17.629965,
+          "p99": 19.771573,
+          "max": 25.4769,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 2.599248333333333,
+          "p50": 0.0009,
+          "p95": 11.770524999999994,
+          "p99": 20.853541999999997,
+          "max": 22.7098,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 39.77557333333334,
+          "p50": 19.333,
+          "p95": 90.667,
+          "p99": 93.333,
+          "max": 96.667,
+          "over33_333": 239,
+          "over50": 233,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 44,
+        "longest_audio_zero_run_frames": 4,
+        "active_observed_wall_s": 10.3371611
+      },
+      {
+        "scene": 2,
+        "environment": 3,
+        "circuit": 0,
+        "direction": 0,
+        "first_frame": 32160,
+        "last_frame": 32759,
+        "wall_start": 541.4376149,
+        "wall_end": 551.7666123,
+        "active_samples": 600,
+        "simulated_frames_per_wall_second": 58.04723247193917,
+        "sim_interval_ms": {
+          "samples": 600,
+          "mean": 17.227350166666668,
+          "p50": 18.255499999999998,
+          "p95": 26.719134999999998,
+          "p99": 30.813219,
+          "max": 32.8224,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "callback_ms": {
+          "samples": 600,
+          "mean": 17.23886916666667,
+          "p50": 16.77615,
+          "p95": 26.718799999999998,
+          "p99": 32.072739999999996,
+          "max": 36.4893,
+          "over33_333": 3,
+          "over50": 0,
+          "over100": 0
+        },
+        "posting_wait_ms": {
+          "samples": 600,
+          "mean": 4.719322666666666,
+          "p50": 2.14845,
+          "p95": 14.461509999999993,
+          "p99": 17.396489999999996,
+          "max": 19.1648,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "pacing_wait_ms": {
+          "samples": 600,
+          "mean": 2.5823345,
+          "p50": 0.0009,
+          "p95": 12.328644999999995,
+          "p99": 21.498195,
+          "max": 23.2134,
+          "over33_333": 0,
+          "over50": 0,
+          "over100": 0
+        },
+        "audio_queue_ms": {
+          "samples": 600,
+          "mean": 44.18445333333334,
+          "p50": 30.6665,
+          "p95": 91.333,
+          "p99": 95.33967,
+          "max": 96.667,
+          "over33_333": 292,
+          "over50": 263,
+          "over100": 0
+        },
+        "audio_queue_zero_observations": 41,
+        "longest_audio_zero_run_frames": 6,
+        "active_observed_wall_s": 10.3364101
+      }
+    ],
+    "active_callback_spikes_over100ms": 12,
+    "event_rows_over100ms_either_timeline": 13,
+    "no_raw_events_or_logs_published": true
+  },
+  "integrity": {
+    "integrity_pass": true,
+    "performance_patch_promoted": false,
+    "benchmark_incomplete": true,
+    "candidate_source_retained_experimental": true,
+    "source_commit": null,
+    "private_package": null,
+    "baseline_private_commit": "7b974c25c3d16c865c30fa16395b4e02fd828458",
+    "original_dirty_paths_preserved": 24,
+    "original_dirty_hashes_exact": true,
+    "candidate_source_paths_retained": 8,
+    "generated_input_count": 332,
+    "all332_hashes_exact": true,
+    "candidate_tests_passed": 47,
+    "no_new_tests_claimed_after_human_session": true,
+    "original_ISO_hash_verified": true,
+    "immutable_v30_files_verified": 59,
+    "delivered_card_hashes_and_mtimes_unchanged": true,
+    "human_session_card_preserved": true,
+    "human_analysis_sha256": "3566637cedf7e8a70bad46152acd75d79a2ccdaf9aa5ee99613598c2e580ce78",
+    "all14_completed_runs_preserved": true,
+    "original_protocol_and_assessment_retained": true
+  },
+  "limitations": [
+    "Human driving is not paired causal performance proof",
+    "Automatic Thunderhead control matrix was interrupted at explicit user request; all promotion gates remain incomplete",
+    "Human scene clock does not prove every natural finish/result or save-reopen",
+    "Four environments/five variants recorded; no active Grand Prix/Skorost in this session",
+    "Audio queue observations are not acoustic proof of silence/underruns",
+    "Cold compilation is supported by synchronous draw-path code and31 new shaders, not per-spike timestamps",
+    "Existing experimental deadline pacing was not enabled; prior rejected pacing work must not be blindly re-enabled"
+  ]
+}

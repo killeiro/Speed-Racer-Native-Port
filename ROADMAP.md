@@ -44,7 +44,7 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-22**. Playable: [v30](docs/audit/vanilla-v30.md), High 3× Vulkan + bilinear HUD/textures + FXAA, sound/HUD accepted. [V31](docs/audit/vanilla-v31.md) attributes a medium-reverse Fuji window to VU-side CPU. [V32](docs/audit/vanilla-v32.md) audits/tests a distinct SIMD flags change; 47 tests and 71,225 complete native checks pass, but the performance gate fails (Fuji mean +1.358%). Exact source baseline restored, 46 tests pass. **P0: inspect compiled hot-loop temporaries and flag-history work before another isolated optimization.** No new gameplay package. Full-race/results/save/reopen and release acceptance remain open.
+Updated **2026-10-22**. Accepted sound/HUD and High 3× [v30](docs/audit/vanilla-v30.md) preserved. [V33](docs/audit/vanilla-v33.md)/[v34](docs/audit/vanilla-v34.md) rejected and restored. [V35](docs/audit/vanilla-v35.md) remains experimental: 47 tests,71,225 complete native checks,14 automatic timing runs and29min08s human driving. Active average59.62 simulated frames/s, with residual stalls and Fuji pressure. **Next: isolate audio-driven cadence and cold pipeline compilation; preserve the warmed cache/progress.** Complete remaining control/coverage, result/save/reopen and second-PC acceptance before promotion.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|

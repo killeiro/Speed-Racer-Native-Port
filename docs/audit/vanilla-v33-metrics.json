@@ -1,0 +1,423 @@
+{
+  "version": 33,
+  "date": "2026-10-22",
+  "title": "conversão de status adiada",
+  "decision": "candidata rejeitada; referência restaurada",
+  "performance_patch_promoted": false,
+  "public_playable_release": false,
+  "baseline_private_commit": "7b974c25c3d16c865c30fa16395b4e02fd828458",
+  "baseline_exe_sha256": "6336c2a04548175dc25260fcf266fb4343de3c7290fdbfb3ba1e6a41e3baf1fd",
+  "candidate_exe_sha256": "1f41ab7ab6498acfe2fc533d04ced42677689a07404ac51f5cbb2c754510c5c1",
+  "timing_dll_sha256": "7d2992096708714225a399f092153ecb1a0f7234ca503e97143d7aec2ada0dc2",
+  "candidate_source_sha256": {
+    "runtime/include/ps2/vu_ops.hpp": "3bfce6c706c0fc16b03c485921f18ca7bfa6c9d1405e107311523c45e3ae93ba",
+    "recomp/vurecomp.cpp": "479c22bfac486571e65c0b6600a2c0f656ac2851274c261036adf559e2098958",
+    "CMakeLists.txt": "ad453274a45bb081282e35170ff77589b545bb69d8fe2280ddbf2ef20352be75",
+    "tests/vu_cont_programs.hpp": "64593a7374f298cdd4c14a4c18e3f9a154aa3860174aa06985003e335d62efb1",
+    "tests/vu_continuation.cpp": "764c8a40425cecfaa656dcde6720cf2dc648c90174739ef332d75f03272a8caa",
+    "tests/vu_cont_fixtures.cpp": "10adb8592ef3933a2cc59dc48cfbc3fe4bcde888dae2d34c8dae37077dad7f25",
+    "generated/speedracer/extra/vu_cont_000.cpp": "5dbd7e0e0f4361e7efcd259e3ad293a2cdde1d9e846505f4a7fc50af2904474b",
+    "generated/speedracer/extra/vu_cont_001.cpp": "5d4771a73cf501f7b8eb651bc8601e622ae8b24ddf8471cc58c426645e9e6e01",
+    "generated/speedracer/extra/vu_cont_002.cpp": "3996e29227533eb1cf0dd4a4409e19b0c40ee94c737903087c8f9d68eef6c659",
+    "generated/speedracer/extra/.vu-cont-manifest.json": "3cf955f859331c9efe87c15dd6fc9fe45ed0ba7eda4fa9df174402ed338c2bf1",
+    "tests/vu_deferred_status.cpp": "36a8134ba0edeca7f766ab37995bdabcf37ac42cdc0ee7a413af009e677203fa"
+  },
+  "protocol_sha256": "b02cea9f9358859144b2e5d40b47343ad86cb679c8df9f1162fa7cb2a3162f91",
+  "candidate_tests_passed": 47,
+  "restored_tests_passed": 46,
+  "native_library_changed": false,
+  "native_library_tests_note": "Five prior v31 upstream native-DLL unit tests, unchanged DLL; full current runtime CTest suite separately rerun.",
+  "generated_input_count": 332,
+  "generated_inputs_intentionally_changed_during_candidate": 4,
+  "generated_inputs_unchanged_during_candidate": 328,
+  "continuation_entries": 37,
+  "extra_programs": 310,
+  "original_dirty_paths_preserved": 24,
+  "native_checks": [
+    {
+      "name": "fuji",
+      "exit": 0,
+      "wall_s": 119.1880000000001,
+      "exe_sha256": "1f41ab7ab6498acfe2fc533d04ced42677689a07404ac51f5cbb2c754510c5c1",
+      "complete_native_checks": 61241,
+      "Q_checks": 1785889,
+      "identity": [
+        [
+          "1",
+          "3",
+          "1",
+          "1",
+          "1",
+          "0"
+        ]
+      ],
+      "functional_diagnostic_only": true,
+      "FPS_benchmark": false,
+      "headless": true
+    },
+    {
+      "name": "skorost",
+      "exit": 0,
+      "wall_s": 105.70399999999972,
+      "exe_sha256": "1f41ab7ab6498acfe2fc533d04ced42677689a07404ac51f5cbb2c754510c5c1",
+      "complete_native_checks": 7121,
+      "Q_checks": 326747,
+      "identity": [
+        [
+          "1",
+          "6",
+          "1",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "functional_diagnostic_only": true,
+      "FPS_benchmark": false,
+      "headless": true
+    },
+    {
+      "name": "thunderhead",
+      "exit": 0,
+      "wall_s": 87.34399999999914,
+      "exe_sha256": "1f41ab7ab6498acfe2fc533d04ced42677689a07404ac51f5cbb2c754510c5c1",
+      "complete_native_checks": 2863,
+      "Q_checks": 374255,
+      "identity": [
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ]
+      ],
+      "functional_diagnostic_only": true,
+      "FPS_benchmark": false,
+      "headless": true
+    }
+  ],
+  "native_complete_checks": 71225,
+  "Q_checks": 2486891,
+  "timing": {
+    "method": "Sequential fresh original-disc boots, same path/name, fixed scripted inputs, normal threads, Win32 direct Vulkan3xHigh, linear+FXAA, WASAPI, equivalent seeded QA cards and warmed caches; no capture/GS or instruction trace/build/profiler/other agent game during timing; external load not isolated.",
+    "total_frames_per_run": 12500,
+    "analysis_window": [
+      10650,
+      12400
+    ],
+    "samples_per_run": 1751,
+    "runs": [
+      {
+        "scene": "fuji",
+        "variant": "baseline",
+        "index": 1,
+        "exit": 0,
+        "wall_s": 219.17200000000048,
+        "exe_sha256": "6336c2a04548175dc25260fcf266fb4343de3c7290fdbfb3ba1e6a41e3baf1fd",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 20.716055225585382,
+          "p95": 26.718249999999998,
+          "p99": 29.468249999999998,
+          "max": 32.6485
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 20.716703883495146,
+          "p95": 26.717399999999998,
+          "p99": 29.464599999999997,
+          "max": 32.6343
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 10.887582524271844,
+          "p95": 16.225749999999998,
+          "p99": 18.467750000000002,
+          "max": 22.3616
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0007993717875499715,
+          "p95": 0.0012,
+          "p99": 0.0015,
+          "max": 0.003
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 6.4755728155339805,
+          "p95": 16.667,
+          "p99": 24.0,
+          "max": 32.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 48.271738470987906
+      },
+      {
+        "scene": "fuji",
+        "variant": "candidate",
+        "index": 2,
+        "exit": 0,
+        "wall_s": 224.26599999999962,
+        "exe_sha256": "1f41ab7ab6498acfe2fc533d04ced42677689a07404ac51f5cbb2c754510c5c1",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 22.789676299257568,
+          "p95": 29.5638,
+          "p99": 32.513,
+          "max": 53.8381
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 22.791435808109654,
+          "p95": 29.564700000000002,
+          "p99": 32.511250000000004,
+          "max": 53.8317
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 11.819337692747002,
+          "p95": 17.9529,
+          "p99": 20.20195,
+          "max": 40.6346
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0009354083380925184,
+          "p95": 0.0013,
+          "p99": 0.0017,
+          "max": 0.0238
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 5.016218732153055,
+          "p95": 16.667,
+          "p99": 17.333,
+          "max": 23.333
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 43.87951750032437
+      },
+      {
+        "scene": "fuji",
+        "variant": "candidate",
+        "index": 3,
+        "exit": 0,
+        "wall_s": 223.09400000000096,
+        "exe_sha256": "1f41ab7ab6498acfe2fc533d04ced42677689a07404ac51f5cbb2c754510c5c1",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 22.55294625928041,
+          "p95": 29.3581,
+          "p99": 31.80525,
+          "max": 47.8202
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 22.559341918903485,
+          "p95": 29.3602,
+          "p99": 31.814799999999998,
+          "max": 47.7833
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 11.603672244431753,
+          "p95": 17.655099999999997,
+          "p99": 19.80205,
+          "max": 33.3116
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0009538549400342661,
+          "p95": 0.0014,
+          "p99": 0.0018,
+          "max": 0.0059
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 4.924839520274129,
+          "p95": 16.667,
+          "p99": 16.667,
+          "max": 25.333
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 44.34010476961544
+      },
+      {
+        "scene": "fuji",
+        "variant": "baseline",
+        "index": 4,
+        "exit": 0,
+        "wall_s": 223.61000000000058,
+        "exe_sha256": "6336c2a04548175dc25260fcf266fb4343de3c7290fdbfb3ba1e6a41e3baf1fd",
+        "identity": [
+          [
+            "1",
+            "3",
+            "1",
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "active_clock_fraction": 1.0,
+        "sim": {
+          "count": 1751,
+          "mean": 22.743593260993716,
+          "p95": 29.6744,
+          "p99": 32.5734,
+          "max": 43.2814
+        },
+        "callback": {
+          "count": 1751,
+          "mean": 22.74468263849229,
+          "p95": 29.6777,
+          "p99": 32.6096,
+          "max": 43.2852
+        },
+        "posting": {
+          "count": 1751,
+          "mean": 11.856352198743574,
+          "p95": 17.9984,
+          "p99": 20.12715,
+          "max": 25.1989
+        },
+        "pacing": {
+          "count": 1751,
+          "mean": 0.0009651056539120501,
+          "p95": 0.0014,
+          "p99": 0.0018,
+          "max": 0.0253
+        },
+        "audio_queue": {
+          "count": 1751,
+          "mean": 4.810996002284409,
+          "p95": 16.667,
+          "p99": 18.667,
+          "max": 26.667
+        },
+        "counters": {
+          "hardware-gs": "[hardware-gs] chunks=17214502 bytes=34194974240 presents=12500 FIFO=0 failed=0",
+          "vif0": "[vif0]",
+          "vif1": "[vif1] 00:183684801 01:46941188 04:9024663 05:18868 06:18868 11:3246730 13:209485 14:9024663 20:16845516 30:1976743 31:18868 4A:2824257 50:3542406 60:82414 64:372839 65:7510955 68:82414 6C:19994872 6E:2052178 7C:9381629 7E:7463887",
+          "vu-cont": "[vu-cont] native_segments=35299112 interpreted_instructions=137918100 checked_calls=0"
+        },
+        "method": "Normal threads3x High, fixed scripted inputs; callback/simulation data, not physical scanout FPS.",
+        "simulation_rate": 43.96842612002937
+      }
+    ],
+    "assessment": {
+      "stage": "Fuji initial screen",
+      "pairs": {
+        "fuji": [
+          {
+            "gain_percent": -9.098949219124009,
+            "callback_p99_percent": 10.340035160837102,
+            "counters_equal": true
+          },
+          {
+            "gain_percent": 0.8453308029980899,
+            "callback_p99_percent": -2.4373190716844184,
+            "counters_equal": true
+          }
+        ],
+        "skorost": [],
+        "thunderhead": []
+      },
+      "screen_pass": false,
+      "gates": {},
+      "promote": false
+    },
+    "Fuji_mean_gain_percent": -4.1268092080629595,
+    "physical_scanout_FPS": false,
+    "full_races": false
+  },
+  "reference": "https://github.com/PCSX2/pcsx2/blob/646df006a4688063e56c0826e7ea4b8bb0c112c4/pcsx2/x86/microVU_Upper.inl",
+  "limitations": [
+    "Agreement preserves current runtime semantics, not certified PS2 accuracy",
+    "Short scripted windows do not establish full-game/variant/latency/second-PC acceptance",
+    "All attempts/maxima retained; no outlier trimming",
+    "Object/EXE instruction and branch counts are static, not retired cycles or a causal profile"
+  ],
+  "delivered_cards_untouched": true,
+  "independent_status_history_checks": 23068672,
+  "generated_fixture_checks": 4800,
+  "baseline_static_branches": [
+    40,
+    257
+  ],
+  "candidate_static_branches": [
+    56,
+    338
+  ],
+  "baseline_static_instructions": [
+    2063,
+    10404
+  ],
+  "candidate_static_instructions": [
+    2341,
+    11371
+  ],
+  "baseline_reference_rate_drift": [
+    48.271738470987906,
+    43.96842612002937
+  ],
+  "retained_setup_attempts": [
+    "First standalone header compile lacked sibling include path; corrected before proof",
+    "First unchanged-generator launch lacked runtime PATH and emitted empty log; child exit not persisted. Retry with toolchain PATH reproduced all four source files exactly",
+    "Generation checker initially omitted owned manifest from the changed-input allowlist; instruction canonicalization had already passed. Corrected to four derived files",
+    "Git-freeze checker initially expected ignored generated paths in porcelain; stopped before game launch. Tracked sources and derived inputs then verified independently"
+  ]
+}

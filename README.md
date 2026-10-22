@@ -8,14 +8,14 @@
 
 ## Current status
 
-**Playable private candidate: [v30](docs/audit/vanilla-v30.md)**, High 3× + bilinear HUD/textures + FXAA. The team accepts sound and HUD. **Latest engineering stage: [v32](docs/audit/vanilla-v32.md)** tests a distinct SIMD VU-flags candidate: 47 tests and 71,225 complete native checks pass, but the performance gate fails (Fuji mean +1.358%). Exact source baseline restored and 46 tests pass. No FPS patch/new package promoted; no public download.
+**Preserved playable baseline: [v30](docs/audit/vanilla-v30.md)**, High 3× + bilinear HUD/textures + FXAA, sound/HUD accepted. **Latest evaluation: [v35](docs/audit/vanilla-v35.md)** VU AVX2; 29min08s human session,104,220 frames,59.62 simulated frames/s during validated advancing scenes. Four environments/five variants, residual spikes and Fuji slow windows remain. Automatic Fuji gain +8.011%; 14 paired runs retained, remaining Thunderhead matrix interrupted at the team’s request. **No performance patch/package promoted.** V33/V34 remain rejected; public distribution remains open.
 
 **Preserved player baseline: v25, Windows GUI with adaptive fullscreen and 1x–4x selection, default 2x. Current hardware candidate: v30 with direct Win32 Vulkan, confirmed audio corrections and High-quality HUD filtering, separate GUI EXE, initial3x; stable-FPS/full-race acceptance pending.** Controllers remain supported; no PCSX2 executable or browser is launched. This repository remains documentary, with no public playable download.
 
 | Area | Status |
 |---|---|
 | Display and resolution | Implemented locally; saved native selector, DPI/resize handling and 39 passing tests; physical dialog/fullscreen-shortcut acceptance pending |
-| Image quality | The team accepts V30 HUD/High quality:3×, bilinear HUD/textures and FXAA; original texture detail, bloom alignment and reference parity remain open |
+| Image quality | The team accepts V30 HUD/High quality: 3×, bilinear HUD/textures and FXAA; original texture detail, bloom alignment and reference parity remain open |
 | Hardware GS integration (v27) | Real game GIF/register/FIFO lifecycle connected; 44 runtime tests, fresh library build and Fuji/Thunderhead 3x scene smoke checks pass; normal threaded performance remains open |
 | Fuji performance | V31 identifies medium/reverse and pause. Two3× threaded windows show21.1ms VU CPU/frame in Fuji versus10.4ms in Thunderhead, with an underfed native GS queue. V32 SIMD packing passes equivalence but fails performance; inspect compiled kernels next. Other variants remain open |
 | Build integrity | Clean v24 build, 332 unchanged generated inputs and 310 extra VU programs; always-run manifest guard preserved |
@@ -72,7 +72,7 @@ The [portable data preparer](docs/audit/data-preparation-v1.md) now validates th
 
 ## Project priorities
 
-1. Inspect compiled temporaries and flag-history work in the hot VU kernels; v32 SIMD flag packing failed its performance gate.
+1. Isolate audio-driven cadence and cold pipeline creation using the captured session/warmed cache; preserve rejected VU evidence and complete acceptance gates.
 2. Require full native equivalence and Fuji/Skorost/Thunderhead cadence controls for an isolated change; do not repeat rejected cache filters as new work.
 3. Confirm original timing/graphics, full races/results/save/reopen, classes/Mirror and long sessions.
 4. Finish physical audio/input, second-PC, provenance and distribution checks before a public alpha.
