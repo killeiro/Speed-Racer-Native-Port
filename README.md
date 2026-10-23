@@ -8,9 +8,9 @@
 
 ## Current status
 
-**Accepted sound/HUD baseline: [v30](docs/audit/vanilla-v30.md)**, High 3× + bilinear HUD/textures + FXAA. **Latest private build: [v36](docs/audit/vanilla-v36.md)** adds the supplied application logo and fixes UTF-8 media/save paths on Windows: 48 runtime tests, 52 synthetic import tests and three fresh native boots pass. A private media-free preparation kit exists; the GUI importer, natural result/save/reopen, remaining coverage, second PC and distribution review stay open. [V35](docs/audit/vanilla-v35.md) retains its completed bounded VU performance evidence (Fuji mean +8.011%); residual stalls remain.
+**The team accepts [v36](docs/audit/vanilla-v36.md) in local play**, preserving v30 High 3×/HUD/audio. **Latest private kit: [v37](docs/audit/vanilla-v37.md)** adds native own-ISO setup without Python, dependency diagnostics and a verified media-free ZIP for a second-PC test. 49 runtime tests, 239 native-import checks, real-ISO GUI import and extracted-ZIP preflight/import/boot pass. The Visual C++ v14 x64 prerequisite is explicit. **Next: one acceptance session on the other PC.** Physical second-PC results, natural race-result/save/reopen, remaining coverage, residual stalls and public redistribution review remain open. No new FPS benchmark.
 
-**Native Windows GUI:** direct Win32/Vulkan, adaptive fullscreen, controller support and saved 1×–4× internal-resolution selection. The current private v36 build starts at High 3× with bilinear HUD/textures and FXAA, preserving accepted v30 audio/visual settings. No PCSX2 executable or browser is launched. This repository contains documentation; a public playable download is not available.
+**Native Windows GUI:** direct Win32/Vulkan, adaptive fullscreen, controller support and saved 1×–4× internal-resolution selection. The current private v37 build starts at High 3× with bilinear HUD/textures and FXAA, preserving accepted v30 audio/visual settings. No PCSX2 executable or browser is launched. This repository contains documentation; a public playable download is not available.
 
 | Area | Status |
 |---|---|

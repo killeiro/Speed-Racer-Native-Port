@@ -44,7 +44,7 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Updated **2026-10-22**. Sound/HUD and High 3× [v30](docs/audit/vanilla-v30.md) preserved. [V36](docs/audit/vanilla-v36.md) adds application branding and fixes native Unicode ELF/ISO/save paths; 48 runtime tests, 52 synthetic import tests and three native boots pass. A private media-free engineering kit is prepared; the importer still requires Python during setup. [V35](docs/audit/vanilla-v35.md) retains its completed bounded AVX2 results. **Next: close natural result/save/reopen and GUI import/dependency packaging, attribute residual stalls, then finish coverage and second-PC validation.** No new FPS gain or public release is claimed; distribution review remains open.
+Updated **2026-10-22**. The team accepts local play in [v36](docs/audit/vanilla-v36.md). [V37](docs/audit/vanilla-v37.md) prepares the private second-PC test kit: native ISO setup without Python, safe staged import, explicit MSVC/Vulkan prerequisites, startup diagnostics, 49 tests/239 import checks and verified ZIP extraction/import/boot. **Next: one session on the second Windows PC, then inspect compatibility, result/save/reopen and any stalls before another patch.** High 3×/sound/HUD stay preserved. There is no new FPS claim or public playable release; full redistribution review remains open.
 
 | Milestone | Current evidence | Next completion criterion |
 |---|---|---|

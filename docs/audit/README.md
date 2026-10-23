@@ -1,5 +1,7 @@
 # Vanilla engineering evidence
 
+- [V37: kit nativo para o segundo PC](vanilla-v37.md) e [métricas](vanilla-v37-metrics.json): ISO própria pelo executável sem Python, 49 testes/239 checks, diagnóstico MSVC/Vulkan e ZIP privado verificado. V36 aceita pela equipe; próxima etapa é uma sessão real no outro PC.
+
 - [V36: logo e caminhos Unicode](vanilla-v36.md) e [métricas](vanilla-v36-metrics.json): 48 testes runtime, 52 do importador e três boots nativos; ícone incorporado, cartões preservados e kit privado sem mídia. Save de corrida/segundo PC/distribuição continuam abertos.
 
 - [V35: AVX2 e análise da pilotagem](vanilla-v35.md) e [métricas](vanilla-v35-metrics.json): 18 execuções automáticas concluídas, critérios VU aprovados, Fuji +8.011%, 47 testes e três pares idênticos de imagem/áudio gerado. Compilação privada verificada; picos e aceitação integral continuam abertos.

@@ -1,0 +1,148 @@
+{
+  "version": 37,
+  "date": "2026-10-22",
+  "status": "private second-PC test ZIP ready; external machine acceptance pending",
+  "user_accepted_playable_baseline": "v36 High3x/bilinear/FXAA",
+  "private_source_commit": "823a7ad519eaa59c74fc78d15c6f20a05b8b4c2a",
+  "candidate_exe_sha256": "72d1a0961935a3507c8a60b1658420472069bb6213c1f38924d1f1a97dfa38a2",
+  "native_GS_sha256": "7d2992096708714225a399f092153ecb1a0f7234ca503e97143d7aec2ada0dc2",
+  "source_files_changed": 13,
+  "runtime_tests_passed": 49,
+  "native_import_checks": 239,
+  "import_api_fixed_audited_USA_version": true,
+  "Python_required_for_setup": false,
+  "source_read_only": true,
+  "existing_destination_never_overwritten": true,
+  "cancellation_phases_unit_tested": 5,
+  "GUI_import_with_real_ISO_completed": true,
+  "GUI_cancel_input_not_exercised": true,
+  "GUI_frames": 1200,
+  "reopen_frames": 600,
+  "integration_cases": [
+    {
+      "name": "verify-install",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 0.1559999999954016,
+      "system_only_PATH": true
+    },
+    {
+      "name": "startup-report",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 0.14100000000325963,
+      "system_only_PATH": true
+    },
+    {
+      "name": "missing-bundled-DLL",
+      "exit": 1,
+      "expected_exit": 1,
+      "wall_s": 0.3600000000005821,
+      "system_only_PATH": true
+    },
+    {
+      "name": "broken-shader-compiler",
+      "exit": 1,
+      "expected_exit": 1,
+      "wall_s": 0.375,
+      "system_only_PATH": true
+    },
+    {
+      "name": "invalid-ISO-cli",
+      "exit": 1,
+      "expected_exit": 1,
+      "wall_s": 0.125,
+      "system_only_PATH": true
+    },
+    {
+      "name": "existing-data-refused",
+      "exit": 1,
+      "expected_exit": 1,
+      "wall_s": 0.125,
+      "system_only_PATH": true
+    },
+    {
+      "name": "fresh-native-gui",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 21.422000000005937,
+      "system_only_PATH": true
+    },
+    {
+      "name": "reopen-native",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 1.0469999999986612,
+      "system_only_PATH": true
+    }
+  ],
+  "zip_smokes": [
+    {
+      "name": "zip-preflight",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 0.23400000000401633
+    },
+    {
+      "name": "zip-diagnostics",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 0.09399999999732245
+    },
+    {
+      "name": "zip-without-media",
+      "exit": 1,
+      "expected_exit": 1,
+      "wall_s": 0.07800000000133878
+    },
+    {
+      "name": "zip-native-import",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 8.18800000000192
+    },
+    {
+      "name": "zip-fresh-boot",
+      "exit": 0,
+      "expected_exit": 0,
+      "wall_s": 1.7810000000026776
+    }
+  ],
+  "private_ZIP": {
+    "filename": "SpeedRacer-Alpha-PC-Test-v37.zip",
+    "bytes": 41903632,
+    "sha256": "ef55834fdaf788cb597fd3e9cc364862aa3665db64c0e45cb900d8287311a905",
+    "files": 87,
+    "CRC_and_all_extracted_hashes_verified": true,
+    "Unicode_extraction_and_production_import_boot_verified": true,
+    "contains_ISO_ELF_cards_cache_logs": false,
+    "contains_Python": false
+  },
+  "dependency_audit": {
+    "x64_binaries": 14,
+    "bundled_DLLs": 13,
+    "unresolved_names": 0,
+    "external_MSVC_prerequisite": [
+      "msvcp140.dll",
+      "vcruntime140.dll",
+      "vcruntime140_1.dll"
+    ],
+    "Windows_System32_is_not_assumed_to_supply_MSVC": true,
+    "MSVC_binaries_copied_from_System32": false,
+    "official_MSVC_download_shortcut_included": true,
+    "automatic_install": false,
+    "Vulkan_loader_check_is_not_GPU_capability_certification": true
+  },
+  "notices_added": 22,
+  "complete_redistribution_review": false,
+  "original_dirty_paths_preserved": 24,
+  "generated_inputs_unchanged": 332,
+  "older_v29_v30_v35_cards_unchanged": true,
+  "v36_card_advanced_during_concurrent_team_session": true,
+  "newest_v36_progress_retained_without_restoration": true,
+  "new_FPS_benchmark": false,
+  "second_physical_PC_tested": false,
+  "natural_race_result_save_reopen_accepted": false,
+  "public_playable_release": false,
+  "public_source_images_or_binaries": false
+}

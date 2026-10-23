@@ -1,18 +1,31 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização de 22/10/2026: [V36](vanilla-v36.md) incorpora o logo e corrige caminhos Unicode de mídia/save: 48 testes runtime, 52 do importador e três boots nativos aprovados. Cartões anteriores preservados e kit privado sem mídia preparado. Alta 3×/som/HUD v30 e a otimização VU v35 continuam. **Próximo: resultado natural/save/reabertura, importação gráfica e inventário de distribuição; atribuir os picos e fechar cobertura/segundo PC.** Kit de engenharia não é release público. Sem novo benchmark de FPS.
+Atualização de22/10/2026: a equipe aprovou a v36 jogando. [V37](vanilla-v37.md)
+fecha o kit experimental privado para outro PC: importador gráfico nativo sem
+Python,49 testes/239 verificações, dependências/diagnóstico e ZIP extraído,
+importado e iniciado com sucesso. Alta3×/som/HUD preservados. **Agora é teste
+externo, sem outra mudança de renderer ou campanha inteira antes desse retorno.**
 
 | # | Prioridade | Entrega e critério de conclusão |
 |---|---|---|
-| 1 | P0 | Correlacionar timestamps de compilação SPIR-V/criação de pipeline com os picos, em uma rota fixa e cópias de cache inicial/aquecido; manter diagnóstico separado do benchmark e preservar todos os intervalos |
-| 2 | P0 | Somente após causa concreta, propor outra mudança isolada; definir controles/limites antes, preservar equivalência VU/memória/GIF e todos os dados adversos |
-| 3 | P0 | Comparar HUD e eventos com referência original/PCSX2, incluindo textura/AA, bloom, feedback, mip e deinterlace; preservar a correção de som já confirmada pela equipe |
-| 4 | P0 | Preservar Alta 3× como padrão; comparar custo dos presets no pipeline normal somente se a atribuição apontar limite de GPU, sem confundir FPS headless com apresentação real |
-| 5 | P1 | Aceitar seletor, fullscreen/monitor/DPI e interação física de controles USB/Bluetooth no novo backend |
-| 6 | P0 | Aceitar corridas/resultados por pista e classes2–4/Mirror; sessão humana de 42min37s já concluída sem crash, sem certificar todas as rotas ou vazamentos |
-| 7 | P0 | Confirmar resultado natural, persistência e leitura após reabrir na pasta final, preservando o progresso da equipe; não depender de checkpoints incompatíveis |
-| 8 | P1 | Medir underruns e latência física, distinguindo simulação, callbacks e apresentação real |
-| 9 | P1 | IO Unicode local corrigido/verificado na v36; verificar outro Windows/GPU, dependências, CPU AVX2/Vulkan e diretório protegido |
-| 10 | P1 | Kit privado sem mídia preparado na v36; falta importador gráfico sem Python, proveniência/licenças/CI e gate da alpha; publicação segue documental |
+| 1 | P0 | Uma sessão no segundo Windows11: primeiro acesso, dependências, controle/áudio/fullscreen e duas corridas acessíveis, Fuji se disponível; não chamar teste local de segundo PC |
+| 2 | P0 | Conferir resultado natural/save, fechar e reabrir no segundo PC; logs/cartão QA isolados e retorno humano explícito, sem equiparar hash ou teste SIO2 a corrida completa |
+| 3 | P0 | Analisar o diagnóstico e relato dessa sessão; corrigir incompatibilidade concreta sem alterar a base que a equipe aprovou |
+| 4 | P0 | Atribuir picos residuais de cadência/compilação em uma rota fixa, somente quando necessário, preservando caches/condições e evidência adversa |
+| 5 | P0 | Somente após causa concreta, propor patch isolado com limites prévios e equivalência VU/memória/GIF; não reabrir experimentos de áudio já rejeitados |
+| 6 | P1 | Confirmar dispositivos USB/Bluetooth, reconexão e fullscreen/DPI no novo PC; suporte físico anterior permanece preservado, sem recertificação universal |
+| 7 | P1 | Completar pistas/classes2–4/Mirror e sessão longa de forma direcionada após o teste externo inicial; não repetir campanhas manuais sem alteração ou hipótese |
+| 8 | P1 | Medir latência física/underruns quando houver evidência, separando simulação, callback e apresentação real |
+| 9 | P0 para release público | Fechar versões/licenças/fonte correspondente, código recompilado e arte/marca;22 avisos adicionados na v37 não equivalem à aprovação integral |
+| 10 | P1 | Depois da aceitação externa e revisão de distribuição, definir versão alpha/release e CI; GitHub continua documental, PR23 aberto sem merge |
 
-Concluído: som/HUD aceitos, identidade/pausa e atribuição delimitada Fuji/controle v31, biblioteca gráfica nativa, ligação ao consumidor do jogo, registradores e FIFO, rejeição explícita de checkpoints incompatíveis, falha com drenagem das filas, correção do compilador ausente, CRT/área ativa, dois smoke tests 3x e pacote local com PATH mínimo. O suporte físico a controle já confirmado em versões anteriores foi preservado, mas não recertificado aqui. As 36 rotas e dados adversos anteriores permanecem como histórico; mods/remaster seguem posteriores à Vanilla estável.
+Concluído nesta etapa: o importador gráfico substitui o fluxo de Python do kit
+v36; ISO e destino são verificados, cancelamento do importador e corrida de
+publicação estão cobertos. A auditoria diferencia MSVC externo de bibliotecas
+garantidas do Windows. Não se copiam runtimes do System32 nem se instala nada
+automaticamente. O ZIP limpo contém instruções e atalho oficial para o
+pré-requisito, sem ISO/ELF/cartão/cache/log. Não há novo benchmark de FPS.
+
+Os dados históricos de desempenho e rejeições v33/v34 permanecem preservados.
+Remaster/mods seguem depois da Vanilla estável; o objetivo atual é o executável
+nativo Windows, com a qualidade e o som aceitos, validado em outra máquina.
