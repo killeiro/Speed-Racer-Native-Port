@@ -8,18 +8,17 @@
 
 ## Current status
 
-| Feature | Status | Evidence |
-| --- | --- | --- |
-| Windows GUI executable | 🟢 Local build verified | GUI subsystem; bundled DLL smoke test; no console window |
-| Gamepad input | 🟢 Local testing | SDL Xbox/PlayStation support; physical controller confirmed by maintainer |
-| Gameplay speed | 🔄 Improved; unresolved | VU continuations and VIF/Q optimizations measured; Fuji and other scenes remain below target |
-| Graphics | 🔄 Implementation advanced; parity pending | Mipmapping/LOD/filtering and GS hazards implemented; synchronized PS2/PCSX2 comparison still open |
-| Regression tests | 🟢 Local suite | 21/21 CTest in v6; differential VU/VIF/Q checks and 12 unchanged images |
-| Track coverage | 🟡 Short samples only | 36 Class 1 route checkpoints, 600 VBlanks per run; not full races |
-| Clean PC installation | ⚪ Untested | Development-path fallback still present |
-| Redistributable release | 🔒 Pending review | No public game-derived source, executable or assets |
+**Major milestone: Vanilla v38 now runs locally from an integrated package, without requiring an ISO during play.** The original data has been converted into a verified package that keeps the game's loading layout intact. The local flow is now: extract the complete folder and open SpeedRacer.exe.
 
-**Last consolidated baseline: local Vanilla v6, 2026-10-19.** These are maintainer-machine results, not independently reproduced. The native Windows runtime recompiles game execution and models PS2 hardware; it does not launch PCSX2 or require a browser. Interpreter/HLE fallback paths remain.
+The accepted baseline preserves the native Windows GUI, Xbox/PlayStation controller support, adaptive fullscreen and High 3× with bilinear HUD/textures and FXAA. The conversion was checked against the original data; captured image and generated audio in Fuji matched between the two storage formats.
+
+**We are now strengthening the next versions:** repeatable candidate preparation, integrity checks, progress/settings preservation and fixes driven by real testing. Testing on another Windows PC is underway; its acceptance is still pending.
+
+**The team is preparing a public announcement as this work progresses. A public playable download is not available yet.** Follow the [integrated Vanilla update](docs/updates/vanilla-integrada-v38.md) and the [roadmap](ROADMAP.md) for the next steps.
+
+### Earlier performance evidence
+
+The following v4–v6 figures are historical measurements, not benchmarks of the integrated v38 package.
 
 On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40→57.94 simulated FPS in Thunderhead-0**, **35.67→40.07 in Fuji-3** and **47.04→53.69 in Grand-Prix-0**. Background applications were active; Skorost's smaller improvement was inconclusive. These are short scene measurements, not a claim of stable 60 FPS across the game. The v6 VIF parser-context change adds a small, scene-dependent improvement; its [final-artifact comparisons and 36-route matrix](docs/audit/vanilla-v6.md) remain below target in several scenes. See the [audit index](docs/audit/README.md), [v5 report](docs/audit/vanilla-v5.md) and [machine-readable metrics](docs/audit/vanilla-v5-metrics.json) for protocol, build hashes, percentiles and limits.
 
@@ -39,11 +38,10 @@ On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40�
 
 ## Project priorities
 
-1. Reduce remaining VIF/VU and GS preparation costs in Fuji, Grand Prix and Skorost, retaining changes only after controlled comparison.
-2. Confirm race-timer cadence independently and extend short replays to full laps/races, classes and long sessions.
-3. Compare matched original/native scenes at 1x, then address remaining dithering/CRTC/fog behavior using evidence.
-4. Measure frame pacing, physical input latency and actual audio underruns; finish shutdown and clean-machine validation.
-5. Publish verified documentation now; review source provenance and distribution permissions before publishing a playable build.
+1. Strengthen candidate preparation, package integrity and save/settings preservation on the integrated baseline.
+2. Complete real second-PC acceptance and investigate concrete compatibility or stability reports.
+3. Apply targeted corrections while preserving accepted graphics, audio, controls and gameplay behavior.
+4. Finalize a stable Vanilla candidate and prepare the next public announcement.
 
 ## Technical references
 
@@ -62,4 +60,5 @@ Speed Racer and associated game assets belong to their respective rights holders
 ## Maintainer
 
 Project initiated by [@killeiro](https://github.com/killeiro).
+
 

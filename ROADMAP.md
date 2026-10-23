@@ -42,28 +42,25 @@ These are conceptual branches; feature feasibility and distribution permissions 
 - [x] Local source/runtime inventory and measured build environment documented
 - [ ] Independent reproduction and complete dependency/provenance review
 
-## Phase 1 — Vanilla stabilization (CURRENT)
+## Phase 1 — Integrated Vanilla robustness (CURRENT)
 
-Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Current P0/P1 tasks](docs/audit/next-10-tasks.md).
+**Current baseline: Vanilla v38, local integrated Windows package.** The game data has been converted and verified, so the local package opens without an ISO during play. [Read the project update](docs/updates/vanilla-integrada-v38.md).
 
-- [x] Separate EE simulation timing from presentation callbacks; capture percentiles and environment
-- [x] Fix DATE/CT24 and delayed VU MSKPATH3 regressions with focused tests
-- [x] Implement mipmapping/LOD/filtering and relevant GS hazard tests
-- [x] Implement selective native VU continuations with pipeline/code-generation validation
-- [x] Reduce VIF NOP/MASK=0 and Q-analysis overhead, with controlled measurements
-- [x] Capture 36 Class 1 route checkpoints and run short 600-VBlank performance samples
-- [x] Reuse VIF parser context per synchronous call; compare against the frozen prior parser
-- [x] Pass 21 local tests, VU/VIF/Q differential checks and 12-image regression in v6
-- [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
-- [ ] Extract race timer independently; complete laps/races, classes 2–4, Mirror and 30-minute sessions
-- [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
-- [ ] Verify actual audio underruns, physical input latency, pause/restart, saves and shutdown
-- [ ] Reproducible Windows build and launch on a clean machine without development fallbacks ([#7](../../issues/7))
-- [ ] Complete source/dependency provenance and distribution review ([#1](../../issues/1), [#8](../../issues/8))
+- [x] Integrated data package and native Windows startup without an ISO prompt
+- [x] Preserve High 3×, bilinear HUD/textures, FXAA, audio, controllers and adaptive fullscreen
+- [x] Verify the converted data and compare captured Fuji image/generated audio between storage formats
+- [x] Implement repeatable isolated candidate preparation, integrity verification and explicit profile copying
+- [ ] Complete the ongoing second-PC test: controls, audio/pause, fullscreen, natural results/save and reopen
+- [ ] Fix concrete issues revealed by real sessions and compare with the accepted baseline
+- [ ] Close targeted coverage gaps in longer sessions, remaining classes and Mirror
+- [ ] Finalize update/package preparation that preserves player progress and settings
+- [ ] Prepare a stable Vanilla candidate and its public announcement
 
-**Performance remains P0.** Fuji, Grand Prix and some Skorost/Thunderhead samples still run below target. A 600-VBlank route sample is approximately ten simulated seconds; it does not validate every section of a track or a full race. The EE clock and a pre-present callback are not independent race-timer or scanout measurements. Regression agreement does not establish PS2 accuracy.
+The team is working toward public disclosure soon. A public playable download has not been announced; second-PC acceptance and the remaining robustness work come first. The conversion itself is not a new FPS benchmark or certification of every track.
 
-**Vanilla definition of done:** repeatable tests show intended speed and original graphics, menus, physics, audio, controls and saving over typical full races and long sessions; authorized packaging passes clean-machine QA. These acceptance gates remain open. No milestone overrides distribution rights.
+While external testing continues, engineering focuses on reliable version preparation and progress preservation. New renderer or timing changes require a concrete issue and focused verification. Remaster and mods follow a stable Vanilla baseline.
+
+**Vanilla completion target:** repeatable startup, full-race results, saving/reopening, sound, controls and display behavior in normal and longer sessions on the tested machines, with no known blocking defect.
 
 ## Phase 2 — Remaster Core: visual and interface modernization
 
@@ -118,4 +115,5 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 | 🔒 Gated | Needs technical, QA or legal review |
 
 No made-up completion percentages. Issues, build SHA, benchmarks, screenshots and tests are the source of truth. **No commercial PS2 ISO, copyrighted assets or game-derived binaries are being published here.**
+
 
