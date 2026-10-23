@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "local_date": "2026-10-21",
+  "source_commit_private": "5b6e0962ef956dea9df40fc3cffc4a3ee295ada6",
+  "exe_sha256": "e92849b2492f93007dc03aab75c5e044d88eca8204304fac272224ee5c0902a0",
+  "exe_bytes": 74664957,
+  "windows_gui_subsystem": true,
+  "ctest_passed": 39,
+  "default_gui_scale": 2,
+  "selectable_scales": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "extra_native_programs_exact": 310,
+  "generated_inputs_unchanged": 332,
+  "preexisting_files_preserved": 24,
+  "VRAM_MiB": {
+    "1": 4,
+    "2": 16,
+    "3": 36,
+    "4": 64
+  },
+  "scratch_MiB": {
+    "1": 8,
+    "2": 32,
+    "3": 72,
+    "4": 128
+  },
+  "scope": "Four short unpaired Fuji-4 resolution samples; not an optimization promotion or full-game acceptance",
+  "fullscreen_samples": [
+    {
+      "scale": 1,
+      "simulated_fps": 59.277660465809134,
+      "present_callback_p99_ms": 25.1985,
+      "simulation_frames": 600,
+      "terminal_log_bytes": 7413,
+      "fullscreen_output": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "scale": 2,
+      "simulated_fps": 49.36623508334866,
+      "present_callback_p99_ms": 31.5496,
+      "simulation_frames": 600,
+      "terminal_log_bytes": 7415,
+      "fullscreen_output": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "scale": 3,
+      "simulated_fps": 28.764514012088664,
+      "present_callback_p99_ms": 48.8365,
+      "simulation_frames": 600,
+      "terminal_log_bytes": 7415,
+      "fullscreen_output": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "scale": 4,
+      "simulated_fps": 19.29088130455662,
+      "present_callback_p99_ms": 75.8332,
+      "simulation_frames": 600,
+      "terminal_log_bytes": 7417,
+      "fullscreen_output": [
+        2560,
+        1440
+      ]
+    }
+  ],
+  "native_internal_captures": [
+    {
+      "scale": 1,
+      "width": 640,
+      "height": 479,
+      "frame": 10900,
+      "ppm_sha256": "6737601c329bc25244a0cecca4a34c765e7190d9cb684ec1afd3fb6e245dc5e2",
+      "native_internal_frame_not_final_screen_capture": true,
+      "timing_campaign_separate": true
+    },
+    {
+      "scale": 2,
+      "width": 1280,
+      "height": 958,
+      "frame": 10900,
+      "ppm_sha256": "deabd2a2c6bed46e2dac4af923015f6138213fc0d4ae7e8e168728a834e5507d",
+      "native_internal_frame_not_final_screen_capture": true,
+      "timing_campaign_separate": true
+    },
+    {
+      "scale": 3,
+      "width": 1920,
+      "height": 1437,
+      "frame": 10900,
+      "ppm_sha256": "12199bdc2ed8402820d89d89697d4e8b4038e14265b67d5011eb4fb645e81b00",
+      "native_internal_frame_not_final_screen_capture": true,
+      "timing_campaign_separate": true
+    },
+    {
+      "scale": 4,
+      "width": 2560,
+      "height": 1916,
+      "frame": 10900,
+      "ppm_sha256": "0925d8411b647e3151b84886485ff2499002d52a2aa941898fd26cda82d51893",
+      "native_internal_frame_not_final_screen_capture": true,
+      "timing_campaign_separate": true
+    }
+  ],
+  "trace_syscalls_during_timing": false,
+  "physical_drivers_during_scripted_timing": false,
+  "capture_and_timing_separate": true,
+  "settings_dialog_interaction_verified": false,
+  "fullscreen_shortcuts_interactive_acceptance": false,
+  "PCSX2_visual_parity": false,
+  "game_derived_files_uploaded": false,
+  "user_card_sha256_before_and_after": "b91326b1aa86a07d7c8f061a6ce3f715d80159c52fab209c061467dea3b7335d"
+}

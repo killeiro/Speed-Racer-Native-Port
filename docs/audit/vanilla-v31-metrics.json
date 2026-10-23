@@ -1,0 +1,277 @@
+{
+  "version": 31,
+  "date": "2026-10-22",
+  "scope": "Optional diagnosis; no FPS patch/new gameplay package",
+  "source_commit": "de187fff594fa26fba5f7f52fe8efbf7348d54aa",
+  "runtime_tests": 46,
+  "native_library_tests": 5,
+  "team_acceptance": [
+    "v29 reported sound issue resolved",
+    "v30 HUD/High-quality stage resolved"
+  ],
+  "playable": "v30, High3x + bilinear textures/sprites + FXAA",
+  "playable_exe_sha256": "ce53dcc55d165e7f9c0dd4cdba37e55b0db683270f4dee7fa199d4dd6b76ab1c",
+  "diagnostic_exe_sha256": "327d271e1c8131afcf390f9c3e97a02f1082dab77af9ce342bd4a24954d3eabd",
+  "diagnostic_dll_sha256": "61585710266bf027a1c358a9d6638b1d76e09b06cdace463db9c5a54f6b01369",
+  "original_dirty_paths_preserved": 24,
+  "generated_inputs_verified": 332,
+  "extra_VU_manifest_guard": 310,
+  "performance_patch_promoted": false,
+  "public_playable_release": false,
+  "method": "Two sequential fresh original-disc normal-threaded Win32/Vulkan3x High boots; separate warmed caches/cards; scripted controls; no capture/syscall/instruction sampling/build/other agent game during these runs. Frame trace/clock and1Hz CPU counters add observer overhead.",
+  "trace_limit_per_lane": 262144,
+  "trace_default": "off, no hook/storage",
+  "windows": [
+    {
+      "environment": "Fuji",
+      "circuit": "medium",
+      "direction": "reverse",
+      "paused": false,
+      "total_emulated_frames": 12500,
+      "exit_code": 0,
+      "wall_s": 232.77505910000036,
+      "window": [
+        10650,
+        12400
+      ],
+      "samples": 1751,
+      "stats": {
+        "callback_ms": {
+          "count": 1751,
+          "mean": 22.087706796116503,
+          "p50": 23.5663,
+          "p95": 27.5261,
+          "p99": 30.594949999999997,
+          "max": 822.18
+        },
+        "sim_interval_ms": {
+          "count": 1751,
+          "mean": 22.085956139348944,
+          "p50": 23.5561,
+          "p95": 27.432650000000002,
+          "p99": 30.495449999999998,
+          "max": 848.125
+        },
+        "sim_post_wait_ms": {
+          "count": 1751,
+          "mean": 11.12136693318104,
+          "p50": 13.7439,
+          "p95": 16.75275,
+          "p99": 18.67255,
+          "max": 24.9352
+        },
+        "sim_pace_wait_ms": {
+          "count": 1751,
+          "mean": 0.0008703597944031982,
+          "p50": 0.0008,
+          "p95": 0.0013,
+          "p99": 0.00165,
+          "max": 0.0092
+        },
+        "worker_idle_ms": {
+          "count": 1751,
+          "mean": 15.990390633923472,
+          "p50": 16.702,
+          "p95": 20.049,
+          "p99": 22.5795,
+          "max": 814.323
+        },
+        "between_active_est_ms": {
+          "count": 1751,
+          "mean": 5.784988006853227,
+          "p50": 6.425,
+          "p95": 7.458,
+          "p99": 8.006,
+          "max": 12.979
+        },
+        "vsync_ms": {
+          "count": 1751,
+          "mean": 0.31614962878355224,
+          "p50": 0.296,
+          "p95": 0.442,
+          "p99": 0.533,
+          "max": 0.805
+        },
+        "ring_space_wait_ms": {
+          "count": 1751,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "max": 0.0
+        },
+        "frame_limit_wait_ms": {
+          "count": 1751,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "max": 0.0
+        },
+        "queued_after_push": {
+          "count": 1751,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0
+        }
+      },
+      "thread_CPU_ms_per_frame": {
+        "VU": 21.08671171171171,
+        "EE": 10.07882882882883,
+        "native_GS": 9.468843843843844,
+        "bridge": 12.903528528528529
+      },
+      "CPU_window": [
+        10701,
+        12366
+      ],
+      "exe_sha256": "ce53dcc55d165e7f9c0dd4cdba37e55b0db683270f4dee7fa199d4dd6b76ab1c",
+      "instrumented_dll_sha256": "3b7eb1ab3fc16f9588b5f3d4b9a1aceb66dbd2484acbe74f173b245e7d6e1f87"
+    },
+    {
+      "environment": "Thunderhead",
+      "circuit": "medium",
+      "direction": "reverse",
+      "paused": false,
+      "total_emulated_frames": 12500,
+      "exit_code": 0,
+      "wall_s": 214.95390229999612,
+      "window": [
+        10650,
+        12400
+      ],
+      "samples": 1751,
+      "stats": {
+        "callback_ms": {
+          "count": 1751,
+          "mean": 17.044823015419762,
+          "p50": 16.5148,
+          "p95": 29.39985,
+          "p99": 35.2411,
+          "max": 364.7733
+        },
+        "sim_interval_ms": {
+          "count": 1751,
+          "mean": 17.05121067961165,
+          "p50": 18.8375,
+          "p95": 29.1941,
+          "p99": 31.05275,
+          "max": 350.7912
+        },
+        "sim_post_wait_ms": {
+          "count": 1751,
+          "mean": 0.21616316390633922,
+          "p50": 0.0015,
+          "p95": 0.00315,
+          "p99": 0.0083,
+          "max": 322.6982
+        },
+        "sim_pace_wait_ms": {
+          "count": 1751,
+          "mean": 6.607369446030839,
+          "p50": 8.1728,
+          "p95": 19.4289,
+          "p99": 21.71195,
+          "max": 23.4641
+        },
+        "worker_idle_ms": {
+          "count": 1751,
+          "mean": 12.314559109080523,
+          "p50": 11.779,
+          "p95": 24.698,
+          "p99": 29.2635,
+          "max": 344.259
+        },
+        "between_active_est_ms": {
+          "count": 1751,
+          "mean": 4.396358081096516,
+          "p50": 3.944,
+          "p95": 5.7995,
+          "p99": 6.827,
+          "max": 376.29
+        },
+        "vsync_ms": {
+          "count": 1751,
+          "mean": 0.3306910336950314,
+          "p50": 0.296,
+          "p95": 0.446,
+          "p99": 0.593,
+          "max": 11.279
+        },
+        "ring_space_wait_ms": {
+          "count": 1751,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "max": 0.0
+        },
+        "frame_limit_wait_ms": {
+          "count": 1751,
+          "mean": 0.2565111364934323,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "max": 356.669
+        },
+        "queued_after_push": {
+          "count": 1751,
+          "mean": 1.0057110222729868,
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 2.0
+        }
+      },
+      "thread_CPU_ms_per_frame": {
+        "VU": 10.410535609181872,
+        "EE": 9.8863301942319,
+        "native_GS": 6.07894349617422,
+        "bridge": 6.759490876986463
+      },
+      "CPU_window": [
+        10674,
+        12373
+      ],
+      "exe_sha256": "ce53dcc55d165e7f9c0dd4cdba37e55b0db683270f4dee7fa199d4dd6b76ab1c",
+      "instrumented_dll_sha256": "3b7eb1ab3fc16f9588b5f3d4b9a1aceb66dbd2484acbe74f173b245e7d6e1f87"
+    }
+  ],
+  "limitations": [
+    "Not GPU timestamps or physical scanout FPS",
+    "One scripted window per environment, not full races or a causal optimization comparison",
+    "Coarse Windows CPU accounting: use averages",
+    "Native idle hook reads clocks at empty-ring transitions",
+    "Old human slow blocks cannot retrospectively be mapped to a track variant"
+  ],
+  "separate_instruction_probe": {
+    "exit_code": 0,
+    "physical_FPS_benchmark": false,
+    "approximately_observations_per_thread": 1445,
+    "hot_native_kernel_observations": [
+      213,
+      184
+    ],
+    "lookup_observations": 175,
+    "limitation": "Suspension-biased RIPs, not CPU wall-time percentages; raw data private"
+  },
+  "final_clock_check": {
+    "frames": 11700,
+    "active": 850,
+    "paused": 160,
+    "setup": "Fuji/medium/reverse",
+    "clock_and_pause_verified": true,
+    "headless": true,
+    "native_presents": 0,
+    "game_exit_code": null,
+    "exit_note": "The original checker did not persist the child exit code before its failed count assertion. The terminal game log records frame-limit completion and failed=0; do not claim independently recorded exit 0."
+  },
+  "retained_adverse_attempts": [
+    "CSV test matched zeros in appended fields; fixed by parsing column positions; then46/46 tests passed",
+    "First final EXE probe lacked adjacent runtime DLLs; stopped before telemetry, then dependencies were staged separately",
+    "Headless without capture correctly produced0 presents; the wrapper expected presents/EE-VU joins incorrectly. Existing clock samples verified separately; no fabricated native frames or exit0 claim",
+    "Unmeasured duplicate of historical v19 negative rejection withdrawn; three sources restored byte-for-byte/recompiled. No new optimization result claimed"
+  ]
+}

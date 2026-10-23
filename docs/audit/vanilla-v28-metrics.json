@@ -1,0 +1,119 @@
+{
+  "version": 28,
+  "date": "2026-10-21",
+  "status": "experimental_audio_and_direct_presentation_candidate",
+  "source_commit": "9a5cec22fcc274adfcb0693de5c2c632809ac044",
+  "exe_sha256": "5fbded9056a4b94c5ca0dde769535484e6c29a3b0ae146f285fc46de6187be6c",
+  "gs_dll_sha256": "eb118627ae7b76247ce8cfa64ba758ad581bc0f8c0064ddc188a2564138cdf3b",
+  "default_scale": 3,
+  "tests": {
+    "runtime_passed": 45,
+    "SPU2_assertions_passed": 11,
+    "baseline_initial_assertions_failed": 6,
+    "baseline_initial_assertions_passed": 2,
+    "native_SDL_contract_test_reproduced_failure": true,
+    "UBSan_trap_actual_mixer_passed": true
+  },
+  "headless": {
+    "same_frames": 18000,
+    "same_audio_frames": 14341056,
+    "format": "48k stereo16",
+    "baseline_exe_sha256": "35b2185f5d9ff9653b5089565f0f77cae8b338757fff58f4646350f5ff3b4982",
+    "candidate_exe_sha256": "8a454de33f485038ea28bda039be4e389f5138c6c5cfefaeb129ad9384604d66",
+    "baseline_audio_sha256": "571094d7b2f2441636cd61519efcf2a7d34e1c60b5a8a3c9b1ed6c97eb19ff6c",
+    "candidate_audio_sha256": "c43ec2dbdff413a8a1d9746f0eb88a4431dbf91a40afdc73d3a354071e7ecb28",
+    "changed_interleaved_samples": 3178,
+    "baseline_active_audio": {
+      "analyzed_from_audio_second": 166,
+      "seconds": 132.772,
+      "nonzero_sample_frames": 6373056,
+      "longest_exact_silence_ms": 0.0,
+      "peak": 20465,
+      "rms": 3147.271459045162
+    },
+    "candidate_active_audio": {
+      "analyzed_from_audio_second": 166,
+      "seconds": 132.772,
+      "nonzero_sample_frames": 6373056,
+      "longest_exact_silence_ms": 0.0,
+      "peak": 20465,
+      "rms": 3147.2528815381006
+    },
+    "equal_images": 30,
+    "images_compared": 30,
+    "neither_playback_nor_complete_championship_acceptance": true
+  },
+  "window_before_surface": {
+    "exit": 0,
+    "frames": 12600,
+    "scale": 3,
+    "seconds": 244.68799999999828,
+    "exe_sha256": "f19d88ae6a0f7a8e961638788c0a02d83e6edb1054543de94d1a9d5d2fcd1f5e",
+    "audio_driver_opened": true,
+    "enqueue_errors": 0,
+    "hardware_playback_capture": false,
+    "audio_queue_ms_min": 0.0,
+    "audio_queue_ms_mean": 4.97806617929973,
+    "audio_queue_ms_max": 22.0,
+    "zero_queue_observations": 74,
+    "callback_interval_ms_mean": 24.475324470950362,
+    "callback_interval_ms_p99": 42.614174,
+    "not_underrun_or_acoustic_latency_measurement": true,
+    "presentation": "readback-to-SDL",
+    "joined": true,
+    "active_generated_audio": {
+      "analyzed_from_audio_second": 166,
+      "seconds": 42.818666666666665,
+      "nonzero_sample_frames": 2055295,
+      "longest_exact_silence_ms": 0.020833333333333332,
+      "peak": 13648,
+      "rms": 2989.6907731502656
+    }
+  },
+  "window_direct": {
+    "exit": 0,
+    "frames": 12600,
+    "scale": 3,
+    "seconds": 211.65699999999924,
+    "exe_sha256": "5fbded9056a4b94c5ca0dde769535484e6c29a3b0ae146f285fc46de6187be6c",
+    "audio_driver_opened": true,
+    "enqueue_errors": 0,
+    "hardware_playback_capture": false,
+    "audio_queue_ms_min": 0.0,
+    "audio_queue_ms_mean": 83.09427048864947,
+    "audio_queue_ms_max": 97.333,
+    "zero_queue_observations": 1,
+    "callback_interval_ms_mean": 17.108973682185457,
+    "callback_interval_ms_p99": 33.960404,
+    "not_underrun_or_acoustic_latency_measurement": true,
+    "presentation": "direct",
+    "joined": true,
+    "active_generated_audio": {
+      "analyzed_from_audio_second": 166,
+      "seconds": 42.818666666666665,
+      "nonzero_sample_frames": 2055295,
+      "longest_exact_silence_ms": 0.020833333333333332,
+      "peak": 13648,
+      "rms": 2989.6907731502656
+    }
+  },
+  "preservation": {
+    "original_dirty_paths_preserved": 24,
+    "generated_inputs_unchanged": 332,
+    "v27_exe_preserved": true,
+    "v27_card_unchanged": true
+  },
+  "acceptance": {
+    "complete_championship_2": false,
+    "reported_race_2_and_3_silence_reproduced": false,
+    "physical_audio_underrun_capture": false,
+    "stable_60_all_tracks": false,
+    "second_PC": false,
+    "public_playable_release": false
+  },
+  "limits": [
+    "Window runs are one diagnostic per variant; cache state differs and build/CTest work overlaps part of the earlier run. No controlled FPS gain is claimed.",
+    "Queue observations are SDL software-queue sizes, not captured sound, device underruns or acoustic latency.",
+    "The generated WAV remains non-silent in the tested first race before and after; the SPU fixes alone do not establish the cause of the reported later silence."
+  ]
+}

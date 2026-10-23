@@ -1,0 +1,107 @@
+{
+  "version": "vanilla-v27",
+  "date": "2026-10-21",
+  "attribution": "the team",
+  "source_commit": "1014c6c9566f058a3dea1314148940f4344a7170",
+  "status": "experimental hardware GS integrated; no stable-FPS promotion",
+  "runtime_tests": {
+    "passed": 44,
+    "total": 44,
+    "new_runtime_cases": [
+      "direct",
+      "queued",
+      "hidden Win32 window",
+      "failed queued drain",
+      "missing DLL"
+    ],
+    "cold_shader_cache": true,
+    "packed_and_textured_ct24_to_ct16": true
+  },
+  "fresh_native_library": {
+    "tests_passed": 3,
+    "build_steps": 174,
+    "dll_sha256": "eb118627ae7b76247ce8cfa64ba758ad581bc0f8c0064ddc188a2564138cdf3b",
+    "dll_bytes": 6193434,
+    "build_seconds": 56.3279999999977,
+    "locked_inputs": {
+      "kzgs": {
+        "repo": "drakolordx7/KillzoneRecomp",
+        "commit": "5f0700079f9ac4e14799d66d01747dbcdcec55f6",
+        "sha256": "e8c8d4285a4443147065dcc3f376a4ed480fea5bde7f123fd3ef5b58cb091252"
+      },
+      "pcsx2": {
+        "repo": "PCSX2/pcsx2",
+        "commit": "646df006a4688063e56c0826e7ea4b8bb0c112c4",
+        "sha256": "b926e3248b5418d4572ce0c576373a0636ce657ae45ea7bdc7815db81c332989"
+      },
+      "deps": {
+        "url": "https://github.com/PCSX2/pcsx2-windows-dependencies/releases/download/latest-windows-dependencies/pcsx2-windows-dependencies.7z",
+        "sha256": "a3133c7841e8fbdab6f4d1d5ad8efec31fb1ecda95ffed39f4d1f36bb7eb0007"
+      }
+    }
+  },
+  "experimental_private_package": {
+    "exe_sha256": "35b2185f5d9ff9653b5089565f0f77cae8b338757fff58f4646350f5ff3b4982",
+    "exe_bytes": 74680948,
+    "gui_subsystem": true,
+    "default_backend": "Vulkan hardware",
+    "initial_resolution": 3,
+    "minimal_path_boot_passed": true,
+    "default_backend_boot_verified": true
+  },
+  "scenes": [
+    {
+      "track": "Fuji-4",
+      "scale": 3,
+      "fresh_boot": true,
+      "checkpoint_loaded": false,
+      "exit": 0,
+      "frame": 10900,
+      "size": [
+        1920,
+        1437
+      ],
+      "frame_sha256": "1d36d03be532359dea6480369d42d10d971e18ccd89fadfde400ce9655d08b54",
+      "single_thread_headless_diagnostic_ms": 31.48,
+      "not_window_presentation_fps": true
+    },
+    {
+      "track": "Thunderhead-4",
+      "scale": 3,
+      "fresh_boot": true,
+      "checkpoint_loaded": false,
+      "exit": 0,
+      "frame": 10900,
+      "size": [
+        1920,
+        1437
+      ],
+      "frame_sha256": "3e5466a9e87f11d1d5f3cab772dbdf89c6621a7d8a51394dc95e50edb8cce4a5",
+      "single_thread_headless_diagnostic_ms": 23.54,
+      "not_window_presentation_fps": true
+    }
+  ],
+  "headless_diagnostics_not_comparable_to_v25_fullscreen": true,
+  "threaded_window_fps": null,
+  "stable_60fps_accepted": false,
+  "real_game_fifo_read_count_in_scenes": 0,
+  "guest_fifo_fixture_passed": true,
+  "runtime_checkpoint_import_export_supported": false,
+  "normal_memory_card_path_unchanged": true,
+  "physical_controller_retested": false,
+  "full_races_accepted": false,
+  "second_pc_gpu_accepted": false,
+  "preserved": {
+    "v25_exe_sha256": "e92849b2492f93007dc03aab75c5e044d88eca8204304fac272224ee5c0902a0",
+    "generated_inputs": 332,
+    "extra_vu_programs": 310,
+    "preexisting_paths": 24
+  },
+  "adverse_results_retained": [
+    "missing shaderc black game frames",
+    "initial CT16 expectation 255 vs actual 248",
+    "NTSC 448-line crop clipped HUD",
+    "unaccepted v26 D3D11 switch"
+  ],
+  "publication": "documentation only; no source/binary/media; PR23 open, main unchanged"
+}

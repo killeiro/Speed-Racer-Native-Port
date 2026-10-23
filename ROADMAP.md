@@ -44,26 +44,26 @@ These are conceptual branches; feature feasibility and distribution permissions 
 
 ## Phase 1 — Vanilla stabilization (CURRENT)
 
-Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Current P0/P1 tasks](docs/audit/next-10-tasks.md).
+Updated **2026-10-22**. The team accepts local play in [v36](docs/audit/vanilla-v36.md). [V37](docs/audit/vanilla-v37.md) prepares the private second-PC test kit: native ISO setup without Python, safe staged import, explicit MSVC/Vulkan prerequisites, startup diagnostics, 49 tests/239 import checks and verified ZIP extraction/import/boot. **Next: one session on the second Windows PC, then inspect compatibility, result/save/reopen and any stalls before another patch.** High 3×/sound/HUD stay preserved. There is no new FPS claim or public playable release; full redistribution review remains open.
 
-- [x] Separate EE simulation timing from presentation callbacks; capture percentiles and environment
-- [x] Fix DATE/CT24 and delayed VU MSKPATH3 regressions with focused tests
-- [x] Implement mipmapping/LOD/filtering and relevant GS hazard tests
-- [x] Implement selective native VU continuations with pipeline/code-generation validation
-- [x] Reduce VIF NOP/MASK=0 and Q-analysis overhead, with controlled measurements
-- [x] Capture 36 Class 1 route checkpoints and run short 600-VBlank performance samples
-- [x] Reuse VIF parser context per synchronous call; compare against the frozen prior parser
-- [x] Pass 21 local tests, VU/VIF/Q differential checks and 12-image regression in v6
-- [ ] Sustain intended simulation speed and acceptable p95/p99 in all relevant scenes ([#2](../../issues/2), [#3](../../issues/3), [#4](../../issues/4))
-- [ ] Extract race timer independently; complete laps/races, classes 2–4, Mirror and 30-minute sessions
-- [ ] Match five original/native scenes at 1x and close active graphics gaps ([#5](../../issues/5), [#6](../../issues/6))
-- [ ] Verify actual audio underruns, physical input latency, pause/restart, saves and shutdown
-- [ ] Reproducible Windows build and launch on a clean machine without development fallbacks ([#7](../../issues/7))
-- [ ] Complete source/dependency provenance and distribution review ([#1](../../issues/1), [#8](../../issues/8))
+| Milestone | Current evidence | Next completion criterion |
+|---|---|---|
+| Reproducible native build | v23 coverage repaired/guarded; v24 clean build; v25 retains 332 generated inputs and 310 extra VU symbols | Keep manifests and complete native coverage in every candidate |
+| Modern display controls | Fullscreen adaptation and 1x–4x selection implemented; 39 tests and four real-resolution captures pass | Accept native selector/shortcut interaction and monitor changes; arbitrary ultrawide camera remains separate |
+| Efficient high-resolution pipeline — P0 | High 3×/HUD/audio retained; V35 scoped VU AVX2 passes bounded criteria (+8.011% Fuji), 47 tests and three identical output pairs | Attribute remaining audio-driven cadence and synchronous pipeline costs with timestamps; preserve exactness, quality and frame-queue limits |
+| Vanilla gameplay acceptance | Six v17 human controller sessions and 36 short Class1 routes retained | Verify full races/results/save/reopen, classes2–4/Mirror/30 minutes, original timing/graphics, physical audio/input and another Windows/GPU |
 
-**Performance remains P0.** Fuji, Grand Prix and some Skorost/Thunderhead samples still run below target. A 600-VBlank route sample is approximately ten simulated seconds; it does not validate every section of a track or a full race. The EE clock and a pre-present callback are not independent race-timer or scanout measurements. Regression agreement does not establish PS2 accuracy.
+[Architecture decision and references](docs/audit/vanilla-v24.md) · [Resolution cost and limits](docs/audit/vanilla-v25.md) · [Ten concrete tasks](docs/audit/next-10-tasks.md).
 
-**Vanilla definition of done:** repeatable tests show intended speed and original graphics, menus, physics, audio, controls and saving over typical full races and long sessions; authorized packaging passes clean-machine QA. These acceptance gates remain open. No milestone overrides distribution rights.
+No new unchanged-build manual driving round is requested. New performance campaigns require a concrete renderer/VU change and intact source coverage. The 128-bit invalidation bug is corrected but not established as Fuji's performance cause. Prior rejected timing candidates remain rejected; the v25 quality default does not waive their gates. Full-game stability and public distribution are still open.
+
+## Historical release-readiness planning — 2026-10-19
+
+The following is the archived planning snapshot. Original media has since been recovered and v35 privately packaged; follow the current acceptance gates above. No public release date is committed.
+
+The native GUI/controller prototype exists. Active v13 still has throughput gaps; the v14 experiment is isolated after regressions. A limited friend-test alpha has a **low-confidence2–4 active-working-week planning range**, and broader Vanilla acceptance6–12+ weeks, conditional on restored legitimate media, continuous engineering/QA and all distribution gates. These are not committed release dates or automatic background work. Re-estimate after the Skorost control and a full-race/portable-data boot milestone.
+
+The [readiness/graphics audit](docs/audit/release-readiness-and-graphics.md) defines alpha acceptance and evaluates the reported aliasing.1x rendering enlarged to the window is a strong code-based explanation; existing2x/3x internal scaling needs fresh correctness/performance comparison before preset promotion. Texture packs and skins remain optional future work; no replacement loader exists in this renderer. Third-party pack/tool candidates and license uncertainty are documented without downloading or integrating assets.
 
 ## Phase 2 — Remaster Core: visual and interface modernization
 
@@ -118,4 +118,3 @@ Status updated **2026-10-19**. [Evidence index](docs/audit/README.md) · [Curren
 | 🔒 Gated | Needs technical, QA or legal review |
 
 No made-up completion percentages. Issues, build SHA, benchmarks, screenshots and tests are the source of truth. **No commercial PS2 ISO, copyrighted assets or game-derived binaries are being published here.**
-

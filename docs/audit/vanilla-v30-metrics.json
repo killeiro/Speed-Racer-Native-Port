@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-22",
+  "version": "v30",
+  "source_commit": "93add46d9ae0c107a10b18b8a53e6abcde85f4f3",
+  "source_hashes": {
+    "host/speedracer_graphics.hpp": "eab0107bf639b58e2863245b3d6a73ac33f847439f827050dcf0b57c831e989e",
+    "host/speedracer_main.cpp": "7cc90afb4b80bcb20a75cf64f9d6ed883361f8b50628cb98edd99fb7c29759b8",
+    "native/gs_hw/bridge.cpp": "11f408fcb20712134cdc7887ba1b5c479ef831cbb90f0d1cc6b3c386379a2d4b",
+    "native/gs_hw/CMakeLists.txt": "e6fc75d1fdee8f5df4ae350ad4aed105e6f75d43bdc57af7e9d9f0ab7654d41d",
+    "native/gs_hw/README.md": "6329e0dfb9eaba3872251fed399e2b50569dd63a85620a454343ea43d78836f1",
+    "tests/gs_hw_bridge.c": "5de914a3c49d399596a27bc40be6ea9ee55d27b98bdb2096ad895f6307c6e50e",
+    "tests/gs_hw_filter.c": "122e71f29e8eb650e213cf083bbb09ba3a6ec084f7f7fa5f115e7c951d55435b",
+    "tests/render_scale.cpp": "4781d4eaf27574671e7f26b21610af97ef1f15d0b4e03423b023e0c3fede3edf"
+  },
+  "package": {
+    "exe_SHA256": "ce53dcc55d165e7f9c0dd4cdba37e55b0db683270f4dee7fa199d4dd6b76ab1c",
+    "dll_SHA256": "7d2992096708714225a399f092153ecb1a0f7234ca503e97143d7aec2ada0dc2",
+    "GUI_subsystem": true,
+    "default_scale": 3,
+    "default_quality": "High: bilinear textures including HUD sprites + FXAA",
+    "old_EXE_SHA256": "f2d38aa9ac71f3fab76342c88e21edb69f92f403b0164a8f028124e90b67291f"
+  },
+  "default": {
+    "scale": 3,
+    "FXAA": true,
+    "texture_filter": "Forced bilinear, including sprites"
+  },
+  "runtime_tests": 46,
+  "native_library_tests": 4,
+  "regression": {
+    "guest_TEX1_nearest": true,
+    "texture_size": [
+      8,
+      8
+    ],
+    "FXAA_disabled_to_isolate_sampler": true,
+    "original_intermediate_pixels": 0,
+    "high_quality_intermediate_pixels": 127125,
+    "flat_color_preserved": true,
+    "invalid_option_rejected": true
+  },
+  "visual": {
+    "lap": {
+      "pixels_changed": 81946,
+      "mean_RGB_difference": 4.876230158730158
+    },
+    "health_boost": {
+      "pixels_changed": 15273,
+      "mean_RGB_difference": 0.6917066666666667
+    }
+  },
+  "native_window_pair": [
+    {
+      "mode": "ps2",
+      "exit_code": 0,
+      "wall_seconds": 200.28199999999924,
+      "callback": {
+        "samples": 1340,
+        "mean_ms": 16.66145634328358,
+        "p95_ms": 26.856415000000002,
+        "p99_ms": 34.589856999999995,
+        "max_ms": 45.5835
+      },
+      "queue_mean_ms": 84.30049626865672,
+      "queue_zero_observations": 0,
+      "posting_mean_ms": 0.001958463832960477,
+      "FXAA_enabled": true,
+      "linear_enabled": false,
+      "win32_direct": true,
+      "DC_blocker": true,
+      "joined": true,
+      "no_heavy_capture": true,
+      "synthetic_controls": true,
+      "full_race": false,
+      "method": "One sequential pair, prewarmed separate caches, same automatic Thunderhead scene; callback rate not physical FPS."
+    },
+    {
+      "mode": "high",
+      "exit_code": 0,
+      "wall_seconds": 198.875,
+      "callback": {
+        "samples": 1340,
+        "mean_ms": 16.6610247761194,
+        "p95_ms": 24.936619999999998,
+        "p99_ms": 32.806328,
+        "max_ms": 37.0692
+      },
+      "queue_mean_ms": 82.4507395522388,
+      "queue_zero_observations": 0,
+      "posting_mean_ms": 0.002514243102162565,
+      "FXAA_enabled": true,
+      "linear_enabled": true,
+      "win32_direct": true,
+      "DC_blocker": true,
+      "joined": true,
+      "no_heavy_capture": true,
+      "synthetic_controls": true,
+      "full_race": false,
+      "method": "One sequential pair, prewarmed separate caches, same automatic Thunderhead scene; callback rate not physical FPS."
+    }
+  ],
+  "user_audio_status": "The team confirms the v29 sound fix; SPU2 and audio output code unchanged in v30.",
+  "limits": [
+    "One sequential scripted Thunderhead window pair; not full race or physical scanout FPS.",
+    "No global stability/Fuji improvement claim; original texture detail and possible filtering softness remain.",
+    "No new physical input/latency or second-PC certification."
+  ]
+}

@@ -1,18 +1,31 @@
 # Próximas dez tarefas — Vanilla
 
-Atualização local v6, 19/10/2026. A ordem mantém o escopo original. Continuações VU, UNPACK MASK=0 e índice Q e contexto VIF por chamada estão implementados e medidos; isso não encerra o aceite de desempenho. Evidências e matriz atuais: [vanilla-v6.md](vanilla-v6.md); histórico [v5](vanilla-v5.md) e [v4](vanilla-v4.md).
+Atualização de22/10/2026: a equipe aprovou a v36 jogando. [V37](vanilla-v37.md)
+fecha o kit experimental privado para outro PC: importador gráfico nativo sem
+Python,49 testes/239 verificações, dependências/diagnóstico e ZIP extraído,
+importado e iniciado com sucesso. Alta3×/som/HUD preservados. **Agora é teste
+externo, sem outra mudança de renderer ou campanha inteira antes desse retorno.**
 
-| # | Prioridade | Tarefa | Estado e próximo critério de aceite | Issues |
-|---|---|---|---|---|
-| 1 | P0 | Replay e relógio da corrida | Scripts coerentes, gatilhos/stick direito e 36 checkpoints Class1 disponíveis. Falta extrair cronômetro, confirmar taxa da corrida, repetir trajetórias/voltas completas e classes2–4/Mirror; multithread ainda não declarado determinístico | #2, #3 |
-| 2 | P0 | VIF parser/UNPACK por perfil | NOP literal, MASK=0 e contexto por chamada implementados; 29.968 diferenciais passam também contra o parser v5 congelado. Próximo: throughput em Fuji/Grand Prix/Skorost com ganho repetido, preservando ciclos, aliasing e efeitos. Cópia V4_32 em bloco foi rejeitada por regressão | #4 |
-| 3 | P0 | Cobertura e throughput VU nativo | 37 continuações com FlagPipe compartilhada; 4.400 diferenciais sintéticos e mais de1,26milhão reais passaram. Índice Q por geração implementado na v5 (30.772 diferenciais); guarda de chamadas Q preserva os resultados. Próximo: kernels BDDB931EFD33B73E/3629DCD016897BE2, VIF::run e alocação de registradores; manter teste de código mutável, CLIP/Q/status e GIF. Não compilar combinações sem medir cache de instruções | #4 |
-| 4 | P0 | Mipmapping GS completo | Implementação CPU/GPU, TEX1/MTBA/MIPTBP/hazards e readback passaram. Regiões GS corrigidas na v4. Falta paridade V04 em cena sincronizada PCSX2 1x; dependências reais e feedback preservados | #6 |
-| 5 | P0 | Cinco pares PCSX2/nativo | Código de referência pesquisado. Pendentes capturas no mesmo estado/tick/câmera em1x: menu, seleção, largada, múltiplos carros e efeitos. Comparação com baseline nativo mede regressão, não paridade PS2 | #5 |
-| 6 | P1 | Dithering16, CRTC e fog | Dithering16 solicitado nos replays; priorizar casos ativos após os pares de referência. Testes isolados antes do shader; AA1 só após uso observado | #6 |
-| 7 | P1 | Latência, pacing e áudio | EE e callbacks de present medidos separadamente. Pendentes input-to-photon físico, underruns reais e sessão contínua de30min. MÉDIA60FPS não basta; aceitar p95/p99 no orçamento confirmado | #3 |
-| 8 | P1 | PATH1 e encerramento | Medir SIGNAL/FINISH/LABEL; mailbox EE se necessário. Pedido atômico, drain/join, pause/restart, saída e save de corrida permanecem pendentes | #3, #4 |
-| 9 | P1 | Build portátil reproduzível | Pacote GUI/DLL local verificado. Falta geração/deps fixadas, PC limpo sem DEV_ROOT, Unicode/pasta sem escrita e outra GPU | #7 |
-| 10 | P1 | Proveniência, licenças e CI | Publicação autorizada de documentação e métricas via PR22; fonte e executável permanecem locais. Falta allowlist de fontes independentes e inventário transitivo. Capturas, gerados comerciais, ISO/ELF/saves não entram no repositório público | #1, #8 |
+| # | Prioridade | Entrega e critério de conclusão |
+|---|---|---|
+| 1 | P0 | Uma sessão no segundo Windows11: primeiro acesso, dependências, controle/áudio/fullscreen e duas corridas acessíveis, Fuji se disponível; não chamar teste local de segundo PC |
+| 2 | P0 | Conferir resultado natural/save, fechar e reabrir no segundo PC; logs/cartão QA isolados e retorno humano explícito, sem equiparar hash ou teste SIO2 a corrida completa |
+| 3 | P0 | Analisar o diagnóstico e relato dessa sessão; corrigir incompatibilidade concreta sem alterar a base que a equipe aprovou |
+| 4 | P0 | Atribuir picos residuais de cadência/compilação em uma rota fixa, somente quando necessário, preservando caches/condições e evidência adversa |
+| 5 | P0 | Somente após causa concreta, propor patch isolado com limites prévios e equivalência VU/memória/GIF; não reabrir experimentos de áudio já rejeitados |
+| 6 | P1 | Confirmar dispositivos USB/Bluetooth, reconexão e fullscreen/DPI no novo PC; suporte físico anterior permanece preservado, sem recertificação universal |
+| 7 | P1 | Completar pistas/classes2–4/Mirror e sessão longa de forma direcionada após o teste externo inicial; não repetir campanhas manuais sem alteração ou hipótese |
+| 8 | P1 | Medir latência física/underruns quando houver evidência, separando simulação, callback e apresentação real |
+| 9 | P0 para release público | Fechar versões/licenças/fonte correspondente, código recompilado e arte/marca;22 avisos adicionados na v37 não equivalem à aprovação integral |
+| 10 | P1 | Depois da aceitação externa e revisão de distribuição, definir versão alpha/release e CI; GitHub continua documental, PR23 aberto sem merge |
 
-Aceite Vanilla: ritmo original confirmado, p95/p99 adequados e sem underruns recorrentes em largada, corrida e efeitos, incluindo30min contínuos. Os36 replays de600VBlanks são janelas curtas, não testes completos de todas as pistas. Fuji, Grand Prix e parte de Skorost ainda exigem trabalho P0. Resolução superior vem após a paridade1x. Remaster, novas interfaces, mods, multiplayer e navegador ficam fora desta fase.
+Concluído nesta etapa: o importador gráfico substitui o fluxo de Python do kit
+v36; ISO e destino são verificados, cancelamento do importador e corrida de
+publicação estão cobertos. A auditoria diferencia MSVC externo de bibliotecas
+garantidas do Windows. Não se copiam runtimes do System32 nem se instala nada
+automaticamente. O ZIP limpo contém instruções e atalho oficial para o
+pré-requisito, sem ISO/ELF/cartão/cache/log. Não há novo benchmark de FPS.
+
+Os dados históricos de desempenho e rejeições v33/v34 permanecem preservados.
+Remaster/mods seguem depois da Vanilla estável; o objetivo atual é o executável
+nativo Windows, com a qualidade e o som aceitos, validado em outra máquina.
