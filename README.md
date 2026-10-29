@@ -2,23 +2,25 @@
 
 **Experimental community-driven effort to run Speed Racer (PlayStation 2) natively on Windows.**
 
-![Status](https://img.shields.io/badge/status-experimental_alpha-orange) ![Platform](https://img.shields.io/badge/platform-Windows-blue) ![Release](https://img.shields.io/badge/public_release-not_available-lightgrey)
+![Status](https://img.shields.io/badge/status-playable_beta-orange) ![Platform](https://img.shields.io/badge/platform-Windows-blue) ![Release](https://img.shields.io/badge/public_release-beta-yellow)
 
-> **Important:** This repository currently contains project documentation and development tracking, **not a downloadable port or a complete game**. This is an independent, unofficial project, not affiliated with the game's rights holders.
+> **Playable beta v0.1.0-beta.1:** download `SpeedRacer-Vanilla-v0.1.0-beta.1-Windows-x64.zip` from [the beta Release](https://github.com/killeiro/Speed-Racer-Native-Port/releases/tag/v0.1.0-beta.1). Extract the complete folder and open `SpeedRacer.exe`.
 
 ## Current status
 
-**Major milestone: Vanilla v38 now runs locally from an integrated package, without requiring an ISO during play.** The original data has been converted into a verified package that keeps the game's loading layout intact. The local flow is now: extract the complete folder and open SpeedRacer.exe.
+The team has published a Windows x64 Vanilla beta based on v48 for community testing, with integrated game data, default High 3× rendering, bilinear HUD/textures, FXAA, adaptive fullscreen and progress import with backup. Playing does not require selecting an ISO, opening PCSX2 or using a browser.
 
-The accepted baseline preserves the native Windows GUI, Xbox/PlayStation controller support, adaptive fullscreen and High 3× with bilinear HUD/textures and FXAA. The conversion was checked against the original data; captured image and generated audio in Fuji matched between the two storage formats.
+Keyboard play is validated. Xbox/PlayStation USB/Bluetooth support is implemented, but Xbox detection failed in the latest test and remains under investigation. Missing/intermittent music or audio on some tracks, low pause cadence and occasional hitches are known issues. The complete track audio sweep has not been finished.
 
-**We are now strengthening the next versions:** repeatable candidate preparation, integrity checks, progress/settings preservation and fixes driven by real testing. Testing on another Windows PC is underway; its acceptance is still pending.
+A real keyboard drive on long Fuji averaged **59.93 simulated frames/s** after the first resume, including subsequent interruptions. This is evidence from one local session, not a guarantee of constant 60 fps across all tracks or PCs. Earlier external testing was positive, but it does not certify this beta on every system.
 
-**The team is preparing a public announcement as this work progresses. A public playable download is not available yet.** Follow the [integrated Vanilla update](docs/updates/vanilla-integrada-v38.md) and the [roadmap](ROADMAP.md) for the next steps.
+**Requirements:** Windows 11 x64 (locally tested), an AVX2-capable CPU/system, Vulkan-capable graphics drivers and the Microsoft Visual C++ v14 x64 Runtime. Detailed instructions and known issues are included in the download.
+
+For community reports, include the ZIP version, Windows/CPU/GPU/RAM, track/variant, mode/Speed Class/championship stage, graphics setting and input device. For audio, distinguish music, voices, engine/effects and total silence. Please do not post personal saves or logs without reviewing them.
 
 ### Earlier performance evidence
 
-The following v4–v6 figures are historical measurements, not benchmarks of the integrated v38 package.
+The following v4–v6 figures are historical measurements, not benchmarks of this beta or the integrated v38 package.
 
 On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40→57.94 simulated FPS in Thunderhead-0**, **35.67→40.07 in Fuji-3** and **47.04→53.69 in Grand-Prix-0**. Background applications were active; Skorost's smaller improvement was inconclusive. These are short scene measurements, not a claim of stable 60 FPS across the game. The v6 VIF parser-context change adds a small, scene-dependent improvement; its [final-artifact comparisons and 36-route matrix](docs/audit/vanilla-v6.md) remain below target in several scenes. See the [audit index](docs/audit/README.md), [v5 report](docs/audit/vanilla-v5.md) and [machine-readable metrics](docs/audit/vanilla-v5-metrics.json) for protocol, build hashes, percentiles and limits.
 
@@ -38,10 +40,10 @@ On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40�
 
 ## Project priorities
 
-1. Strengthen candidate preparation, package integrity and save/settings preservation on the integrated baseline.
-2. Complete real second-PC acceptance and investigate concrete compatibility or stability reports.
-3. Apply targeted corrections while preserving accepted graphics, audio, controls and gameplay behavior.
-4. Finalize a stable Vanilla candidate and prepare the next public announcement.
+1. Validate controller detection with short native enumeration and physical-button checks.
+2. Investigate reproducible audio-category and track-transition reports.
+3. Preserve the accepted rendering quality and near-60 racing behavior while treating pause cadence and isolated hitches separately.
+4. Collect community beta feedback with a fixed, verifiable package identity.
 
 ## Technical references
 
@@ -53,12 +55,10 @@ On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40�
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) and [test plan](docs/TEST_PLAN.md). Issues and reproducible observations are welcome. Please **do not upload PS2 ISOs, game executables, copyrighted assets or copyrighted source code**.
 
-## Rights and attribution
+## Credits and component notices
 
-Speed Racer and associated game assets belong to their respective rights holders. **Ownership of an original disc does not automatically authorize redistribution of a compiled derivative.** Distribution of binaries, extracted assets, or recompiled game code is on hold pending review. No license is asserted over third-party components.
+Component notices and provenance information are included in the package. See `NOTICES.md` and the bundled `licenses/` directory. No ownership or license is asserted over third-party components.
 
 ## Maintainer
 
 Project initiated by [@killeiro](https://github.com/killeiro).
-
-
