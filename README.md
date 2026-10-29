@@ -10,7 +10,7 @@
 
 The team has published a Windows x64 Vanilla beta based on v48 for community testing, with integrated game data, default High 3Ã— rendering, bilinear HUD/textures, FXAA, adaptive fullscreen and progress import with backup. Playing does not require selecting an ISO, opening PCSX2 or using a browser.
 
-Keyboard play is validated. Xbox/PlayStation USB/Bluetooth support is implemented, but Xbox detection failed in the latest test and remains under investigation. Missing/intermittent music or audio on some tracks, low pause cadence and occasional hitches are known issues. The complete track audio sweep has not been finished.
+Keyboard input and Xbox/PlayStation USB/Bluetooth controller support are implemented. Missing/intermittent music or audio on some tracks, low pause cadence and occasional hitches are known issues. The complete track audio sweep has not been finished.
 
 A real keyboard drive on long Fuji averaged **59.93 simulated frames/s** after the first resume, including subsequent interruptions. This is evidence from one local session, not a guarantee of constant 60 fps across all tracks or PCs. Earlier external testing was positive, but it does not certify this beta on every system.
 
@@ -40,7 +40,7 @@ On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40â
 
 ## Project priorities
 
-1. Validate controller detection with short native enumeration and physical-button checks.
+1. Improve plug-and-play controller compatibility.
 2. Investigate reproducible audio-category and track-transition reports.
 3. Preserve the accepted rendering quality and near-60 racing behavior while treating pause cadence and isolated hitches separately.
 4. Collect community beta feedback with a fixed, verifiable package identity.
