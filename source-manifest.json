@@ -1,0 +1,2428 @@
+{
+  "schema": 1,
+  "source_tag": "source-v0.1.0",
+  "playable_release": "v0.1.0",
+  "scope": "Full curated source snapshot; excludes this manifest itself, downloads, toolchain, build outputs, game data and saves",
+  "files": {
+    ".gitattributes": {
+      "bytes": 177,
+      "sha256": "00b78aa7c60282eeef4ffcbc44396f6367c122c8090733f454cacf773088a8b3"
+    },
+    ".github/ISSUE_TEMPLATE/bug_report.yml": {
+      "bytes": 602,
+      "sha256": "e1815dd04fb7e32ac09dc5d17f6dee747e1fd61584c28ebbd6f043b16f6a94de"
+    },
+    ".github/ISSUE_TEMPLATE/config.yml": {
+      "bytes": 216,
+      "sha256": "b5d43782cd7284cdef3fa812f1d297814a55b42a1e551d1d3746a0471cc026d7"
+    },
+    ".github/ISSUE_TEMPLATE/performance.yml": {
+      "bytes": 554,
+      "sha256": "0f709db486d32ddba8e2f1c0c32105de4c8d63aa9cb54c758a32c945e4ff10bf"
+    },
+    ".github/PULL_REQUEST_TEMPLATE.md": {
+      "bytes": 296,
+      "sha256": "af9bee0283179d9e9754a5a541b761561e6b6f54fd557f19bd6387287ec9abd4"
+    },
+    ".gitignore": {
+      "bytes": 227,
+      "sha256": "0a6dacc53ff3dff597bf14e634c570c09a84a98ce6bd46a92ebc46c0fb73b0a9"
+    },
+    "AGENTS.md": {
+      "bytes": 1557,
+      "sha256": "ecb208ebc1f3105ada78a90dcf78458858a5c96d96119d5a2ab0687d15e45ea6"
+    },
+    "CHANGELOG.md": {
+      "bytes": 1676,
+      "sha256": "446d236dab32df67af95797029a378790448da1939832cb0f137fda5d517e547"
+    },
+    "cmake/embed.cmake": {
+      "bytes": 133,
+      "sha256": "f9c00947753f7ab2a2740c026bb555ae5eac5d2b8bdb46a4167b461f509347e1"
+    },
+    "cmake/SpeedRacer.cmake": {
+      "bytes": 6580,
+      "sha256": "a416c405aa7d0fe57e61969ff96b92cdd931d5496ec14dd27ba09faac881d0a3"
+    },
+    "cmake/VerifyVuExtra.cmake": {
+      "bytes": 1949,
+      "sha256": "19f6f670676312d3b8072b18a6d0e72646d7f82728d49852ad5147a2a7f210fb"
+    },
+    "CMakeLists.txt": {
+      "bytes": 37617,
+      "sha256": "92475950cffd7e8d2bc53ee1e3da778f209103fd40981fe77e9d0f77be3b8bae"
+    },
+    "CONTRIBUTING.md": {
+      "bytes": 1081,
+      "sha256": "58ccfa594bdabc549c6c1ad6aaa1ecbb95c9a03dd0d16e569ce799e8bdde967d"
+    },
+    "dependencies.lock.json": {
+      "bytes": 1656,
+      "sha256": "582ff38ea18a240aba75dfac9b1618a252cd13ee9852f1c43649af3fd50e8e7b"
+    },
+    "docs/audit/architecture.md": {
+      "bytes": 7127,
+      "sha256": "96a08e0f03e94b54ec14c8dd712f4f3ad975a7fc50611546e34e65a4412cc3a2"
+    },
+    "docs/audit/graphics-parity.md": {
+      "bytes": 6428,
+      "sha256": "a831465b168aa3800acad52fab65899b030640170a6c96dcece215cb4e57a33b"
+    },
+    "docs/audit/image-check.json": {
+      "bytes": 583,
+      "sha256": "8464298082a508d38dd8e51d7c13212ff5dc1ff8e8b2c21482d555271d4ae752"
+    },
+    "docs/audit/iteration-report.md": {
+      "bytes": 4397,
+      "sha256": "c3e384726907e92e40eb331a408bf747f671625a374a91b49571f8bf9c23c406"
+    },
+    "docs/audit/metrics.json": {
+      "bytes": 15584,
+      "sha256": "823c4725b06f003cecde8a423a955e903d7f714669ffa28c4f85d043c929bc2e"
+    },
+    "docs/audit/next-10-tasks.md": {
+      "bytes": 3606,
+      "sha256": "bb6fe1cde22052947328c7e40c114ac4a89bc8978ff731895e0a55b26cbc2cc8"
+    },
+    "docs/audit/performance-baseline.md": {
+      "bytes": 4680,
+      "sha256": "a69b6e98098c6297b3beafff971cdcaaab3521ce590301ba5094a948828ffa2c"
+    },
+    "docs/audit/profiling-results.md": {
+      "bytes": 4871,
+      "sha256": "fc5a346319fe6f31a8d3855a290da0856cdbeb70b491943967223b735d748519"
+    },
+    "docs/audit/README.md": {
+      "bytes": 5329,
+      "sha256": "f2a3c4416f4ffc1e3580a4af6d6f95d0ab0a86e173400542f601a7a673358549"
+    },
+    "docs/audit/stability-matrix.md": {
+      "bytes": 2397,
+      "sha256": "49ea14d2790d25a9150fea52ba2c2930ebc99d858af619283d2498b54ebee37b"
+    },
+    "docs/audit/vanilla-v3-metrics.json": {
+      "bytes": 10005,
+      "sha256": "e65857a1e7fa4e282ca7b019fd04d832eb7648380943adc579a64b87b6ca3b2e"
+    },
+    "docs/audit/vanilla-v3.md": {
+      "bytes": 6624,
+      "sha256": "6c58eedd4776d234b6bda2d38b3b3ca0d210acd050610c9c7ecb7455c9813f52"
+    },
+    "docs/audit/vanilla-v4-metrics.json": {
+      "bytes": 92275,
+      "sha256": "4146d085d4984a3bca305ff194458b1a37c126bb251d2d0a69d7106dcd2f28a6"
+    },
+    "docs/audit/vanilla-v4.md": {
+      "bytes": 14616,
+      "sha256": "5a0195fa4d8e2dfac35f8c4cbc151fdcf8825ac94f2e20c4631cc350f7087330"
+    },
+    "docs/audit/vanilla-v5-metrics.json": {
+      "bytes": 140806,
+      "sha256": "1d0fcbbcfb4a3a33a0bd99c1c8e94863f73260f18a2ef80ec3cc8c135fc3f6cf"
+    },
+    "docs/audit/vanilla-v5.md": {
+      "bytes": 9237,
+      "sha256": "d70eb16b487a9b4a66ba1c5faafd81be9ed2ba9b1aadfd131f07af0486e04498"
+    },
+    "docs/audit/vanilla-v6-metrics.json": {
+      "bytes": 116661,
+      "sha256": "a1ec7dd9ebb80cda96822628262819e380915e989f906c199be390cff2cc366b"
+    },
+    "docs/audit/vanilla-v6.md": {
+      "bytes": 6702,
+      "sha256": "16fd0d33b208031046e04b6e1bbdd2ac484a25eb9bb54e46f5de75b8942b2d12"
+    },
+    "docs/AUDIT_CODEX.md": {
+      "bytes": 882,
+      "sha256": "5d4a3c27f523f0cb152a3c031fcac81c15243ea4c3bad0d7a4b6fef960dd60bc"
+    },
+    "docs/BUILDING.md": {
+      "bytes": 8980,
+      "sha256": "ffac063fbcd0f234cf5e0ec1e25f9013ee906e569c41d158a3d90e5780ef3d0b"
+    },
+    "docs/KNOWN_ISSUES.md": {
+      "bytes": 620,
+      "sha256": "de6b14bfabd7bb9fe0913c8f242acfe35ca286b9c3f1f10c99c24b90c0d7cf4f"
+    },
+    "docs/REMASTER_UI_UX.md": {
+      "bytes": 3322,
+      "sha256": "2dad89219111b8f493a518d3c0ed22c35b1f3808ff57518c5ddc00282ad4c606"
+    },
+    "docs/SETUP_GITHUB.md": {
+      "bytes": 597,
+      "sha256": "292d02f45560e4e5fa3f88578fe61fdc6a82420673a9111f9294cf2c096ec192"
+    },
+    "docs/SOURCE-MAP.md": {
+      "bytes": 4104,
+      "sha256": "c441bfe3fb9c0f3104fd750eee8773df2271b7186055c1119710f0b23d7f533c"
+    },
+    "docs/SOURCE-PROVENANCE.md": {
+      "bytes": 2148,
+      "sha256": "8d1f1703dddcf74bda5e8b6fb10e41b4503eeade0a460a01cc5a5081d33ca2b8"
+    },
+    "docs/SOURCE-VERIFICATION.md": {
+      "bytes": 2279,
+      "sha256": "d57eeab766b725c9a7044cf04ee8aab6c7cdb0b41bc9856ec50805ed035318af"
+    },
+    "docs/TEST_PLAN.md": {
+      "bytes": 1049,
+      "sha256": "90b574ce5ee543683aacfa94f3bb4c15df1c9a4800177ca0cdd5e01c8cd94aa5"
+    },
+    "docs/updates/vanilla-integrada-v38.md": {
+      "bytes": 1292,
+      "sha256": "33f38d3a9d1f360d2330d0217502a5f18020539c590fe8cf3069df99f06d3de3"
+    },
+    "generated/speedracer/extra/.vu-cont-manifest.json": {
+      "bytes": 509,
+      "sha256": "94581bc00c962d99bb2d929c912d471269696d6a59b5ab637495a1a5c3960707"
+    },
+    "generated/speedracer/extra/.vu-extra-manifest.json": {
+      "bytes": 134,
+      "sha256": "bedea80d3d76c42f7b49c12d880bd94d36c142776e85108d80de5725d1272df6"
+    },
+    "generated/speedracer/extra/vu_cont_000.cpp": {
+      "bytes": 308825,
+      "sha256": "2b0deb5b364e34d21edc8479c73d9d2788936437d3f7cbab0130d1d26f0b3ca5"
+    },
+    "generated/speedracer/extra/vu_cont_001.cpp": {
+      "bytes": 179199,
+      "sha256": "6b2962a46fb4ba4fa12df0bb939ad157df91240b1fd945e0d38732237207dc0c"
+    },
+    "generated/speedracer/extra/vu_cont_002.cpp": {
+      "bytes": 96678,
+      "sha256": "1dfdc71ebf4ebf86541329a17d72ecab104f1042ff4ee750e007358685fa9f94"
+    },
+    "generated/speedracer/extra/vu_cont_table.cpp": {
+      "bytes": 5828,
+      "sha256": "f5d2be939e81fdee837c8f5ee0a87c9b8785d3dcaa8247410abac68b737554e3"
+    },
+    "generated/speedracer/extra/vu_extra.cpp": {
+      "bytes": 25145368,
+      "sha256": "fd6e71f7d1032d59ecb274ea927f9c3ff9c73e3b56ef553c6bc7f10374ad3290"
+    },
+    "generated/speedracer/table.cpp": {
+      "bytes": 16213,
+      "sha256": "28814cc0b30e760cf383201b5779d2a1ddbb621602ea8d7f18885a6774f0508c"
+    },
+    "generated/speedracer/unit_0000.cpp": {
+      "bytes": 261075,
+      "sha256": "03ebda26fa00f3bfce4df2a7c8db54d6c2ebc97d675b9f76cd84c28bd7deea6c"
+    },
+    "generated/speedracer/unit_0001.cpp": {
+      "bytes": 282059,
+      "sha256": "b4df60598f98d6914ded3a3f509f255fd18b785053b48e95c0ae1c072f9add72"
+    },
+    "generated/speedracer/unit_0002.cpp": {
+      "bytes": 294800,
+      "sha256": "fa6b02b7e70c33ce7104703e78f9104edfb93d61857b862b80fe28265af30179"
+    },
+    "generated/speedracer/unit_0003.cpp": {
+      "bytes": 299480,
+      "sha256": "10367be5244ae74981010739802e726b6e47cf54b958ce039be9db0fa33b0ff0"
+    },
+    "generated/speedracer/unit_0004.cpp": {
+      "bytes": 256165,
+      "sha256": "200ee12b24bd90da98c2125417248f6dc7b7e286a02d7c6f3cd60d8581be6d3f"
+    },
+    "generated/speedracer/unit_0005.cpp": {
+      "bytes": 243744,
+      "sha256": "f86f131a24e438ee590562f5a5236f563166f592056ec059b070d7f158788b19"
+    },
+    "generated/speedracer/unit_0006.cpp": {
+      "bytes": 291143,
+      "sha256": "dbde83f2ca619e411a605712609efaf096174c3f4d3c694a06b53043a493e838"
+    },
+    "generated/speedracer/unit_0007.cpp": {
+      "bytes": 276212,
+      "sha256": "94d7e7d6a79bc804b8fd2c0983e77c5a5877b810bb42632b135c76ac48668c27"
+    },
+    "generated/speedracer/unit_0008.cpp": {
+      "bytes": 293699,
+      "sha256": "a678ce2104340e93a2a7baca600cf5a90b0a9bb301eb899cc4d5b844d393db63"
+    },
+    "generated/speedracer/unit_0009.cpp": {
+      "bytes": 259560,
+      "sha256": "8901de93c60f8a2451ae4702a1313b93be6b7c50b44a954ba3015f7d5da7477d"
+    },
+    "generated/speedracer/unit_000A.cpp": {
+      "bytes": 279602,
+      "sha256": "83130babdce1dead60ecbb0879c35ee7f7fcb3fabcefd60ff554126a3632e609"
+    },
+    "generated/speedracer/unit_000B.cpp": {
+      "bytes": 273949,
+      "sha256": "84c9b17797899060c08aa38cfe34d46029bbeec93652d19963d78e1b53d8eb87"
+    },
+    "generated/speedracer/unit_000C.cpp": {
+      "bytes": 286172,
+      "sha256": "71f9af67c9cc61e8678379187a49b55595763281bc96a2de7c3052f56342331b"
+    },
+    "generated/speedracer/unit_000D.cpp": {
+      "bytes": 287432,
+      "sha256": "8682b769e320d664b9d2a332cde0087ccadff00e011e908b775d2ffb3e8eb2ac"
+    },
+    "generated/speedracer/unit_000E.cpp": {
+      "bytes": 273108,
+      "sha256": "6ad6a549ade41c67da8c16fcc091f50f4b31c84b213cea35b348f949fd872ae6"
+    },
+    "generated/speedracer/unit_000F.cpp": {
+      "bytes": 271928,
+      "sha256": "231421ac372ec404078b60229dd4c0eb5467761da60486a60292673ff77cd2be"
+    },
+    "generated/speedracer/unit_0010.cpp": {
+      "bytes": 296319,
+      "sha256": "ac51cb1cb357a6ea5587b5ef895c02a4aeb7580f2d10a33b325d610c8c060fd5"
+    },
+    "generated/speedracer/unit_0011.cpp": {
+      "bytes": 289012,
+      "sha256": "8e302f6b4977cec0410166a00464589c87df72f2cb26e5054e0e7b39870f6630"
+    },
+    "generated/speedracer/unit_0012.cpp": {
+      "bytes": 291999,
+      "sha256": "ff6783020780160be53855fb15b20d5ac128dfda4ba4af61ff1ccecb9257ebc6"
+    },
+    "generated/speedracer/unit_0013.cpp": {
+      "bytes": 276552,
+      "sha256": "fccda30cfff1d9469159fa373bcdedac8866c3bba547f5ee99d087a4df09706a"
+    },
+    "generated/speedracer/unit_0014.cpp": {
+      "bytes": 272443,
+      "sha256": "9d88cd699c1c07c3502cce6d3f7d3a5805bf6e549b28850367bc9f19c6a90675"
+    },
+    "generated/speedracer/unit_0015.cpp": {
+      "bytes": 277856,
+      "sha256": "d945253531669416c17047ea7110747571b8b3d9af0eb9081ce6ca94ee0fafa7"
+    },
+    "generated/speedracer/unit_0016.cpp": {
+      "bytes": 305724,
+      "sha256": "51ec9987c4788fed451418cccb31e1cae34170a3ce003f9d4469dc27aad5f972"
+    },
+    "generated/speedracer/unit_0017.cpp": {
+      "bytes": 285606,
+      "sha256": "c90de87775ce993339c292cbad26968fcba7050471a1db16a7adc04b9b519c55"
+    },
+    "generated/speedracer/unit_0018.cpp": {
+      "bytes": 286135,
+      "sha256": "448352123d3b26169642b5a3c00b0550e3c944a2dcd07c77c6d8f4d3373e8f4a"
+    },
+    "generated/speedracer/unit_0019.cpp": {
+      "bytes": 276178,
+      "sha256": "6bf7471603ff90d3a60613f7268dcaa65c19fdf284f571a2e51d54cc10a79a75"
+    },
+    "generated/speedracer/unit_001A.cpp": {
+      "bytes": 308693,
+      "sha256": "36681c8c24f948869bb23474b727e3b44cab52ea41b8159fa56595e705f913c8"
+    },
+    "generated/speedracer/unit_001B.cpp": {
+      "bytes": 251443,
+      "sha256": "982195f304309a4c869d8ae1cdf22dae9b4ff7971a42048fabcca40f7d2d8f97"
+    },
+    "generated/speedracer/unit_001C.cpp": {
+      "bytes": 242723,
+      "sha256": "5c6baa0c705cddc3a0a9d4d345d53e06d328aab3f93c043b11de584207b57f92"
+    },
+    "generated/speedracer/unit_001D.cpp": {
+      "bytes": 241433,
+      "sha256": "9af0ed137f5522dad291d921415f5d31cc4299f0916e8737d101c1cd29f5d60c"
+    },
+    "generated/speedracer/unit_001E.cpp": {
+      "bytes": 237668,
+      "sha256": "e5ed2bf5922e92fa1f2fdb678bfcc191d110f5f5a345cc1f333a8b2e045a43e0"
+    },
+    "generated/speedracer/unit_001F.cpp": {
+      "bytes": 225122,
+      "sha256": "6ae961af3b39ba4ce519050f496ef52d83f5e3c74a970dde42ac654adef26a7f"
+    },
+    "generated/speedracer/unit_0020.cpp": {
+      "bytes": 228909,
+      "sha256": "33a4ab10c3aad8eb7b6db27c4917f8e0f3dd74690eb0d3d9a08e9a57973c5e21"
+    },
+    "generated/speedracer/unit_0021.cpp": {
+      "bytes": 238457,
+      "sha256": "55b2f096eea08e25750ccce79c55c5d36d2d5963c1bbd8562f8d1cab8bbe9fa5"
+    },
+    "generated/speedracer/unit_0022.cpp": {
+      "bytes": 226331,
+      "sha256": "66d3b4cf73bd82022ef6c0c4073a7b6ff9c30c000de5ed6387a5ec6d5c410087"
+    },
+    "generated/speedracer/unit_0023.cpp": {
+      "bytes": 231883,
+      "sha256": "75d855593e8af05cb6d29ba4684be2b109909bd8272399d76689400a3a57621f"
+    },
+    "generated/speedracer/unit_0024.cpp": {
+      "bytes": 251031,
+      "sha256": "ec5c0cc1a98c01dcd9a231124f15799460dd372df1e09a5817fefbf9b3df5839"
+    },
+    "generated/speedracer/unit_0025.cpp": {
+      "bytes": 233073,
+      "sha256": "c528a20b7b5d0b68e9ae71892b6e777c1606720fe85992b03fe24540117115d5"
+    },
+    "generated/speedracer/unit_0026.cpp": {
+      "bytes": 240144,
+      "sha256": "ff29b812f432fc240d0f2744e75d2fadb04f7655de72dd87eaa09593b99bc83d"
+    },
+    "generated/speedracer/unit_0027.cpp": {
+      "bytes": 232761,
+      "sha256": "d5f0fef688d921208187f8ce1ff1802f018463868f3ade178ff31d8fd9dea7d3"
+    },
+    "generated/speedracer/unit_0028.cpp": {
+      "bytes": 231024,
+      "sha256": "39af74c02d8d18f25ff41a117a57d97fd278c5471b0af1dee9d8ff7fdca58c62"
+    },
+    "generated/speedracer/unit_0029.cpp": {
+      "bytes": 235636,
+      "sha256": "b4d641a5992b2050a755910483923351763e36714fc8fb3237f6734ba46d661c"
+    },
+    "generated/speedracer/unit_002A.cpp": {
+      "bytes": 250923,
+      "sha256": "646e65f0dc1c10b2479c74fc6b5865678d57742f7aa36f5e40d73426823de93f"
+    },
+    "generated/speedracer/unit_002B.cpp": {
+      "bytes": 233631,
+      "sha256": "4e662c6d3701a4aa9405d40b76ba41c44aa019e601a0c7798ae9b961ede94700"
+    },
+    "generated/speedracer/unit_002C.cpp": {
+      "bytes": 240380,
+      "sha256": "e44c720117b5dbc8b886346e8098cad246fea34513ecf2623318f01e784fe7c1"
+    },
+    "generated/speedracer/unit_002D.cpp": {
+      "bytes": 234911,
+      "sha256": "70793bfa889e5831b48665a41bd25e7526b74dcff5da9903410ed14e9f8c1c98"
+    },
+    "generated/speedracer/unit_002E.cpp": {
+      "bytes": 225161,
+      "sha256": "613659e35b3c147f98f05b9a1d8d1f29b5f939ede2c899a3bc827e7ebfeec87e"
+    },
+    "generated/speedracer/unit_002F.cpp": {
+      "bytes": 255113,
+      "sha256": "2bf8586bf5592afd788933b4e122c9ccd5aa8c675e1b18c55f6fa0946cb232eb"
+    },
+    "generated/speedracer/unit_0030.cpp": {
+      "bytes": 269238,
+      "sha256": "e5d32b6cad37be3c8e14c10120df19ef7b5a493861c669885e58a2e101e69e02"
+    },
+    "generated/speedracer/unit_0031.cpp": {
+      "bytes": 249065,
+      "sha256": "b0e09dbaeb73346e3863f05ff56ebc5ef712d7c8f91e1984d2bbaffff72f1442"
+    },
+    "generated/speedracer/unit_0032.cpp": {
+      "bytes": 254020,
+      "sha256": "7790450c0ce82534d3736fb894d8a71fd3a070624ce2bcac43210c922b30638b"
+    },
+    "generated/speedracer/unit_0033.cpp": {
+      "bytes": 274316,
+      "sha256": "3d457a1adb3a54f06d826caa6be444f05e71fc80ec5243ca1d27a37d60e927a6"
+    },
+    "generated/speedracer/unit_0034.cpp": {
+      "bytes": 288074,
+      "sha256": "ac5ddfcc1546d3adf393b7ccb273ec3a4133997a9690f51f46a1fcb1baf46238"
+    },
+    "generated/speedracer/unit_0035.cpp": {
+      "bytes": 263446,
+      "sha256": "58907a6833bdd9811e84598265aee01ded894ff4073ad77cc793c3e9a0382615"
+    },
+    "generated/speedracer/unit_0036.cpp": {
+      "bytes": 285669,
+      "sha256": "136285e7a1b4d6929abad2e6ea20880457bfa931a25b00f99aa6565b136c9b42"
+    },
+    "generated/speedracer/unit_0037.cpp": {
+      "bytes": 331019,
+      "sha256": "ab71da4d263102b73dd7a1588f88c0852297007a4e33acd68db3a1c3004134ad"
+    },
+    "generated/speedracer/unit_0038.cpp": {
+      "bytes": 306099,
+      "sha256": "31c51acf5ab389b13db1345e8e1987051f1e2691a31fcb2db4da5385f4baad11"
+    },
+    "generated/speedracer/unit_0039.cpp": {
+      "bytes": 297578,
+      "sha256": "ef71cecea712faabde1a9afe7ee42878561df596dd1b7576d87d55527ab2444d"
+    },
+    "generated/speedracer/unit_003A.cpp": {
+      "bytes": 266409,
+      "sha256": "52eb12bd8abafc3122974603f8046c6f2735a59acdc9829887f6e0db71175ec7"
+    },
+    "generated/speedracer/unit_003B.cpp": {
+      "bytes": 284800,
+      "sha256": "f445a720faaef86bb3886d81b5a6527cca5bc3f16adc5b82cb52b9cea56de0c1"
+    },
+    "generated/speedracer/unit_003C.cpp": {
+      "bytes": 298581,
+      "sha256": "73993c77c0a966017ff360b53d57de48ebf3fc343dd40c8054a6790f3a875aeb"
+    },
+    "generated/speedracer/unit_003D.cpp": {
+      "bytes": 302728,
+      "sha256": "64bfbeb2b475b980a1b6e6add54857e3f5ef58c2b93da1519ec7565f61fb5f63"
+    },
+    "generated/speedracer/unit_003E.cpp": {
+      "bytes": 264046,
+      "sha256": "4831435cf54053f59fb668b3fd4aa1a32ac30014907ed53e679c6cbd7fd2e4b9"
+    },
+    "generated/speedracer/unit_003F.cpp": {
+      "bytes": 274930,
+      "sha256": "f68c7a65bdf982d8358f6d23744be6002209bbcdc1aaf4250fb9eaac20132b59"
+    },
+    "generated/speedracer/unit_0040.cpp": {
+      "bytes": 269121,
+      "sha256": "aafad411fa345106f8c699c4b234ff7656ff7083529f2d7360941569ed293ed0"
+    },
+    "generated/speedracer/unit_0041.cpp": {
+      "bytes": 267308,
+      "sha256": "617cc51ea3c2edc141c18252804201a98419923fcafb9ada6a018b9d2e0a5d98"
+    },
+    "generated/speedracer/unit_0042.cpp": {
+      "bytes": 283691,
+      "sha256": "7155459b6ca4dc7cff23f1de1b9e26d4110167e623e06e1a983345b3392ee61c"
+    },
+    "generated/speedracer/unit_0043.cpp": {
+      "bytes": 256495,
+      "sha256": "b2400832825fe28869d91468e0a4581d84acc5d39984c6c3ddc145696fa02141"
+    },
+    "generated/speedracer/unit_0044.cpp": {
+      "bytes": 279317,
+      "sha256": "8fbf1c8aa94528c2e6276d86721dd5ae029b4cf8af5f885c2bb4686387a0f43e"
+    },
+    "generated/speedracer/unit_0045.cpp": {
+      "bytes": 256705,
+      "sha256": "692956a4dbf1ccd28a65cdfce7b4bd652b03dac2fdbe9dab59467b36f8e4eb0a"
+    },
+    "generated/speedracer/unit_0046.cpp": {
+      "bytes": 258638,
+      "sha256": "cd9fa515e5d9075b2efa88b8aaf693875a08a62b07d7d89c12e74a59bfe5f2c7"
+    },
+    "generated/speedracer/unit_0047.cpp": {
+      "bytes": 272388,
+      "sha256": "5439e27b3eb63a21f3838961aa806ce04cd436f7b80bfd53a3121aa0776d5ff3"
+    },
+    "generated/speedracer/unit_0048.cpp": {
+      "bytes": 258705,
+      "sha256": "930a8eb43ae4a0647d6011966c635c3c905ad2e5cf6ce81b1d1a081fe8e7a8bc"
+    },
+    "generated/speedracer/unit_0049.cpp": {
+      "bytes": 245734,
+      "sha256": "2f00d18aebdacb4c4a302deca12009e712d87343637b649c27146683e0f851d3"
+    },
+    "generated/speedracer/unit_004A.cpp": {
+      "bytes": 282124,
+      "sha256": "c15b9b3603c46838563164f209846b8499969aa33180bd6d8174c1fc9f8531be"
+    },
+    "generated/speedracer/unit_004B.cpp": {
+      "bytes": 273120,
+      "sha256": "1449dd5939bc60469a4824ee3698dad357f74cbf729fecd50df9d5a7e9d113a5"
+    },
+    "generated/speedracer/unit_004C.cpp": {
+      "bytes": 251759,
+      "sha256": "bcc1ac997e85d26a9a0f95f8d683882b218128bb0815e58fec41930eb5e7ffb2"
+    },
+    "generated/speedracer/unit_004D.cpp": {
+      "bytes": 244683,
+      "sha256": "49a931ba5dbd93aecbb6cc1ef939e4493afeaa1f0abc4546d0aa263b56d2834d"
+    },
+    "generated/speedracer/unit_004E.cpp": {
+      "bytes": 283891,
+      "sha256": "62921f1f267951eb81e2e745ba74c0621be4ba7c41c6db239b8331d96e6aca27"
+    },
+    "generated/speedracer/unit_004F.cpp": {
+      "bytes": 236596,
+      "sha256": "611766755f5a880caa73f1b41faf999ebf27fe468a44c00b749eab5a30b893a9"
+    },
+    "generated/speedracer/unit_0050.cpp": {
+      "bytes": 263556,
+      "sha256": "706ce9d37bffa5c959dd93615083d5ab45709f696a5689133dec98cbc64a9b38"
+    },
+    "generated/speedracer/unit_0051.cpp": {
+      "bytes": 275760,
+      "sha256": "aa4543639d8e809e772528226f0d20cfc9fc0ef1cc69e61f6b9a4641880822ce"
+    },
+    "generated/speedracer/unit_0052.cpp": {
+      "bytes": 250438,
+      "sha256": "4365e3cad4b2804eff49c62dc0336075d73ebdadd6f87360c72a1c1f06de1cc4"
+    },
+    "generated/speedracer/unit_0053.cpp": {
+      "bytes": 270282,
+      "sha256": "54078476ec58147f46ed2d28d2937d2fb2d64f8bc04a3ea9c4cce2b321d3c7df"
+    },
+    "generated/speedracer/unit_0054.cpp": {
+      "bytes": 300177,
+      "sha256": "8c4c9adc9e289b17d0d3ad826006187af1bc3fa6d3a594d7d02886bdf433cce4"
+    },
+    "generated/speedracer/unit_0055.cpp": {
+      "bytes": 301681,
+      "sha256": "2b02b199d03d8e8534bb3835c8182e982d8a87bf619169569c8ee02cf6c8a720"
+    },
+    "generated/speedracer/unit_0056.cpp": {
+      "bytes": 296251,
+      "sha256": "636369a176c83a15c949b1ff9ea9bda35d21fb8e6beeb348a790113241c772c0"
+    },
+    "generated/speedracer/unit_0057.cpp": {
+      "bytes": 284723,
+      "sha256": "789eeaaa9143f0435706e56c466da7587572f60cebc2b03af4eace02463ec713"
+    },
+    "generated/speedracer/unit_0058.cpp": {
+      "bytes": 266967,
+      "sha256": "ff552695438b94be5fbdfc904803123108d7111d8231431f7da8969486c8e729"
+    },
+    "generated/speedracer/unit_0059.cpp": {
+      "bytes": 273009,
+      "sha256": "85879386dd0507a5084090c06612ebe0a2d3f60ca2fda22d3783b48380293aa6"
+    },
+    "generated/speedracer/unit_005A.cpp": {
+      "bytes": 278478,
+      "sha256": "bebdb9515a0fed1f0cb27db0bf41ba8a68b665b451a55b1bd1a59ba17a896a7c"
+    },
+    "generated/speedracer/unit_005B.cpp": {
+      "bytes": 260863,
+      "sha256": "bb8ccd2fd48533715a190a01597a421689faed40c6c7a61a1c401de2ab8ff74f"
+    },
+    "generated/speedracer/unit_005C.cpp": {
+      "bytes": 258303,
+      "sha256": "35b1057110f01efaecef17e1a41c8394247981aa694c5b18a6addb98af4d13b9"
+    },
+    "generated/speedracer/unit_005D.cpp": {
+      "bytes": 252780,
+      "sha256": "feca9fa4c9064b59c89c052ab4ee82761f5a41d56b61464a8bd3af5127dcdf3b"
+    },
+    "generated/speedracer/unit_005E.cpp": {
+      "bytes": 264767,
+      "sha256": "577a4ac7e7c11b5f088b08108b5b53cf8e27ba85f9c04cd758e03eabca17c283"
+    },
+    "generated/speedracer/unit_005F.cpp": {
+      "bytes": 241120,
+      "sha256": "bc0cdd27aaa644d798ab36c0eb0ba7e23007eab12cbb1d31b8cd6b7348295bf7"
+    },
+    "generated/speedracer/unit_0060.cpp": {
+      "bytes": 303147,
+      "sha256": "c69efe2bb958a3371bbcb5c95c5b6520c959bcd4c9ece67fa1eef321918caf28"
+    },
+    "generated/speedracer/unit_0061.cpp": {
+      "bytes": 270984,
+      "sha256": "8ed1ede33b57fb7d7c3d192f189e077862027e359d096c214f8275852da0da1e"
+    },
+    "generated/speedracer/unit_0062.cpp": {
+      "bytes": 266544,
+      "sha256": "d4a204971b3ecd044fabda574f059c244b72fb3ed6172c28d6b75c6de85ea597"
+    },
+    "generated/speedracer/unit_0063.cpp": {
+      "bytes": 252914,
+      "sha256": "74f105bc33618a5f0a32a324619f54b86d258019f8bf79c3eea55cef14d782f8"
+    },
+    "generated/speedracer/unit_0064.cpp": {
+      "bytes": 244739,
+      "sha256": "2ea2914990d67a41fb74622f031d5bb708a55569be343bcf3f8a390bab446f02"
+    },
+    "generated/speedracer/unit_0065.cpp": {
+      "bytes": 258943,
+      "sha256": "d164d74a6c60a464e7a7bebd095645d7a1ad505c749f7cae3637f6761a8c3f52"
+    },
+    "generated/speedracer/unit_0066.cpp": {
+      "bytes": 266308,
+      "sha256": "5a256b0ae031039d86db1405594a36a6385210b51b9900e101676a368e98eea8"
+    },
+    "generated/speedracer/unit_0067.cpp": {
+      "bytes": 296394,
+      "sha256": "745b345c177026bb605a22b363d763b643de0394937b82cee50ff088a108a20e"
+    },
+    "generated/speedracer/unit_0068.cpp": {
+      "bytes": 282927,
+      "sha256": "3142aebc224ee31ed4f30df5747309b3d506d8ccc177b51679d598e4cc8bb68a"
+    },
+    "generated/speedracer/unit_0069.cpp": {
+      "bytes": 294601,
+      "sha256": "7e51abda8461227c19fc7e5096d615ef4e4527ed9f807f7edfb7d1a19c01a6d6"
+    },
+    "generated/speedracer/unit_006A.cpp": {
+      "bytes": 301887,
+      "sha256": "265c750827c012888925c80011b01fafbaa35773b4f529edfe8c2af818315b95"
+    },
+    "generated/speedracer/unit_006B.cpp": {
+      "bytes": 338465,
+      "sha256": "e785cd8139a255da5e9b4fc4b27070893c82d219895ac9fa116fa96fe48db3e1"
+    },
+    "generated/speedracer/unit_006C.cpp": {
+      "bytes": 300460,
+      "sha256": "e58fef12b020bc90d07834c89de18f712a382c0d962863ea3d8b1694c79e4ce9"
+    },
+    "generated/speedracer/unit_006D.cpp": {
+      "bytes": 297753,
+      "sha256": "1fdc50e5acc8d8f317b01b292de5803c5a7aade656d6d29dc9e3ff579b03d0a3"
+    },
+    "generated/speedracer/unit_006E.cpp": {
+      "bytes": 300371,
+      "sha256": "02042cfa45f8a179ff99861aee8812ae2f464fab8e364c159272a331d867e1b6"
+    },
+    "generated/speedracer/unit_006F.cpp": {
+      "bytes": 314034,
+      "sha256": "1ff04088e367123d3ea840d0148e099fe75b7290efc19147643bdc4d173f44c6"
+    },
+    "generated/speedracer/unit_0070.cpp": {
+      "bytes": 287981,
+      "sha256": "ec542d0483c086b12af3d74e70cd4476a86aa8b0f1ee586d48bbb2cd3b3d6052"
+    },
+    "generated/speedracer/unit_0071.cpp": {
+      "bytes": 269249,
+      "sha256": "d1dc8585ef2d5f1c8eb2a33965d3f1ffb0fb67a68f8d54d26074bd0c768e8acd"
+    },
+    "generated/speedracer/unit_0072.cpp": {
+      "bytes": 276657,
+      "sha256": "71fc0fedd4ab4189ec4c483c6165da67ee17ec1760f603a3c857d132e0b3ce87"
+    },
+    "generated/speedracer/unit_0073.cpp": {
+      "bytes": 276870,
+      "sha256": "375f35ad9d51415762290482cd164f8b6c0a746f420f422c80e1cb2a75d2cbab"
+    },
+    "generated/speedracer/unit_0074.cpp": {
+      "bytes": 349121,
+      "sha256": "5bebed50eb954c8fe44edd441b231efc523890064270797e78451f6931910338"
+    },
+    "generated/speedracer/unit_0075.cpp": {
+      "bytes": 316744,
+      "sha256": "c2bda2b80c8b8a4b6b7f116c7e64c0c6abaceb9a7a79bdbb999cd65a535ac722"
+    },
+    "generated/speedracer/unit_0076.cpp": {
+      "bytes": 298074,
+      "sha256": "a6cd90773d1a99f3c03df2a5cc9b48f01c189e5b91b6e16aba969b3853bb746a"
+    },
+    "generated/speedracer/unit_0077.cpp": {
+      "bytes": 294504,
+      "sha256": "7d4e7d8d2da2b318a07ec51080699879941d3d15ba647e72d920bd680859aec8"
+    },
+    "generated/speedracer/unit_0078.cpp": {
+      "bytes": 303378,
+      "sha256": "944f91212f53f046213ad92d21c2955578847ef0113be41d0e05db009213d58a"
+    },
+    "generated/speedracer/unit_0079.cpp": {
+      "bytes": 304018,
+      "sha256": "e3be9e63fc5a31739e6ea727043f2149b78f67f7f44181eece76c9b69f51ae49"
+    },
+    "generated/speedracer/unit_007A.cpp": {
+      "bytes": 300817,
+      "sha256": "f626958838bd0027c4a819de9f61b6ab11129f79ed820a3a579bc12bf595afdf"
+    },
+    "generated/speedracer/unit_007B.cpp": {
+      "bytes": 300377,
+      "sha256": "c1431c784d59ab69fbac677e82d130bd02780d10304d5fa637afeac03c79f789"
+    },
+    "generated/speedracer/unit_007C.cpp": {
+      "bytes": 308788,
+      "sha256": "f1678246dd502053eaac1f19c2d8c8cf9f40ea9ae1928a2bafe48e3a589dbdc7"
+    },
+    "generated/speedracer/unit_007D.cpp": {
+      "bytes": 320090,
+      "sha256": "be96c45900d7bd0c731290c6cc08cc683cf227560d3c71e055659ae1dbdce1fd"
+    },
+    "generated/speedracer/unit_007E.cpp": {
+      "bytes": 308946,
+      "sha256": "fa0ee8ea47bcb37f89ae1610048a4dd242bc6e079fc4f79caa62ad514de7c515"
+    },
+    "generated/speedracer/unit_007F.cpp": {
+      "bytes": 258405,
+      "sha256": "1cbce0dc78f59c9c84689760922d293decfc07444873ff73d25ca52df3bef550"
+    },
+    "generated/speedracer/unit_0080.cpp": {
+      "bytes": 312908,
+      "sha256": "fb3eaaf1cf3034587469ebcc7d29d126e8579c9a931035ec16d19a2afd7feb69"
+    },
+    "generated/speedracer/unit_0081.cpp": {
+      "bytes": 316204,
+      "sha256": "f6e977cbb3b4815e23ba1c936af0e8924fb19ef56fe90b2a797aede19a37779a"
+    },
+    "generated/speedracer/unit_0082.cpp": {
+      "bytes": 293494,
+      "sha256": "689db9731712e9f2594eaa97efcb6f1bd192ebc32b14b805563d60958cd7ab75"
+    },
+    "generated/speedracer/unit_0083.cpp": {
+      "bytes": 295571,
+      "sha256": "d5c56a31df388364a36f5570a9385d3b21944ad6a3e2f8641ff32fb14548cdb5"
+    },
+    "generated/speedracer/unit_0084.cpp": {
+      "bytes": 280506,
+      "sha256": "f957fc21b6004388c795f9745f84358abd83d0d93c45f74cee6da649376e7c24"
+    },
+    "generated/speedracer/unit_0085.cpp": {
+      "bytes": 267321,
+      "sha256": "1d421658770ee4af2ec03f885da49fa3c1afa37c180b5044f4f7d03457fd5ac4"
+    },
+    "generated/speedracer/unit_0086.cpp": {
+      "bytes": 290367,
+      "sha256": "c2cf71693e7628c8186f8b8cb2a7027a5d660739c5896d034d9df5c22653ed7f"
+    },
+    "generated/speedracer/unit_0087.cpp": {
+      "bytes": 279926,
+      "sha256": "273362e23d3411c480321c7e8dd4b95fc03ab42ca68633690efabd8e36eaa65a"
+    },
+    "generated/speedracer/unit_0088.cpp": {
+      "bytes": 270705,
+      "sha256": "e3c5c579554a3aaec5b19d9fc66a06125f6defc4022aeefdeb94eaa228b1ffb1"
+    },
+    "generated/speedracer/unit_0089.cpp": {
+      "bytes": 239117,
+      "sha256": "9c5df3c0b2716f807a000980cadbdf06195adbe36fd92f2000b124d07e0cd847"
+    },
+    "generated/speedracer/unit_008A.cpp": {
+      "bytes": 245444,
+      "sha256": "c21d4f86269ced14194ffd434f1cbadb1ffe725c3cf2f54ba169c9e0937de9a9"
+    },
+    "generated/speedracer/unit_008B.cpp": {
+      "bytes": 229628,
+      "sha256": "31e20f42c69a04b42402e72304294c41b57977b52100afabda42b7ddc0f96e48"
+    },
+    "generated/speedracer/unit_008C.cpp": {
+      "bytes": 221283,
+      "sha256": "f314215cb5adc5af8a5769193ed6d8705d28e26c15bddb75430f85c0ae8b8469"
+    },
+    "generated/speedracer/unit_008D.cpp": {
+      "bytes": 230109,
+      "sha256": "a1940d38fdd9f54676bbf7c2652f57305a04d417d0133076f184d8f31f509206"
+    },
+    "generated/speedracer/unit_008E.cpp": {
+      "bytes": 235028,
+      "sha256": "c921def5a3a827b736fed89dfe94fba99ef103210963e943161aed5901840570"
+    },
+    "generated/speedracer/unit_008F.cpp": {
+      "bytes": 233218,
+      "sha256": "cac2d3d3bc365d8326d3944a7e5f5a98ce986fbad920882fa2817791f03e9526"
+    },
+    "generated/speedracer/unit_0090.cpp": {
+      "bytes": 246494,
+      "sha256": "61d68d883dfd3c921512541c128aa8aab2f1fd2daf8a940082ea9eb19944ebe7"
+    },
+    "generated/speedracer/unit_0091.cpp": {
+      "bytes": 241407,
+      "sha256": "e88b78293690443cd7b0881b224ba2ffd8e90e68cf372e1c5154f294576eb88e"
+    },
+    "generated/speedracer/unit_0092.cpp": {
+      "bytes": 261964,
+      "sha256": "912f0329eaa6896e2a7e99612acc75c48c5dd14eec8b837ab5bfe8449c457588"
+    },
+    "generated/speedracer/unit_0093.cpp": {
+      "bytes": 295420,
+      "sha256": "d60011546864beda9f7c91ae77913070003637698b0d067de772312cb0d6b225"
+    },
+    "generated/speedracer/unit_0094.cpp": {
+      "bytes": 299368,
+      "sha256": "90205dd885a085447966917a6684f012fbbf7b91de3d9cb3efbbe329c8d13d3c"
+    },
+    "generated/speedracer/unit_0095.cpp": {
+      "bytes": 248303,
+      "sha256": "49692bf1525a1775a1c1dbe6d11d8572dbefe31d0cfda38d1feb9cbec8a6e585"
+    },
+    "generated/speedracer/unit_0096.cpp": {
+      "bytes": 257298,
+      "sha256": "747e7c94d009cbf726bf7ec6b064ad43274e4abbc8f11246dadf203a61894ddc"
+    },
+    "generated/speedracer/unit_0097.cpp": {
+      "bytes": 268133,
+      "sha256": "5a9fc6f5bc972846662886473c312d48ef15f26d13b715de7a6cd963bddd5855"
+    },
+    "generated/speedracer/unit_0098.cpp": {
+      "bytes": 260683,
+      "sha256": "d8a6eaa7222b98b7e0b6bde6313967019384ca2d11ba3c4c8529875c6c314575"
+    },
+    "generated/speedracer/unit_0099.cpp": {
+      "bytes": 214759,
+      "sha256": "7b886c1769b21fa7507b7b587f0e33afba923bc18822625022efe9b7197d44af"
+    },
+    "generated/speedracer/unit_009A.cpp": {
+      "bytes": 218865,
+      "sha256": "94629e081d1f2fe618b07fdb382777a8f5a100e2e01c00e5b6fc7db88baf0abe"
+    },
+    "generated/speedracer/unit_009B.cpp": {
+      "bytes": 226440,
+      "sha256": "f08ffdccecfa9c5a02e9f831706c6dfa489fb489589edc821b57704edb1257a8"
+    },
+    "generated/speedracer/unit_009C.cpp": {
+      "bytes": 211628,
+      "sha256": "f5d4b61a3a2e8ae06a800daa81f6dbf0137627576fc4efe83fa20a6775c8032d"
+    },
+    "generated/speedracer/unit_009D.cpp": {
+      "bytes": 247035,
+      "sha256": "72de12e4da622e4093f3170354f0e1d5ed0bdf5668cc73a4bd209e05627e8494"
+    },
+    "generated/speedracer/unit_009E.cpp": {
+      "bytes": 252467,
+      "sha256": "c300e29377b325e4079f3fa7258430b8210c5ba5a1cc29aa27a352f2f48a0d3d"
+    },
+    "generated/speedracer/unit_009F.cpp": {
+      "bytes": 238371,
+      "sha256": "8ee7d6a71c1f02426d878c91037625b3c22d5e92f3a37afaafb867d1fcc58cdb"
+    },
+    "generated/speedracer/unit_00A0.cpp": {
+      "bytes": 220058,
+      "sha256": "7161b39c72a9c82a33efbf6fd0baa28eb9391dd28bf8a816aae6d1821454ea7f"
+    },
+    "generated/speedracer/unit_00A1.cpp": {
+      "bytes": 221663,
+      "sha256": "e9ea9e8deb37406f073c8f1737d6714e7056cfd37e7dedd57e71568654d9a710"
+    },
+    "generated/speedracer/unit_00A2.cpp": {
+      "bytes": 239636,
+      "sha256": "46e67a40b5fce226f106404a29b5fef87e04d9b659196ab9ea844a66091cbb3f"
+    },
+    "generated/speedracer/unit_00A3.cpp": {
+      "bytes": 196663,
+      "sha256": "3891b9d76c369b3841f8f44bc08e5308c9e8ad007a212912d11cedf418e007b3"
+    },
+    "generated/speedracer/unit_00A4.cpp": {
+      "bytes": 238827,
+      "sha256": "ca81bf2ab59ab31cb53853dbff26c9687232ffcf10e9e977fd7d94cb4ef59e54"
+    },
+    "generated/speedracer/unit_00A5.cpp": {
+      "bytes": 243534,
+      "sha256": "d7cebc6b27eacffa2fb93cae6a0057e9eae8e39915546de65b37fa33d661c746"
+    },
+    "generated/speedracer/unit_00A6.cpp": {
+      "bytes": 257585,
+      "sha256": "4ffd5452df4a9bdcf3e4357a62e847bb8a73c0029c67e7c89a642ac50a2e93f8"
+    },
+    "generated/speedracer/unit_00A7.cpp": {
+      "bytes": 279634,
+      "sha256": "18cbbc13b40dfdc234264c24e6fbf56a43052407e17fee6883fa13fa3c15fbce"
+    },
+    "generated/speedracer/unit_00A8.cpp": {
+      "bytes": 253615,
+      "sha256": "e86265286b778da571f46b2ce4639b721bd3bf26efeb9a0736439fdbbcb5d029"
+    },
+    "generated/speedracer/unit_00A9.cpp": {
+      "bytes": 305211,
+      "sha256": "8bbf1d923caa4fa36fb62cd46bf76957de917e1b412a9174199255f68bb8598c"
+    },
+    "generated/speedracer/unit_00AA.cpp": {
+      "bytes": 292565,
+      "sha256": "35a799bf4789b7fed80a97bf0215072e888f719f817418b0fa425733106cf4ed"
+    },
+    "generated/speedracer/unit_00AB.cpp": {
+      "bytes": 301456,
+      "sha256": "8375c41ad82dbccd737157de0cf11d30728a6b37f9e88af67880718fe47b5e1a"
+    },
+    "generated/speedracer/unit_00AC.cpp": {
+      "bytes": 256570,
+      "sha256": "cf82e43be123ec3dc033a86bc794de2e5c785d8dd0e09b02b3b5a15314758118"
+    },
+    "generated/speedracer/unit_00AD.cpp": {
+      "bytes": 278235,
+      "sha256": "027f35ea2210328e434a0561d2c927d3f7a407912e23f64c6c27c86e09aadc8a"
+    },
+    "generated/speedracer/unit_00AE.cpp": {
+      "bytes": 275242,
+      "sha256": "8b6efb202fcd605ba5046a2c2a381032e97c851998d7c05c8b3d7ac9dd455203"
+    },
+    "generated/speedracer/unit_00AF.cpp": {
+      "bytes": 295888,
+      "sha256": "544171baa1c41bc17ec17378c7c5af3f75349c3ed2cf3f774860890dec83713a"
+    },
+    "generated/speedracer/unit_00B0.cpp": {
+      "bytes": 242019,
+      "sha256": "d8298886e04138ca429837ff65f024aa76b350664dcbfeb847b88c5e6940cc45"
+    },
+    "generated/speedracer/unit_00B1.cpp": {
+      "bytes": 293777,
+      "sha256": "3a4dc9977b0db1f3d0fd14ad59a7d847412f3256c7cb03bfb86907eb12cd2647"
+    },
+    "generated/speedracer/unit_00B2.cpp": {
+      "bytes": 274643,
+      "sha256": "af49f0d996c8babc018d4ff8e43e5f14ef72d6c3fbb86bd75b1deb39750d445c"
+    },
+    "generated/speedracer/unit_00B3.cpp": {
+      "bytes": 289092,
+      "sha256": "8746e6b9b4604b5565157bf9a2076a38966cd81f8bcb1d51c90368725b5391cc"
+    },
+    "generated/speedracer/unit_00B4.cpp": {
+      "bytes": 273715,
+      "sha256": "1157436174b64c56c5aaa73cf20a1c266f9bab63238c2203c314e41253e8c122"
+    },
+    "generated/speedracer/unit_00B5.cpp": {
+      "bytes": 264669,
+      "sha256": "3193bd8fe79b0a12758abd002ede989425e0349bb52eb800210524edfea87457"
+    },
+    "generated/speedracer/unit_00B6.cpp": {
+      "bytes": 279190,
+      "sha256": "4b73fe73956743b2416c6e4c625d0394e117b6552928e95b732f11f9361748d1"
+    },
+    "generated/speedracer/unit_00B7.cpp": {
+      "bytes": 289863,
+      "sha256": "9df9326b12ea0ce4b0dfd8cb4e36570d15f419ffa568f6b11e8a5e8e81f566af"
+    },
+    "generated/speedracer/unit_00B8.cpp": {
+      "bytes": 306070,
+      "sha256": "b0cb6dd9b6914f5c906dc64e08183600909770b470ea1b6ed552b10cf1f9da6c"
+    },
+    "generated/speedracer/unit_00B9.cpp": {
+      "bytes": 287245,
+      "sha256": "40d07708714e2cc9a7c96f651708e41293119bc64cf9fc7bf41e1fb8ad6afbca"
+    },
+    "generated/speedracer/unit_00BA.cpp": {
+      "bytes": 292966,
+      "sha256": "ac472b98007fddc7ef7aba5397316531acd20eba669bcb835716d2b597db2c54"
+    },
+    "generated/speedracer/unit_00BB.cpp": {
+      "bytes": 288208,
+      "sha256": "0d0c27ec3b222ac4f3c23f0afa34696c92d8dae4fa443f9d38e1edef58fb9d7a"
+    },
+    "generated/speedracer/unit_00BC.cpp": {
+      "bytes": 304523,
+      "sha256": "70b736c2bd3da4b4d6af2041605cd9b8525639b027a3c9a06decebf804944d0e"
+    },
+    "generated/speedracer/unit_00BD.cpp": {
+      "bytes": 286581,
+      "sha256": "0515c3b7f3cf8c8f69c443e519f51df4a9d43873fa62814860ef080e47a909b2"
+    },
+    "generated/speedracer/unit_00BE.cpp": {
+      "bytes": 270433,
+      "sha256": "a4aea0a6ded7d73ed2670d161d9a64667b20c80b2ee351aec6359a4b193ad07b"
+    },
+    "generated/speedracer/unit_00BF.cpp": {
+      "bytes": 304445,
+      "sha256": "05baf354200477edfa90b4b04c40dd1f723229f11a34e9e346b213bdadce4c87"
+    },
+    "generated/speedracer/unit_00C0.cpp": {
+      "bytes": 252231,
+      "sha256": "c4230b17cbdd3b699dfff240e9610e26a242cc7509bfa53695b60eda2d7cfd4b"
+    },
+    "generated/speedracer/unit_00C1.cpp": {
+      "bytes": 303318,
+      "sha256": "fcfd32484799513e14024bb72df68a341047db3bbb8b48f4f49589da223e759b"
+    },
+    "generated/speedracer/unit_00C2.cpp": {
+      "bytes": 292155,
+      "sha256": "19c78b217a55cb8b42d6eb8f7e51890c5c0ea35d10112d6f3f4f852e953eaf47"
+    },
+    "generated/speedracer/unit_00C3.cpp": {
+      "bytes": 296281,
+      "sha256": "f6df4981191c0bc8ee2863cf45e33c3e5ec7166f1ca172c46cb289e9886671af"
+    },
+    "generated/speedracer/unit_00C4.cpp": {
+      "bytes": 293453,
+      "sha256": "f73ff8652a8ad4f1a18bb91c2811a74b7be3ea8d9b06ea780e4e6f12f00e5fc6"
+    },
+    "generated/speedracer/unit_00C5.cpp": {
+      "bytes": 309887,
+      "sha256": "95d66688b8032e3cd7c748e2a0df4b77b74a001ed8cdf84abdd0fc264876806f"
+    },
+    "generated/speedracer/unit_00C6.cpp": {
+      "bytes": 287588,
+      "sha256": "a4129043e0d02647f0ed710f0a8183900e76537a86378bee23e29310c764a8c0"
+    },
+    "generated/speedracer/unit_00C7.cpp": {
+      "bytes": 282674,
+      "sha256": "d974eaa6a9aaf3d3f041a2c1f31f36945dc6eeb22f7571fcf9150ba42abae4e5"
+    },
+    "generated/speedracer/unit_00C8.cpp": {
+      "bytes": 242514,
+      "sha256": "23be863b2717b786d5b7264451763bbdd37a4234546708bd4d27f0c9291e2810"
+    },
+    "generated/speedracer/unit_00C9.cpp": {
+      "bytes": 298840,
+      "sha256": "af666d93c6d5f5b3fcf482b0362dfe1f98b189c53b951e4e96d117934b50230d"
+    },
+    "generated/speedracer/unit_00CA.cpp": {
+      "bytes": 311785,
+      "sha256": "517bd8fb9a7758b1c099aac338c7ea7f6e9142cf098093daad366faabc5c192a"
+    },
+    "generated/speedracer/unit_00CB.cpp": {
+      "bytes": 261253,
+      "sha256": "da4171453fc92d77553097ac1b0e4eb6696c9e47bf1f7188777f56340a647c8a"
+    },
+    "generated/speedracer/unit_00CC.cpp": {
+      "bytes": 304147,
+      "sha256": "3d5014a39b5f1bb0d44ac03e136e2ffa0851dde36d1ad10222e0a435bfc126aa"
+    },
+    "generated/speedracer/unit_00CD.cpp": {
+      "bytes": 295213,
+      "sha256": "444ad27dd9333df6b44318f01b6b848f0fc09d8c61b3b6f13b8134aaf409a2fe"
+    },
+    "generated/speedracer/unit_00CE.cpp": {
+      "bytes": 276245,
+      "sha256": "c2bc14b2a4cb25f41db008fab7557a608eeb95be7978f67d347970f0b590c805"
+    },
+    "generated/speedracer/unit_00CF.cpp": {
+      "bytes": 292490,
+      "sha256": "a72ccc0f848fc4edb132bb31ccda8052b08b87256de0823bb5eab2d6533a2be8"
+    },
+    "generated/speedracer/unit_00D0.cpp": {
+      "bytes": 304163,
+      "sha256": "dd127fc8b9fedb1e7f283f230ed8881c6e6e3dda0462fa158b1ccd50e936fbb9"
+    },
+    "generated/speedracer/unit_00D1.cpp": {
+      "bytes": 281992,
+      "sha256": "62649eca783f8589dcde17ce678c734fcce2cac003467dfe5fdf2e144be19ddc"
+    },
+    "generated/speedracer/unit_00D2.cpp": {
+      "bytes": 278786,
+      "sha256": "6ef5406398721febc1fd34815949553695ae58b3c95e3247e36affa52226c5d8"
+    },
+    "generated/speedracer/unit_00D3.cpp": {
+      "bytes": 287542,
+      "sha256": "d16fc0a2f26b464da264175133ee484a6881a400a4df9a223718a0d0ed1ecbfd"
+    },
+    "generated/speedracer/unit_00D4.cpp": {
+      "bytes": 307696,
+      "sha256": "ba0837160c56a0049730b2f77e339c818aca0fd0ef17518ff04ff8f7c1ed9db8"
+    },
+    "generated/speedracer/unit_00D5.cpp": {
+      "bytes": 295404,
+      "sha256": "c9c140a5193e7fb44217af95c90e0f950e3cdecf805fe752667023794ad20be1"
+    },
+    "generated/speedracer/unit_00D6.cpp": {
+      "bytes": 290315,
+      "sha256": "a4d703f5331b0660d9a421d12a88d0b38c9b46c26c5c6cfc2df58b8be59ffe60"
+    },
+    "generated/speedracer/unit_00D7.cpp": {
+      "bytes": 276219,
+      "sha256": "531bb6583c3ab0a8bd286cf0a95edb07ecd7a438d0b7a76c60047dc331c8ae2d"
+    },
+    "generated/speedracer/unit_00D8.cpp": {
+      "bytes": 273943,
+      "sha256": "2522b651515cca8da9388d3a47f11f2b3f3821f10c5ff78cab558de45e33b026"
+    },
+    "generated/speedracer/unit_00D9.cpp": {
+      "bytes": 273234,
+      "sha256": "83455dda5fa917a465b3e813b49dbb5c297fa5ed7dd3fb9cb51b306bff129efe"
+    },
+    "generated/speedracer/unit_00DA.cpp": {
+      "bytes": 259557,
+      "sha256": "5e050b500f3d2e5b6a29da0dd76734dbaf058cfe566c274dbdf6ffd8e3253c32"
+    },
+    "generated/speedracer/unit_00DB.cpp": {
+      "bytes": 258613,
+      "sha256": "4cbf411d82e4b72f1d5935682cb443c6a880d4dbd637f48313a5fe08eb48280d"
+    },
+    "generated/speedracer/unit_00DC.cpp": {
+      "bytes": 235053,
+      "sha256": "d65abba045848e05379fa00649b29b25497f915946a0d0ec24dc39458b9c7963"
+    },
+    "generated/speedracer/unit_00DD.cpp": {
+      "bytes": 289942,
+      "sha256": "a3d66d0c8456924ad6cf12788d5b80527b269e2c6cb47aed2c189ccb77cf15e4"
+    },
+    "generated/speedracer/unit_00DE.cpp": {
+      "bytes": 292184,
+      "sha256": "27648c81ce2a61094acb247c2831e4a0b8f329b1f079cdd0868d41dd0e0ec556"
+    },
+    "generated/speedracer/unit_00DF.cpp": {
+      "bytes": 294780,
+      "sha256": "713757639e499dfe1536c5c74681041c91a5fa963ec937346fbdaf859c7b6113"
+    },
+    "generated/speedracer/unit_00E0.cpp": {
+      "bytes": 303402,
+      "sha256": "532c64e57c8efb268bdfe56fd8505093c0d33c9a8c730dc02cda6b24742e6f91"
+    },
+    "generated/speedracer/unit_00E1.cpp": {
+      "bytes": 293167,
+      "sha256": "2aed7a21264765275de49fb0ea1c1550148284d0f3f12caf12d2594a509e5887"
+    },
+    "generated/speedracer/unit_00E2.cpp": {
+      "bytes": 274519,
+      "sha256": "7e5102c1dfcf4f893d630c95f3b01e8ff797ef9fe18fc00daf3f8912007e224f"
+    },
+    "generated/speedracer/unit_00E3.cpp": {
+      "bytes": 289164,
+      "sha256": "5951609f8fc28c7f60e66a5358b41ddce24875d085c212eb5be840b1149690e4"
+    },
+    "generated/speedracer/unit_00E4.cpp": {
+      "bytes": 333153,
+      "sha256": "d068c7269c77632b77587451e95473a33682910c1ef19ca3eb51833a7ddb7bb1"
+    },
+    "generated/speedracer/unit_00E5.cpp": {
+      "bytes": 304492,
+      "sha256": "ed2fd3140d4734c6f9f3ec7e188df84518e78aa9becd7ac80539915abd144adb"
+    },
+    "generated/speedracer/unit_00E6.cpp": {
+      "bytes": 318311,
+      "sha256": "244f6c224c8a00155a2c113fc440ed42005acb9ae9ad4f35d8a437affdad78ac"
+    },
+    "generated/speedracer/unit_00E7.cpp": {
+      "bytes": 302266,
+      "sha256": "7500804053c84cec5565f2c9bdfe766300eb1bca95ad779b9b91c1328b03a51d"
+    },
+    "generated/speedracer/unit_00E8.cpp": {
+      "bytes": 297066,
+      "sha256": "3015f824fa497122d01c1dbab3dd6a6116a1107374b2e7fe748ae4589ae13eb6"
+    },
+    "generated/speedracer/unit_00E9.cpp": {
+      "bytes": 302424,
+      "sha256": "41968f66bf02239ee9b9fb867fd368cb5331835d5b89d439a6b444161f65dc64"
+    },
+    "generated/speedracer/unit_00EA.cpp": {
+      "bytes": 288058,
+      "sha256": "be026a533c8add3f4ee11bb1cd9da9419e052c842a0ff3d9c024c9780478cd8c"
+    },
+    "generated/speedracer/unit_00EB.cpp": {
+      "bytes": 298591,
+      "sha256": "0cf27b5cddf5a23c9172841c622e98e96003562200cbac573dadd42817ad7244"
+    },
+    "generated/speedracer/unit_00EC.cpp": {
+      "bytes": 296986,
+      "sha256": "8e5365b6d8f32a2cbbc5b24eff5847d6dc1aa7ce7a40d950f7f45eec4a5bd3cb"
+    },
+    "generated/speedracer/unit_00ED.cpp": {
+      "bytes": 310510,
+      "sha256": "617c425c34a9ec0d9a01c5c40c74f4fa7f8862deafc79ebcafb9729ff2df2a52"
+    },
+    "generated/speedracer/unit_00EE.cpp": {
+      "bytes": 269367,
+      "sha256": "ff96110f6dfda5e2b55d4ec6979d2a49df2427f0dbe60e98062b7d1dc4d74dbb"
+    },
+    "generated/speedracer/unit_00EF.cpp": {
+      "bytes": 280518,
+      "sha256": "9710ead91c3e988332e755620ab18d6c5a770b4f3d107371f41de8cbc326c7cc"
+    },
+    "generated/speedracer/unit_00F0.cpp": {
+      "bytes": 289219,
+      "sha256": "0f073eee3c75f2c2318b4236a19a5b8d1eaad92bbc864373214525fc1fc1f503"
+    },
+    "generated/speedracer/unit_00F1.cpp": {
+      "bytes": 276723,
+      "sha256": "3bc281c7cd73f079eb6c3d6ba133e0ce5bab3198000209228ff339f5bc12031b"
+    },
+    "generated/speedracer/unit_00F2.cpp": {
+      "bytes": 310118,
+      "sha256": "f9f20769d1ba0d9859b07d0a48555aed15a21bc3f65dab96a767881a9bcd0a20"
+    },
+    "generated/speedracer/unit_00F3.cpp": {
+      "bytes": 309473,
+      "sha256": "22e56d099ab00ecd665d18edf5a1f9bfd766b85a83d0148165928cd1a3b3aeb2"
+    },
+    "generated/speedracer/unit_00F4.cpp": {
+      "bytes": 266854,
+      "sha256": "e3e267e18781ca5d701e881194dfb60357a44725e6e9f8141977dedd8d666bfc"
+    },
+    "generated/speedracer/unit_00F5.cpp": {
+      "bytes": 324860,
+      "sha256": "61fc0908292331af33a7de1e33a4f802d6186f754d581484502a9f5dd49634db"
+    },
+    "generated/speedracer/unit_00F6.cpp": {
+      "bytes": 236198,
+      "sha256": "9a6af1dcaac0b5b4b9fea93dd232362b4ea5ff4b025ff8a2002998ad26c61432"
+    },
+    "generated/speedracer/unit_00F7.cpp": {
+      "bytes": 232747,
+      "sha256": "d79622d398a9dd9fd008c449a7bc169be2dad8df2e033ffc5545fec163816439"
+    },
+    "generated/speedracer/unit_00F8.cpp": {
+      "bytes": 245217,
+      "sha256": "c61ae083d2a470e6809cdad2e807dbe1c846558a6017990d1f712bfe5ccc570c"
+    },
+    "generated/speedracer/unit_00F9.cpp": {
+      "bytes": 294646,
+      "sha256": "1b1d4842f32b1ec218750bcf34fce08de93a23678a56f9dafc760df2897ca1f2"
+    },
+    "generated/speedracer/unit_00FA.cpp": {
+      "bytes": 277844,
+      "sha256": "5de292c0d3ae04b1710d7a233c92964acf1e780a06babb5c08d37dfc8ce9c5bd"
+    },
+    "generated/speedracer/unit_00FB.cpp": {
+      "bytes": 299431,
+      "sha256": "4f5852be745b6bc2b3a43ce616c0019f9c12781d7581fc144e56f6108d1d22c3"
+    },
+    "generated/speedracer/unit_00FC.cpp": {
+      "bytes": 303391,
+      "sha256": "eb5c412b19ac3ca791c131e61e1277a3185a1492b93f0bafab6c20d3e348c63d"
+    },
+    "generated/speedracer/unit_00FD.cpp": {
+      "bytes": 325571,
+      "sha256": "41cab57c2d6047868867da301ce553a19e94accae2e4f1bd1a522b314e88a9d6"
+    },
+    "generated/speedracer/unit_00FE.cpp": {
+      "bytes": 297333,
+      "sha256": "098d2fb3e969ea2974cb12e1f7f5fc5b49888ac28f34f4049a7c9dfb61a3d359"
+    },
+    "generated/speedracer/unit_00FF.cpp": {
+      "bytes": 303476,
+      "sha256": "d7141d779df2bc14bf5eb8d10ece77cab397eb50f5eec514731cc30c01f03f5d"
+    },
+    "generated/speedracer/unit_0100.cpp": {
+      "bytes": 296730,
+      "sha256": "1105c41c5f81a63b5763a4bd3010aa6bcd5b2db0eb147c0d72ada550b7edaf04"
+    },
+    "generated/speedracer/unit_0101.cpp": {
+      "bytes": 297318,
+      "sha256": "285fdce4cc1c247eb2713267e964b91787358667dd9676be0f1df6cc90ffe2b8"
+    },
+    "generated/speedracer/unit_0102.cpp": {
+      "bytes": 276754,
+      "sha256": "3403f340d574a9f09665682d1b8d94d3ad7b8263c66716e7ff8ea3decc926fae"
+    },
+    "generated/speedracer/unit_0103.cpp": {
+      "bytes": 303566,
+      "sha256": "825bc9b6e4134c0b2d44da3677e18770e328052247141039b87a2df8f8788c17"
+    },
+    "generated/speedracer/unit_0104.cpp": {
+      "bytes": 255200,
+      "sha256": "f74747db11f15a37b51ad0906389021ffc0584c9024ca290115236ed4ab6944a"
+    },
+    "generated/speedracer/unit_0105.cpp": {
+      "bytes": 262426,
+      "sha256": "769d1ebfd9633297d8539b298f419d6894104cd9d85da29f7068a742e36d3613"
+    },
+    "generated/speedracer/unit_0106.cpp": {
+      "bytes": 242995,
+      "sha256": "bc58a9b377f09dfc274ec0877e0132fb9eac0224382c5b1fe8ffbf0f7fda6163"
+    },
+    "generated/speedracer/unit_0107.cpp": {
+      "bytes": 244994,
+      "sha256": "7d2457afcb0ba5455580ef747258659322bf94d83e28126b6013f53f3b035b7c"
+    },
+    "generated/speedracer/unit_0108.cpp": {
+      "bytes": 237168,
+      "sha256": "7afff21ce708ef7cb0264fb29498c3f8e5c67b8a4b5d8f8a3d948bb984efd32d"
+    },
+    "generated/speedracer/unit_0109.cpp": {
+      "bytes": 241905,
+      "sha256": "cf4d51d19817f82015c0d67814fc12afd2a325caac574649c83b8572ea3e90cf"
+    },
+    "generated/speedracer/unit_010A.cpp": {
+      "bytes": 240111,
+      "sha256": "b3dd8916173fd2873ce06c9d5b904fff08ad97d355c3cea13bf6f06b1e530ced"
+    },
+    "generated/speedracer/unit_010B.cpp": {
+      "bytes": 254664,
+      "sha256": "ba1db3992cefedb43acd94d97500c218cf8f6bf5bc061ce9ce80627d59f4c4b0"
+    },
+    "generated/speedracer/unit_010C.cpp": {
+      "bytes": 236935,
+      "sha256": "d6d2d8a7673e94e79bb7a879e7d2711ff3dfa81a7edbcf3979c9281ce8f589a9"
+    },
+    "generated/speedracer/unit_010D.cpp": {
+      "bytes": 251501,
+      "sha256": "2e0883b5331a82d1f533a2c03e43b14f6d7dd77e2a21f28659ccc2111b4b98bd"
+    },
+    "generated/speedracer/unit_010E.cpp": {
+      "bytes": 271480,
+      "sha256": "a87a8603afba15d4f5f4e6d8cbc732e1c473386f88e216ea6f0d20652b3a2fc4"
+    },
+    "generated/speedracer/unit_010F.cpp": {
+      "bytes": 256228,
+      "sha256": "4e19901acb603fc6df9ccd66c2a28ea9a2289ffe3eb7e29db150ce32870c4083"
+    },
+    "generated/speedracer/unit_0110.cpp": {
+      "bytes": 242896,
+      "sha256": "3412c6d2f7b24b27d1a47931e1548aa5766c8a5f63f5fe4f0dfec0948e18391b"
+    },
+    "generated/speedracer/unit_0111.cpp": {
+      "bytes": 262837,
+      "sha256": "754b38c3c17809d2fb32b7f7b3cb91c73f910f4cd7a4dffbec94e3c1d9a9cefa"
+    },
+    "generated/speedracer/unit_0112.cpp": {
+      "bytes": 256732,
+      "sha256": "0a46b82ae069f0f74c458ffaf898b5d3388acbb4b91250138e83d364339174fd"
+    },
+    "generated/speedracer/unit_0113.cpp": {
+      "bytes": 237229,
+      "sha256": "6fc9bac70ad6d2398f8e1d7067fc7c3e38ee5d7a2a9026659f32902672d9f3ca"
+    },
+    "generated/speedracer/unit_0114.cpp": {
+      "bytes": 250261,
+      "sha256": "37e0678c14af449e0ee49b7eab49db2c24eaa68d8bd0c0cfc73fb308b6ab264c"
+    },
+    "generated/speedracer/unit_0115.cpp": {
+      "bytes": 265927,
+      "sha256": "5bd667fef5098e2e33feb6c011e0b7d5bee8f0380cd8c2b14b2706f982062946"
+    },
+    "generated/speedracer/unit_0116.cpp": {
+      "bytes": 268456,
+      "sha256": "6a180914532d7f536c581018fa749f21a8590743be2db409440f42176fcbcc1e"
+    },
+    "generated/speedracer/unit_0117.cpp": {
+      "bytes": 260792,
+      "sha256": "321bce46966e05277414417c2dc4664d7b6ecc299c436047c64753363f98ac1c"
+    },
+    "generated/speedracer/unit_0118.cpp": {
+      "bytes": 245689,
+      "sha256": "9e4166e09253eff6e2841a28c84b032750c81b3ec7cf77ad8982f4718bc03f3a"
+    },
+    "generated/speedracer/unit_0119.cpp": {
+      "bytes": 253147,
+      "sha256": "ab0a69ae0ad9a792d10c4af41ea115997457986219088d52cd65b63524971a83"
+    },
+    "generated/speedracer/unit_011A.cpp": {
+      "bytes": 258198,
+      "sha256": "af2d753b1d43a175d4c03e4a40979ea7553b8a14303d457ba39e40c2dfe9ff58"
+    },
+    "generated/speedracer/unit_011B.cpp": {
+      "bytes": 130256,
+      "sha256": "3349e2d1cb18eabc2abe36f88cccb9b0f5593dc975dc32466587ea26660ba60a"
+    },
+    "generated/speedracer/unit_011C.cpp": {
+      "bytes": 14805,
+      "sha256": "1fb7b809f53716dd18738dcad3a91832fd6c571daa2d74623778b3567a5a0e18"
+    },
+    "generated/speedracer/unit_011D.cpp": {
+      "bytes": 60100,
+      "sha256": "2e560c5a12aa185210cae136d0323265be9001ab608949daf9853b172e38b5dd"
+    },
+    "generated/speedracer/unit_0121.cpp": {
+      "bytes": 18209,
+      "sha256": "44083506d610bd1f6528addc47cc4ae8aa8b69b75c5299109012a0376405eb56"
+    },
+    "generated/speedracer/unit_0122.cpp": {
+      "bytes": 16681,
+      "sha256": "6cafeea2c0db4bfe88c9dc11879c93bfd671f34236886c55d257d6651ab553e5"
+    },
+    "generated/speedracer/unit_0125.cpp": {
+      "bytes": 19008,
+      "sha256": "183f15c1b33135b9961f919814b132c783385007703be44ccbb33176dd4a8770"
+    },
+    "generated/speedracer/unit_0126.cpp": {
+      "bytes": 16845,
+      "sha256": "36f3ae1a0722d8f283400376fe3cb0b4ded33bb310af049857bdfab8baa0fa1c"
+    },
+    "generated/speedracer/unit_0127.cpp": {
+      "bytes": 22529,
+      "sha256": "3a506df8ebc38d3ddcaedeb587af833038e25e899f840839cf374f040e08a5e5"
+    },
+    "generated/speedracer/unit_0128.cpp": {
+      "bytes": 13342,
+      "sha256": "0b71ec30f445c39ad0cd8260966046132a3c10b75e826df787c78be7b67939e6"
+    },
+    "generated/speedracer/unit_0129.cpp": {
+      "bytes": 13855,
+      "sha256": "e4d22de7fe39e436d8f81828c4f23fd144ac6ba969e34bafeab64ba77fb4606d"
+    },
+    "generated/speedracer/unit_012A.cpp": {
+      "bytes": 19360,
+      "sha256": "1102e72121a4848667f36b56a2a0ee2b9a322fdaaac52ba1b56d0640013abffb"
+    },
+    "generated/speedracer/unit_012B.cpp": {
+      "bytes": 13546,
+      "sha256": "01ecc08a608d8b87abb30211965337fb6220088379ffcae912579248154aa259"
+    },
+    "generated/speedracer/unit_012C.cpp": {
+      "bytes": 18808,
+      "sha256": "f0f738cd717f94272bc775a9b2c400d220bce23f0d1f7cc0b5cdd23282145638"
+    },
+    "generated/speedracer/unit_012E.cpp": {
+      "bytes": 14261,
+      "sha256": "ef56c259e108997b36c0de1413c9ed4cd4ea3fecaef9180773d56d19ef64927f"
+    },
+    "generated/speedracer/unit_012F.cpp": {
+      "bytes": 14047,
+      "sha256": "2755676d09083efa5c7ecf28dc1d84c5082214960a492df017c60509adc78d0c"
+    },
+    "generated/speedracer/unit_0132.cpp": {
+      "bytes": 76452,
+      "sha256": "3afb670a6d9339b6df85deab4c4adba6a90281c4d2fd2967bbd605b048ea56cd"
+    },
+    "generated/speedracer/unit_0133.cpp": {
+      "bytes": 292809,
+      "sha256": "fc51cd443021431fa5c2d62b93e03969401dc7e3a48b09ea8e61f30c4f822b9c"
+    },
+    "generated/speedracer/unit_0134.cpp": {
+      "bytes": 281326,
+      "sha256": "daff0cddd59def27e98d9bef227ee46cbd9ef16157d7e5bd8ad6ae464e061068"
+    },
+    "generated/speedracer/unit_0135.cpp": {
+      "bytes": 392752,
+      "sha256": "3e99bc5e215252b6d29b0ff9794df2cfa1fd1725cecbd26f4700eaebb6061416"
+    },
+    "generated/speedracer/unit_0136.cpp": {
+      "bytes": 61250,
+      "sha256": "70d508463468bca5d5a80ae898814a16c28852e926881b7c87480162045e644d"
+    },
+    "generated/speedracer/units.hpp": {
+      "bytes": 34604,
+      "sha256": "e48a83b6016622611e0b089e1941d5507b18471ca5699ab45fcb7eababee8ce5"
+    },
+    "generated/speedracer/vu1_000.cpp": {
+      "bytes": 969547,
+      "sha256": "3351f0eb3ee403e638f17ac484fb07f93d3e66aafd89d476276b9f23cb7567ca"
+    },
+    "generated/speedracer/vu1_001.cpp": {
+      "bytes": 1122431,
+      "sha256": "9f254b101023135f4c1cda2defb7ab231c136b0e7a9b5fab562ceeb0c82a6b92"
+    },
+    "generated/speedracer/vu1_002.cpp": {
+      "bytes": 984638,
+      "sha256": "096343a89bb83a7ad6d665467eb998a55db656ed50ee646ec7de1665f28ad14d"
+    },
+    "generated/speedracer/vu1_003.cpp": {
+      "bytes": 1087478,
+      "sha256": "110af773b955de05b783fb6ac2858911655135ecda255f00c64fa6248fcdc821"
+    },
+    "generated/speedracer/vu1_004.cpp": {
+      "bytes": 1029149,
+      "sha256": "6fb5289aac3841a856aeaeca203ead8d4c2845d674586987e3584a02ac3aece0"
+    },
+    "generated/speedracer/vu1_005.cpp": {
+      "bytes": 1066526,
+      "sha256": "3280b60e48422fce5ca2d951381a5a2b5ab9553677dbedaf7899f541a306ad00"
+    },
+    "generated/speedracer/vu1_006.cpp": {
+      "bytes": 923107,
+      "sha256": "6f6eaff1d700567044dc1458d71ca3065544ce59a46d8276ae55a80ce04ea64c"
+    },
+    "generated/speedracer/vu1_007.cpp": {
+      "bytes": 1039294,
+      "sha256": "711b50a099133d67f2a0ecae776d1fb9302c54bcc9feefd9e8298251355c1cab"
+    },
+    "generated/speedracer/vu1_008.cpp": {
+      "bytes": 1097714,
+      "sha256": "87db578fd1e30014b8a1a4d1033a2914a80a2ac355194fd3c8425d052367c021"
+    },
+    "generated/speedracer/vu1_009.cpp": {
+      "bytes": 808307,
+      "sha256": "60c800f4d4ca682da4ecce48ded85c306b73dfa147be9fc3c41c4d402cf292fb"
+    },
+    "generated/speedracer/vu1_010.cpp": {
+      "bytes": 1011632,
+      "sha256": "c0586e5362c2bb12500c87268f9db72bc7287f7d901e4e42ab37d46411443fa4"
+    },
+    "generated/speedracer/vu1_011.cpp": {
+      "bytes": 931762,
+      "sha256": "2080cea056d87d8ef7f2775c3b6f72dccadcee1a44a7455266c5cc71bfdb931c"
+    },
+    "generated/speedracer/vu1_012.cpp": {
+      "bytes": 1197270,
+      "sha256": "b945d9e87a7ce5a41f3bc19e10bf32dfcc7731fa813a5563fe36b3db9b2b2f3e"
+    },
+    "generated/speedracer/vu1_013.cpp": {
+      "bytes": 1040553,
+      "sha256": "e2a4278eda404a0d72b48aaed1393011a4dd3b669104203a8c5eac67db317300"
+    },
+    "generated/speedracer/vu1_014.cpp": {
+      "bytes": 1023141,
+      "sha256": "d792e2fc9164ef46b14c36c61bb8cc60ef8e0de060619beebcdbb9d0803d45a0"
+    },
+    "generated/speedracer/vu1_015.cpp": {
+      "bytes": 1129615,
+      "sha256": "136d32202e501b32331a5fbdaa43f34390a106faf48ab954a13a8744758e48ba"
+    },
+    "generated/speedracer/vu1_016.cpp": {
+      "bytes": 1118800,
+      "sha256": "372355b70f20d12d6894719835ff847422a1b0d1df3cef7492d4539ce17a459b"
+    },
+    "generated/speedracer/vu1_017.cpp": {
+      "bytes": 1134477,
+      "sha256": "19476de960e120c78871e775cef357df4dfb8bda8197196db490bbfa8eb0843c"
+    },
+    "generated/speedracer/vu1_018.cpp": {
+      "bytes": 658927,
+      "sha256": "a1f618a55c1f15d8bc4736dae061c6dc95ecbdb7fce712894338ef0252dabef7"
+    },
+    "generated/speedracer/vu1_table.cpp": {
+      "bytes": 34639,
+      "sha256": "4bdc9d149def324ca0dbfc8cb9fd9f7535679be4605a3c7689fd277dd4778c31"
+    },
+    "host/assets/README.md": {
+      "bytes": 333,
+      "sha256": "ff23f61fb3e72c6a45c21fb5e9f98db19ee59e3cacf1f99f902edae8593fb477"
+    },
+    "host/assets/SpeedRacer.ico": {
+      "bytes": 153327,
+      "sha256": "09b19dfcf01b0b22df19a45af36e6c3b29415b97e72bd0e366bcdb679294a67a"
+    },
+    "host/assets/SpeedRacerLogo.png": {
+      "bytes": 777324,
+      "sha256": "d48dfd75d2af5731a020b477fc2f32b00d149d1f54166583420b52ff76ff65f8"
+    },
+    "host/audio_content_trace.hpp": {
+      "bytes": 7083,
+      "sha256": "5fac912296597eca1795b0fd8c219434dc3044aed1e1282eefb0cc0e37290970"
+    },
+    "host/audio_output.hpp": {
+      "bytes": 1097,
+      "sha256": "a8d3bf78a035d9764071a76c11d2b6e9a1f34dac8658660fbf549e63f244c006"
+    },
+    "host/controllers.cpp": {
+      "bytes": 7304,
+      "sha256": "bf01e408463b50defe61454225d84042a5fd9ffe59c8ca5926154eb15089f7ef"
+    },
+    "host/controllers.hpp": {
+      "bytes": 1002,
+      "sha256": "5119e8f8d142beb9e56dd31cef57a42e2bcb317e8263a7a4a17f14cabe7dabe7"
+    },
+    "host/frame_metrics.hpp": {
+      "bytes": 1213,
+      "sha256": "1a47eb3f32aa15de05a7a64380ae1db8ecf7211eedcc84178befd1282615544a"
+    },
+    "host/frame_pacer.hpp": {
+      "bytes": 1517,
+      "sha256": "f0283ded6608ef1720e851ad6a9ad7d4a7869065343fec5fd6f35afbe3c9caa1"
+    },
+    "host/keyboard.cpp": {
+      "bytes": 14044,
+      "sha256": "7b56ba72b3579fe4a373c206b8c2391937be151cae97e10f2080d2a4af13412c"
+    },
+    "host/keyboard.hpp": {
+      "bytes": 2051,
+      "sha256": "26467bbf89512aa13faffe1605ca75ca8c10a3f0747813f0a5e972f6321481d6"
+    },
+    "host/main.cpp": {
+      "bytes": 7101,
+      "sha256": "fa5f3ed70fa4863bb1f4f611478dba022dc1bbeeca0d71728e8a3457df6b5804"
+    },
+    "host/media_import.cpp": {
+      "bytes": 18501,
+      "sha256": "24f168c1d4b2ebf628d42bba705523886bd6ec27985df3aadee9224a2644239d"
+    },
+    "host/media_import.hpp": {
+      "bytes": 867,
+      "sha256": "bf93eb0d04968e55a3c6c9290b72da6f8d115306e48136bf590095807a04ad50"
+    },
+    "host/media_setup.cpp": {
+      "bytes": 6390,
+      "sha256": "afeba0255a5ceebae0bffcff112416278ed1925038aedfa242211aec5271f70a"
+    },
+    "host/media_setup.hpp": {
+      "bytes": 225,
+      "sha256": "682574d6dd38114ffb9a2b7622741bfe06d99de9d6f676f762c0dbb3322a9a9d"
+    },
+    "host/profile.cpp": {
+      "bytes": 3516,
+      "sha256": "4c10578c45de60d6ca2c5f33d2596a622507548c133803128ad8adfc64f03c14"
+    },
+    "host/profile.hpp": {
+      "bytes": 118,
+      "sha256": "23214938df4390681005383b055da69b01f9e7b3a32acd29cd95430c575d511d"
+    },
+    "host/resource.h": {
+      "bytes": 138,
+      "sha256": "df8319a8e7c8b291067b184e437fe7f96087f84fe0dba772258534b1b3a320e3"
+    },
+    "host/save_import.cpp": {
+      "bytes": 6181,
+      "sha256": "1e0f306dbd791dedea3a187c919eff44fe095405318f217eb5147c5db41e9050"
+    },
+    "host/save_import.hpp": {
+      "bytes": 908,
+      "sha256": "1343b4c80e36598c21bd6af66ae1e27644f0345f530318c9012a6e88a1a52ba7"
+    },
+    "host/save_import_launcher.cpp": {
+      "bytes": 1558,
+      "sha256": "74ba2629256d2a142995aa60c18c115251e3c88e70fdad780e81fb2a99aa91f2"
+    },
+    "host/save_import_ui.cpp": {
+      "bytes": 2263,
+      "sha256": "f81be91e355dd22b721a40af1a97cd991f9acea4590df7eadfc9f7a0b56c0abf"
+    },
+    "host/save_import_ui.hpp": {
+      "bytes": 161,
+      "sha256": "3928e91c3e14d8bc55267b730a440669e4b1bf09a2eea8fe15c0ae336f48d660"
+    },
+    "host/speedracer.manifest": {
+      "bytes": 975,
+      "sha256": "a924a0aee3ed96adc3744af76d750b433769514a7caa47924fbd62c11c17c140"
+    },
+    "host/speedracer.rc": {
+      "bytes": 570,
+      "sha256": "da7f2934d8ee847707012ca1009169fffc379df6199c8b4ec2a5425738c50605"
+    },
+    "host/speedracer_clock.hpp": {
+      "bytes": 5228,
+      "sha256": "30542d956231237ded68166281e6ee8b5bb72b26b4ae744a8f48b35594006927"
+    },
+    "host/speedracer_graphics.hpp": {
+      "bytes": 2359,
+      "sha256": "39a8e9e9a2291e26d9eaf84558bf5df97714da67b44e0c7b0825f58b9471217a"
+    },
+    "host/speedracer_main.cpp": {
+      "bytes": 16113,
+      "sha256": "a6ae0df9ded09fafe7b6d941f1e8955e45a0da878884cdc944e275c9aff30fb7"
+    },
+    "host/startup_report.cpp": {
+      "bytes": 6052,
+      "sha256": "59221da6eeb4159e498077f7250a12551e5adc6a4158c7ade1958e387c29f9db"
+    },
+    "host/startup_report.hpp": {
+      "bytes": 330,
+      "sha256": "b412cb2995bf5266e8940de7ed05c6aa79af220483cb766200137680e912678d"
+    },
+    "host/web.cpp": {
+      "bytes": 18651,
+      "sha256": "32267d06b68dcbc538154f3df92d7a32770c150f891ad8f17dd8c59abf98a2d9"
+    },
+    "host/window.cpp": {
+      "bytes": 22321,
+      "sha256": "bd3b95390f3ec0682f85ec87c4cacfcd49ca4db8305fd4b9516e92ceed28d02b"
+    },
+    "host/window.hpp": {
+      "bytes": 125,
+      "sha256": "b83712341505a30379975ad275225bda9497af51e4cf402753472ab6b782f770"
+    },
+    "host/windows_arguments.hpp": {
+      "bytes": 1605,
+      "sha256": "7d053e21679c92e6ee00d835c8e31b76732ba999affdc0119602a589bba9f835"
+    },
+    "LICENSE": {
+      "bytes": 1067,
+      "sha256": "6c0e3d033ae273f580b39b57486c532aee12ed2d1cf69a6e7279b399f40c14eb"
+    },
+    "native/gs_hw/bridge.cpp": {
+      "bytes": 9811,
+      "sha256": "11f408fcb20712134cdc7887ba1b5c479ef831cbb90f0d1cc6b3c386379a2d4b"
+    },
+    "native/gs_hw/bridge.h": {
+      "bytes": 2569,
+      "sha256": "6853ed2526ccc22440445b60752e68baf07e36ed216bcb171aeb586ba92c8f45"
+    },
+    "native/gs_hw/CMakeLists.txt": {
+      "bytes": 2950,
+      "sha256": "e6fc75d1fdee8f5df4ae350ad4aed105e6f75d43bdc57af7e9d9f0ab7654d41d"
+    },
+    "native/gs_hw/compat.py": {
+      "bytes": 7673,
+      "sha256": "ebab29f06b52d5fc9c821cf4dfe6d6eceed6c894d07d1fc9aeb7527dc8593e67"
+    },
+    "native/gs_hw/COPYING.GPL-3.0": {
+      "bytes": 35497,
+      "sha256": "970d10bc4e72edc210b38ad790f86b8f4fa65974ca02c92f8e1c9608049c1150"
+    },
+    "native/gs_hw/gif_packet.hpp": {
+      "bytes": 996,
+      "sha256": "f63ca436164b9e69925f8c9643af0b0880b6042a51b8c5a98965f14af5b70ef3"
+    },
+    "native/gs_hw/README.md": {
+      "bytes": 5294,
+      "sha256": "51b59f93cd20ac8d337c8642ba4665a8f88b47fce38a549bf518e95a573b5382"
+    },
+    "native/vu-local/blocks/vu_local_blocks.cpp": {
+      "bytes": 23819,
+      "sha256": "37f8b32661b48223a2f3ca786b25ada55bd6db68c8cd3b9394b587af70f9341b"
+    },
+    "native/vu-local/generate_local_blocks.cpp": {
+      "bytes": 4647,
+      "sha256": "a586581ae9d21cd4e229b4f1235122717ea5ef55682ade602b15b2c091b7a86f"
+    },
+    "native/vu-local/tests/local_blocks_differential.cpp": {
+      "bytes": 9918,
+      "sha256": "b8cc09fa4bba8f9be4f5a3d6b36cf5b2c2ea0391d54e67b7e6b645a57442019c"
+    },
+    "README.md": {
+      "bytes": 7119,
+      "sha256": "139fcd1376630bee03a545f9cdafebe7e0d425a93ef5ffe3f2e13995245009eb"
+    },
+    "recomp/analysis.cpp": {
+      "bytes": 10988,
+      "sha256": "8ed687465e0d74f93e20188c08bc2936e4e4ee9463b225c1b07e188965d4760d"
+    },
+    "recomp/analysis.hpp": {
+      "bytes": 679,
+      "sha256": "41e3d0bb729a4fa7fcb111967c2ea3d2c4d42c7acd6017e2e135e197e5541cc0"
+    },
+    "recomp/codegen.cpp": {
+      "bytes": 46041,
+      "sha256": "d3228cf07979fae54873a467c1b4a9c5a7b30c70c59520dcffde2ec481c0161a"
+    },
+    "recomp/codegen.hpp": {
+      "bytes": 667,
+      "sha256": "a247e75a0f874d70b1288c7f9ede154d2db373d47f6a618e6d7bb1df666ee1e5"
+    },
+    "recomp/elf.cpp": {
+      "bytes": 4218,
+      "sha256": "055f935399b93117726134b664b84e955e24196752748f2881a861d3e797d12a"
+    },
+    "recomp/elf.hpp": {
+      "bytes": 1136,
+      "sha256": "c23b4619fc8bf529f83dfe19e0a0c0f07d7e4baa82edd87558e0cd17075e19ef"
+    },
+    "recomp/main.cpp": {
+      "bytes": 6507,
+      "sha256": "c16f31dc0d924cafe372e708230d4ea463a46f974bc9b111bf3536a0ae2ed3dd"
+    },
+    "recomp/r5900.cpp": {
+      "bytes": 9571,
+      "sha256": "498297b1f1aefef40f745b5b5602a62068e1a6ff6ad6dc2e7c80b5d3ec830e43"
+    },
+    "recomp/r5900.hpp": {
+      "bytes": 4902,
+      "sha256": "24eed5f309fc99746a3769db20a4befa236007cefa27e29f5e5a5fb706be14f2"
+    },
+    "recomp/snr2.cpp": {
+      "bytes": 5450,
+      "sha256": "b0369c6589fcb413f2ad07054cbadf8d35551b1f913aa9ac8f6784fce92b14b4"
+    },
+    "recomp/snr2.hpp": {
+      "bytes": 721,
+      "sha256": "8288ed7fef2f0dc1bccd5d78da58be772a16adece0e227c8f8d286ce89b7c7aa"
+    },
+    "recomp/vujit_dump.cpp": {
+      "bytes": 1266,
+      "sha256": "bd55577189cd56a38cdd6293c04fd020272f9c220db7d5bc40b9d73dcb82360a"
+    },
+    "recomp/vurecomp.cpp": {
+      "bytes": 39728,
+      "sha256": "ff18e39654a996db846fbfd058bd6bceb570811ad15e08f2581f513395710ef7"
+    },
+    "ROADMAP.md": {
+      "bytes": 8672,
+      "sha256": "d644b5fdef16248cd1bb62f74a0a6779263ef47cc5de39834ce82ea987ebc603"
+    },
+    "runtime/include/ps2/atomic_file.hpp": {
+      "bytes": 5129,
+      "sha256": "b37ca1b3d3a49fb9f27e20d17087bbf34b5086476acc1f27daf49e6e91672c66"
+    },
+    "runtime/include/ps2/audio_diagnostics.hpp": {
+      "bytes": 1782,
+      "sha256": "4dc761ebb1716624f90576b9abb596bb230f70b949d16baa46e25acebb2fb78c"
+    },
+    "runtime/include/ps2/card_file.hpp": {
+      "bytes": 4967,
+      "sha256": "a1f00ccf84f239c128e864e024555d1b0f972a9df53adc1ca329da640554c0e6"
+    },
+    "runtime/include/ps2/cpu.hpp": {
+      "bytes": 1673,
+      "sha256": "396bc1878b47e0d059ac4fb86c1f809e17d75eeee6599dbf5369ccfc6b66fe63"
+    },
+    "runtime/include/ps2/data_pack.hpp": {
+      "bytes": 4950,
+      "sha256": "c83404bce055e06e5974f646e810adb30827fc5bd184c434900e3e64a30f6088"
+    },
+    "runtime/include/ps2/disc.hpp": {
+      "bytes": 851,
+      "sha256": "2a0be6ec1ad712706e1dd211a2213a2aa356db81ee08e5620b3f0f6e2d83d7c9"
+    },
+    "runtime/include/ps2/display.hpp": {
+      "bytes": 1509,
+      "sha256": "ebc3faf1d541a708d286c25b42be63eda133d3b093513eb0a6570e8157c2d85c"
+    },
+    "runtime/include/ps2/fpu.hpp": {
+      "bytes": 4782,
+      "sha256": "1b54aeb17340ced79fee19aa22f7243963f2d7ae9b49fc94aca17f5eb5e78b9b"
+    },
+    "runtime/include/ps2/generated.hpp": {
+      "bytes": 2889,
+      "sha256": "c0c1068fb7e2635377ad2c7d6787563a256b8819e7c95d3f6d8e624b4f063c6e"
+    },
+    "runtime/include/ps2/host_path.hpp": {
+      "bytes": 1047,
+      "sha256": "aacf12a91e3d8e617067484c9d8df3ac894155ed0d981fbb2f301f746fe843cb"
+    },
+    "runtime/include/ps2/memory.hpp": {
+      "bytes": 4792,
+      "sha256": "1269b389869140dce7cc76c8a8fffb36db212c9b73430af42e13c46721c982f5"
+    },
+    "runtime/include/ps2/mmi.hpp": {
+      "bytes": 13849,
+      "sha256": "ae674004e849062334d2450786c81f59c45aa9b84faec6aff69b9127a12c67c9"
+    },
+    "runtime/include/ps2/render_scale.hpp": {
+      "bytes": 816,
+      "sha256": "988efb4a3814dc815e7bc7754b2e8294800e14b207884d8cf88bedac8a5862f2"
+    },
+    "runtime/include/ps2/scripted_input.hpp": {
+      "bytes": 2716,
+      "sha256": "e1972f2d55ea83a9f9dc72368da43372750e907f471ea0ff0d456dbf3b82a838"
+    },
+    "runtime/include/ps2/state.hpp": {
+      "bytes": 4681,
+      "sha256": "fa24eedd970739774f78a79a9370dd2a90af56a5f2ad638aacbc7afdb9a836fe"
+    },
+    "runtime/include/ps2/system.hpp": {
+      "bytes": 5058,
+      "sha256": "83fbb6936bc103179dcebb1da681b511ea48bea5e214a15c309cfe7ab431f8f7"
+    },
+    "runtime/include/ps2/vu.hpp": {
+      "bytes": 7447,
+      "sha256": "6dcb6c6fddbff38422cb5b4c7f73d2293bdd66f50f3af2f09ca8deb3ee2a3e4f"
+    },
+    "runtime/include/ps2/vu_continuation.hpp": {
+      "bytes": 4853,
+      "sha256": "dcc0d361043fd0dfb58e9748020bdf12eda0d0624af0a14b54fd78120f10b86e"
+    },
+    "runtime/include/ps2/vu_ops.hpp": {
+      "bytes": 24259,
+      "sha256": "914c14bb2a89838d455ce53bfa1743a34760639f14b2aa60fc4da1233da31cd6"
+    },
+    "runtime/include/ps2/vu_q_analysis.hpp": {
+      "bytes": 7906,
+      "sha256": "78303b8344f49ebd028f6fe244dcc8047c6f1f740b0301de19c6f73550b9534c"
+    },
+    "runtime/src/cop.cpp": {
+      "bytes": 1584,
+      "sha256": "23bd0ebf1dca77f1467ba96288cbf3b54b4dd5f6e6f80f9d8443f8394217cfed"
+    },
+    "runtime/src/disc.cpp": {
+      "bytes": 6304,
+      "sha256": "7ffacd0f072a8dc71ec61a798ca76cb83c7dd0a27bdc9096e43bd9cafbf429e5"
+    },
+    "runtime/src/dispatch.cpp": {
+      "bytes": 6176,
+      "sha256": "ff9ecf53655ad02a76963fca70a90016bb2a53d8fe0dee8e20cbb00f27db79a3"
+    },
+    "runtime/src/dmac.cpp": {
+      "bytes": 15971,
+      "sha256": "00d96010a712cda1949d86e3d2bab9006598b468c893541c1ca930d1222bd5aa"
+    },
+    "runtime/src/dmac.hpp": {
+      "bytes": 374,
+      "sha256": "7b2dd82c952a3fe4bd5dfbf59672764c644390b52f383e8fb4e8b608b4b1ffb8"
+    },
+    "runtime/src/gs/gif.cpp": {
+      "bytes": 7694,
+      "sha256": "0c4479bd032a9ea09d1cde2492648e2e601f5bbcebcbaa806fca815f93b5c98c"
+    },
+    "runtime/src/gs/gif.hpp": {
+      "bytes": 599,
+      "sha256": "f16a9402bebcee3d013821d25778f0ad0b23861e0ceee6ed94f8c95810ee87c6"
+    },
+    "runtime/src/gs/gpu/blit.wgsl": {
+      "bytes": 1712,
+      "sha256": "0666f87135c6732b4d58793da8f57682d4f1677e76b018fe2e3f912067884a60"
+    },
+    "runtime/src/gs/gpu/bounds.hpp": {
+      "bytes": 528,
+      "sha256": "e2bb43b99a764afcd2ccc1e7713b74ce0c7280db1b86f6ffbd8086eed729612f"
+    },
+    "runtime/src/gs/gpu/gpu.cpp": {
+      "bytes": 102437,
+      "sha256": "33881f6b92b52b90774fb9beabd3e2b0b7de05acb922a0b266f0a73cc18a0f53"
+    },
+    "runtime/src/gs/gpu/gpu.hpp": {
+      "bytes": 1750,
+      "sha256": "a763505a85f83e67e77349c7aca37ba7ae111401aa3c0d399fd08801dbd6d2ff"
+    },
+    "runtime/src/gs/gpu/gs.wgsl": {
+      "bytes": 37149,
+      "sha256": "bd4ae329ccd2b0384137495096d3a2d80033bc30287bc4296831fda52817a9f1"
+    },
+    "runtime/src/gs/gs.cpp": {
+      "bytes": 60207,
+      "sha256": "0d26078a80ed9623b0cfcaa7ebde3fc17e029742c18d9b2f2dd2dd63c6a742bc"
+    },
+    "runtime/src/gs/gs.hpp": {
+      "bytes": 3321,
+      "sha256": "9e00263d12888dff4ee0f748cffbb223df3d09bc0f7701ea4711d6511f06c02a"
+    },
+    "runtime/src/gs/hardware.cpp": {
+      "bytes": 9007,
+      "sha256": "e9243cd2ce3eaf5cf058cb2ae078ec489621bb23f2a038ed1632c669ed34584e"
+    },
+    "runtime/src/gs/hardware.hpp": {
+      "bytes": 654,
+      "sha256": "1a85019a194b156ca85afe9cc121d3381d2df397a01337cac6b3d6ef5e6504c4"
+    },
+    "runtime/src/gs/queue.cpp": {
+      "bytes": 6252,
+      "sha256": "95b22c871cdca1f5670035ccd42a00b703681b57d4a07b93cce40d47c24687f4"
+    },
+    "runtime/src/gs/queue.hpp": {
+      "bytes": 1785,
+      "sha256": "dded646aa50d48f8568be370d64ba06816394fa6a5ab884afb3181314824d326"
+    },
+    "runtime/src/gs/raster.cpp": {
+      "bytes": 23535,
+      "sha256": "9240abb2b241611a3046b1f99720e90b471329ce2e934d933bdaa38c92d9d6e4"
+    },
+    "runtime/src/gs/raster.hpp": {
+      "bytes": 134,
+      "sha256": "9a9af4ef30c6d65c2bb80f79497bd4f1be77cf214dec7d1d7b1ff382346644fe"
+    },
+    "runtime/src/gs/texture.hpp": {
+      "bytes": 2016,
+      "sha256": "4fb7c36754d7bedc5a4498822efcb308aeb71161b26cdd4b560f3064c228a80b"
+    },
+    "runtime/src/hw.cpp": {
+      "bytes": 11340,
+      "sha256": "f2bef002dde51ec6f05b57aafe2e3e294484229e5b490c3feef4341d55a29f48"
+    },
+    "runtime/src/hw.hpp": {
+      "bytes": 1412,
+      "sha256": "ac59186ec60b84f1f66002b444092b37c5e1d6bd473366b4173e7a1e2c8a8368"
+    },
+    "runtime/src/iop/cdvd.cpp": {
+      "bytes": 6990,
+      "sha256": "ba098a7912a4ad162de3606418dcd72e00a59c1dd4a1c53f1408eece6b5add7a"
+    },
+    "runtime/src/iop/cdvdfsv.cpp": {
+      "bytes": 6846,
+      "sha256": "a711bbc8047162c8aad79185007d91c3ee4f8229fd6ad8b169ece2fc30c7fb8a"
+    },
+    "runtime/src/iop/cpu.cpp": {
+      "bytes": 9855,
+      "sha256": "931cc9b5bc44b098ba6ba0efb0af7fe18ed96c8edd6fc88e801e9265c9681119"
+    },
+    "runtime/src/iop/hw.cpp": {
+      "bytes": 9218,
+      "sha256": "5db82742646f1592c500c12f7470dc540deec73443ddf96559dfa1334a9683db"
+    },
+    "runtime/src/iop/hw.hpp": {
+      "bytes": 492,
+      "sha256": "1b0f64d25fc23b03a7a235542671b5ba73a1643a1c7128a481bd4846abcb2c42"
+    },
+    "runtime/src/iop/io.cpp": {
+      "bytes": 6535,
+      "sha256": "dd7a9bfd876805236774f4e9fc2a28d8ae233fe7eb30bcd4579017799354d0d7"
+    },
+    "runtime/src/iop/io.hpp": {
+      "bytes": 506,
+      "sha256": "4cb1e70b469d900100eb3621fcd21e4b7c1afd2aab9d988be7e3f6cab2882796"
+    },
+    "runtime/src/iop/iop.hpp": {
+      "bytes": 2179,
+      "sha256": "bd8c3cf8ae524790649e499e5ffa80d01abbee6553729b796d0f32e165e88540"
+    },
+    "runtime/src/iop/kernel.cpp": {
+      "bytes": 28968,
+      "sha256": "1fbb5fc82a054a3796f0a48ea2cfd16e40dc6c1f109ccc261381b728d62eea99"
+    },
+    "runtime/src/iop/kernel.hpp": {
+      "bytes": 3769,
+      "sha256": "56b8f959c6228cf811fd2905689380c4201b8adad2370cc8b7acc9b838a96f03"
+    },
+    "runtime/src/iop/libs.cpp": {
+      "bytes": 49394,
+      "sha256": "ec3274346614235e325827e7fa8d2dfb708c0c5f691308ee7b5bfaca560a66aa"
+    },
+    "runtime/src/iop/sif.cpp": {
+      "bytes": 35791,
+      "sha256": "03737bee8d2e5168389849e97a60077e820208f0e6d704ce3c785b97e11944e8"
+    },
+    "runtime/src/iop/sif.hpp": {
+      "bytes": 670,
+      "sha256": "fcfc25709e1681c0ac871832ac999220f367447ad937086e93feae070ea5c677"
+    },
+    "runtime/src/iop/sio2.cpp": {
+      "bytes": 17852,
+      "sha256": "a2d8cd4ad68a14e7136d8007a6180546af0e9965e17cea283dee03bea9016d14"
+    },
+    "runtime/src/iop/sio2.hpp": {
+      "bytes": 792,
+      "sha256": "54488f66995f2f6c05a67f9a73f934cfb88435f52583248c00880299491cece9"
+    },
+    "runtime/src/iop/spu2.cpp": {
+      "bytes": 26113,
+      "sha256": "fa310f93a36ae2cd73f7ef1618f88ef6ab8b308f2ea9e364098689cc9499d66a"
+    },
+    "runtime/src/iop/spu2.hpp": {
+      "bytes": 544,
+      "sha256": "5099e00f94b7194e3097b7261852315ac5ce4ee68235b9931409f88d2bb87fc3"
+    },
+    "runtime/src/ipu/ipu.cpp": {
+      "bytes": 22699,
+      "sha256": "32af318db87002e60c8c2ff14fd2dae90e00b7770c993dc027fa4622ab717746"
+    },
+    "runtime/src/ipu/ipu.hpp": {
+      "bytes": 362,
+      "sha256": "e76d41986b77d2ff4f199818a111b50dca3467090c4ab68386902de17004d1ca"
+    },
+    "runtime/src/ipu/NOTICE": {
+      "bytes": 1453,
+      "sha256": "095eae38f375e5706f52e87e7ad3f6b367cede5e8a2d4f981450374006e16c9b"
+    },
+    "runtime/src/ipu/tables.hpp": {
+      "bytes": 8979,
+      "sha256": "dc4c2547d4a6c65a231c12b31cd100959849dc8070ae6315102ba790dffde5c4"
+    },
+    "runtime/src/kernel.cpp": {
+      "bytes": 29918,
+      "sha256": "6081e18001ad64520c69f634dd838d7b5def9072595c1687d79f61bcaedc6fa5"
+    },
+    "runtime/src/kernel.hpp": {
+      "bytes": 570,
+      "sha256": "397707d0364406a641eb51fcac0ebefa843e8936ead64a8ad43fcdfbae7bdcb3"
+    },
+    "runtime/src/memory.cpp": {
+      "bytes": 4600,
+      "sha256": "0a2afd158b982db2764fa7071885dbf72ef6e1535bec35e22586a09403105ebd"
+    },
+    "runtime/src/system.cpp": {
+      "bytes": 23484,
+      "sha256": "74ffd5c2f37ad82ee523601b6d9032cae439ef418f0ba161394e486630b0078c"
+    },
+    "runtime/src/vif.cpp": {
+      "bytes": 17046,
+      "sha256": "c1956046d434fe1f7d3f016b3551bffb82118e2ce060c9f6bc23ba4256541a2c"
+    },
+    "runtime/src/vif.hpp": {
+      "bytes": 390,
+      "sha256": "819e4fd8ee81a8d6b9816548b1c1ae7e3de89dda94540439f2cec5e7385acc0f"
+    },
+    "runtime/src/vif_fill.hpp": {
+      "bytes": 1893,
+      "sha256": "2ac5a333516b553c6cc01a4dc4c4fd231de9c1dda4f584cf253e7bbacc0ba09b"
+    },
+    "runtime/src/vif_upload.hpp": {
+      "bytes": 909,
+      "sha256": "95cfa1a0cf85cff1f7269785e6306af7d787880d0d5131a3836e0927b6c9d12f"
+    },
+    "runtime/src/vu_code_equal.hpp": {
+      "bytes": 1497,
+      "sha256": "6029d226c89b0e5786f7c19da8777428cdbcf39f2a8b74c9a87b5c7027840413"
+    },
+    "runtime/src/vu_jit.cpp": {
+      "bytes": 58531,
+      "sha256": "45698b9a576836ce2d6ae2958b66da98add5a0fe5f62b21c8b1128d3e32487bd"
+    },
+    "runtime/src/vu_jit.hpp": {
+      "bytes": 415,
+      "sha256": "a731a8eb8deea9731ca79c0ba44ca688c0caee4d72d68687ffc34376ba7a75ac"
+    },
+    "runtime/src/vu_jit_web.cpp": {
+      "bytes": 3048,
+      "sha256": "38368fa08ac10239475ecb7fb2768cb54510fbde8be4704c3017436b1508de4c"
+    },
+    "runtime/src/vu_jit_web.hpp": {
+      "bytes": 280,
+      "sha256": "d3792d43fb00ca316dee4cf4371e6749c77da8359c717d001c09ee5f00373240"
+    },
+    "runtime/src/vu_micro.cpp": {
+      "bytes": 91887,
+      "sha256": "49e4b3452d067979c3f6d26220099e7b3b279a39466aad8fd2e17d467dad9f5b"
+    },
+    "runtime/src/vu_micro.hpp": {
+      "bytes": 912,
+      "sha256": "7d1bd27ca9609be7cf1c21724f41f71eff172a332ca4b75fcea9cc0cab61fd7e"
+    },
+    "runtime/src/vu_packet.hpp": {
+      "bytes": 1471,
+      "sha256": "974c1c858dd7e579b44c4b7ec72960123a57f338839b215a35648b99fb82092b"
+    },
+    "runtime/src/vu_profile.hpp": {
+      "bytes": 1413,
+      "sha256": "999928b1677a797e3613cf1cf07aace17e173a7c7b54158f9bdf60234510a3cc"
+    },
+    "runtime/src/vu_replay.hpp": {
+      "bytes": 10221,
+      "sha256": "03d7c2db58697b61bd52bb913cec4347413e9aa0f93c85a372b04391dad515c5"
+    },
+    "runtime/src/vu_timing.hpp": {
+      "bytes": 6645,
+      "sha256": "c508d7a4e71b51fed39f7c40f94c29935ddec1f4c8d946e29ef5e63435c79c26"
+    },
+    "scripts/audit/build_hw_gs.py": {
+      "bytes": 6562,
+      "sha256": "ea82e214bff47d247a05c94dd73cbed6969c6466fb0b28a77dae7966a20158a3"
+    },
+    "scripts/audit/integrated_package.py": {
+      "bytes": 16123,
+      "sha256": "d3919af46e83598c10b38da65d218d025fc464d09ed0ca5817d8775f9bcbd984"
+    },
+    "scripts/audit/preflight_portable.py": {
+      "bytes": 6582,
+      "sha256": "03eaed2ed30399f6c5ecb1c5392037cfb04f4f28c2adea9262631c3de5fd2d3d"
+    },
+    "scripts/audit/run_matrix.py": {
+      "bytes": 3582,
+      "sha256": "1aaabf59a7d7d77dbba41269c3a482b39df50d75e0cbde5bc182400aa0f4807c"
+    },
+    "scripts/audit/run_pacing.py": {
+      "bytes": 2659,
+      "sha256": "a215faddaa1c43646546a723cf65f92468c709e648f751d90e4403f9ad1cfb63"
+    },
+    "scripts/audit/run_tracks.py": {
+      "bytes": 4697,
+      "sha256": "41435475a21e366e72b9f3252cf201eecc5b22d296bf68d0a7f804db29a6d39a"
+    },
+    "scripts/audit/test_integrated_package.py": {
+      "bytes": 15575,
+      "sha256": "753fa8732afe44ab8b342b0c27f0d8f5586e5b8d7343035219582b3662732ccf"
+    },
+    "scripts/audit/test_prepare_speedracer_data.py": {
+      "bytes": 14451,
+      "sha256": "e4029ee38c33f11ba26065607123779c7d6bd610a3039b0c808a1d7868577aa9"
+    },
+    "scripts/build_web.sh": {
+      "bytes": 970,
+      "sha256": "a7a2d6251cedcc783d412810c19021298b250076a726e760921a64043ffb6b67"
+    },
+    "scripts/build_windows.ps1": {
+      "bytes": 6088,
+      "sha256": "1632b82f541ad79f3de1a8d424863c86e2e5121d3b7a0a8a63a755eaf211db2e"
+    },
+    "scripts/compile_vu_continuations.py": {
+      "bytes": 1977,
+      "sha256": "573e85e900057ac10c77021fa6b4690b29abc6221dd942011b64f262a7266976"
+    },
+    "scripts/compile_vu_extra.py": {
+      "bytes": 2630,
+      "sha256": "5c9833e0f9ca51fa9c7e2d8136768c8dd8d3d783e94a926d355b4e0ca95cd89f"
+    },
+    "scripts/cxx.sh": {
+      "bytes": 1138,
+      "sha256": "82d88b6e96eb9e523e9c19b61ca618f6289cf53c64f4579e416c345d1659efdd"
+    },
+    "scripts/disc.py": {
+      "bytes": 6104,
+      "sha256": "221f2609676c767a85ff6cd72bdea774d1615a0e575d370f8ebf140f61c195ff"
+    },
+    "scripts/fetch_build_deps.py": {
+      "bytes": 3178,
+      "sha256": "15ffff8219ad18e84832e59cbe250525c62f6dc1a2ec3b55893af372de951cb0"
+    },
+    "scripts/fetch_wgpu.sh": {
+      "bytes": 977,
+      "sha256": "de1bee3f1122fc0ab53b2b8f4b6e0db07955f31f02c6acd63eab2fc38abdb371"
+    },
+    "scripts/gpu_profile.py": {
+      "bytes": 1726,
+      "sha256": "417e4ca3190bbf5fd58063be2646f27d953540dba72b28424909945213481fe9"
+    },
+    "scripts/gt4_core.py": {
+      "bytes": 2991,
+      "sha256": "e93ac7788ce3b88fc7300065f20f2d0e1ff795b37725d80be6019c5cc97b6f06"
+    },
+    "scripts/pack_speedracer_data.py": {
+      "bytes": 5713,
+      "sha256": "7490bf027ff6aafee9c8e438c5f3b409c8dc3aba189cdd2e6f0a1ba3098169e8"
+    },
+    "scripts/port.sh": {
+      "bytes": 6080,
+      "sha256": "c6d82a37aa91550f089c67cb5ab3c5fcfe7965480d32fce5867d606eca832058"
+    },
+    "scripts/prepare_speedracer_data.py": {
+      "bytes": 11848,
+      "sha256": "221b9ea966a31a12d987e627c5d23d9761854637a6208225efeef3d39df2fc9b"
+    },
+    "scripts/serve.py": {
+      "bytes": 4362,
+      "sha256": "2c6be3b0924a0cf66818879284f226e6b279231a23d3b8ffeecdb5f5ed9bc931"
+    },
+    "scripts/setup.sh": {
+      "bytes": 856,
+      "sha256": "694bf89f3919a9f1c9ac4a408c6093a0b6cf51aedbd4f6c899ec951a5d0aed64"
+    },
+    "scripts/verify_source.py": {
+      "bytes": 1099,
+      "sha256": "9532dc5d0f12d766d139437fcd4aa0048f974304e3db2ea4eac37c37d0c67cfb"
+    },
+    "SECURITY.md": {
+      "bytes": 374,
+      "sha256": "0fa02bfa191d86b1ad9d9673a4029f04b7d63ffe9234180d1ef58e1a480ec79c"
+    },
+    "source-provenance.json": {
+      "bytes": 6493,
+      "sha256": "52b2e9b75cffc1540f9d3639cf3e27d12f16922093189bb6b8877a8ddccff945"
+    },
+    "source-verification.json": {
+      "bytes": 796,
+      "sha256": "9eb7bea5953669101c2714b777c586c03e7f67ac585994fabf18501d4e8cac88"
+    },
+    "tests/atomic_file.cpp": {
+      "bytes": 6431,
+      "sha256": "3f4802f587fa8e7df7db6a05e1f82907dc8dc9a688111eb9fcb4d43e5c87ba62"
+    },
+    "tests/audio_output.cpp": {
+      "bytes": 2273,
+      "sha256": "5eea7570b49604d88c50fde1276eeb46a3727120b7d18c9de60a9feb901d1ad9"
+    },
+    "tests/card_lease.cpp": {
+      "bytes": 13682,
+      "sha256": "14dd8aef6b75130e9ee925128a93f0317dd6967b205a97c8ad42d903f9090ea2"
+    },
+    "tests/controllers.cpp": {
+      "bytes": 5808,
+      "sha256": "050b9b4f776c902be8b50181823daa6a666ffb2d4c2a1d4ac2bcd217afc25df2"
+    },
+    "tests/data_pack.cpp": {
+      "bytes": 7534,
+      "sha256": "e1562647fe055e05734749f34bda1c34871d97465d793f0383e74319d0a9ccbf"
+    },
+    "tests/display.cpp": {
+      "bytes": 1795,
+      "sha256": "e69a4b48fddd8cf9e943ebb0a5b5013558ede997b00e3aa00a67b84b771f0b84"
+    },
+    "tests/frame_pacer.cpp": {
+      "bytes": 2540,
+      "sha256": "26a9b22a64392367a4596824a9fecd3ba5850e3272f5eb0cbce3fa95a52bc696"
+    },
+    "tests/gs_bounds.cpp": {
+      "bytes": 672,
+      "sha256": "bd0327ecf9c7419e1294d09c86bcf6100966108a4f9044a04d153fe49f1e690f"
+    },
+    "tests/gs_date.cpp": {
+      "bytes": 2690,
+      "sha256": "2dcbd42683da16093ebbe27814d25b1423305f616ad24c03ac8b9e81c7b318b8"
+    },
+    "tests/gs_feedback.cpp": {
+      "bytes": 3389,
+      "sha256": "4b63bcce677337e317a4ec1748cdd5911f3f618a10d870cf04641d999bb9db7e"
+    },
+    "tests/gs_hw_bridge.c": {
+      "bytes": 8557,
+      "sha256": "5de914a3c49d399596a27bc40be6ea9ee55d27b98bdb2096ad895f6307c6e50e"
+    },
+    "tests/gs_hw_filter.c": {
+      "bytes": 5118,
+      "sha256": "122e71f29e8eb650e213cf083bbb09ba3a6ec084f7f7fa5f115e7c951d55435b"
+    },
+    "tests/gs_hw_packets.cpp": {
+      "bytes": 1551,
+      "sha256": "d71b7daff964c58b50a285347d4a043d1d4df6f9f44a228aa574a2f86575fc02"
+    },
+    "tests/gs_hw_runtime.cpp": {
+      "bytes": 9306,
+      "sha256": "3ca39481abb396831ca88dd893adc1da1623e230ae8d2b18dc0a0ac9ebd86c94"
+    },
+    "tests/gs_mip.cpp": {
+      "bytes": 18071,
+      "sha256": "1781229794f4dac1000354ab922cbb18e2a33ee500316c49d78041841b298d93"
+    },
+    "tests/gs_mip_hazards.cpp": {
+      "bytes": 8173,
+      "sha256": "22868fc5e7f8d2696b61f3a14473d7c965ae14d57c44f56179db35f07982648d"
+    },
+    "tests/gs_mtba.cpp": {
+      "bytes": 4772,
+      "sha256": "bb4c9a12ca3fd92088ef3c38aabab111e9f5e1a036cea3ec4f79d0598b925942"
+    },
+    "tests/gs_reads.cpp": {
+      "bytes": 11763,
+      "sha256": "3231afeef40c1bd11a919cc02caf07490e72058e0b08be96133af186270ae10b"
+    },
+    "tests/gs_region.cpp": {
+      "bytes": 2420,
+      "sha256": "163a84030cfc00259623c102772e614a9a171bef0ea6bd258192c5d3b8907e65"
+    },
+    "tests/gs_scale.cpp": {
+      "bytes": 2470,
+      "sha256": "40a963a7f63f6ab1434498aa91e1cdc6481dad879573d8bd4ad5fb29151835b3"
+    },
+    "tests/gs_setup.cpp": {
+      "bytes": 8018,
+      "sha256": "a3f49d4ff1960f4fda243e8b82dd0b3dcc57513e996fd896a805a185b5e0228f"
+    },
+    "tests/gs_snapshot.cpp": {
+      "bytes": 9624,
+      "sha256": "63c3d6987d6601f70c57f39bea5de1443be3465f7877a68771cad606bc6f76a2"
+    },
+    "tests/gs_snapshot_reference.inc": {
+      "bytes": 2521,
+      "sha256": "0e15052a70855b7001bfc1011417b0e5e8c8857f3c01e4b054bf5ef635edf032"
+    },
+    "tests/host_paths.cpp": {
+      "bytes": 2917,
+      "sha256": "fdff480c2137d8529d43119ccdd140cb4bcb33f9c031771eba4e223c1689137f"
+    },
+    "tests/keyboard.cpp": {
+      "bytes": 9105,
+      "sha256": "b9d427c91536c8e7c5bbbbd01f17dce4fb0431f2067e1799fecdfa658af96e01"
+    },
+    "tests/media_import.cpp": {
+      "bytes": 10805,
+      "sha256": "29c38b0825fc612754798c591d756b796eebedfee6d5a1baa4df4246f1300a5e"
+    },
+    "tests/osd_display.cpp": {
+      "bytes": 817,
+      "sha256": "d5a534fcbbcebd73ab7b2542e13c32a4cf39679b5b1d5523d3de5c2e83d5717b"
+    },
+    "tests/queue.cpp": {
+      "bytes": 5145,
+      "sha256": "8c5b51221076a143b19282d9e6e3c7cfc8211c146119f31f17a353418ec65843"
+    },
+    "tests/render_scale.cpp": {
+      "bytes": 2720,
+      "sha256": "4781d4eaf27574671e7f26b21610af97ef1f15d0b4e03423b023e0c3fede3edf"
+    },
+    "tests/runtime_lifecycle.cpp": {
+      "bytes": 2516,
+      "sha256": "5c89928e39a0dedbf94a9f24b36fcacf3deb9029a9afd8eb98b2fa6a7a0f57f3"
+    },
+    "tests/save_import.cpp": {
+      "bytes": 10151,
+      "sha256": "4a78606467267d9cfe63b5a9f52be11d82ecc4f4ac0204d79d099f63437b74d0"
+    },
+    "tests/scripted_input.cpp": {
+      "bytes": 3925,
+      "sha256": "2e38975bfec7e3e47973ff4fd7ec245ea48b708b425e21f9b098d9d93d13e6be"
+    },
+    "tests/sio2_input.cpp": {
+      "bytes": 1518,
+      "sha256": "f32c53e2d09047d640d224d05bc47a3d489a97e4e79228eef8484a985911dc72"
+    },
+    "tests/sio2_save.cpp": {
+      "bytes": 9698,
+      "sha256": "452cf194dc2b32e2a10656ae0ff4c0778b5f0f961fa6e72d8c03aaad4d5774ec"
+    },
+    "tests/speedracer_clock.cpp": {
+      "bytes": 5608,
+      "sha256": "6662a6d227476b78d2bc8de16edac234dd477f5aaa99ed72e20b5f9516974093"
+    },
+    "tests/spu2_audio.cpp": {
+      "bytes": 9177,
+      "sha256": "6568a2cc1bf8ac70ae4b274e538451e38717252a41324140748de00402c802ee"
+    },
+    "tests/vif_nop.cpp": {
+      "bytes": 21178,
+      "sha256": "835b6a5af145ba147b91557a00d354cc793688cc56e84e61a401fcc7d47b21c3"
+    },
+    "tests/vif_path3.cpp": {
+      "bytes": 1924,
+      "sha256": "356191fea1efddd3b4f57e3c3e00ade0bfbaa8e2e7b9d06848a50ba34cf38f31"
+    },
+    "tests/vif_upload.cpp": {
+      "bytes": 1095,
+      "sha256": "e0fc41f043ce38e345d77fffacb7f7a6ecf6725ccec8b38ca1f7b9a5877293b7"
+    },
+    "tests/vu_cache.cpp": {
+      "bytes": 14560,
+      "sha256": "f74ea717539055e88761f1f4154db77a1b6a468de55c995fd94ac562b3df683f"
+    },
+    "tests/vu_clip_latency.cpp": {
+      "bytes": 917,
+      "sha256": "333c7e00fac103c7a4c623a576cafff55486929db9e45b4cd510bcabd1f05c15"
+    },
+    "tests/vu_clip_micro.cpp": {
+      "bytes": 1359,
+      "sha256": "7a526779403cdcccb6b60e3710d170d5b5a5d56fea992726415b31aa9221a274"
+    },
+    "tests/vu_code_equal.cpp": {
+      "bytes": 4142,
+      "sha256": "9c961bbefdef906f42319234c59214b0e392bcc4b5c9dfba9a2bd1ad6a42945e"
+    },
+    "tests/vu_cont_fixtures.cpp": {
+      "bytes": 618,
+      "sha256": "10adb8592ef3933a2cc59dc48cfbc3fe4bcde888dae2d34c8dae37077dad7f25"
+    },
+    "tests/vu_cont_generate.cmake": {
+      "bytes": 893,
+      "sha256": "9c2d7c9dd14b20c70378bdcb5033bb2597461cb41a8f04cdfa8eaf498320214a"
+    },
+    "tests/vu_cont_programs.hpp": {
+      "bytes": 4360,
+      "sha256": "9a7d65a2c8e7773be0922e9c3ec05660e75229a99273a708b64f4716bfa2dd2e"
+    },
+    "tests/vu_continuation.cpp": {
+      "bytes": 3296,
+      "sha256": "f373ac789eb19d9c3e8ce736be2910be828af8a304db45bde910b68e2a90b92e"
+    },
+    "tests/vu_extra_manifest.cmake": {
+      "bytes": 2219,
+      "sha256": "f7a8117cb732644ee635908bd19a4e3c9023e31a4aa311299e6b14841c77da37"
+    },
+    "tests/vu_isa.cpp": {
+      "bytes": 1951,
+      "sha256": "a70ac4bef06d02bd54bbd6fdd8112715028bbb68d66105854b8b91a5d00002f2"
+    },
+    "tests/vu_isa_kernel.cpp": {
+      "bytes": 815,
+      "sha256": "96b8e823f40b2737e90fe6e6ccb6a74fe88899a662375c1f9bda4a95fa75e07e"
+    },
+    "tests/vu_local_cache.cpp": {
+      "bytes": 12488,
+      "sha256": "30239c856e8ec1eaf97922d7f4d5aecabc019588c3d3a7c690132786aafbbe16"
+    },
+    "tests/vu_normalize.cpp": {
+      "bytes": 6917,
+      "sha256": "444abdf4f7dcbbcd7dc3a86710a36fca4d7a7fba28f2b448e865c8d9b225ff2f"
+    },
+    "tests/vu_normalize_reference.cpp": {
+      "bytes": 1048,
+      "sha256": "e93d327ca6a4405bb486a2af20ad93f8fb5549202f2160b7793e7f9f83cbfd2c"
+    },
+    "tests/vu_packet.cpp": {
+      "bytes": 3031,
+      "sha256": "e1305799fd43f8971c9a47aaf260109ea9b3b59eac1f9ba8a13de81052e2cafc"
+    },
+    "tests/vu_profile.cpp": {
+      "bytes": 1250,
+      "sha256": "40a0113896c221af3563ff6c5c16aa0f18fd18fb3a5dce60dc41a4a8eafbbece"
+    },
+    "tests/vu_q_analysis.cpp": {
+      "bytes": 7372,
+      "sha256": "7abfa52b111057e2b487a4acfb0b5123274e92da799568e2bbcbbdb717bbdcac"
+    },
+    "tests/vu_q_delay_history.cpp": {
+      "bytes": 8956,
+      "sha256": "302ce2bae347d767cdf8f718fb64bed82b4e71275ba917f42012b24db75bf2ee"
+    },
+    "tests/vu_q_inline.cpp": {
+      "bytes": 12670,
+      "sha256": "2c4fe0179e2a2b877fafd3adff8a58241a40803095e5fa8fa8ea3a405a0760b9"
+    },
+    "tests/vu_replay_qa.cpp": {
+      "bytes": 3141,
+      "sha256": "ad4ab0410fff2db485fb872fefde4d7801de58dd7d0625c66081f396d02b64a7"
+    },
+    "web/shell.html": {
+      "bytes": 30528,
+      "sha256": "68598108d4d38969f18a8635d22b23e6e024bf3a83168e7490a19fad0b7583f3"
+    }
+  }
+}

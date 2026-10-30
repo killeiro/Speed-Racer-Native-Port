@@ -1,0 +1,165 @@
+#include "ps2/disc.hpp"
+#include "ps2/host_path.hpp"
+#include "ps2/data_pack.hpp"
+
+#include <algorithm>
+#include <cctype>
+#include <cstdio>
+#include <cstring>
+#include <map>
+
+namespace ps2::disc {
+
+namespace {
+
+std::FILE *g_file = nullptr;
+Reader g_reader;
+Probe g_probe;
+std::uint64_t g_size = 0;
+std::uint32_t g_layer1 = 0;
+std::map<std::string, Entry> g_index;
+
+std::uint32_t u32(const std::uint8_t *p) {
+    std::uint32_t v;
+    std::memcpy(&v, p, 4);
+    return v;
+}
+
+std::string upper(std::string s) {
+    for (char &c : s) c = static_cast<char>(std::toupper(static_cast<unsigned char>(c)));
+    return s;
+}
+
+void walk(std::uint32_t base, std::uint32_t lba, std::uint32_t size, const std::string &prefix, int depth) {
+    const auto absolute = (std::uint64_t(base) + lba) * kSector;
+    if (depth > 16 || size > 16 * 1024 * 1024 || absolute > g_size || size > g_size - absolute) return;
+    std::vector<std::uint8_t> data((size + kSector - 1) / kSector * kSector);
+    if (!read(base + lba, static_cast<std::uint32_t>(data.size() / kSector), data.data())) return;
+    std::size_t off = 0;
+    while (off < size && g_index.size() < 65536) {
+        const std::uint8_t length = data[off];
+        if (!length) {
+            off = (off / kSector + 1) * kSector;
+            continue;
+        }
+        if (length < 33 || length > size - off || length > kSector - off % kSector) return;
+        const std::uint8_t *rec = &data[off];
+        off += length;
+        const std::uint8_t name_len = rec[32];
+        if (name_len > length - 33 || prefix.size() + name_len > 4096) return;
+        std::string name(reinterpret_cast<const char *>(rec + 33), name_len);
+        if (name_len == 1 && (name[0] == 0 || name[0] == 1)) continue;
+        const auto semi = name.find(';');
+        if (semi != std::string::npos) name = name.substr(0, semi);
+        const std::string path = prefix + upper(name);
+        const bool dir = rec[25] & 2;
+        const Entry entry{base + u32(rec + 2), u32(rec + 10), dir};
+        g_index[path] = entry;
+        if (dir) walk(base, u32(rec + 2), u32(rec + 10), path + "/", depth + 1);
+    }
+}
+
+void index_layer(std::uint32_t pvd_sector, std::uint32_t base) {
+    std::uint8_t pvd[kSector]{};
+    if (!read(pvd_sector, 1, pvd) || std::memcmp(pvd, "\x01" "CD001", 6) != 0) return;
+    walk(base, u32(pvd + 158), u32(pvd + 166), "", 0);
+}
+
+}
+
+void close() {
+    g_reader = {}; g_probe = {}; g_size = 0; g_layer1 = 0; g_index.clear();
+    if (g_file) { std::fclose(g_file); g_file = nullptr; }
+}
+
+bool open(const std::string &path) {
+    close();
+    g_file = host_path::open(path.c_str(), "rb");
+    if (!g_file) return false;
+    unsigned char signature[8]{};
+    const auto got = std::fread(signature, 1, sizeof signature, g_file);
+    if (upper(path).ends_with(".SRPAK") ||
+        (got == sizeof signature && std::memcmp(signature, DataPack::magic.data(), sizeof signature) == 0)) {
+        std::fclose(g_file); g_file = nullptr;
+        auto pack = DataPack::open(path);
+        std::uint8_t pvd[kSector]{};
+        if (pack->read(16 * kSector, pvd, kSector) != kSector || std::memcmp(pvd, "\x01" "CD001", 6) != 0)
+            throw std::runtime_error("Invalid Speed Racer data pack: missing volume metadata");
+        std::fprintf(stderr, "[data-pack] indexed data; no ISO or runtime decompression required\n");
+        const auto size = pack->size();
+        return open(path, size, [pack = std::move(pack)](std::uint64_t offset, void* out, std::size_t bytes) {
+            return pack->read(offset, out, bytes);
+        });
+    }
+#if defined(_WIN32)
+    _fseeki64(g_file, 0, SEEK_END);
+    const std::uint64_t size = static_cast<std::uint64_t>(_ftelli64(g_file));
+#else
+    fseeko(g_file, 0, SEEK_END);
+    const std::uint64_t size = static_cast<std::uint64_t>(ftello(g_file));
+#endif
+    std::FILE *file = g_file;
+    return open(path, size, [file](std::uint64_t offset, void *out, std::size_t bytes) {
+#if defined(_WIN32)
+        _fseeki64(file, static_cast<long long>(offset), SEEK_SET);
+#else
+        fseeko(file, static_cast<off_t>(offset), SEEK_SET);
+#endif
+        return std::fread(out, 1, bytes, file);
+    });
+}
+
+bool open(const std::string &name, std::uint64_t size, Reader reader, Probe probe) {
+    g_reader = std::move(reader);
+    g_probe = std::move(probe);
+    g_size = size;
+    g_layer1 = 0;
+    g_index.clear();
+    index_layer(16, 0);
+    std::uint8_t pvd[kSector]{};
+    read(16, 1, pvd);
+    const std::uint32_t layer0 = u32(pvd + 80);
+    for (std::uint32_t s = layer0; s < layer0 + 64 && static_cast<std::uint64_t>(s) * kSector < g_size; ++s) {
+        std::uint8_t probe[kSector];
+        if (read(s, 1, probe) && std::memcmp(probe, "\x01" "CD001", 6) == 0) {
+            g_layer1 = s - 16;
+            index_layer(s, g_layer1);
+            break;
+        }
+    }
+    std::fprintf(stderr, "[disc] %s: %zu files, %llu sectors, layer 1 at %u\n", name.c_str(), g_index.size(),
+                 static_cast<unsigned long long>(g_size / kSector), g_layer1);
+    return true;
+}
+
+bool is_open() { return static_cast<bool>(g_reader); }
+
+bool read(std::uint32_t sector, std::uint32_t count, void *out) {
+    if (!g_reader) return false;
+    const std::size_t want = static_cast<std::size_t>(count) * kSector;
+    const std::size_t got = g_reader(static_cast<std::uint64_t>(sector) * kSector, out, want);
+    if (got < want) std::memset(static_cast<std::uint8_t *>(out) + got, 0, want - got);
+    return got > 0 || !count;
+}
+
+bool ready(std::uint32_t sector, std::uint32_t count) {
+    return !g_probe || g_probe(static_cast<std::uint64_t>(sector) * kSector, static_cast<std::size_t>(count) * kSector);
+}
+
+std::optional<Entry> find(const std::string &raw) {
+    std::string path = raw;
+    const auto colon = path.find(':');
+    if (colon != std::string::npos) path = path.substr(colon + 1);
+    std::replace(path.begin(), path.end(), '\\', '/');
+    const auto semi = path.find(';');
+    if (semi != std::string::npos) path = path.substr(0, semi);
+    while (!path.empty() && path.front() == '/') path.erase(path.begin());
+    auto it = g_index.find(upper(path));
+    if (it == g_index.end()) return std::nullopt;
+    return it->second;
+}
+
+std::uint32_t layer1_start() { return g_layer1; }
+std::uint64_t sector_count() { return g_size / kSector; }
+
+}

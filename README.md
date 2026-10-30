@@ -6,6 +6,26 @@
 
 > **Official project release v0.1.0:** download `SpeedRacer-Vanilla-v0.1.0-Windows-x64.zip` from [the recommended Release](https://github.com/killeiro/Speed-Racer-Native-Port/releases/tag/v0.1.0). Extract the complete folder and open `SpeedRacer.exe`.
 
+## Source code and development
+
+**The native port sources are available for auditing, forks and pull requests.**
+Use the [`source-v0.1.0` tag](https://github.com/killeiro/Speed-Racer-Native-Port/tree/source-v0.1.0)
+for the source snapshot associated with the playable v0.1.0. It includes the
+host/runtime, recompilers, accepted EE/VU translation units, Fuji native blocks,
+the matching GS bridge and regression tests.
+
+Start with [Windows build instructions](docs/BUILDING.md), the
+[source map and contribution workflow](docs/SOURCE-MAP.md), and
+[source/release provenance](docs/SOURCE-PROVENANCE.md).
+`python scripts/verify_source.py` checks the pinned source snapshot without
+game data. Build dependencies are fetched using fixed revisions and hashes.
+
+The original `v0.1.0` tag was documentation-only and is preserved unchanged.
+Use `source-v0.1.0` for code; the playable ZIP remains on the v0.1.0 Release.
+Fresh builds are validated for compilation and tests; byte-identical reproduction
+of the existing EXE/DLL is not claimed. The code publication does not mark the
+known gameplay issues resolved.
+
 ## Current status
 
 **v0.1.0 is the official release of this project and the recommended download.** Known issues are documented below and inside the package.
@@ -55,7 +75,7 @@ On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40â
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) and [test plan](docs/TEST_PLAN.md). Issues and reproducible observations are welcome. Please **do not upload PS2 ISOs, game executables, copyrighted assets or copyrighted source code**.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and [test plan](docs/TEST_PLAN.md). Issues and reproducible observations are welcome. Keep pull requests focused on source changes and pertinent tests. Do not add ISOs, personal saves, data packs, build caches or compiled binaries. Changes to accepted generated inputs need updated manifests and validation.
 
 ## Credits and component notices
 

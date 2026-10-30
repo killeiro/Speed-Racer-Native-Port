@@ -1,0 +1,6 @@
+#pragma once
+
+#define IDI_SPEEDRACER 101
+#define IDD_MEDIA_IMPORT 201
+#define IDC_IMPORT_STATUS 202
+#define IDC_IMPORT_PROGRESS 203
