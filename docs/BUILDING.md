@@ -2,9 +2,16 @@
 
 This source snapshot exposes the host, runtime, recompilers, generated Speed Racer translation units, native VU blocks and regression tests used by the v0.1.0 line. The playable release remains the recommended download for players. The source tree is for auditing and development.
 
+For the hosted no-GPU verification tier and its explicit omissions, see
+[CI.md](CI.md). It complements the full local recipe below; a successful CI job
+does not certify Vulkan rendering, physical controllers or whole-game behavior.
+
 ## Requirements
 
-- Windows 11 x64, the locally tested host, with an AVX2-capable CPU/system.
+- Windows 11 x64, the locally tested host, with an AVX2-capable CPU/system. The
+  current hardware GS build independently enables AVX2 and FMA; see
+  [CPU_COMPATIBILITY.md](CPU_COMPATIBILITY.md) for the requirement audit and
+  validation limits. A working lower-ISA variant is not established.
 - A Vulkan-capable GPU and current compatible graphics driver for renderer tests and gameplay.
 - MSYS2 **MINGW64** toolchain: Clang with C++20 `<format>` support, GNU binutils, CMake, Ninja and SDL2. The inspected release build used Clang 23.1.3 and CMake 4.4.4 with the MinGW GNU C++ runtime. MSVC and CLANG64 are not this build recipe.
 - Python 3.11 or newer. The scripts use the standard library; pass its executable explicitly if it is not on PATH.

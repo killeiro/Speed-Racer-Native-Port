@@ -1,5 +1,18 @@
 # Source and release provenance
 
+## Current development checkout versus the published snapshot
+
+The release correspondence below is historical. The `source-v0.1.0` tag and its
+manifest remain unchanged. On later development branches, `source-manifest.json`
+describes the deliberately updated curated source set in that checkout; its
+`baseline_source_tag` identifies the original snapshot. A development manifest
+does not redefine the inputs or verification results of an existing release.
+`source-provenance.json`, `source-verification.json` and
+[SOURCE-VERIFICATION.md](SOURCE-VERIFICATION.md) retain their original scope.
+Current candidate results belong to separate CI/build receipts.
+
+## Published source-v0.1.0 correspondence
+
 The `source-v0.1.0` tag records the source snapshot associated with the playable
 v0.1.0. The older playable tag is preserved, rather than retroactively changing
 its documentation-only commit. `source-provenance.json` identifies the actual

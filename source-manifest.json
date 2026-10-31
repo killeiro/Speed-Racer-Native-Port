@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "source_tag": "source-v0.1.0",
+  "source_tag": "development",
   "playable_release": "v0.1.0",
-  "scope": "Full curated source snapshot; excludes this manifest itself, downloads, toolchain, build outputs, game data and saves",
+  "scope": "Current curated development source set; immutable release correspondence remains in source-v0.1.0. Excludes this manifest, downloads, toolchain, build outputs, game data and saves",
   "files": {
     ".gitattributes": {
       "bytes": 177,
@@ -21,8 +21,12 @@
       "sha256": "0f709db486d32ddba8e2f1c0c32105de4c8d63aa9cb54c758a32c945e4ff10bf"
     },
     ".github/PULL_REQUEST_TEMPLATE.md": {
-      "bytes": 296,
-      "sha256": "af9bee0283179d9e9754a5a541b761561e6b6f54fd557f19bd6387287ec9abd4"
+      "bytes": 1415,
+      "sha256": "3b9c8e806b01b4dae3f2eca21ee8f82e8bc1edd8861f9ad4fb178caaf81b7909"
+    },
+    ".github/workflows/source-checks.yml": {
+      "bytes": 2377,
+      "sha256": "bb64263d3967d367725789de1455b22247b0110f07cac2ef19fc8366855d3f57"
     },
     ".gitignore": {
       "bytes": 227,
@@ -33,12 +37,32 @@
       "sha256": "ecb208ebc1f3105ada78a90dcf78458858a5c96d96119d5a2ab0687d15e45ea6"
     },
     "CHANGELOG.md": {
-      "bytes": 1676,
-      "sha256": "446d236dab32df67af95797029a378790448da1939832cb0f137fda5d517e547"
+      "bytes": 3032,
+      "sha256": "ad1eb606be9621310c7e9c15816418e76aeb4003c4759e6583bc2f44f06ad581"
     },
-    "cmake/embed.cmake": {
-      "bytes": 133,
-      "sha256": "f9c00947753f7ab2a2740c026bb555ae5eac5d2b8bdb46a4167b461f509347e1"
+    "CMakeLists.txt": {
+      "bytes": 37617,
+      "sha256": "92475950cffd7e8d2bc53ee1e3da778f209103fd40981fe77e9d0f77be3b8bae"
+    },
+    "CONTRIBUTING.md": {
+      "bytes": 2532,
+      "sha256": "61b9548d7dea03fea107358a5768dc15a76a39ad394cc54cbe98fc46ef47bbf0"
+    },
+    "LICENSE": {
+      "bytes": 1067,
+      "sha256": "6c0e3d033ae273f580b39b57486c532aee12ed2d1cf69a6e7279b399f40c14eb"
+    },
+    "README.md": {
+      "bytes": 9081,
+      "sha256": "b14e06491a6bdc228030bb4d78a120bafba412a8f029f4a0c035180e8d93db19"
+    },
+    "ROADMAP.md": {
+      "bytes": 11014,
+      "sha256": "d3b043fc78686ef3feca99a0218072ca8b5564ae65dd163af0bb5e7c188f52bd"
+    },
+    "SECURITY.md": {
+      "bytes": 684,
+      "sha256": "4268dee63b6652d70f7a20a16b1e5dc6a49a94edc0a0fe134500fbb300d96c03"
     },
     "cmake/SpeedRacer.cmake": {
       "bytes": 6580,
@@ -48,17 +72,73 @@
       "bytes": 1949,
       "sha256": "19f6f670676312d3b8072b18a6d0e72646d7f82728d49852ad5147a2a7f210fb"
     },
-    "CMakeLists.txt": {
-      "bytes": 37617,
-      "sha256": "92475950cffd7e8d2bc53ee1e3da778f209103fd40981fe77e9d0f77be3b8bae"
-    },
-    "CONTRIBUTING.md": {
-      "bytes": 1081,
-      "sha256": "58ccfa594bdabc549c6c1ad6aaa1ecbb95c9a03dd0d16e569ce799e8bdde967d"
+    "cmake/embed.cmake": {
+      "bytes": 133,
+      "sha256": "f9c00947753f7ab2a2740c026bb555ae5eac5d2b8bdb46a4167b461f509347e1"
     },
     "dependencies.lock.json": {
       "bytes": 1656,
       "sha256": "582ff38ea18a240aba75dfac9b1618a252cd13ee9852f1c43649af3fd50e8e7b"
+    },
+    "docs/ARCHITECTURE.md": {
+      "bytes": 3841,
+      "sha256": "60b82e577c72a9c655b1eca19785db8bbeadc14885b0f4d7bb2e8cb76ad04536"
+    },
+    "docs/AUDIT_CODEX.md": {
+      "bytes": 882,
+      "sha256": "5d4a3c27f523f0cb152a3c031fcac81c15243ea4c3bad0d7a4b6fef960dd60bc"
+    },
+    "docs/BACKLOG.md": {
+      "bytes": 4022,
+      "sha256": "0b651f77b2fd117704f0823e0f22ac02e0a0e7ad410919d6ec71e6b18721f511"
+    },
+    "docs/BUILDING.md": {
+      "bytes": 9431,
+      "sha256": "65d850bcc9cc2efcd41f64900bf1431487b4d652a538d3ce442d29a3cf5dd48e"
+    },
+    "docs/CI.md": {
+      "bytes": 4231,
+      "sha256": "bd0004dfa6ce4a60733f76f298043e7062b31f25de4d19040488d738a4e1c994"
+    },
+    "docs/CODE_QUALITY.md": {
+      "bytes": 5387,
+      "sha256": "129e8bbbcf22d3ae473f6f282fb67ed38c71379a50c8b12e2f5a3b2d80309644"
+    },
+    "docs/CPU_COMPATIBILITY.md": {
+      "bytes": 5790,
+      "sha256": "b56fdf5ec5f5b0c98d4cec81f81f0f99a6c2d04ffbbc38423fd314e43c23bc12"
+    },
+    "docs/KNOWN_ISSUES.md": {
+      "bytes": 620,
+      "sha256": "de6b14bfabd7bb9fe0913c8f242acfe35ca286b9c3f1f10c99c24b90c0d7cf4f"
+    },
+    "docs/REMASTER_UI_UX.md": {
+      "bytes": 3322,
+      "sha256": "2dad89219111b8f493a518d3c0ed22c35b1f3808ff57518c5ddc00282ad4c606"
+    },
+    "docs/SETUP_GITHUB.md": {
+      "bytes": 597,
+      "sha256": "292d02f45560e4e5fa3f88578fe61fdc6a82420673a9111f9294cf2c096ec192"
+    },
+    "docs/SOURCE-MAP.md": {
+      "bytes": 4104,
+      "sha256": "c441bfe3fb9c0f3104fd750eee8773df2271b7186055c1119710f0b23d7f533c"
+    },
+    "docs/SOURCE-PROVENANCE.md": {
+      "bytes": 2860,
+      "sha256": "814e51e940679bd40951cb119ef0e0528d57689078b3b528ccfbb376abba6f6c"
+    },
+    "docs/SOURCE-VERIFICATION.md": {
+      "bytes": 2279,
+      "sha256": "d57eeab766b725c9a7044cf04ee8aab6c7cdb0b41bc9856ec50805ed035318af"
+    },
+    "docs/TEST_PLAN.md": {
+      "bytes": 1049,
+      "sha256": "90b574ce5ee543683aacfa94f3bb4c15df1c9a4800177ca0cdd5e01c8cd94aa5"
+    },
+    "docs/audit/README.md": {
+      "bytes": 5329,
+      "sha256": "f2a3c4416f4ffc1e3580a4af6d6f95d0ab0a86e173400542f601a7a673358549"
     },
     "docs/audit/architecture.md": {
       "bytes": 7127,
@@ -91,10 +171,6 @@
     "docs/audit/profiling-results.md": {
       "bytes": 4871,
       "sha256": "fc5a346319fe6f31a8d3855a290da0856cdbeb70b491943967223b735d748519"
-    },
-    "docs/audit/README.md": {
-      "bytes": 5329,
-      "sha256": "f2a3c4416f4ffc1e3580a4af6d6f95d0ab0a86e173400542f601a7a673358549"
     },
     "docs/audit/stability-matrix.md": {
       "bytes": 2397,
@@ -131,42 +207,6 @@
     "docs/audit/vanilla-v6.md": {
       "bytes": 6702,
       "sha256": "16fd0d33b208031046e04b6e1bbdd2ac484a25eb9bb54e46f5de75b8942b2d12"
-    },
-    "docs/AUDIT_CODEX.md": {
-      "bytes": 882,
-      "sha256": "5d4a3c27f523f0cb152a3c031fcac81c15243ea4c3bad0d7a4b6fef960dd60bc"
-    },
-    "docs/BUILDING.md": {
-      "bytes": 8980,
-      "sha256": "ffac063fbcd0f234cf5e0ec1e25f9013ee906e569c41d158a3d90e5780ef3d0b"
-    },
-    "docs/KNOWN_ISSUES.md": {
-      "bytes": 620,
-      "sha256": "de6b14bfabd7bb9fe0913c8f242acfe35ca286b9c3f1f10c99c24b90c0d7cf4f"
-    },
-    "docs/REMASTER_UI_UX.md": {
-      "bytes": 3322,
-      "sha256": "2dad89219111b8f493a518d3c0ed22c35b1f3808ff57518c5ddc00282ad4c606"
-    },
-    "docs/SETUP_GITHUB.md": {
-      "bytes": 597,
-      "sha256": "292d02f45560e4e5fa3f88578fe61fdc6a82420673a9111f9294cf2c096ec192"
-    },
-    "docs/SOURCE-MAP.md": {
-      "bytes": 4104,
-      "sha256": "c441bfe3fb9c0f3104fd750eee8773df2271b7186055c1119710f0b23d7f533c"
-    },
-    "docs/SOURCE-PROVENANCE.md": {
-      "bytes": 2148,
-      "sha256": "8d1f1703dddcf74bda5e8b6fb10e41b4503eeade0a460a01cc5a5081d33ca2b8"
-    },
-    "docs/SOURCE-VERIFICATION.md": {
-      "bytes": 2279,
-      "sha256": "d57eeab766b725c9a7044cf04ee8aab6c7cdb0b41bc9856ec50805ed035318af"
-    },
-    "docs/TEST_PLAN.md": {
-      "bytes": 1049,
-      "sha256": "90b574ce5ee543683aacfa94f3bb4c15df1c9a4800177ca0cdd5e01c8cd94aa5"
     },
     "docs/updates/vanilla-integrada-v38.md": {
       "bytes": 1292,
@@ -1640,9 +1680,17 @@
       "bytes": 1605,
       "sha256": "7d053e21679c92e6ee00d835c8e31b76732ba999affdc0119602a589bba9f835"
     },
-    "LICENSE": {
-      "bytes": 1067,
-      "sha256": "6c0e3d033ae273f580b39b57486c532aee12ed2d1cf69a6e7279b399f40c14eb"
+    "native/gs_hw/CMakeLists.txt": {
+      "bytes": 2950,
+      "sha256": "e6fc75d1fdee8f5df4ae350ad4aed105e6f75d43bdc57af7e9d9f0ab7654d41d"
+    },
+    "native/gs_hw/COPYING.GPL-3.0": {
+      "bytes": 35497,
+      "sha256": "970d10bc4e72edc210b38ad790f86b8f4fa65974ca02c92f8e1c9608049c1150"
+    },
+    "native/gs_hw/README.md": {
+      "bytes": 5294,
+      "sha256": "51b59f93cd20ac8d337c8642ba4665a8f88b47fce38a549bf518e95a573b5382"
     },
     "native/gs_hw/bridge.cpp": {
       "bytes": 9811,
@@ -1652,25 +1700,13 @@
       "bytes": 2569,
       "sha256": "6853ed2526ccc22440445b60752e68baf07e36ed216bcb171aeb586ba92c8f45"
     },
-    "native/gs_hw/CMakeLists.txt": {
-      "bytes": 2950,
-      "sha256": "e6fc75d1fdee8f5df4ae350ad4aed105e6f75d43bdc57af7e9d9f0ab7654d41d"
-    },
     "native/gs_hw/compat.py": {
       "bytes": 7673,
       "sha256": "ebab29f06b52d5fc9c821cf4dfe6d6eceed6c894d07d1fc9aeb7527dc8593e67"
     },
-    "native/gs_hw/COPYING.GPL-3.0": {
-      "bytes": 35497,
-      "sha256": "970d10bc4e72edc210b38ad790f86b8f4fa65974ca02c92f8e1c9608049c1150"
-    },
     "native/gs_hw/gif_packet.hpp": {
       "bytes": 996,
       "sha256": "f63ca436164b9e69925f8c9643af0b0880b6042a51b8c5a98965f14af5b70ef3"
-    },
-    "native/gs_hw/README.md": {
-      "bytes": 5294,
-      "sha256": "51b59f93cd20ac8d337c8642ba4665a8f88b47fce38a549bf518e95a573b5382"
     },
     "native/vu-local/blocks/vu_local_blocks.cpp": {
       "bytes": 23819,
@@ -1683,10 +1719,6 @@
     "native/vu-local/tests/local_blocks_differential.cpp": {
       "bytes": 9918,
       "sha256": "b8cc09fa4bba8f9be4f5a3d6b36cf5b2c2ea0391d54e67b7e6b645a57442019c"
-    },
-    "README.md": {
-      "bytes": 7119,
-      "sha256": "139fcd1376630bee03a545f9cdafebe7e0d425a93ef5ffe3f2e13995245009eb"
     },
     "recomp/analysis.cpp": {
       "bytes": 10988,
@@ -1739,10 +1771,6 @@
     "recomp/vurecomp.cpp": {
       "bytes": 39728,
       "sha256": "ff18e39654a996db846fbfd058bd6bceb570811ad15e08f2581f513395710ef7"
-    },
-    "ROADMAP.md": {
-      "bytes": 8672,
-      "sha256": "d644b5fdef16248cd1bb62f74a0a6779263ef47cc5de39834ce82ea987ebc603"
     },
     "runtime/include/ps2/atomic_file.hpp": {
       "bytes": 5129,
@@ -1984,6 +2012,10 @@
       "bytes": 544,
       "sha256": "5099e00f94b7194e3097b7261852315ac5ce4ee68235b9931409f88d2bb87fc3"
     },
+    "runtime/src/ipu/NOTICE": {
+      "bytes": 1453,
+      "sha256": "095eae38f375e5706f52e87e7ad3f6b367cede5e8a2d4f981450374006e16c9b"
+    },
     "runtime/src/ipu/ipu.cpp": {
       "bytes": 22699,
       "sha256": "32af318db87002e60c8c2ff14fd2dae90e00b7770c993dc027fa4622ab717746"
@@ -1991,10 +2023,6 @@
     "runtime/src/ipu/ipu.hpp": {
       "bytes": 362,
       "sha256": "e76d41986b77d2ff4f199818a111b50dca3467090c4ab68386902de17004d1ca"
-    },
-    "runtime/src/ipu/NOTICE": {
-      "bytes": 1453,
-      "sha256": "095eae38f375e5706f52e87e7ad3f6b367cede5e8a2d4f981450374006e16c9b"
     },
     "runtime/src/ipu/tables.hpp": {
       "bytes": 8979,
@@ -2116,6 +2144,14 @@
       "bytes": 6088,
       "sha256": "1632b82f541ad79f3de1a8d424863c86e2e5121d3b7a0a8a63a755eaf211db2e"
     },
+    "scripts/ci_checks.py": {
+      "bytes": 5728,
+      "sha256": "eaa21e932878e4ace20877ad37ee54832a172995754d214bdff48cb253108ee7"
+    },
+    "scripts/ci_windows.ps1": {
+      "bytes": 4968,
+      "sha256": "8cf935157ab016c40750979a3125d68714195d7534949ff606030cfe4a7d55cd"
+    },
     "scripts/compile_vu_continuations.py": {
       "bytes": 1977,
       "sha256": "573e85e900057ac10c77021fa6b4690b29abc6221dd942011b64f262a7266976"
@@ -2172,10 +2208,6 @@
       "bytes": 1099,
       "sha256": "9532dc5d0f12d766d139437fcd4aa0048f974304e3db2ea4eac37c37d0c67cfb"
     },
-    "SECURITY.md": {
-      "bytes": 374,
-      "sha256": "0fa02bfa191d86b1ad9d9673a4029f04b7d63ffe9234180d1ef58e1a480ec79c"
-    },
     "source-provenance.json": {
       "bytes": 6493,
       "sha256": "52b2e9b75cffc1540f9d3639cf3e27d12f16922093189bb6b8877a8ddccff945"
@@ -2195,6 +2227,10 @@
     "tests/card_lease.cpp": {
       "bytes": 13682,
       "sha256": "14dd8aef6b75130e9ee925128a93f0317dd6967b205a97c8ad42d903f9090ea2"
+    },
+    "tests/ci_checks_test.py": {
+      "bytes": 2535,
+      "sha256": "7f9582b90df78e7e88ea728ef36a8e185d12f36bd89b7d4bfb9bf2cd9dcffc06"
     },
     "tests/controllers.cpp": {
       "bytes": 5808,
@@ -2424,5 +2460,7 @@
       "bytes": 30528,
       "sha256": "68598108d4d38969f18a8635d22b23e6e024bf3a83168e7490a19fad0b7583f3"
     }
-  }
+  },
+  "baseline_source_tag": "source-v0.1.0",
+  "baseline_commit": "ad409e3f5f992e1b2f6dd01567f176f805c6748d"
 }
