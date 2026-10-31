@@ -1,7 +1,15 @@
 """Exercise the CI coverage boundary, especially false-green omissions."""
 import importlib.util
+import io
+import json
+import os
 from pathlib import Path
+import shutil
+import subprocess
+import sys
+import tempfile
 import unittest
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 
 path = Path(__file__).resolve().parents[1] / "scripts/ci_checks.py"
@@ -46,6 +54,44 @@ class CoverageBoundary(unittest.TestCase):
         result = ci.junit_coverage(xml, ['one'])
         self.assertEqual(result['cpu_skipped'], ['one'])
         self.assertNotIn('coverage_error', result)
+        self.assertNotEqual(ci.result_status(0, result), 0)
+
+    def test_windows_console_preserves_failure_output_without_encoding_crash(self):
+        output, errors = io.BytesIO(), io.BytesIO()
+        stdout = io.TextIOWrapper(output, encoding='cp1252', errors='strict')
+        stderr = io.TextIOWrapper(errors, encoding='cp1252', errors='strict')
+        with patch.object(sys, 'stdout', stdout), patch.object(sys, 'stderr', stderr):
+            ci.configure_console()
+            print('failure path: \u7af6\u8cfd', flush=True)
+            print('error path: \u7af6\u8cfd', file=sys.stderr, flush=True)
+        self.assertIn(b'\\u7af6\\u8cfd', output.getvalue())
+        self.assertIn(b'\\u7af6\\u8cfd', errors.getvalue())
+
+    def test_selection_uses_actual_ctest_regex_and_exact_names(self):
+        ctest = os.environ.get('CI_CTEST') or shutil.which('ctest')
+        self.assertTrue(ctest, 'CTest is required for this integration check; set CI_CTEST or PATH')
+        fixture_root = path.parents[1] / 'build/ci-selection-tests'
+        fixture_root.mkdir(parents=True, exist_ok=True)
+        selected = ['cpu_case', 'cpu_case_calls', 'cpu.case']
+        decoys = ['cpu_case_suffix', 'x_cpu_case', 'cpuXcase']
+        # Keep the disposable fixture inside the build tree, not a private save
+        # directory or the OS temp location. Verify the absolute cleanup target.
+        with tempfile.TemporaryDirectory(dir=fixture_root) as temporary:
+            fixture = Path(temporary).resolve()
+            self.assertTrue(fixture.is_relative_to(fixture_root.resolve()))
+            python = Path(sys.executable).as_posix()
+            commands = [f'add_test({name} "{python}" "-c" "pass")\n'
+                        for name in selected + decoys]
+            (fixture / 'CTestTestfile.cmake').write_text(''.join(commands), encoding='utf-8')
+            result = subprocess.run(
+                [ctest, '--test-dir', str(fixture), '--show-only=json-v1',
+                 '-R', ci.selection_regex(selected)],
+                capture_output=True, text=True, encoding='utf-8', errors='replace', check=True,
+            )
+            actual = [test['name'] for test in json.loads(result.stdout)['tests']]
+            self.assertCountEqual(actual, selected)
+        with self.assertRaisesRegex(ValueError, 'must not be empty'):
+            ci.selection_regex([])
 
 
 if __name__ == "__main__":

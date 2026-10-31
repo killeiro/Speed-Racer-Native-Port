@@ -23,7 +23,10 @@ on the CPU and are included; their names alone do not indicate Vulkan coverage.
 
 `scripts/ci_checks.py` reads CTest's JSON inventory, rejects unknown names and
 missing mandatory coverage, selects the exact CPU tier, and writes CTest JUnit
-plus a JSON report. Skips remain listed as skips. Adding a test requires an
+plus a JSON report. Skips remain listed as skips and fail this supported-AVX2
+profile: all 60 selected CPU tests must actually pass. The full UTF-8 log and
+final JSON result are saved before console output, which escapes characters
+that a local Windows console cannot represent. Adding a test requires an
 explicit classification and appropriate runner; a new test must not disappear
 behind a permissive name pattern.
 
@@ -33,11 +36,16 @@ Use a fresh build directory. Fetch the verified wgpu dependency as described in
 [BUILDING.md](BUILDING.md), then run:
 
 ```powershell
+$env:CI_CTEST = 'C:/msys64/mingw64/bin/ctest.exe'
 python -B -m unittest discover -s tests -p ci_checks_test.py -v
 .\scripts\ci_windows.ps1 -Tools C:/msys64/mingw64/bin -Python C:/Path/To/python.exe
 ```
 
 This compiles all host/runtime/game targets but runs only the no-GPU tier. The
+coverage guard also exercises CTest's actual regular-expression engine on a
+tiny generated test inventory, including similar names that must not match.
+It requires CTest on PATH or the explicit `CI_CTEST` path; it does not skip that
+check when CTest is missing. The
 normal `build_windows.ps1` command still runs the full configured CTest suite.
 For already configured builds, inventory without executing tests using:
 

@@ -27,6 +27,7 @@ jobs:
           python-version: '3.12'
       - name: Verify source bytes and CI coverage guard
         run: |
+          ctest --version
           python scripts/verify_source.py
           python -B -m unittest discover -s tests -p ci_checks_test.py -v
 

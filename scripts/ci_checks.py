@@ -75,7 +75,29 @@ def junit_coverage(root, selected):
     return result
 
 
+def selection_regex(names):
+    # CTest uses CMake's regular-expression engine, not Python's. In particular,
+    # it does not support the noncapturing-group syntax (?:...).
+    if not names:
+        raise ValueError("The CTest selection must not be empty")
+    return "^(" + "|".join(re.escape(name) for name in names) + ")$"
+
+
+def configure_console():
+    # Local Windows consoles may use cp1252 even though CTest logs are UTF-8.
+    # Escape unrepresentable characters on screen; keep the log itself intact.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="backslashreplace")
+
+
+def result_status(exit_code, result):
+    return exit_code or (1 if result.get("coverage_error") or result.get("cpu_failed")
+                         or result.get("cpu_skipped") else 0)
+
+
 def main():
+    configure_console()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ctest", default="ctest")
     parser.add_argument("--build-dir", required=True, type=Path)
@@ -102,7 +124,7 @@ def main():
     print(json.dumps(result, indent=2), flush=True)
     if not args.run_cpu:
         return 0
-    selection = "^(?:" + "|".join(re.escape(name) for name in tiers["cpu"]) + ")$"
+    selection = selection_regex(tiers["cpu"])
     junit = report.with_suffix(".xml")
     # An old result must not provide coverage for a failed/new CTest invocation.
     junit.unlink(missing_ok=True)
@@ -110,12 +132,16 @@ def main():
                "--parallel", "1", "--no-tests=error", "--output-junit", str(junit), "-R", selection]
     completed = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace")
     report.with_suffix(".log").write_text(completed.stdout + completed.stderr, encoding="utf-8")
+    result.update(cpu_executed=True, cpu_exit_code=completed.returncode)
+    try:
+        result.update(junit_result(junit, tiers["cpu"]))
+    except (ET.ParseError, OSError) as error:
+        result["coverage_error"] = "Cannot read CTest JUnit report: " + str(error)
+    # Persist the outcome before optional console presentation can fail.
+    report.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(completed.stdout, end="", flush=True)
     print(completed.stderr, end="", file=sys.stderr, flush=True)
-    result.update(cpu_executed=True, cpu_exit_code=completed.returncode)
-    result.update(junit_result(junit, tiers["cpu"]))
-    report.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    return completed.returncode or (1 if result.get("coverage_error") or result.get("cpu_failed") else 0)
+    return result_status(completed.returncode, result)
 
 
 if __name__ == "__main__":
