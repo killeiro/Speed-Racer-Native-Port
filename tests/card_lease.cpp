@@ -56,10 +56,14 @@ std::wstring without_device_prefix(const fs::path& path) {
 bool same_target(const fs::path& actual, const fs::path& expected) {
     if (fs::exists(expected)) return fs::equivalent(actual, expected);
 #ifdef _WIN32
-    const auto a = fs::path(without_device_prefix(actual)).lexically_normal().native();
-    const auto b = fs::weakly_canonical(expected).native();
-    return CompareStringOrdinal(a.c_str(), static_cast<int>(a.size()), b.c_str(),
-                                static_cast<int>(b.size()), TRUE) == CSTR_EQUAL;
+    // The existing parent may be reached through a junction or a short-name
+    // alias. Its identity, rather than a preferred spelling, owns the leaf.
+    const fs::path a(without_device_prefix(actual)), b(without_device_prefix(expected));
+    std::error_code error;
+    if (!fs::equivalent(a.parent_path(), b.parent_path(), error) || error) return false;
+    const auto a_name = a.filename().native(), b_name = b.filename().native();
+    return CompareStringOrdinal(a_name.c_str(), static_cast<int>(a_name.size()), b_name.c_str(),
+                                static_cast<int>(b_name.size()), TRUE) == CSTR_EQUAL;
 #else
     return actual == fs::weakly_canonical(expected);
 #endif
@@ -94,8 +98,14 @@ void run_local(const fs::path& root) {
     const auto dotted = root / "sub" / ".." / "." / "SaveCard.PS2";
     {
         ps2::card_file::Lease first(dotted);
-        check(first.target().is_absolute() && !has_dot_component(first.target()) &&
-              same_target(first.target(), target), "absent target is canonical and absolute");
+        if (!first.target().is_absolute() || has_dot_component(first.target()) ||
+            !same_target(first.target(), target)) {
+            std::cerr << "Absent-card fixture actual=" << first.target()
+                      << " expected=" << target << '\n';
+        }
+        check(first.target().is_absolute(), "absent target is absolute");
+        check(!has_dot_component(first.target()), "absent target has no dot components");
+        check(same_target(first.target(), target), "absent target retains parent and leaf identity");
         check(!fs::exists(target), "reserving an absent card does not create the card");
         check(refused(target), "same target cannot have a second in-process lease");
         check(refused(dotted), "dot path alias cannot bypass the lease");

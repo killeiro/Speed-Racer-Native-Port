@@ -2225,8 +2225,8 @@
       "sha256": "5eea7570b49604d88c50fde1276eeb46a3727120b7d18c9de60a9feb901d1ad9"
     },
     "tests/card_lease.cpp": {
-      "bytes": 13682,
-      "sha256": "14dd8aef6b75130e9ee925128a93f0317dd6967b205a97c8ad42d903f9090ea2"
+      "bytes": 14353,
+      "sha256": "1611f6f02c387f527ec120c1fb07253d332d162b1aa0bdc6fabb6f2d9a910aa7"
     },
     "tests/ci_checks_test.py": {
       "bytes": 5022,
