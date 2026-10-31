@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "native_clean_build": true,
+  "official_launcher_target": "SpeedRacerHardware",
+  "host_CTests_passed": 70,
+  "GS_clean_build": true,
+  "GS_CTests_passed": 4,
+  "host_EXE_sha256": "68702f6eee25688fecea4a3705d7292ead76a2d7b88f2a75d96cfd3a23f29392",
+  "GS_DLL_sha256": "0545656d6a51d393b7d631570d7993c1f4284011ddff83455cacd21cea09bc70",
+  "published_binaries_replaced": false,
+  "binary_byte_identity_claimed": false,
+  "new_gameplay_campaign": false,
+  "physical_device_acceptance_claimed": false,
+  "accepted_generated_source_files": 332,
+  "accepted_generated_bytes": 124084962,
+  "release_host_runtime_overlay_files_verified": 37,
+  "working_checkout_source_preserved": true,
+  "GS_source_checkpoint": "93add46d9ae0c107a10b18b8a53e6abcde85f4f3"
+}

@@ -1,0 +1,16 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "resource.h"
+
+IDI_SPEEDRACER ICON "assets/SpeedRacer.ico"
+1 RT_MANIFEST "speedracer.manifest"
+
+IDD_MEDIA_IMPORT DIALOGEX 0, 0, 300, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Speed Racer — preparando o jogo"
+FONT 9, "Segoe UI"
+BEGIN
+    LTEXT "Verificando sua ISO…", IDC_IMPORT_STATUS, 12, 12, 276, 20
+    CONTROL "", IDC_IMPORT_PROGRESS, "msctls_progress32", WS_CHILD | WS_VISIBLE, 12, 38, 276, 12
+    PUSHBUTTON "Cancelar", IDCANCEL, 226, 64, 62, 16
+END

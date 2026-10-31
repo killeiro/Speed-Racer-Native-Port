@@ -1,0 +1,4 @@
+# Preserve accepted source and manifest bytes across Windows/Linux checkouts.
+* -text
+generated/** linguist-generated=true
+native/vu-local/blocks/** linguist-generated=true

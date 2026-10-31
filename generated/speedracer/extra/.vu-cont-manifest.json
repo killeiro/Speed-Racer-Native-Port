@@ -1,0 +1,10 @@
+{
+  "files": {
+    "vu_cont_000.cpp": "2b0deb5b364e34d21edc8479c73d9d2788936437d3f7cbab0130d1d26f0b3ca5",
+    "vu_cont_001.cpp": "6b2962a46fb4ba4fa12df0bb939ad157df91240b1fd945e0d38732237207dc0c",
+    "vu_cont_002.cpp": "1dfdc71ebf4ebf86541329a17d72ecab104f1042ff4ee750e007358685fa9f94",
+    "vu_cont_table.cpp": "f5d2be939e81fdee837c8f5ee0a87c9b8785d3dcaa8247410abac68b737554e3"
+  },
+  "generator_sha256": "4b8fd557fe8ab90125325911c7d5bc1e40a2b8289bf0806e338093dc7137e3bc",
+  "capture_count": 2123
+}
