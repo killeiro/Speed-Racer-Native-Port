@@ -1,0 +1,77 @@
+name: Source checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integrity:
+    name: Source integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Verify source bytes and CI coverage guard
+        run: |
+          ctest --version
+          python scripts/verify_source.py
+          python -B -m unittest discover -s tests -p ci_checks_test.py -v
+
+  windows:
+    name: Windows compile and CPU tests
+    needs: integrity
+    runs-on: windows-latest
+    timeout-minutes: 90
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        id: python
+        with:
+          python-version: '3.12'
+      - uses: msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e # v2
+        id: msys2
+        with:
+          msystem: MINGW64
+          update: true
+          cache: false
+          install: >-
+            mingw-w64-x86_64-clang
+            mingw-w64-x86_64-binutils
+            mingw-w64-x86_64-cmake
+            mingw-w64-x86_64-ninja
+            mingw-w64-x86_64-SDL2
+      - name: Fetch verified build input
+        shell: pwsh
+        run: python scripts/fetch_build_deps.py --cache build/download-cache
+      - name: Compile and run explicit no-GPU tier
+        shell: pwsh
+        env:
+          CI_PYTHON: ${{ steps.python.outputs.python-path }}
+          CI_MSYS2: ${{ steps.msys2.outputs.msys2-location }}
+        run: ./scripts/ci_windows.ps1 -Python $env:CI_PYTHON -Tools (Join-Path $env:CI_MSYS2 'mingw64/bin') -Jobs 2
+      - name: Retain build/test evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: windows-build-evidence
+          path: build/ci-reports/
+          retention-days: 7
+          if-no-files-found: warn

@@ -1,10 +1,27 @@
 # Speed Racer â€” Native Port ðŸ
 
-**Experimental community-driven effort to run Speed Racer (PlayStation 2) natively on Windows.**
+**Experimental Windows adaptation of Speed Racer (PlayStation 2), built on static recompilation and a supporting PS2 runtime.**
 
 ![Status](https://img.shields.io/badge/status-playable_release-green) ![Platform](https://img.shields.io/badge/platform-Windows-blue) ![Release](https://img.shields.io/badge/public_release-v0.1.0-green)
 
 > **Official project release v0.1.0:** download `SpeedRacer-Vanilla-v0.1.0-Windows-x64.zip` from [the recommended Release](https://github.com/killeiro/Speed-Racer-Native-Port/releases/tag/v0.1.0). Extract the complete folder and open `SpeedRacer.exe`.
+
+## What this project is
+
+The project builds on [Samir Nuri's ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp).
+Accepted Emotion Engine (EE) functions and Vector Unit (VU) programs are
+translated ahead of time into C++ and compiled for the PC. A runtime still
+reproduces supporting PS2 hardware and system behavior. The released hardware
+renderer embeds pinned [PCSX2](https://github.com/PCSX2/pcsx2)/kzgs GS components
+inside `SpeedRacerGS.dll`; it does not launch the PCSX2 application.
+
+This is a recompilation-based Windows project, not a complete rewrite of the
+original game engine. The team's adaptations include Windows packaging,
+integrated-data launching, input, rendering integration and game-specific runtime
+fixes. **The project was developed with substantial AI assistance.** That does
+not replace the need for understandable changes, review and measured validation.
+See the [architecture and component credits](docs/ARCHITECTURE.md) and
+[code quality rules](docs/CODE_QUALITY.md).
 
 ## Source code and development
 
@@ -17,8 +34,10 @@ the matching GS bridge and regression tests.
 Start with [Windows build instructions](docs/BUILDING.md), the
 [source map and contribution workflow](docs/SOURCE-MAP.md), and
 [source/release provenance](docs/SOURCE-PROVENANCE.md).
-`python scripts/verify_source.py` checks the pinned source snapshot without
-game data. Build dependencies are fetched using fixed revisions and hashes.
+`python scripts/verify_source.py` checks the current checkout's curated source
+manifest without game data. The manifest at `source-v0.1.0` remains the immutable
+release snapshot; later development manifests describe their own reviewed
+changes. Build dependencies are fetched using fixed revisions and hashes.
 
 The original `v0.1.0` tag was documentation-only and is preserved unchanged.
 Use `source-v0.1.0` for code; the playable ZIP remains on the v0.1.0 Release.
@@ -36,7 +55,11 @@ The default PC keyboard layout puts driving on the arrow keys and tricks on WASD
 
 Before this keyboard update, a real keyboard drive on long Fuji in the v48 base averaged **59.93 simulated frames/s** after the first resume, including subsequent interruptions. This is evidence from one local session, not a guarantee of constant 60 fps across all tracks or PCs. Earlier external testing was positive, but it does not certify this release on every system.
 
-**Requirements:** Windows 11 x64 (locally tested), an AVX2-capable CPU/system, Vulkan-capable graphics drivers and the Microsoft Visual C++ v14 x64 Runtime. Detailed instructions and known issues are included in the download.
+**Requirements:** Windows 11 x64 (locally tested), an AVX2-capable CPU/system,
+Vulkan-capable graphics drivers and the Microsoft Visual C++ v14 x64 Runtime.
+The hardware GS build also enables FMA; see the [CPU compatibility audit](docs/CPU_COMPATIBILITY.md)
+for the separate renderer requirement and remaining startup-check gap. Detailed
+instructions and known issues are included in the download.
 
 For community reports, include the ZIP version, Windows/CPU/GPU/RAM, track/variant, mode/Speed Class/championship stage, graphics setting and input device. For audio, distinguish music, voices, engine/effects and total silence. Please do not post personal saves or logs without reviewing them.
 
@@ -62,10 +85,13 @@ On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40â
 
 ## Project priorities
 
-1. Improve plug-and-play controller compatibility.
-2. Investigate reproducible audio-category and track-transition reports.
-3. Preserve the accepted rendering quality and near-60 racing behavior while treating pause cadence and isolated hitches separately.
-4. Collect community feedback with a fixed, verifiable package identity.
+1. Make architecture, provenance and contribution rules clear to reviewers.
+2. Verify clean Windows builds and automate appropriate source/build checks.
+3. Improve maintainability through small, behavior-preserving changes.
+4. Investigate CPU compatibility and reproducible controller, audio, pause and hitch reports with before/after evidence.
+
+Preserve the accepted rendering quality and integrated-data launch flow. Future
+remaster and modding work does not take priority over Vanilla stability.
 
 ## Technical references
 
@@ -75,11 +101,17 @@ On an i5-12400 / RTX 3060 at 1x, three alternating v4/v5 pairs averaged **52.40â
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) and [test plan](docs/TEST_PLAN.md). Issues and reproducible observations are welcome. Keep pull requests focused on source changes and pertinent tests. Do not add ISOs, personal saves, data packs, build caches or compiled binaries. Changes to accepted generated inputs need updated manifests and validation.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [code quality rules](docs/CODE_QUALITY.md) and [test plan](docs/TEST_PLAN.md). Issues and reproducible observations are welcome. Keep pull requests focused on source changes and pertinent tests. Do not add ISOs, personal saves, data packs, build caches or compiled binaries. Changes to accepted generated inputs need updated manifests and validation.
 
 ## Credits and component notices
 
-Component notices and provenance information are included in the package. See `NOTICES.md` and the bundled `licenses/` directory. No ownership or license is asserted over third-party components.
+The base recompilation/runtime project is credited to Samir Nuri in the retained
+[MIT notice](LICENSE). The hardware GS incorporates PCSX2/kzgs components with
+their [own notices](native/gs_hw/README.md#component-notices). See the
+[component credits](docs/ARCHITECTURE.md) and [source provenance](docs/SOURCE-PROVENANCE.md)
+for the distinction between upstream code and the team's adaptations.
+The playable package also includes `NOTICES.md` and a `licenses/` directory.
+No ownership is asserted over third-party components or the original game.
 
 ## Maintainer
 

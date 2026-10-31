@@ -1,6 +1,30 @@
 # Changelog
 
-All notable project updates will be recorded here. Dates refer to documentation and releases, not claims of shipping a playable public build.
+Entries describe their status at the stated milestone; older publication limits
+are historical. The playable v0.1.0 and its separate source-v0.1.0 tag remain
+preserved.
+
+## Unreleased — source quality and build verification
+
+- Explain recompilation, supporting PS2 runtime, embedded PCSX2/kzgs renderer,
+  upstream contributions and substantial AI assistance prominently.
+- Define code quality and review rules for editable, generated and imported
+  sources; retain existing provenance and historical evidence.
+- Add read-only source/Windows build verification, explicit CPU test coverage
+  and truthful separation of Vulkan, external GS and physical-device checks.
+- Reconcile the roadmap and existing issue groups with the published baseline.
+- Document AVX2/FMA build requirements and the remaining GS pre-load guard gap.
+- No gameplay/runtime change, new FPS gain, controller fix or playable release
+  is claimed by these changes. Actual CI results belong to the corresponding run.
+
+## 2026-10-30 — playable and source publication
+
+- Publish the recommended experimental v0.1.0 Windows package with ergonomic
+  keyboard defaults, preserving accepted rendering and integrated-data launch.
+- Publish host/runtime, generated inputs, GS bridge, tests and build scripts
+  under source-v0.1.0. Keep the earlier playable tag and artifacts unchanged.
+- Document clean source-build results and bounded verification; do not claim
+  byte-identical rebuilt binaries or complete game/device acceptance.
 
 ## Integrated Vanilla v38 — local conversion milestone
 
